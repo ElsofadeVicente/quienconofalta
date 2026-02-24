@@ -18,9 +18,9 @@
       ],
       [
         {
-          "name": "J. MIRANDA",
+          "name": "JESÚS GÁMEZ",
           "position": "DEF",
-          "number": "23"
+          "number": "18"
         },
         {
           "name": "J. GIMÉNEZ",
@@ -28,17 +28,22 @@
           "number": "24"
         },
         {
+          "name": "J. MIRANDA",
+          "position": "DEF",
+          "number": "23"
+        },
+        {
           "name": "G. SIQUEIRA",
           "position": "DEF",
           "number": "3"
-        },
-        {
-          "name": "JESÚS GÁMEZ",
-          "position": "DEF",
-          "number": "18"
         }
       ],
       [
+        {
+          "name": "KOKE",
+          "position": "MID",
+          "number": "6"
+        },
         {
           "name": "MARIO SUÁREZ",
           "position": "MID",
@@ -48,11 +53,6 @@
           "name": "TIAGO",
           "position": "MID",
           "number": "5"
-        },
-        {
-          "name": "KOKE",
-          "position": "MID",
-          "number": "6"
         },
         {
           "name": "A. TURAN",
@@ -93,9 +93,9 @@
       ],
       [
         {
-          "name": "J. MIRANDA",
+          "name": "JUANFRAN",
           "position": "DEF",
-          "number": "23"
+          "number": "20"
         },
         {
           "name": "J. GIMÉNEZ",
@@ -103,171 +103,21 @@
           "number": "24"
         },
         {
-          "name": "G. SIQUEIRA",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "JUANFRAN",
-          "position": "DEF",
-          "number": "20"
-        }
-      ],
-      [
-        {
-          "name": "GABI",
-          "position": "MID",
-          "number": "14"
-        },
-        {
-          "name": "TIAGO",
-          "position": "MID",
-          "number": "5"
-        },
-        {
-          "name": "KOKE",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "A. TURAN",
-          "position": "MID",
-          "number": "10"
-        }
-      ],
-      [
-        {
-          "name": "A. GRIEZMANN",
-          "position": "FWD",
-          "number": "7"
-        },
-        {
-          "name": "M. MANDŽUKIĆ",
-          "position": "FWD",
-          "number": "9"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2014-15",
-    "homeTeam": "ATHLETIC CLUB",
-    "awayTeam": "ATLETICO MADRID",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "1-4",
-    "date": "21 de diciembre 2014",
-    "playingTeam": "ATLETICO MADRID",
-    "formation": [
-      [
-        {
-          "name": "MIGUEL ÁNGEL MOYÁ",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "DIEGO GODÍN",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "J. GIMÉNEZ",
-          "position": "DEF",
-          "number": "24"
-        },
-        {
-          "name": "G. SIQUEIRA",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "TIAGO",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "JUANFRAN",
-          "position": "DEF",
-          "number": "20"
-        }
-      ],
-      [
-        {
-          "name": "SAÚL",
-          "position": "MID",
-          "number": "17"
-        },
-        {
-          "name": "GABI",
-          "position": "MID",
-          "number": "14"
-        },
-        {
-          "name": "A. TURAN",
-          "position": "MID",
-          "number": "10"
-        },
-        {
-          "name": "RAÚL GARCÍA",
-          "position": "MID",
-          "number": "8"
-        }
-      ],
-      [
-        {
-          "name": "A. GRIEZMANN",
-          "position": "FWD",
-          "number": "7"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2014-15",
-    "homeTeam": "VILLARREAL",
-    "awayTeam": "ATLETICO MADRID",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "0-1",
-    "date": "29 de abril 2015",
-    "playingTeam": "ATLETICO MADRID",
-    "formation": [
-      [
-        {
-          "name": "JAN OBLAK",
-          "position": "GK",
-          "number": "13"
-        }
-      ],
-      [
-        {
           "name": "J. MIRANDA",
           "position": "DEF",
           "number": "23"
         },
         {
-          "name": "DIEGO GODÍN",
+          "name": "G. SIQUEIRA",
           "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "JESÚS GÁMEZ",
-          "position": "DEF",
-          "number": "18"
-        },
-        {
-          "name": "JUANFRAN",
-          "position": "DEF",
-          "number": "20"
+          "number": "3"
         }
       ],
       [
         {
-          "name": "TIAGO",
+          "name": "KOKE",
           "position": "MID",
-          "number": "5"
+          "number": "6"
         },
         {
           "name": "GABI",
@@ -275,9 +125,9 @@
           "number": "14"
         },
         {
-          "name": "KOKE",
+          "name": "TIAGO",
           "position": "MID",
-          "number": "6"
+          "number": "5"
         },
         {
           "name": "A. TURAN",
@@ -313,10 +163,15 @@
         {
           "name": "JAN OBLAK",
           "position": "GK",
-          "number": "1"
+          "number": "13"
         }
       ],
       [
+        {
+          "name": "JUANFRAN",
+          "position": "DEF",
+          "number": "20"
+        },
         {
           "name": "DIEGO GODÍN",
           "position": "DEF",
@@ -325,51 +180,46 @@
         {
           "name": "STEFAN SAVIC",
           "position": "DEF",
-          "number": "3"
+          "number": "15"
         },
         {
           "name": "FILIPE LUÍS",
           "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "JUANFRAN",
-          "position": "DEF",
-          "number": "5"
+          "number": "3"
         }
       ],
       [
         {
-          "name": "GABI",
+          "name": "KOKE",
           "position": "MID",
           "number": "6"
         },
         {
+          "name": "GABI",
+          "position": "MID",
+          "number": "14"
+        },
+        {
           "name": "SAÚL ÑÍGUEZ",
           "position": "MID",
-          "number": "7"
+          "number": "17"
         },
         {
           "name": "ÁNGEL CORREA",
           "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "KOKE",
-          "position": "MID",
-          "number": "9"
+          "number": "16"
         }
       ],
       [
         {
-          "name": "FERNANDO TORRES",
+          "name": "A. GRIEZMANN",
           "position": "FWD",
-          "number": "10"
+          "number": "7"
         },
         {
-          "name": "ANTOINE GRIEZMANN",
+          "name": "FERNANDO TORRES",
           "position": "FWD",
-          "number": "11"
+          "number": "9"
         }
       ]
     ]
@@ -388,213 +238,63 @@
         {
           "name": "JAN OBLAK",
           "position": "GK",
-          "number": "1"
+          "number": "13"
         }
       ],
       [
         {
-          "name": "JOSÉ GIMÉNEZ",
+          "name": "JUANFRAN",
           "position": "DEF",
-          "number": "2"
+          "number": "20"
         },
         {
           "name": "DIEGO GODÍN",
           "position": "DEF",
-          "number": "3"
+          "number": "2"
+        },
+        {
+          "name": "J. GIMÉNEZ",
+          "position": "DEF",
+          "number": "24"
         },
         {
           "name": "FILIPE LUÍS",
           "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "JUANFRAN",
-          "position": "DEF",
-          "number": "5"
+          "number": "3"
         }
       ],
       [
         {
-          "name": "TIAGO",
+          "name": "KOKE",
           "position": "MID",
           "number": "6"
         },
         {
           "name": "SAÚL ÑÍGUEZ",
           "position": "MID",
-          "number": "7"
+          "number": "17"
         },
         {
-          "name": "KOKE",
+          "name": "TIAGO",
           "position": "MID",
-          "number": "8"
+          "number": "5"
         },
         {
           "name": "ÓLIVER TORRES",
           "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "LUCIANO VIETTO",
-          "position": "FWD",
           "number": "10"
-        },
+        }
+      ],
+      [
         {
-          "name": "ANTOINE GRIEZMANN",
+          "name": "A. GRIEZMANN",
           "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2015-16",
-    "homeTeam": "CELTA VIGO",
-    "awayTeam": "ATLETICO MADRID",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "0-2",
-    "date": "10 de enero 2016",
-    "playingTeam": "ATLETICO MADRID",
-    "formation": [
-      [
-        {
-          "name": "JAN OBLAK",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "DIEGO GODÍN",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "JOSÉ GIMÉNEZ",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "FILIPE LUÍS",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "JUANFRAN",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "AUGUSTO FERNÁNDEZ",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "GABI",
-          "position": "MID",
           "number": "7"
         },
         {
-          "name": "KOKE",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "SAÚL ÑÍGUEZ",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "LUCIANO VIETTO",
+          "name": "L. VIETTO",
           "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "ANTOINE GRIEZMANN",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2015-16",
-    "homeTeam": "ATLETICO MADRID",
-    "awayTeam": "SEVILLA",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "0-0",
-    "date": "24 de enero 2016",
-    "playingTeam": "ATLETICO MADRID",
-    "formation": [
-      [
-        {
-          "name": "JAN OBLAK",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "STEFAN SAVIC",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "DIEGO GODÍN",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "FILIPE LUÍS",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "JUANFRAN",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "AUGUSTO FERNÁNDEZ",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "GABI",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "KOKE",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "SAÚL ÑÍGUEZ",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "LUCIANO VIETTO",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "ANTOINE GRIEZMANN",
-          "position": "FWD",
-          "number": "11"
+          "number": "23"
         }
       ]
     ]
@@ -611,12 +311,17 @@
     "formation": [
       [
         {
-          "name": "MIGUEL ÁNGEL MOYÁ",
+          "name": "M.Á. MOYÁ",
           "position": "GK",
           "number": "1"
         }
       ],
       [
+        {
+          "name": "SIME VRSALJKO",
+          "position": "DEF",
+          "number": "16"
+        },
         {
           "name": "DIEGO GODÍN",
           "position": "DEF",
@@ -625,51 +330,46 @@
         {
           "name": "STEFAN SAVIC",
           "position": "DEF",
-          "number": "3"
+          "number": "15"
         },
         {
           "name": "FILIPE LUÍS",
           "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "JOSÉ GIMÉNEZ",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "SIME VRSALJKO",
-          "position": "DEF",
-          "number": "6"
+          "number": "3"
         }
       ],
       [
         {
           "name": "KOKE",
           "position": "MID",
-          "number": "7"
+          "number": "6"
         },
         {
           "name": "GABI",
           "position": "MID",
-          "number": "8"
+          "number": "14"
+        },
+        {
+          "name": "J. GIMÉNEZ",
+          "position": "MID",
+          "number": "24"
         },
         {
           "name": "SAÚL ÑÍGUEZ",
           "position": "MID",
-          "number": "9"
+          "number": "8"
         },
         {
-          "name": "ANTOINE GRIEZMANN",
+          "name": "A. GRIEZMANN",
           "position": "MID",
-          "number": "10"
+          "number": "7"
         }
       ],
       [
         {
           "name": "FERNANDO TORRES",
           "position": "FWD",
-          "number": "11"
+          "number": "9"
         }
       ]
     ]
@@ -688,213 +388,63 @@
         {
           "name": "JAN OBLAK",
           "position": "GK",
-          "number": "1"
+          "number": "13"
         }
       ],
       [
         {
-          "name": "LUCAS HERNÁNDEZ",
+          "name": "SIME VRSALJKO",
           "position": "DEF",
-          "number": "2"
+          "number": "16"
         },
         {
           "name": "STEFAN SAVIC",
           "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "FILIPE LUÍS",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "SIME VRSALJKO",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "GABI",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "SAÚL ÑÍGUEZ",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "KOKE",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "YANNICK CARRASCO",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "KEVIN GAMEIRO",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "ANTOINE GRIEZMANN",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2016-17",
-    "homeTeam": "DEPORTIVO LA CORUNA",
-    "awayTeam": "ATLETICO MADRID",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "1-1",
-    "date": "02 de marzo 2017",
-    "playingTeam": "ATLETICO MADRID",
-    "formation": [
-      [
-        {
-          "name": "JAN OBLAK",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "JOSÉ GIMÉNEZ",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "DIEGO GODÍN",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "FILIPE LUÍS",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "SIME VRSALJKO",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "KOKE",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "THOMAS PARTEY",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "GABI",
-          "position": "MID",
-          "number": "8"
-        }
-      ],
-      [
-        {
-          "name": "KEVIN GAMEIRO",
-          "position": "FWD",
-          "number": "9"
-        },
-        {
-          "name": "ANTOINE GRIEZMANN",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "ÁNGEL CORREA",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2016-17",
-    "homeTeam": "LAS PALMAS",
-    "awayTeam": "ATLETICO MADRID",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "0-5",
-    "date": "29 de abril 2017",
-    "playingTeam": "ATLETICO MADRID",
-    "formation": [
-      [
-        {
-          "name": "JAN OBLAK",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "STEFAN SAVIC",
-          "position": "DEF",
-          "number": "2"
+          "number": "15"
         },
         {
           "name": "LUCAS HERNÁNDEZ",
           "position": "DEF",
-          "number": "3"
+          "number": "19"
         },
         {
           "name": "FILIPE LUÍS",
           "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "JOSÉ GIMÉNEZ",
-          "position": "DEF",
-          "number": "5"
+          "number": "3"
         }
       ],
       [
         {
-          "name": "GABI",
+          "name": "KOKE",
           "position": "MID",
           "number": "6"
         },
         {
-          "name": "SAÚL ÑÍGUEZ",
+          "name": "GABI",
           "position": "MID",
-          "number": "7"
+          "number": "14"
         },
         {
-          "name": "KOKE",
+          "name": "SAÚL ÑÍGUEZ",
           "position": "MID",
           "number": "8"
         },
         {
-          "name": "NICOLÁS GAITÁN",
+          "name": "Y. CARRASCO",
           "position": "MID",
-          "number": "9"
+          "number": "10"
         }
       ],
       [
         {
-          "name": "ANTOINE GRIEZMANN",
+          "name": "A. GRIEZMANN",
           "position": "FWD",
-          "number": "10"
+          "number": "7"
         },
         {
-          "name": "KEVIN GAMEIRO",
+          "name": "K. GAMEIRO",
           "position": "FWD",
-          "number": "11"
+          "number": "21"
         }
       ]
     ]
@@ -913,10 +463,15 @@
         {
           "name": "JAN OBLAK",
           "position": "GK",
-          "number": "1"
+          "number": "13"
         }
       ],
       [
+        {
+          "name": "JUANFRAN",
+          "position": "DEF",
+          "number": "20"
+        },
         {
           "name": "DIEGO GODÍN",
           "position": "DEF",
@@ -925,51 +480,46 @@
         {
           "name": "STEFAN SAVIC",
           "position": "DEF",
-          "number": "3"
+          "number": "15"
         },
         {
           "name": "FILIPE LUÍS",
           "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "JUANFRAN",
-          "position": "DEF",
-          "number": "5"
+          "number": "3"
         }
       ],
       [
         {
-          "name": "GABI",
+          "name": "KOKE",
           "position": "MID",
           "number": "6"
         },
         {
-          "name": "SAÚL ÑÍGUEZ",
+          "name": "GABI",
           "position": "MID",
-          "number": "7"
+          "number": "14"
         },
         {
-          "name": "YANNICK CARRASCO",
+          "name": "SAÚL ÑÍGUEZ",
           "position": "MID",
           "number": "8"
         },
         {
-          "name": "KOKE",
+          "name": "Y. CARRASCO",
           "position": "MID",
-          "number": "9"
+          "number": "10"
         }
       ],
       [
         {
-          "name": "ÁNGEL CORREA",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "ANTOINE GRIEZMANN",
+          "name": "Á. CORREA",
           "position": "FWD",
           "number": "11"
+        },
+        {
+          "name": "A. GRIEZMANN",
+          "position": "FWD",
+          "number": "7"
         }
       ]
     ]
@@ -988,213 +538,63 @@
         {
           "name": "JAN OBLAK",
           "position": "GK",
-          "number": "1"
+          "number": "13"
         }
       ],
       [
+        {
+          "name": "SIME VRSALJKO",
+          "position": "DEF",
+          "number": "16"
+        },
         {
           "name": "DIEGO GODÍN",
           "position": "DEF",
           "number": "2"
         },
         {
-          "name": "JOSÉ GIMÉNEZ",
+          "name": "J. GIMÉNEZ",
           "position": "DEF",
-          "number": "3"
+          "number": "24"
         },
         {
           "name": "LUCAS HERNÁNDEZ",
           "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "SIME VRSALJKO",
-          "position": "DEF",
-          "number": "5"
+          "number": "19"
         }
       ],
       [
         {
-          "name": "SAÚL ÑÍGUEZ",
+          "name": "KOKE",
           "position": "MID",
           "number": "6"
         },
         {
           "name": "GABI",
           "position": "MID",
-          "number": "7"
+          "number": "14"
+        },
+        {
+          "name": "SAÚL ÑÍGUEZ",
+          "position": "MID",
+          "number": "8"
         },
         {
           "name": "VITOLO",
           "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "KOKE",
-          "position": "MID",
-          "number": "9"
+          "number": "23"
         }
       ],
       [
         {
-          "name": "DIEGO COSTA",
+          "name": "A. GRIEZMANN",
           "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "ANTOINE GRIEZMANN",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2017-18",
-    "homeTeam": "BARCELONA",
-    "awayTeam": "ATLETICO MADRID",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "1-0",
-    "date": "04 de marzo 2018",
-    "playingTeam": "ATLETICO MADRID",
-    "formation": [
-      [
-        {
-          "name": "JAN OBLAK",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "DIEGO GODÍN",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "JOSÉ GIMÉNEZ",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "FILIPE LUÍS",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "SIME VRSALJKO",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "GABI",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "THOMAS PARTEY",
-          "position": "MID",
           "number": "7"
-        },
-        {
-          "name": "KOKE",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "SAÚL ÑÍGUEZ",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "ANTOINE GRIEZMANN",
-          "position": "FWD",
-          "number": "10"
         },
         {
           "name": "DIEGO COSTA",
           "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2017-18",
-    "homeTeam": "REAL SOCIEDAD",
-    "awayTeam": "ATLETICO MADRID",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "3-0",
-    "date": "19 de abril 2018",
-    "playingTeam": "ATLETICO MADRID",
-    "formation": [
-      [
-        {
-          "name": "JAN OBLAK",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "STEFAN SAVIC",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "DIEGO GODÍN",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "SIME VRSALJKO",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "JUANFRAN",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "THOMAS PARTEY",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "SAÚL ÑÍGUEZ",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "KOKE",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "ÁNGEL CORREA",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "KEVIN GAMEIRO",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "ANTOINE GRIEZMANN",
-          "position": "FWD",
-          "number": "11"
+          "number": "18"
         }
       ]
     ]
@@ -1218,9 +618,9 @@
       ],
       [
         {
-          "name": "JAVI MONTERO",
+          "name": "SANTIAGO ARIAS",
           "position": "DEF",
-          "number": "35"
+          "number": "4"
         },
         {
           "name": "DIEGO GODÍN",
@@ -1228,48 +628,48 @@
           "number": "2"
         },
         {
+          "name": "J. MONTERO",
+          "position": "DEF",
+          "number": "35"
+        },
+        {
           "name": "FILIPE LUÍS",
           "position": "DEF",
           "number": "3"
-        },
-        {
-          "name": "SANTIAGO ARIAS",
-          "position": "DEF",
-          "number": "4"
         }
       ],
       [
-        {
-          "name": "RODRI",
-          "position": "MID",
-          "number": "14"
-        },
-        {
-          "name": "THOMAS PARTEY",
-          "position": "MID",
-          "number": "5"
-        },
         {
           "name": "SAÚL ÑÍGUEZ",
           "position": "MID",
           "number": "8"
         },
         {
-          "name": "ÁNGEL CORREA",
+          "name": "T. PARTEY",
+          "position": "MID",
+          "number": "5"
+        },
+        {
+          "name": "RODRI",
+          "position": "MID",
+          "number": "14"
+        },
+        {
+          "name": "Á. CORREA",
           "position": "MID",
           "number": "10"
         }
       ],
       [
         {
+          "name": "A. GRIEZMANN",
+          "position": "FWD",
+          "number": "7"
+        },
+        {
           "name": "DIEGO COSTA",
           "position": "FWD",
           "number": "19"
-        },
-        {
-          "name": "ANTOINE GRIEZMANN",
-          "position": "FWD",
-          "number": "7"
         }
       ]
     ]
@@ -1293,12 +693,17 @@
       ],
       [
         {
+          "name": "SANTIAGO ARIAS",
+          "position": "DEF",
+          "number": "4"
+        },
+        {
           "name": "DIEGO GODÍN",
           "position": "DEF",
           "number": "2"
         },
         {
-          "name": "JOSÉ GIMÉNEZ",
+          "name": "J. GIMÉNEZ",
           "position": "DEF",
           "number": "24"
         },
@@ -1306,193 +711,38 @@
           "name": "FILIPE LUÍS",
           "position": "DEF",
           "number": "3"
-        },
-        {
-          "name": "SANTIAGO ARIAS",
-          "position": "DEF",
-          "number": "4"
         }
       ],
       [
         {
-          "name": "SAÚL ÑÍGUEZ",
+          "name": "Á. CORREA",
           "position": "MID",
-          "number": "8"
+          "number": "10"
         },
         {
           "name": "RODRI",
           "position": "MID",
           "number": "14"
+        },
+        {
+          "name": "SAÚL ÑÍGUEZ",
+          "position": "MID",
+          "number": "8"
         },
         {
           "name": "VITOLO",
           "position": "MID",
           "number": "23"
-        },
-        {
-          "name": "ÁNGEL CORREA",
-          "position": "MID",
-          "number": "10"
         }
       ],
       [
         {
-          "name": "ÁLVARO MORATA",
-          "position": "FWD",
-          "number": "22"
-        },
-        {
-          "name": "ANTOINE GRIEZMANN",
-          "position": "FWD",
-          "number": "7"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2018-19",
-    "homeTeam": "LEVANTE",
-    "awayTeam": "ATLETICO MADRID",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "2-2",
-    "date": "18 de mayo 2019",
-    "playingTeam": "ATLETICO MADRID",
-    "formation": [
-      [
-        {
-          "name": "ANTONIO ADÁN",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "JAVI MONTERO",
-          "position": "DEF",
-          "number": "35"
-        },
-        {
-          "name": "DIEGO GODÍN",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "FILIPE LUÍS",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "JUANFRAN",
-          "position": "DEF",
-          "number": "20"
-        }
-      ],
-      [
-        {
-          "name": "THOMAS PARTEY",
-          "position": "MID",
-          "number": "5"
-        },
-        {
-          "name": "RODRI",
-          "position": "MID",
-          "number": "14"
-        },
-        {
-          "name": "KOKE",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "THOMAS LEMAR",
-          "position": "MID",
-          "number": "11"
-        }
-      ],
-      [
-        {
-          "name": "ÁNGEL CORREA",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "ANTOINE GRIEZMANN",
-          "position": "FWD",
-          "number": "7"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2018-19",
-    "homeTeam": "REAL SOCIEDAD",
-    "awayTeam": "ATLETICO MADRID",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "0-2",
-    "date": "03 de marzo 2019",
-    "playingTeam": "ATLETICO MADRID",
-    "formation": [
-      [
-        {
-          "name": "JAN OBLAK",
-          "position": "GK",
-          "number": "13"
-        }
-      ],
-      [
-        {
-          "name": "DIEGO GODÍN",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "JOSÉ GIMÉNEZ",
-          "position": "DEF",
-          "number": "24"
-        },
-        {
-          "name": "FILIPE LUÍS",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "JUANFRAN",
-          "position": "DEF",
-          "number": "20"
-        }
-      ],
-      [
-        {
-          "name": "SAÚL ÑÍGUEZ",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "RODRI",
-          "position": "MID",
-          "number": "14"
-        },
-        {
-          "name": "THOMAS LEMAR",
-          "position": "MID",
-          "number": "11"
-        },
-        {
-          "name": "KOKE",
-          "position": "MID",
-          "number": "6"
-        }
-      ],
-      [
-        {
-          "name": "ANTOINE GRIEZMANN",
+          "name": "A. GRIEZMANN",
           "position": "FWD",
           "number": "7"
         },
         {
-          "name": "ÁLVARO MORATA",
+          "name": "Á. MORATA",
           "position": "FWD",
           "number": "22"
         }
@@ -1513,63 +763,63 @@
         {
           "name": "JAN OBLAK",
           "position": "GK",
-          "number": "1"
+          "number": "13"
         }
       ],
       [
         {
-          "name": "JOSÉ GIMÉNEZ",
+          "name": "SANTIAGO ARIAS",
+          "position": "DEF",
+          "number": "4"
+        },
+        {
+          "name": "J. GIMÉNEZ",
           "position": "DEF",
           "number": "2"
         },
         {
           "name": "STEFAN SAVIC",
           "position": "DEF",
-          "number": "3"
+          "number": "15"
         },
         {
           "name": "RENAN LODI",
           "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "SANTIAGO ARIAS",
-          "position": "DEF",
-          "number": "5"
+          "number": "12"
         }
       ],
       [
         {
-          "name": "SAÚL ÑÍGUEZ",
+          "name": "KOKE",
           "position": "MID",
           "number": "6"
         },
         {
-          "name": "HÉCTOR HERRERA",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "KOKE",
+          "name": "SAÚL ÑÍGUEZ",
           "position": "MID",
           "number": "8"
         },
         {
-          "name": "ÁNGEL CORREA",
+          "name": "H. HERRERA",
           "position": "MID",
-          "number": "9"
+          "number": "16"
+        },
+        {
+          "name": "JOÃO FÉLIX",
+          "position": "MID",
+          "number": "7"
         }
       ],
       [
         {
-          "name": "DIEGO COSTA",
+          "name": "Á. CORREA",
           "position": "FWD",
           "number": "10"
         },
         {
-          "name": "JOÃO FÉLIX",
+          "name": "DIEGO COSTA",
           "position": "FWD",
-          "number": "11"
+          "number": "19"
         }
       ]
     ]
@@ -1588,213 +838,63 @@
         {
           "name": "JAN OBLAK",
           "position": "GK",
-          "number": "1"
+          "number": "13"
         }
       ],
       [
-        {
-          "name": "JOSÉ GIMÉNEZ",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "FELIPE",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "RENAN LODI",
-          "position": "DEF",
-          "number": "4"
-        },
         {
           "name": "SANTIAGO ARIAS",
           "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "THOMAS PARTEY",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "SAÚL ÑÍGUEZ",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "YANNICK CARRASCO",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "ÁNGEL CORREA",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "DIEGO COSTA",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "MARCOS LLORENTE",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2019-20",
-    "homeTeam": "ATLETICO MADRID",
-    "awayTeam": "ESPANYOL",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "3-1",
-    "date": "10 de noviembre 2019",
-    "playingTeam": "ATLETICO MADRID",
-    "formation": [
-      [
-        {
-          "name": "JAN OBLAK",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "FELIPE",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "MARIO HERMOSO",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "SAÚL ÑÍGUEZ",
-          "position": "DEF",
           "number": "4"
         },
         {
-          "name": "KIERAN TRIPPIER",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "HÉCTOR HERRERA",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "THOMAS PARTEY",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "KOKE",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "ÁNGEL CORREA",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "VITOLO",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "ÁLVARO MORATA",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2019-20",
-    "homeTeam": "ATLETICO MADRID",
-    "awayTeam": "ATHLETIC CLUB",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "2-0",
-    "date": "26 de octubre 2019",
-    "playingTeam": "ATLETICO MADRID",
-    "formation": [
-      [
-        {
-          "name": "JAN OBLAK",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "MARIO HERMOSO",
+          "name": "J. GIMÉNEZ",
           "position": "DEF",
           "number": "2"
         },
         {
           "name": "FELIPE",
           "position": "DEF",
-          "number": "3"
+          "number": "18"
         },
         {
           "name": "RENAN LODI",
           "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "KIERAN TRIPPIER",
-          "position": "DEF",
-          "number": "5"
+          "number": "12"
         }
       ],
       [
         {
-          "name": "THOMAS PARTEY",
+          "name": "M. LLORENTE",
           "position": "MID",
-          "number": "6"
+          "number": "14"
+        },
+        {
+          "name": "T. PARTEY",
+          "position": "MID",
+          "number": "5"
         },
         {
           "name": "SAÚL ÑÍGUEZ",
           "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "THOMAS LEMAR",
-          "position": "MID",
           "number": "8"
         },
         {
-          "name": "KOKE",
+          "name": "Y. CARRASCO",
           "position": "MID",
-          "number": "9"
+          "number": "21"
         }
       ],
       [
         {
-          "name": "ÁLVARO MORATA",
+          "name": "Á. CORREA",
           "position": "FWD",
           "number": "10"
         },
         {
-          "name": "ÁNGEL CORREA",
+          "name": "DIEGO COSTA",
           "position": "FWD",
-          "number": "11"
+          "number": "19"
         }
       ]
     ]
@@ -1813,63 +913,63 @@
         {
           "name": "JAN OBLAK",
           "position": "GK",
-          "number": "1"
+          "number": "13"
         }
       ],
       [
         {
-          "name": "STEFAN SAVIC",
+          "name": "K. TRIPPIER",
           "position": "DEF",
-          "number": "2"
+          "number": "23"
         },
         {
-          "name": "MARIO HERMOSO",
+          "name": "STEFAN SAVIC",
           "position": "DEF",
-          "number": "3"
+          "number": "15"
+        },
+        {
+          "name": "M. HERMOSO",
+          "position": "DEF",
+          "number": "22"
         },
         {
           "name": "MANU SÁNCHEZ",
           "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "KIERAN TRIPPIER",
-          "position": "DEF",
-          "number": "5"
+          "number": "3"
         }
       ],
       [
+        {
+          "name": "Á. CORREA",
+          "position": "MID",
+          "number": "10"
+        },
         {
           "name": "KOKE",
           "position": "MID",
           "number": "6"
         },
         {
-          "name": "LUCAS TORREIRA",
+          "name": "L. TORREIRA",
           "position": "MID",
-          "number": "7"
+          "number": "5"
         },
         {
-          "name": "THOMAS LEMAR",
+          "name": "T. LEMAR",
           "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "ÁNGEL CORREA",
-          "position": "MID",
-          "number": "9"
+          "number": "11"
         }
       ],
       [
         {
           "name": "DIEGO COSTA",
           "position": "FWD",
-          "number": "10"
+          "number": "19"
         },
         {
           "name": "LUIS SUÁREZ",
           "position": "FWD",
-          "number": "11"
+          "number": "9"
         }
       ]
     ]
@@ -1888,213 +988,63 @@
         {
           "name": "JAN OBLAK",
           "position": "GK",
-          "number": "1"
+          "number": "13"
         }
       ],
       [
         {
-          "name": "JOSÉ GIMÉNEZ",
+          "name": "K. TRIPPIER",
+          "position": "DEF",
+          "number": "23"
+        },
+        {
+          "name": "J. GIMÉNEZ",
           "position": "DEF",
           "number": "2"
         },
         {
           "name": "FELIPE",
           "position": "DEF",
-          "number": "3"
+          "number": "18"
         },
         {
-          "name": "MARIO HERMOSO",
+          "name": "M. HERMOSO",
           "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "KIERAN TRIPPIER",
-          "position": "DEF",
-          "number": "5"
+          "number": "22"
         }
       ],
       [
         {
-          "name": "MARCOS LLORENTE",
+          "name": "M. LLORENTE",
           "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "SAÚL ÑÍGUEZ",
-          "position": "MID",
-          "number": "7"
+          "number": "14"
         },
         {
           "name": "KOKE",
           "position": "MID",
-          "number": "8"
-        }
-      ],
-      [
-        {
-          "name": "LUIS SUÁREZ",
-          "position": "FWD",
-          "number": "9"
-        },
-        {
-          "name": "YANNICK CARRASCO",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "ÁNGEL CORREA",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2020-21",
-    "homeTeam": "ATLETICO MADRID",
-    "awayTeam": "REAL BETIS",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "1-0",
-    "date": "11 de julio 2020",
-    "playingTeam": "ATLETICO MADRID",
-    "formation": [
-      [
-        {
-          "name": "JAN OBLAK",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "MARIO HERMOSO",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "STEFAN SAVIC",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "RENAN LODI",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "KIERAN TRIPPIER",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "SAÚL ÑÍGUEZ",
-          "position": "MID",
           "number": "6"
         },
         {
-          "name": "THOMAS PARTEY",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "KOKE",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "ÁNGEL CORREA",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "ÁLVARO MORATA",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "MARCOS LLORENTE",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2020-21",
-    "homeTeam": "EIBAR",
-    "awayTeam": "ATLETICO MADRID",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "1-2",
-    "date": "21 de enero 2021",
-    "playingTeam": "ATLETICO MADRID",
-    "formation": [
-      [
-        {
-          "name": "JAN OBLAK",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "JOSÉ GIMÉNEZ",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "FELIPE",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "STEFAN SAVIC",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
           "name": "SAÚL ÑÍGUEZ",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "THOMAS LEMAR",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "MARCOS LLORENTE",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "YANNICK CARRASCO",
           "position": "MID",
           "number": "8"
         },
         {
-          "name": "SIME VRSALJKO",
+          "name": "Y. CARRASCO",
           "position": "MID",
-          "number": "9"
+          "number": "21"
         }
       ],
       [
         {
-          "name": "ÁNGEL CORREA",
+          "name": "Á. CORREA",
           "position": "FWD",
           "number": "10"
         },
         {
           "name": "LUIS SUÁREZ",
           "position": "FWD",
-          "number": "11"
+          "number": "9"
         }
       ]
     ]
@@ -2113,63 +1063,63 @@
         {
           "name": "JAN OBLAK",
           "position": "GK",
-          "number": "1"
+          "number": "13"
         }
       ],
       [
-        {
-          "name": "STEFAN SAVIC",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "REINILDO",
-          "position": "DEF",
-          "number": "3"
-        },
         {
           "name": "FELIPE",
           "position": "DEF",
-          "number": "4"
+          "number": "18"
         },
         {
-          "name": "GEOFFREY KONDOGBIA",
+          "name": "STEFAN SAVIC",
           "position": "DEF",
-          "number": "5"
+          "number": "15"
+        },
+        {
+          "name": "R. MANDAVA",
+          "position": "DEF",
+          "number": "23"
         }
       ],
       [
+        {
+          "name": "M. LLORENTE",
+          "position": "MID",
+          "number": "14"
+        },
+        {
+          "name": "KONDOGBIA",
+          "position": "MID",
+          "number": "4"
+        },
         {
           "name": "KOKE",
           "position": "MID",
           "number": "6"
         },
         {
-          "name": "RODRIGO DE PAUL",
+          "name": "R. DE PAUL",
           "position": "MID",
-          "number": "7"
+          "number": "5"
         },
         {
-          "name": "YANNICK CARRASCO",
+          "name": "Y. CARRASCO",
           "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "MARCOS LLORENTE",
-          "position": "MID",
-          "number": "9"
+          "number": "21"
         }
       ],
       [
         {
-          "name": "MATHEUS CUNHA",
+          "name": "A. GRIEZMANN",
           "position": "FWD",
-          "number": "10"
+          "number": "8"
         },
         {
-          "name": "ANTOINE GRIEZMANN",
+          "name": "M. CUNHA",
           "position": "FWD",
-          "number": "11"
+          "number": "19"
         }
       ]
     ]
@@ -2188,213 +1138,63 @@
         {
           "name": "JAN OBLAK",
           "position": "GK",
-          "number": "1"
+          "number": "13"
         }
       ],
       [
         {
-          "name": "JOSÉ GIMÉNEZ",
+          "name": "S. VRSALJKO",
+          "position": "DEF",
+          "number": "24"
+        },
+        {
+          "name": "J. GIMÉNEZ",
           "position": "DEF",
           "number": "2"
         },
         {
           "name": "STEFAN SAVIC",
           "position": "DEF",
-          "number": "3"
+          "number": "15"
         },
         {
-          "name": "REINILDO",
+          "name": "R. MANDAVA",
           "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "SIME VRSALJKO",
-          "position": "DEF",
-          "number": "5"
+          "number": "23"
         }
       ],
       [
+        {
+          "name": "M. LLORENTE",
+          "position": "MID",
+          "number": "14"
+        },
         {
           "name": "KOKE",
           "position": "MID",
           "number": "6"
         },
         {
-          "name": "HÉCTOR HERRERA",
+          "name": "H. HERRERA",
           "position": "MID",
-          "number": "7"
+          "number": "16"
         },
         {
-          "name": "YANNICK CARRASCO",
+          "name": "Y. CARRASCO",
           "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "MARCOS LLORENTE",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "LUIS SUÁREZ",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "JOÃO FÉLIX",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2021-22",
-    "homeTeam": "ATLETICO MADRID",
-    "awayTeam": "VALENCIA",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "3-2",
-    "date": "22 de enero 2022",
-    "playingTeam": "ATLETICO MADRID",
-    "formation": [
-      [
-        {
-          "name": "JAN OBLAK",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "JOSÉ GIMÉNEZ",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "MARIO HERMOSO",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "RENAN LODI",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "SIME VRSALJKO",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "RODRIGO DE PAUL",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "KOKE",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "THOMAS LEMAR",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "YANNICK CARRASCO",
-          "position": "MID",
-          "number": "9"
+          "number": "21"
         }
       ],
       [
         {
           "name": "JOÃO FÉLIX",
           "position": "FWD",
-          "number": "10"
+          "number": "7"
         },
         {
           "name": "LUIS SUÁREZ",
           "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2021-22",
-    "homeTeam": "ATLETICO MADRID",
-    "awayTeam": "CELTA VIGO",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "2-0",
-    "date": "26 de febrero 2022",
-    "playingTeam": "ATLETICO MADRID",
-    "formation": [
-      [
-        {
-          "name": "JAN OBLAK",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "JOSÉ GIMÉNEZ",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "STEFAN SAVIC",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "REINILDO",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "RENAN LODI",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "SIME VRSALJKO",
-          "position": "DEF",
-          "number": "6"
-        }
-      ],
-      [
-        {
-          "name": "MARCOS LLORENTE",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "HÉCTOR HERRERA",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "GEOFFREY KONDOGBIA",
-          "position": "MID",
           "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "ÁNGEL CORREA",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "JOÃO FÉLIX",
-          "position": "FWD",
-          "number": "11"
         }
       ]
     ]
@@ -2413,63 +1213,63 @@
         {
           "name": "JAN OBLAK",
           "position": "GK",
-          "number": "1"
+          "number": "13"
         }
       ],
       [
         {
-          "name": "STEFAN SAVIC",
+          "name": "N. MOLINA",
+          "position": "DEF",
+          "number": "16"
+        },
+        {
+          "name": "J. GIMÉNEZ",
           "position": "DEF",
           "number": "2"
         },
         {
-          "name": "REINILDO",
+          "name": "STEFAN SAVIC",
           "position": "DEF",
-          "number": "3"
+          "number": "15"
         },
         {
-          "name": "JOSÉ GIMÉNEZ",
+          "name": "R. MANDAVA",
           "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "YANNICK CARRASCO",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "NAHUEL MOLINA",
-          "position": "DEF",
-          "number": "6"
+          "number": "23"
         }
       ],
       [
         {
+          "name": "Á. CORREA",
+          "position": "MID",
+          "number": "10"
+        },
+        {
           "name": "KOKE",
           "position": "MID",
-          "number": "7"
+          "number": "6"
         },
         {
           "name": "AXEL WITSEL",
           "position": "MID",
-          "number": "8"
+          "number": "20"
         },
         {
-          "name": "ANTOINE GRIEZMANN",
+          "name": "Y. CARRASCO",
           "position": "MID",
-          "number": "9"
-        },
-        {
-          "name": "ÁNGEL CORREA",
-          "position": "MID",
-          "number": "10"
+          "number": "21"
         }
       ],
       [
         {
-          "name": "MATHEUS CUNHA",
+          "name": "A. GRIEZMANN",
           "position": "FWD",
-          "number": "11"
+          "number": "8"
+        },
+        {
+          "name": "M. CUNHA",
+          "position": "FWD",
+          "number": "19"
         }
       ]
     ]
@@ -2488,213 +1288,63 @@
         {
           "name": "JAN OBLAK",
           "position": "GK",
-          "number": "1"
+          "number": "13"
         }
       ],
       [
         {
-          "name": "MARIO HERMOSO",
+          "name": "M. LLORENTE",
+          "position": "DEF",
+          "number": "14"
+        },
+        {
+          "name": "J. GIMÉNEZ",
           "position": "DEF",
           "number": "2"
         },
         {
-          "name": "JOSÉ GIMÉNEZ",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
           "name": "STEFAN SAVIC",
           "position": "DEF",
-          "number": "4"
+          "number": "15"
         },
         {
-          "name": "YANNICK CARRASCO",
+          "name": "M. HERMOSO",
           "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "MARCOS LLORENTE",
-          "position": "DEF",
-          "number": "6"
+          "number": "22"
         }
       ],
       [
         {
-          "name": "ANTOINE GRIEZMANN",
+          "name": "A. GRIEZMANN",
           "position": "MID",
-          "number": "7"
+          "number": "8"
         },
+        {
+          "name": "P. BARRIOS",
+          "position": "MID",
+          "number": "24"
+        },
+        {
+          "name": "KONDOGBIA",
+          "position": "MID",
+          "number": "4"
+        },
+        {
+          "name": "Y. CARRASCO",
+          "position": "MID",
+          "number": "21"
+        }
+      ],
+      [
         {
           "name": "JOÃO FÉLIX",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "PABLO BARRIOS",
-          "position": "MID",
-          "number": "9"
-        },
-        {
-          "name": "GEOFFREY KONDOGBIA",
-          "position": "MID",
-          "number": "10"
-        }
-      ],
-      [
-        {
-          "name": "ÁLVARO MORATA",
           "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2022-23",
-    "homeTeam": "SEVILLA",
-    "awayTeam": "ATLETICO MADRID",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "0-2",
-    "date": "01 de octubre 2022",
-    "playingTeam": "ATLETICO MADRID",
-    "formation": [
-      [
-        {
-          "name": "JAN OBLAK",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "STEFAN SAVIC",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "JOSÉ GIMÉNEZ",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "REINILDO",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "AXEL WITSEL",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "NAHUEL MOLINA",
-          "position": "DEF",
-          "number": "6"
-        }
-      ],
-      [
-        {
-          "name": "KOKE",
-          "position": "MID",
           "number": "7"
         },
         {
-          "name": "SAÚL ÑÍGUEZ",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "MATHEUS CUNHA",
-          "position": "MID",
-          "number": "9"
-        },
-        {
-          "name": "MARCOS LLORENTE",
-          "position": "MID",
-          "number": "10"
-        }
-      ],
-      [
-        {
-          "name": "ÁLVARO MORATA",
+          "name": "Á. MORATA",
           "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2022-23",
-    "homeTeam": "ATLETICO MADRID",
-    "awayTeam": "ALMERIA",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "2-1",
-    "date": "16 de abril 2023",
-    "playingTeam": "ATLETICO MADRID",
-    "formation": [
-      [
-        {
-          "name": "JAN OBLAK",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "AXEL WITSEL",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "JOSÉ GIMÉNEZ",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "MARIO HERMOSO",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "YANNICK CARRASCO",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "NAHUEL MOLINA",
-          "position": "DEF",
-          "number": "6"
-        }
-      ],
-      [
-        {
-          "name": "KOKE",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "RODRIGO DE PAUL",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "MARCOS LLORENTE",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "ÁNGEL CORREA",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "ANTOINE GRIEZMANN",
-          "position": "FWD",
-          "number": "11"
+          "number": "19"
         }
       ]
     ]
