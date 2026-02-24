@@ -18,14 +18,9 @@
       ],
       [
         {
-          "name": "JESÚS GÁMEZ",
+          "name": "G. SIQUEIRA",
           "position": "DEF",
-          "number": "18"
-        },
-        {
-          "name": "J. GIMÉNEZ",
-          "position": "DEF",
-          "number": "24"
+          "number": "3"
         },
         {
           "name": "J. MIRANDA",
@@ -33,21 +28,21 @@
           "number": "23"
         },
         {
-          "name": "G. SIQUEIRA",
+          "name": "J. GIMÉNEZ",
           "position": "DEF",
-          "number": "3"
+          "number": "24"
+        },
+        {
+          "name": "JESÚS GÁMEZ",
+          "position": "DEF",
+          "number": "18"
         }
       ],
       [
         {
-          "name": "KOKE",
+          "name": "A. TURAN",
           "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "MARIO SUÁREZ",
-          "position": "MID",
-          "number": "4"
+          "number": "10"
         },
         {
           "name": "TIAGO",
@@ -55,21 +50,26 @@
           "number": "5"
         },
         {
-          "name": "A. TURAN",
+          "name": "MARIO SUÁREZ",
           "position": "MID",
-          "number": "10"
+          "number": "4"
+        },
+        {
+          "name": "KOKE",
+          "position": "MID",
+          "number": "6"
         }
       ],
       [
         {
-          "name": "FERNANDO TORRES",
-          "position": "FWD",
-          "number": "19"
-        },
-        {
           "name": "A. GRIEZMANN",
           "position": "FWD",
           "number": "7"
+        },
+        {
+          "name": "FERNANDO TORRES",
+          "position": "FWD",
+          "number": "19"
         }
       ]
     ]
@@ -93,14 +93,9 @@
       ],
       [
         {
-          "name": "JUANFRAN",
+          "name": "G. SIQUEIRA",
           "position": "DEF",
-          "number": "20"
-        },
-        {
-          "name": "J. GIMÉNEZ",
-          "position": "DEF",
-          "number": "24"
+          "number": "3"
         },
         {
           "name": "J. MIRANDA",
@@ -108,21 +103,21 @@
           "number": "23"
         },
         {
-          "name": "G. SIQUEIRA",
+          "name": "J. GIMÉNEZ",
           "position": "DEF",
-          "number": "3"
+          "number": "24"
+        },
+        {
+          "name": "JUANFRAN",
+          "position": "DEF",
+          "number": "20"
         }
       ],
       [
         {
-          "name": "KOKE",
+          "name": "A. TURAN",
           "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "GABI",
-          "position": "MID",
-          "number": "14"
+          "number": "10"
         },
         {
           "name": "TIAGO",
@@ -130,21 +125,26 @@
           "number": "5"
         },
         {
-          "name": "A. TURAN",
+          "name": "GABI",
           "position": "MID",
-          "number": "10"
+          "number": "14"
+        },
+        {
+          "name": "KOKE",
+          "position": "MID",
+          "number": "6"
         }
       ],
       [
         {
-          "name": "A. GRIEZMANN",
-          "position": "FWD",
-          "number": "7"
-        },
-        {
           "name": "M. MANDŽUKIĆ",
           "position": "FWD",
           "number": "9"
+        },
+        {
+          "name": "A. GRIEZMANN",
+          "position": "FWD",
+          "number": "7"
         }
       ]
     ]
@@ -168,14 +168,9 @@
       ],
       [
         {
-          "name": "JUANFRAN",
+          "name": "FILIPE LUÍS",
           "position": "DEF",
-          "number": "20"
-        },
-        {
-          "name": "DIEGO GODÍN",
-          "position": "DEF",
-          "number": "2"
+          "number": "3"
         },
         {
           "name": "STEFAN SAVIC",
@@ -183,21 +178,21 @@
           "number": "15"
         },
         {
-          "name": "FILIPE LUÍS",
+          "name": "DIEGO GODÍN",
           "position": "DEF",
-          "number": "3"
+          "number": "2"
+        },
+        {
+          "name": "JUANFRAN",
+          "position": "DEF",
+          "number": "20"
         }
       ],
       [
         {
-          "name": "KOKE",
+          "name": "ÁNGEL CORREA",
           "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "GABI",
-          "position": "MID",
-          "number": "14"
+          "number": "16"
         },
         {
           "name": "SAÚL ÑÍGUEZ",
@@ -205,21 +200,26 @@
           "number": "17"
         },
         {
-          "name": "ÁNGEL CORREA",
+          "name": "GABI",
           "position": "MID",
-          "number": "16"
+          "number": "14"
+        },
+        {
+          "name": "KOKE",
+          "position": "MID",
+          "number": "6"
         }
       ],
       [
         {
-          "name": "A. GRIEZMANN",
-          "position": "FWD",
-          "number": "7"
-        },
-        {
           "name": "FERNANDO TORRES",
           "position": "FWD",
           "number": "9"
+        },
+        {
+          "name": "A. GRIEZMANN",
+          "position": "FWD",
+          "number": "7"
         }
       ]
     ]
@@ -243,14 +243,9 @@
       ],
       [
         {
-          "name": "JUANFRAN",
+          "name": "FILIPE LUÍS",
           "position": "DEF",
-          "number": "20"
-        },
-        {
-          "name": "DIEGO GODÍN",
-          "position": "DEF",
-          "number": "2"
+          "number": "3"
         },
         {
           "name": "J. GIMÉNEZ",
@@ -258,21 +253,21 @@
           "number": "24"
         },
         {
-          "name": "FILIPE LUÍS",
+          "name": "DIEGO GODÍN",
           "position": "DEF",
-          "number": "3"
+          "number": "2"
+        },
+        {
+          "name": "JUANFRAN",
+          "position": "DEF",
+          "number": "20"
         }
       ],
       [
         {
-          "name": "KOKE",
+          "name": "ÓLIVER TORRES",
           "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "SAÚL ÑÍGUEZ",
-          "position": "MID",
-          "number": "17"
+          "number": "10"
         },
         {
           "name": "TIAGO",
@@ -280,21 +275,26 @@
           "number": "5"
         },
         {
-          "name": "ÓLIVER TORRES",
+          "name": "SAÚL ÑÍGUEZ",
           "position": "MID",
-          "number": "10"
+          "number": "17"
+        },
+        {
+          "name": "KOKE",
+          "position": "MID",
+          "number": "6"
         }
       ],
       [
         {
-          "name": "A. GRIEZMANN",
-          "position": "FWD",
-          "number": "7"
-        },
-        {
           "name": "L. VIETTO",
           "position": "FWD",
           "number": "23"
+        },
+        {
+          "name": "A. GRIEZMANN",
+          "position": "FWD",
+          "number": "7"
         }
       ]
     ]
@@ -318,14 +318,9 @@
       ],
       [
         {
-          "name": "SIME VRSALJKO",
+          "name": "FILIPE LUÍS",
           "position": "DEF",
-          "number": "16"
-        },
-        {
-          "name": "DIEGO GODÍN",
-          "position": "DEF",
-          "number": "2"
+          "number": "3"
         },
         {
           "name": "STEFAN SAVIC",
@@ -333,26 +328,21 @@
           "number": "15"
         },
         {
-          "name": "FILIPE LUÍS",
+          "name": "DIEGO GODÍN",
           "position": "DEF",
-          "number": "3"
+          "number": "2"
+        },
+        {
+          "name": "SIME VRSALJKO",
+          "position": "DEF",
+          "number": "16"
         }
       ],
       [
         {
-          "name": "KOKE",
+          "name": "A. GRIEZMANN",
           "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "GABI",
-          "position": "MID",
-          "number": "14"
-        },
-        {
-          "name": "J. GIMÉNEZ",
-          "position": "MID",
-          "number": "24"
+          "number": "7"
         },
         {
           "name": "SAÚL ÑÍGUEZ",
@@ -360,9 +350,19 @@
           "number": "8"
         },
         {
-          "name": "A. GRIEZMANN",
+          "name": "J. GIMÉNEZ",
           "position": "MID",
-          "number": "7"
+          "number": "24"
+        },
+        {
+          "name": "GABI",
+          "position": "MID",
+          "number": "14"
+        },
+        {
+          "name": "KOKE",
+          "position": "MID",
+          "number": "6"
         }
       ],
       [
@@ -393,14 +393,9 @@
       ],
       [
         {
-          "name": "SIME VRSALJKO",
+          "name": "FILIPE LUÍS",
           "position": "DEF",
-          "number": "16"
-        },
-        {
-          "name": "STEFAN SAVIC",
-          "position": "DEF",
-          "number": "15"
+          "number": "3"
         },
         {
           "name": "LUCAS HERNÁNDEZ",
@@ -408,21 +403,21 @@
           "number": "19"
         },
         {
-          "name": "FILIPE LUÍS",
+          "name": "STEFAN SAVIC",
           "position": "DEF",
-          "number": "3"
+          "number": "15"
+        },
+        {
+          "name": "SIME VRSALJKO",
+          "position": "DEF",
+          "number": "16"
         }
       ],
       [
         {
-          "name": "KOKE",
+          "name": "Y. CARRASCO",
           "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "GABI",
-          "position": "MID",
-          "number": "14"
+          "number": "10"
         },
         {
           "name": "SAÚL ÑÍGUEZ",
@@ -430,21 +425,26 @@
           "number": "8"
         },
         {
-          "name": "Y. CARRASCO",
+          "name": "GABI",
           "position": "MID",
-          "number": "10"
+          "number": "14"
+        },
+        {
+          "name": "KOKE",
+          "position": "MID",
+          "number": "6"
         }
       ],
       [
         {
-          "name": "A. GRIEZMANN",
-          "position": "FWD",
-          "number": "7"
-        },
-        {
           "name": "K. GAMEIRO",
           "position": "FWD",
           "number": "21"
+        },
+        {
+          "name": "A. GRIEZMANN",
+          "position": "FWD",
+          "number": "7"
         }
       ]
     ]
@@ -468,14 +468,9 @@
       ],
       [
         {
-          "name": "JUANFRAN",
+          "name": "FILIPE LUÍS",
           "position": "DEF",
-          "number": "20"
-        },
-        {
-          "name": "DIEGO GODÍN",
-          "position": "DEF",
-          "number": "2"
+          "number": "3"
         },
         {
           "name": "STEFAN SAVIC",
@@ -483,21 +478,21 @@
           "number": "15"
         },
         {
-          "name": "FILIPE LUÍS",
+          "name": "DIEGO GODÍN",
           "position": "DEF",
-          "number": "3"
+          "number": "2"
+        },
+        {
+          "name": "JUANFRAN",
+          "position": "DEF",
+          "number": "20"
         }
       ],
       [
         {
-          "name": "KOKE",
+          "name": "Y. CARRASCO",
           "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "GABI",
-          "position": "MID",
-          "number": "14"
+          "number": "10"
         },
         {
           "name": "SAÚL ÑÍGUEZ",
@@ -505,21 +500,26 @@
           "number": "8"
         },
         {
-          "name": "Y. CARRASCO",
+          "name": "GABI",
           "position": "MID",
-          "number": "10"
+          "number": "14"
+        },
+        {
+          "name": "KOKE",
+          "position": "MID",
+          "number": "6"
         }
       ],
       [
         {
-          "name": "Á. CORREA",
-          "position": "FWD",
-          "number": "11"
-        },
-        {
           "name": "A. GRIEZMANN",
           "position": "FWD",
           "number": "7"
+        },
+        {
+          "name": "Á. CORREA",
+          "position": "FWD",
+          "number": "11"
         }
       ]
     ]
@@ -543,14 +543,9 @@
       ],
       [
         {
-          "name": "SIME VRSALJKO",
+          "name": "LUCAS HERNÁNDEZ",
           "position": "DEF",
-          "number": "16"
-        },
-        {
-          "name": "DIEGO GODÍN",
-          "position": "DEF",
-          "number": "2"
+          "number": "19"
         },
         {
           "name": "J. GIMÉNEZ",
@@ -558,21 +553,21 @@
           "number": "24"
         },
         {
-          "name": "LUCAS HERNÁNDEZ",
+          "name": "DIEGO GODÍN",
           "position": "DEF",
-          "number": "19"
+          "number": "2"
+        },
+        {
+          "name": "SIME VRSALJKO",
+          "position": "DEF",
+          "number": "16"
         }
       ],
       [
         {
-          "name": "KOKE",
+          "name": "VITOLO",
           "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "GABI",
-          "position": "MID",
-          "number": "14"
+          "number": "23"
         },
         {
           "name": "SAÚL ÑÍGUEZ",
@@ -580,21 +575,26 @@
           "number": "8"
         },
         {
-          "name": "VITOLO",
+          "name": "GABI",
           "position": "MID",
-          "number": "23"
+          "number": "14"
+        },
+        {
+          "name": "KOKE",
+          "position": "MID",
+          "number": "6"
         }
       ],
       [
         {
-          "name": "A. GRIEZMANN",
-          "position": "FWD",
-          "number": "7"
-        },
-        {
           "name": "DIEGO COSTA",
           "position": "FWD",
           "number": "18"
+        },
+        {
+          "name": "A. GRIEZMANN",
+          "position": "FWD",
+          "number": "7"
         }
       ]
     ]
@@ -618,14 +618,9 @@
       ],
       [
         {
-          "name": "SANTIAGO ARIAS",
+          "name": "FILIPE LUÍS",
           "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "DIEGO GODÍN",
-          "position": "DEF",
-          "number": "2"
+          "number": "3"
         },
         {
           "name": "J. MONTERO",
@@ -633,21 +628,21 @@
           "number": "35"
         },
         {
-          "name": "FILIPE LUÍS",
+          "name": "DIEGO GODÍN",
           "position": "DEF",
-          "number": "3"
+          "number": "2"
+        },
+        {
+          "name": "SANTIAGO ARIAS",
+          "position": "DEF",
+          "number": "4"
         }
       ],
       [
         {
-          "name": "SAÚL ÑÍGUEZ",
+          "name": "Á. CORREA",
           "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "T. PARTEY",
-          "position": "MID",
-          "number": "5"
+          "number": "10"
         },
         {
           "name": "RODRI",
@@ -655,21 +650,26 @@
           "number": "14"
         },
         {
-          "name": "Á. CORREA",
+          "name": "T. PARTEY",
           "position": "MID",
-          "number": "10"
+          "number": "5"
+        },
+        {
+          "name": "SAÚL ÑÍGUEZ",
+          "position": "MID",
+          "number": "8"
         }
       ],
       [
         {
-          "name": "A. GRIEZMANN",
-          "position": "FWD",
-          "number": "7"
-        },
-        {
           "name": "DIEGO COSTA",
           "position": "FWD",
           "number": "19"
+        },
+        {
+          "name": "A. GRIEZMANN",
+          "position": "FWD",
+          "number": "7"
         }
       ]
     ]
@@ -693,14 +693,9 @@
       ],
       [
         {
-          "name": "SANTIAGO ARIAS",
+          "name": "FILIPE LUÍS",
           "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "DIEGO GODÍN",
-          "position": "DEF",
-          "number": "2"
+          "number": "3"
         },
         {
           "name": "J. GIMÉNEZ",
@@ -708,21 +703,21 @@
           "number": "24"
         },
         {
-          "name": "FILIPE LUÍS",
+          "name": "DIEGO GODÍN",
           "position": "DEF",
-          "number": "3"
+          "number": "2"
+        },
+        {
+          "name": "SANTIAGO ARIAS",
+          "position": "DEF",
+          "number": "4"
         }
       ],
       [
         {
-          "name": "Á. CORREA",
+          "name": "VITOLO",
           "position": "MID",
-          "number": "10"
-        },
-        {
-          "name": "RODRI",
-          "position": "MID",
-          "number": "14"
+          "number": "23"
         },
         {
           "name": "SAÚL ÑÍGUEZ",
@@ -730,21 +725,26 @@
           "number": "8"
         },
         {
-          "name": "VITOLO",
+          "name": "RODRI",
           "position": "MID",
-          "number": "23"
+          "number": "14"
+        },
+        {
+          "name": "Á. CORREA",
+          "position": "MID",
+          "number": "10"
         }
       ],
       [
         {
-          "name": "A. GRIEZMANN",
-          "position": "FWD",
-          "number": "7"
-        },
-        {
           "name": "Á. MORATA",
           "position": "FWD",
           "number": "22"
+        },
+        {
+          "name": "A. GRIEZMANN",
+          "position": "FWD",
+          "number": "7"
         }
       ]
     ]
@@ -768,14 +768,9 @@
       ],
       [
         {
-          "name": "SANTIAGO ARIAS",
+          "name": "RENAN LODI",
           "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "J. GIMÉNEZ",
-          "position": "DEF",
-          "number": "2"
+          "number": "12"
         },
         {
           "name": "STEFAN SAVIC",
@@ -783,21 +778,21 @@
           "number": "15"
         },
         {
-          "name": "RENAN LODI",
+          "name": "J. GIMÉNEZ",
           "position": "DEF",
-          "number": "12"
+          "number": "2"
+        },
+        {
+          "name": "SANTIAGO ARIAS",
+          "position": "DEF",
+          "number": "4"
         }
       ],
       [
         {
-          "name": "KOKE",
+          "name": "JOÃO FÉLIX",
           "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "SAÚL ÑÍGUEZ",
-          "position": "MID",
-          "number": "8"
+          "number": "7"
         },
         {
           "name": "H. HERRERA",
@@ -805,21 +800,26 @@
           "number": "16"
         },
         {
-          "name": "JOÃO FÉLIX",
+          "name": "SAÚL ÑÍGUEZ",
           "position": "MID",
-          "number": "7"
+          "number": "8"
+        },
+        {
+          "name": "KOKE",
+          "position": "MID",
+          "number": "6"
         }
       ],
       [
         {
-          "name": "Á. CORREA",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
           "name": "DIEGO COSTA",
           "position": "FWD",
           "number": "19"
+        },
+        {
+          "name": "Á. CORREA",
+          "position": "FWD",
+          "number": "10"
         }
       ]
     ]
@@ -843,14 +843,9 @@
       ],
       [
         {
-          "name": "SANTIAGO ARIAS",
+          "name": "RENAN LODI",
           "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "J. GIMÉNEZ",
-          "position": "DEF",
-          "number": "2"
+          "number": "12"
         },
         {
           "name": "FELIPE",
@@ -858,21 +853,21 @@
           "number": "18"
         },
         {
-          "name": "RENAN LODI",
+          "name": "J. GIMÉNEZ",
           "position": "DEF",
-          "number": "12"
+          "number": "2"
+        },
+        {
+          "name": "SANTIAGO ARIAS",
+          "position": "DEF",
+          "number": "4"
         }
       ],
       [
         {
-          "name": "M. LLORENTE",
+          "name": "Y. CARRASCO",
           "position": "MID",
-          "number": "14"
-        },
-        {
-          "name": "T. PARTEY",
-          "position": "MID",
-          "number": "5"
+          "number": "21"
         },
         {
           "name": "SAÚL ÑÍGUEZ",
@@ -880,21 +875,26 @@
           "number": "8"
         },
         {
-          "name": "Y. CARRASCO",
+          "name": "T. PARTEY",
           "position": "MID",
-          "number": "21"
+          "number": "5"
+        },
+        {
+          "name": "M. LLORENTE",
+          "position": "MID",
+          "number": "14"
         }
       ],
       [
         {
-          "name": "Á. CORREA",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
           "name": "DIEGO COSTA",
           "position": "FWD",
           "number": "19"
+        },
+        {
+          "name": "Á. CORREA",
+          "position": "FWD",
+          "number": "10"
         }
       ]
     ]
@@ -918,14 +918,9 @@
       ],
       [
         {
-          "name": "K. TRIPPIER",
+          "name": "MANU SÁNCHEZ",
           "position": "DEF",
-          "number": "23"
-        },
-        {
-          "name": "STEFAN SAVIC",
-          "position": "DEF",
-          "number": "15"
+          "number": "3"
         },
         {
           "name": "M. HERMOSO",
@@ -933,21 +928,21 @@
           "number": "22"
         },
         {
-          "name": "MANU SÁNCHEZ",
+          "name": "STEFAN SAVIC",
           "position": "DEF",
-          "number": "3"
+          "number": "15"
+        },
+        {
+          "name": "K. TRIPPIER",
+          "position": "DEF",
+          "number": "23"
         }
       ],
       [
         {
-          "name": "Á. CORREA",
+          "name": "T. LEMAR",
           "position": "MID",
-          "number": "10"
-        },
-        {
-          "name": "KOKE",
-          "position": "MID",
-          "number": "6"
+          "number": "11"
         },
         {
           "name": "L. TORREIRA",
@@ -955,21 +950,26 @@
           "number": "5"
         },
         {
-          "name": "T. LEMAR",
+          "name": "KOKE",
           "position": "MID",
-          "number": "11"
+          "number": "6"
+        },
+        {
+          "name": "Á. CORREA",
+          "position": "MID",
+          "number": "10"
         }
       ],
       [
         {
-          "name": "DIEGO COSTA",
-          "position": "FWD",
-          "number": "19"
-        },
-        {
           "name": "LUIS SUÁREZ",
           "position": "FWD",
           "number": "9"
+        },
+        {
+          "name": "DIEGO COSTA",
+          "position": "FWD",
+          "number": "19"
         }
       ]
     ]
@@ -993,14 +993,9 @@
       ],
       [
         {
-          "name": "K. TRIPPIER",
+          "name": "M. HERMOSO",
           "position": "DEF",
-          "number": "23"
-        },
-        {
-          "name": "J. GIMÉNEZ",
-          "position": "DEF",
-          "number": "2"
+          "number": "22"
         },
         {
           "name": "FELIPE",
@@ -1008,21 +1003,21 @@
           "number": "18"
         },
         {
-          "name": "M. HERMOSO",
+          "name": "J. GIMÉNEZ",
           "position": "DEF",
-          "number": "22"
+          "number": "2"
+        },
+        {
+          "name": "K. TRIPPIER",
+          "position": "DEF",
+          "number": "23"
         }
       ],
       [
         {
-          "name": "M. LLORENTE",
+          "name": "Y. CARRASCO",
           "position": "MID",
-          "number": "14"
-        },
-        {
-          "name": "KOKE",
-          "position": "MID",
-          "number": "6"
+          "number": "21"
         },
         {
           "name": "SAÚL ÑÍGUEZ",
@@ -1030,21 +1025,26 @@
           "number": "8"
         },
         {
-          "name": "Y. CARRASCO",
+          "name": "KOKE",
           "position": "MID",
-          "number": "21"
+          "number": "6"
+        },
+        {
+          "name": "M. LLORENTE",
+          "position": "MID",
+          "number": "14"
         }
       ],
       [
         {
-          "name": "Á. CORREA",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
           "name": "LUIS SUÁREZ",
           "position": "FWD",
           "number": "9"
+        },
+        {
+          "name": "Á. CORREA",
+          "position": "FWD",
+          "number": "10"
         }
       ]
     ]
@@ -1068,9 +1068,9 @@
       ],
       [
         {
-          "name": "FELIPE",
+          "name": "R. MANDAVA",
           "position": "DEF",
-          "number": "18"
+          "number": "23"
         },
         {
           "name": "STEFAN SAVIC",
@@ -1078,26 +1078,16 @@
           "number": "15"
         },
         {
-          "name": "R. MANDAVA",
+          "name": "FELIPE",
           "position": "DEF",
-          "number": "23"
+          "number": "18"
         }
       ],
       [
         {
-          "name": "M. LLORENTE",
+          "name": "Y. CARRASCO",
           "position": "MID",
-          "number": "14"
-        },
-        {
-          "name": "KONDOGBIA",
-          "position": "MID",
-          "number": "4"
-        },
-        {
-          "name": "KOKE",
-          "position": "MID",
-          "number": "6"
+          "number": "21"
         },
         {
           "name": "R. DE PAUL",
@@ -1105,21 +1095,31 @@
           "number": "5"
         },
         {
-          "name": "Y. CARRASCO",
+          "name": "KOKE",
           "position": "MID",
-          "number": "21"
+          "number": "6"
+        },
+        {
+          "name": "KONDOGBIA",
+          "position": "MID",
+          "number": "4"
+        },
+        {
+          "name": "M. LLORENTE",
+          "position": "MID",
+          "number": "14"
         }
       ],
       [
         {
-          "name": "A. GRIEZMANN",
-          "position": "FWD",
-          "number": "8"
-        },
-        {
           "name": "M. CUNHA",
           "position": "FWD",
           "number": "19"
+        },
+        {
+          "name": "A. GRIEZMANN",
+          "position": "FWD",
+          "number": "8"
         }
       ]
     ]
@@ -1143,14 +1143,9 @@
       ],
       [
         {
-          "name": "S. VRSALJKO",
+          "name": "R. MANDAVA",
           "position": "DEF",
-          "number": "24"
-        },
-        {
-          "name": "J. GIMÉNEZ",
-          "position": "DEF",
-          "number": "2"
+          "number": "23"
         },
         {
           "name": "STEFAN SAVIC",
@@ -1158,21 +1153,21 @@
           "number": "15"
         },
         {
-          "name": "R. MANDAVA",
+          "name": "J. GIMÉNEZ",
           "position": "DEF",
-          "number": "23"
+          "number": "2"
+        },
+        {
+          "name": "S. VRSALJKO",
+          "position": "DEF",
+          "number": "24"
         }
       ],
       [
         {
-          "name": "M. LLORENTE",
+          "name": "Y. CARRASCO",
           "position": "MID",
-          "number": "14"
-        },
-        {
-          "name": "KOKE",
-          "position": "MID",
-          "number": "6"
+          "number": "21"
         },
         {
           "name": "H. HERRERA",
@@ -1180,21 +1175,26 @@
           "number": "16"
         },
         {
-          "name": "Y. CARRASCO",
+          "name": "KOKE",
           "position": "MID",
-          "number": "21"
+          "number": "6"
+        },
+        {
+          "name": "M. LLORENTE",
+          "position": "MID",
+          "number": "14"
         }
       ],
       [
         {
-          "name": "JOÃO FÉLIX",
-          "position": "FWD",
-          "number": "7"
-        },
-        {
           "name": "LUIS SUÁREZ",
           "position": "FWD",
           "number": "9"
+        },
+        {
+          "name": "JOÃO FÉLIX",
+          "position": "FWD",
+          "number": "7"
         }
       ]
     ]
@@ -1218,14 +1218,9 @@
       ],
       [
         {
-          "name": "N. MOLINA",
+          "name": "R. MANDAVA",
           "position": "DEF",
-          "number": "16"
-        },
-        {
-          "name": "J. GIMÉNEZ",
-          "position": "DEF",
-          "number": "2"
+          "number": "23"
         },
         {
           "name": "STEFAN SAVIC",
@@ -1233,21 +1228,21 @@
           "number": "15"
         },
         {
-          "name": "R. MANDAVA",
+          "name": "J. GIMÉNEZ",
           "position": "DEF",
-          "number": "23"
+          "number": "2"
+        },
+        {
+          "name": "N. MOLINA",
+          "position": "DEF",
+          "number": "16"
         }
       ],
       [
         {
-          "name": "Á. CORREA",
+          "name": "Y. CARRASCO",
           "position": "MID",
-          "number": "10"
-        },
-        {
-          "name": "KOKE",
-          "position": "MID",
-          "number": "6"
+          "number": "21"
         },
         {
           "name": "AXEL WITSEL",
@@ -1255,21 +1250,26 @@
           "number": "20"
         },
         {
-          "name": "Y. CARRASCO",
+          "name": "KOKE",
           "position": "MID",
-          "number": "21"
+          "number": "6"
+        },
+        {
+          "name": "Á. CORREA",
+          "position": "MID",
+          "number": "10"
         }
       ],
       [
         {
-          "name": "A. GRIEZMANN",
-          "position": "FWD",
-          "number": "8"
-        },
-        {
           "name": "M. CUNHA",
           "position": "FWD",
           "number": "19"
+        },
+        {
+          "name": "A. GRIEZMANN",
+          "position": "FWD",
+          "number": "8"
         }
       ]
     ]
@@ -1293,14 +1293,9 @@
       ],
       [
         {
-          "name": "M. LLORENTE",
+          "name": "M. HERMOSO",
           "position": "DEF",
-          "number": "14"
-        },
-        {
-          "name": "J. GIMÉNEZ",
-          "position": "DEF",
-          "number": "2"
+          "number": "22"
         },
         {
           "name": "STEFAN SAVIC",
@@ -1308,21 +1303,21 @@
           "number": "15"
         },
         {
-          "name": "M. HERMOSO",
+          "name": "J. GIMÉNEZ",
           "position": "DEF",
-          "number": "22"
+          "number": "2"
+        },
+        {
+          "name": "M. LLORENTE",
+          "position": "DEF",
+          "number": "14"
         }
       ],
       [
         {
-          "name": "A. GRIEZMANN",
+          "name": "Y. CARRASCO",
           "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "P. BARRIOS",
-          "position": "MID",
-          "number": "24"
+          "number": "21"
         },
         {
           "name": "KONDOGBIA",
@@ -1330,21 +1325,26 @@
           "number": "4"
         },
         {
-          "name": "Y. CARRASCO",
+          "name": "P. BARRIOS",
           "position": "MID",
-          "number": "21"
+          "number": "24"
+        },
+        {
+          "name": "A. GRIEZMANN",
+          "position": "MID",
+          "number": "8"
         }
       ],
       [
         {
-          "name": "JOÃO FÉLIX",
-          "position": "FWD",
-          "number": "7"
-        },
-        {
           "name": "Á. MORATA",
           "position": "FWD",
           "number": "19"
+        },
+        {
+          "name": "JOÃO FÉLIX",
+          "position": "FWD",
+          "number": "7"
         }
       ]
     ]
