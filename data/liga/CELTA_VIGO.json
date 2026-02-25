@@ -18,19 +18,19 @@
       ],
       [
         {
-          "name": "G. CABRAL",
+          "name": "JONNY OTTO",
           "position": "DEF",
-          "number": "22"
+          "number": "19"
         },
         {
-          "name": "A. FONTÀS",
+          "name": "ANDREU FONTÀS",
           "position": "DEF",
           "number": "3"
         },
         {
-          "name": "JONNY",
+          "name": "GUSTAVO CABRAL",
           "position": "DEF",
-          "number": "19"
+          "number": "22"
         },
         {
           "name": "SERGI GÓMEZ",
@@ -40,19 +40,29 @@
       ],
       [
         {
-          "name": "N. RADOJA",
+          "name": "NOLITO",
+          "position": "MID",
+          "number": "10"
+        },
+        {
+          "name": "NEMANJA RADOJA",
           "position": "MID",
           "number": "6"
         },
         {
-          "name": "M. KROHN-DEHLI",
+          "name": "AUGUSTO FERNÁNDEZ",
+          "position": "MID",
+          "number": "24"
+        },
+        {
+          "name": "MICHAEL KROHN-DEHLI",
           "position": "MID",
           "number": "23"
         },
         {
-          "name": "A. FERNÁNDEZ",
+          "name": "FABIÁN ORELLANA",
           "position": "MID",
-          "number": "24"
+          "number": "14"
         }
       ],
       [
@@ -60,16 +70,6 @@
           "name": "CHARLES",
           "position": "FWD",
           "number": "9"
-        },
-        {
-          "name": "NOLITO",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "F. ORELLANA",
-          "position": "FWD",
-          "number": "14"
         }
       ]
     ]
@@ -93,19 +93,19 @@
       ],
       [
         {
-          "name": "G. CABRAL",
+          "name": "JONNY OTTO",
           "position": "DEF",
-          "number": "22"
+          "number": "19"
         },
         {
-          "name": "A. FONTÀS",
+          "name": "ANDREU FONTÀS",
           "position": "DEF",
           "number": "3"
         },
         {
-          "name": "JONNY",
+          "name": "GUSTAVO CABRAL",
           "position": "DEF",
-          "number": "19"
+          "number": "22"
         },
         {
           "name": "HUGO MALLO",
@@ -115,9 +115,9 @@
       ],
       [
         {
-          "name": "A. FERNÁNDEZ",
+          "name": "NOLITO",
           "position": "MID",
-          "number": "24"
+          "number": "10"
         },
         {
           "name": "ÁLEX LÓPEZ",
@@ -125,101 +125,26 @@
           "number": "8"
         },
         {
-          "name": "M. KROHN-DEHLI",
+          "name": "AUGUSTO FERNÁNDEZ",
+          "position": "MID",
+          "number": "24"
+        },
+        {
+          "name": "MICHAEL KROHN-DEHLI",
           "position": "MID",
           "number": "23"
-        }
-      ],
-      [
-        {
-          "name": "J. LARRIVEY",
-          "position": "FWD",
-          "number": "11"
         },
         {
-          "name": "NOLITO",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "F. ORELLANA",
-          "position": "FWD",
+          "name": "FABIÁN ORELLANA",
+          "position": "MID",
           "number": "14"
         }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2014-15",
-    "homeTeam": "REAL SOCIEDAD",
-    "awayTeam": "CELTA VIGO",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "1-1",
-    "date": "07 de febrero 2015",
-    "playingTeam": "CELTA VIGO",
-    "formation": [
-      [
-        {
-          "name": "SERGIO ÁLVAREZ",
-          "position": "GK",
-          "number": "1"
-        }
       ],
       [
         {
-          "name": "A. FONTÀS",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "G. CABRAL",
-          "position": "DEF",
-          "number": "22"
-        },
-        {
-          "name": "JONNY",
-          "position": "DEF",
-          "number": "19"
-        },
-        {
-          "name": "SERGI GÓMEZ",
-          "position": "DEF",
-          "number": "20"
-        }
-      ],
-      [
-        {
-          "name": "M. KROHN-DEHLI",
-          "position": "MID",
-          "number": "23"
-        },
-        {
-          "name": "ÁLEX LÓPEZ",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "A. FERNÁNDEZ",
-          "position": "MID",
-          "number": "24"
-        }
-      ],
-      [
-        {
-          "name": "J. LARRIVEY",
+          "name": "JOAQUÍN LARRIVEY",
           "position": "FWD",
           "number": "11"
-        },
-        {
-          "name": "NOLITO",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "SANTI MINA",
-          "position": "FWD",
-          "number": "7"
         }
       ]
     ]
@@ -243,131 +168,56 @@
       ],
       [
         {
-          "name": "GUSTAVO CABRAL",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
           "name": "JONNY OTTO",
           "position": "DEF",
-          "number": "3"
+          "number": "19"
+        },
+        {
+          "name": "GUSTAVO CABRAL",
+          "position": "DEF",
+          "number": "22"
         },
         {
           "name": "CARLES PLANAS",
           "position": "DEF",
-          "number": "4"
+          "number": "21"
         },
         {
           "name": "HUGO MALLO",
           "position": "DEF",
-          "number": "5"
+          "number": "2"
         }
       ],
       [
+        {
+          "name": "JOSEP SEÑÉ",
+          "position": "MID",
+          "number": "23"
+        },
         {
           "name": "NEMANJA RADOJA",
           "position": "MID",
           "number": "6"
         },
         {
-          "name": "DANIEL WASS",
-          "position": "MID",
-          "number": "7"
-        },
-        {
           "name": "PABLO HERNÁNDEZ",
           "position": "MID",
           "number": "8"
+        },
+        {
+          "name": "DANIEL WASS",
+          "position": "MID",
+          "number": "18"
+        },
+        {
+          "name": "CLAUDIO BEAUVUE",
+          "position": "MID",
+          "number": "12"
         }
       ],
       [
         {
           "name": "JOHN GUIDETTI",
-          "position": "FWD",
-          "number": "9"
-        },
-        {
-          "name": "JOSEP SEÑÉ",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "CLAUDIO BEAUVUE",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2015-16",
-    "homeTeam": "CELTA VIGO",
-    "awayTeam": "REAL MADRID",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "1-3",
-    "date": "24 de octubre 2015",
-    "playingTeam": "CELTA VIGO",
-    "formation": [
-      [
-        {
-          "name": "SERGIO ÁLVAREZ",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "GUSTAVO CABRAL",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "SERGI GÓMEZ",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "JONNY OTTO",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "HUGO MALLO",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "AUGUSTO FERNÁNDEZ",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "DANIEL WASS",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "PABLO HERNÁNDEZ",
-          "position": "MID",
-          "number": "8"
-        }
-      ],
-      [
-        {
-          "name": "IAGO ASPAS",
-          "position": "FWD",
-          "number": "9"
-        },
-        {
-          "name": "NOLITO",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "FABIÁN ORELLANA",
           "position": "FWD",
           "number": "11"
         }
@@ -393,9 +243,9 @@
       ],
       [
         {
-          "name": "SERGI GÓMEZ",
+          "name": "JONNY OTTO",
           "position": "DEF",
-          "number": "2"
+          "number": "19"
         },
         {
           "name": "ANDREU FONTÀS",
@@ -403,198 +253,48 @@
           "number": "3"
         },
         {
-          "name": "JONNY OTTO",
+          "name": "SERGI GÓMEZ",
           "position": "DEF",
-          "number": "4"
+          "number": "20"
         },
         {
           "name": "HUGO MALLO",
           "position": "DEF",
-          "number": "5"
+          "number": "2"
         }
       ],
       [
+        {
+          "name": "NOLITO",
+          "position": "MID",
+          "number": "10"
+        },
         {
           "name": "NEMANJA RADOJA",
           "position": "MID",
           "number": "6"
         },
         {
-          "name": "DANIEL WASS",
-          "position": "MID",
-          "number": "7"
-        },
-        {
           "name": "PABLO HERNÁNDEZ",
           "position": "MID",
           "number": "8"
-        }
-      ],
-      [
-        {
-          "name": "IAGO ASPAS",
-          "position": "FWD",
-          "number": "9"
         },
         {
-          "name": "NOLITO",
-          "position": "FWD",
-          "number": "10"
+          "name": "DANIEL WASS",
+          "position": "MID",
+          "number": "18"
         },
         {
           "name": "FABIÁN ORELLANA",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2016-17",
-    "homeTeam": "CELTA VIGO",
-    "awayTeam": "REAL SOCIEDAD",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "2-2",
-    "date": "21 de mayo 2017",
-    "playingTeam": "CELTA VIGO",
-    "formation": [
-      [
-        {
-          "name": "SERGIO ÁLVAREZ",
-          "position": "GK",
-          "number": "1"
+          "position": "MID",
+          "number": "14"
         }
       ],
       [
-        {
-          "name": "ANDREU FONTÀS",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "GUSTAVO CABRAL",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "JONNY OTTO",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "MARCELO DÍAZ",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "PABLO HERNÁNDEZ",
-          "position": "DEF",
-          "number": "6"
-        },
-        {
-          "name": "FACUNDO RONCAGLIA",
-          "position": "DEF",
-          "number": "7"
-        }
-      ],
-      [
-        {
-          "name": "DANIEL WASS",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "PIONE SISTO",
-          "position": "MID",
-          "number": "9"
-        },
         {
           "name": "IAGO ASPAS",
-          "position": "MID",
-          "number": "10"
-        }
-      ],
-      [
-        {
-          "name": "JOHN GUIDETTI",
           "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2016-17",
-    "homeTeam": "MALAGA",
-    "awayTeam": "CELTA VIGO",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "3-0",
-    "date": "07 de mayo 2017",
-    "playingTeam": "CELTA VIGO",
-    "formation": [
-      [
-        {
-          "name": "SERGIO ÁLVAREZ",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "GUSTAVO CABRAL",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "SERGI GÓMEZ",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "CARLES PLANAS",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "MARCELO DÍAZ",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "PAPE CHEIKH",
-          "position": "DEF",
-          "number": "6"
-        },
-        {
-          "name": "ÁLVARO LEMOS",
-          "position": "DEF",
-          "number": "7"
-        }
-      ],
-      [
-        {
-          "name": "JOZABED",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "THÉO BONGONDA",
-          "position": "MID",
           "number": "9"
-        },
-        {
-          "name": "JOSEP SEÑÉ",
-          "position": "MID",
-          "number": "10"
-        }
-      ],
-      [
-        {
-          "name": "CLAUDIO BEAUVUE",
-          "position": "FWD",
-          "number": "11"
         }
       ]
     ]
@@ -613,63 +313,63 @@
         {
           "name": "RUBÉN BLANCO",
           "position": "GK",
-          "number": "1"
+          "number": "13"
         }
       ],
       [
         {
           "name": "ANDREU FONTÀS",
           "position": "DEF",
-          "number": "2"
+          "number": "3"
         },
         {
           "name": "SERGI GÓMEZ",
           "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "CARLES PLANAS",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "HUGO MALLO",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "NEMANJA RADOJA",
-          "position": "DEF",
-          "number": "6"
+          "number": "20"
         },
         {
           "name": "FACUNDO RONCAGLIA",
           "position": "DEF",
-          "number": "7"
+          "number": "24"
         }
       ],
       [
+        {
+          "name": "CARLES PLANAS",
+          "position": "MID",
+          "number": "21"
+        },
+        {
+          "name": "NEMANJA RADOJA",
+          "position": "MID",
+          "number": "6"
+        },
         {
           "name": "DANIEL WASS",
           "position": "MID",
-          "number": "8"
+          "number": "18"
         },
         {
-          "name": "THÉO BONGONDA",
+          "name": "HUGO MALLO",
           "position": "MID",
-          "number": "9"
-        },
-        {
-          "name": "JOSEP SEÑÉ",
-          "position": "MID",
-          "number": "10"
+          "number": "2"
         }
       ],
       [
         {
+          "name": "THÉO BONGONDA",
+          "position": "FWD",
+          "number": "7"
+        },
+        {
           "name": "GIUSEPPE ROSSI",
           "position": "FWD",
-          "number": "11"
+          "number": "25"
+        },
+        {
+          "name": "JOSEP SEÑÉ",
+          "position": "FWD",
+          "number": "23"
         }
       ]
     ]
@@ -688,324 +388,24 @@
         {
           "name": "RUBÉN BLANCO",
           "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "SERGI GÓMEZ",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "GUSTAVO CABRAL",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "JONNY OTTO",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "HUGO MALLO",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "DANIEL WASS",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "STANISLAV LOBOTKA",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "PABLO HERNÁNDEZ",
-          "position": "MID",
-          "number": "8"
-        }
-      ],
-      [
-        {
-          "name": "MAXI GÓMEZ",
-          "position": "FWD",
-          "number": "9"
-        },
-        {
-          "name": "PIONE SISTO",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "IAGO ASPAS",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2017-18",
-    "homeTeam": "VALENCIA",
-    "awayTeam": "CELTA VIGO",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "2-1",
-    "date": "09 de diciembre 2017",
-    "playingTeam": "CELTA VIGO",
-    "formation": [
-      [
-        {
-          "name": "RUBÉN BLANCO",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "ANDREU FONTÀS",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "GUSTAVO CABRAL",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "JONNY OTTO",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "HUGO MALLO",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "PABLO HERNÁNDEZ",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "DANIEL WASS",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "STANISLAV LOBOTKA",
-          "position": "MID",
-          "number": "8"
-        }
-      ],
-      [
-        {
-          "name": "MAXI GÓMEZ",
-          "position": "FWD",
-          "number": "9"
-        },
-        {
-          "name": "PIONE SISTO",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "IAGO ASPAS",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2017-18",
-    "homeTeam": "CELTA VIGO",
-    "awayTeam": "VALENCIA",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "1-1",
-    "date": "21 de abril 2018",
-    "playingTeam": "CELTA VIGO",
-    "formation": [
-      [
-        {
-          "name": "SERGIO ÁLVAREZ",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "GUSTAVO CABRAL",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "SERGI GÓMEZ",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "FACUNDO RONCAGLIA",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "HUGO MALLO",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "STANISLAV LOBOTKA",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "JOZABED",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "PIONE SISTO",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "DANIEL WASS",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "BRAIS MÉNDEZ",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "MAXI GÓMEZ",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2018-19",
-    "homeTeam": "CELTA VIGO",
-    "awayTeam": "BARCELONA",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "2-0",
-    "date": "04 de mayo 2019",
-    "playingTeam": "CELTA VIGO",
-    "formation": [
-      [
-        {
-          "name": "RUBÉN BLANCO",
-          "position": "GK",
           "number": "13"
         }
       ],
       [
         {
-          "name": "NÉSTOR ARAÚJO",
+          "name": "JONNY OTTO",
           "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "GUSTAVO CABRAL",
-          "position": "DEF",
-          "number": "22"
-        },
-        {
-          "name": "LUCAS OLAZA",
-          "position": "DEF",
-          "number": "15"
-        },
-        {
-          "name": "HUGO MALLO",
-          "position": "DEF",
-          "number": "2"
-        }
-      ],
-      [
-        {
-          "name": "STANISLAV LOBOTKA",
-          "position": "MID",
-          "number": "14"
-        },
-        {
-          "name": "OKAY YOKUSLU",
-          "position": "MID",
-          "number": "5"
-        },
-        {
-          "name": "SOFIANE BOUFAL",
-          "position": "MID",
           "number": "19"
         },
         {
-          "name": "RYAD BOUDEBOUZ",
-          "position": "MID",
-          "number": "24"
-        }
-      ],
-      [
-        {
-          "name": "IAGO ASPAS",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "MAXI GÓMEZ",
-          "position": "FWD",
-          "number": "9"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2018-19",
-    "homeTeam": "CELTA VIGO",
-    "awayTeam": "GETAFE",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "1-1",
-    "date": "01 de octubre 2018",
-    "playingTeam": "CELTA VIGO",
-    "formation": [
-      [
-        {
-          "name": "SERGIO ÁLVAREZ",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "FACUNDO RONCAGLIA",
+          "name": "SERGI GÓMEZ",
           "position": "DEF",
-          "number": "24"
+          "number": "20"
         },
         {
           "name": "GUSTAVO CABRAL",
           "position": "DEF",
           "number": "22"
-        },
-        {
-          "name": "JÚNIOR ALONSO",
-          "position": "DEF",
-          "number": "25"
         },
         {
           "name": "HUGO MALLO",
@@ -1015,36 +415,36 @@
       ],
       [
         {
+          "name": "PIONE SISTO",
+          "position": "MID",
+          "number": "11"
+        },
+        {
           "name": "STANISLAV LOBOTKA",
           "position": "MID",
           "number": "14"
         },
         {
-          "name": "FRAN BELTRÁN",
+          "name": "PABLO HERNÁNDEZ",
           "position": "MID",
           "number": "8"
         },
         {
-          "name": "BRAIS MÉNDEZ",
-          "position": "MID",
-          "number": "23"
-        },
-        {
-          "name": "MATHIAS JENSEN",
+          "name": "DANIEL WASS",
           "position": "MID",
           "number": "18"
+        },
+        {
+          "name": "IAGO ASPAS",
+          "position": "MID",
+          "number": "10"
         }
       ],
       [
         {
-          "name": "IAGO ASPAS",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
           "name": "MAXI GÓMEZ",
           "position": "FWD",
-          "number": "9"
+          "number": "7"
         }
       ]
     ]
@@ -1068,6 +468,11 @@
       ],
       [
         {
+          "name": "DAVID JUNCÀ",
+          "position": "DEF",
+          "number": "17"
+        },
+        {
           "name": "DAVID COSTAS",
           "position": "DEF",
           "number": "3"
@@ -1078,11 +483,6 @@
           "number": "4"
         },
         {
-          "name": "DAVID JUNCÀ",
-          "position": "DEF",
-          "number": "17"
-        },
-        {
           "name": "HUGO MALLO",
           "position": "DEF",
           "number": "2"
@@ -1090,19 +490,19 @@
       ],
       [
         {
-          "name": "JOZABED",
+          "name": "SOFIANE BOUFAL",
           "position": "MID",
-          "number": "21"
+          "number": "19"
         },
         {
-          "name": "OKAY YOKUSLU",
+          "name": "OKAY YOKUŞLU",
           "position": "MID",
           "number": "5"
         },
         {
-          "name": "SOFIANE BOUFAL",
+          "name": "JOZABED SÁNCHEZ",
           "position": "MID",
-          "number": "19"
+          "number": "21"
         },
         {
           "name": "BRAIS MÉNDEZ",
@@ -1138,138 +538,63 @@
         {
           "name": "RUBÉN BLANCO",
           "position": "GK",
-          "number": "1"
+          "number": "13"
         }
       ],
       [
         {
-          "name": "JEISON MURILLO",
+          "name": "LUCAS OLAZA",
           "position": "DEF",
-          "number": "2"
+          "number": "15"
         },
         {
           "name": "NÉSTOR ARAÚJO",
           "position": "DEF",
-          "number": "3"
+          "number": "4"
         },
         {
-          "name": "LUCAS OLAZA",
+          "name": "JEISON MURILLO",
           "position": "DEF",
-          "number": "4"
+          "number": "21"
         },
         {
           "name": "HUGO MALLO",
           "position": "DEF",
-          "number": "5"
+          "number": "2"
         }
       ],
       [
         {
-          "name": "FRAN BELTRÁN",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "OKAY YOKUSLU",
-          "position": "MID",
-          "number": "7"
-        },
-        {
           "name": "PIONE SISTO",
+          "position": "MID",
+          "number": "11"
+        },
+        {
+          "name": "OKAY YOKUŞLU",
+          "position": "MID",
+          "number": "5"
+        },
+        {
+          "name": "FRAN BELTRÁN",
           "position": "MID",
           "number": "8"
         },
         {
           "name": "RAFINHA",
           "position": "MID",
-          "number": "9"
+          "number": "12"
+        },
+        {
+          "name": "IAGO ASPAS",
+          "position": "MID",
+          "number": "10"
         }
       ],
       [
-        {
-          "name": "IAGO ASPAS",
-          "position": "FWD",
-          "number": "10"
-        },
         {
           "name": "FEDOR SMOLOV",
           "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2019-20",
-    "homeTeam": "CELTA VIGO",
-    "awayTeam": "GETAFE",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "0-1",
-    "date": "03 de noviembre 2019",
-    "playingTeam": "CELTA VIGO",
-    "formation": [
-      [
-        {
-          "name": "RUBÉN BLANCO",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "JOSEPH AIDOO",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "NÉSTOR ARAÚJO",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "LUCAS OLAZA",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "HUGO MALLO",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "STANISLAV LOBOTKA",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "FRAN BELTRÁN",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "DENIS SUÁREZ",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "BRAIS MÉNDEZ",
-          "position": "MID",
           "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "IAGO ASPAS",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "GABRIEL FERNÁNDEZ",
-          "position": "FWD",
-          "number": "11"
         }
       ]
     ]
@@ -1293,208 +618,58 @@
       ],
       [
         {
-          "name": "JOSEPH AIDOO",
+          "name": "LUCAS OLAZA",
           "position": "DEF",
-          "number": "2"
+          "number": "15"
         },
         {
           "name": "NÉSTOR ARAÚJO",
           "position": "DEF",
-          "number": "3"
+          "number": "4"
         },
         {
-          "name": "LUCAS OLAZA",
+          "name": "JOSEPH AIDOO",
           "position": "DEF",
-          "number": "4"
+          "number": "18"
         },
         {
           "name": "HUGO MALLO",
           "position": "DEF",
-          "number": "5"
+          "number": "2"
         }
       ],
       [
         {
+          "name": "PIONE SISTO",
+          "position": "MID",
+          "number": "11"
+        },
+        {
           "name": "STANISLAV LOBOTKA",
           "position": "MID",
-          "number": "6"
+          "number": "14"
         },
         {
           "name": "PAPE CHEIKH",
           "position": "MID",
-          "number": "7"
+          "number": "24"
         },
         {
           "name": "DENIS SUÁREZ",
           "position": "MID",
-          "number": "8"
-        }
-      ],
-      [
-        {
-          "name": "IAGO ASPAS",
-          "position": "FWD",
-          "number": "9"
-        },
-        {
-          "name": "PIONE SISTO",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "SANTI MINA",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2020-21",
-    "homeTeam": "CELTA VIGO",
-    "awayTeam": "REAL VALLADOLID",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "1-1",
-    "date": "28 de febrero 2021",
-    "playingTeam": "CELTA VIGO",
-    "formation": [
-      [
-        {
-          "name": "RUBÉN BLANCO",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "NÉSTOR ARAÚJO",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "JEISON MURILLO",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "AARÓN MARTÍN",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "RENATO TAPIA",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "HUGO MALLO",
-          "position": "DEF",
           "number": "6"
-        }
-      ],
-      [
-        {
-          "name": "BRAIS MÉNDEZ",
-          "position": "MID",
-          "number": "7"
         },
-        {
-          "name": "DENIS SUÁREZ",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "AUGUSTO SOLARI",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
         {
           "name": "SANTI MINA",
-          "position": "FWD",
-          "number": "10"
-        },
+          "position": "MID",
+          "number": "22"
+        }
+      ],
+      [
         {
           "name": "IAGO ASPAS",
           "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2020-21",
-    "homeTeam": "SEVILLA",
-    "awayTeam": "CELTA VIGO",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "4-2",
-    "date": "21 de noviembre 2020",
-    "playingTeam": "CELTA VIGO",
-    "formation": [
-      [
-        {
-          "name": "RUBÉN BLANCO",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "JEISON MURILLO",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "JOSEPH AIDOO",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "LUCAS OLAZA",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "RENATO TAPIA",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "HUGO MALLO",
-          "position": "DEF",
-          "number": "6"
-        }
-      ],
-      [
-        {
-          "name": "DENIS SUÁREZ",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "BRAIS MÉNDEZ",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "NOLITO",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "SANTI MINA",
-          "position": "FWD",
           "number": "10"
-        },
-        {
-          "name": "IAGO ASPAS",
-          "position": "FWD",
-          "number": "11"
         }
       ]
     ]
@@ -1513,138 +688,63 @@
         {
           "name": "RUBÉN BLANCO",
           "position": "GK",
-          "number": "1"
+          "number": "13"
         }
       ],
       [
         {
-          "name": "JEISON MURILLO",
+          "name": "LUCAS OLAZA",
           "position": "DEF",
-          "number": "2"
+          "number": "15"
         },
         {
           "name": "NÉSTOR ARAÚJO",
           "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "LUCAS OLAZA",
-          "position": "DEF",
           "number": "4"
         },
         {
-          "name": "RENATO TAPIA",
+          "name": "JEISON MURILLO",
           "position": "DEF",
-          "number": "5"
+          "number": "24"
         },
         {
           "name": "HUGO MALLO",
           "position": "DEF",
-          "number": "6"
-        }
-      ],
-      [
-        {
-          "name": "DENIS SUÁREZ",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "BRAIS MÉNDEZ",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "NOLITO",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "SANTI MINA",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "IAGO ASPAS",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2021-22",
-    "homeTeam": "CELTA VIGO",
-    "awayTeam": "VILLARREAL",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "1-1",
-    "date": "20 de noviembre 2021",
-    "playingTeam": "CELTA VIGO",
-    "formation": [
-      [
-        {
-          "name": "MATÍAS DITURO",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "JEISON MURILLO",
-          "position": "DEF",
           "number": "2"
-        },
-        {
-          "name": "JOSEPH AIDOO",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "JAVI GALÁN",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "FRAN BELTRÁN",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "KEVIN VÁZQUEZ",
-          "position": "DEF",
-          "number": "6"
         }
       ],
       [
         {
           "name": "NOLITO",
           "position": "MID",
-          "number": "7"
+          "number": "9"
         },
         {
-          "name": "DENIS SUÁREZ",
+          "name": "RENATO TAPIA",
           "position": "MID",
-          "number": "8"
+          "number": "14"
         },
         {
           "name": "BRAIS MÉNDEZ",
           "position": "MID",
-          "number": "9"
+          "number": "23"
+        },
+        {
+          "name": "DENIS SUÁREZ",
+          "position": "MID",
+          "number": "6"
         }
       ],
       [
         {
-          "name": "SANTI MINA",
+          "name": "IAGO ASPAS",
           "position": "FWD",
           "number": "10"
         },
         {
-          "name": "IAGO ASPAS",
+          "name": "SANTI MINA",
           "position": "FWD",
-          "number": "11"
+          "number": "22"
         }
       ]
     ]
@@ -1668,121 +768,46 @@
       ],
       [
         {
-          "name": "JOSEPH AIDOO",
+          "name": "JAVI GALÁN",
           "position": "DEF",
-          "number": "2"
+          "number": "17"
         },
         {
           "name": "NÉSTOR ARAÚJO",
           "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "JAVI GALÁN",
-          "position": "DEF",
           "number": "4"
         },
         {
-          "name": "FRAN BELTRÁN",
+          "name": "JOSEPH AIDOO",
           "position": "DEF",
-          "number": "5"
+          "number": "15"
         },
         {
           "name": "HUGO MALLO",
           "position": "DEF",
-          "number": "6"
+          "number": "2"
         }
       ],
       [
-        {
-          "name": "BRAIS MÉNDEZ",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "DENIS SUÁREZ",
-          "position": "MID",
-          "number": "8"
-        },
         {
           "name": "FRANCO CERVI",
           "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "SANTI MINA",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "IAGO ASPAS",
-          "position": "FWD",
           "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2021-22",
-    "homeTeam": "VALENCIA",
-    "awayTeam": "CELTA VIGO",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "2-0",
-    "date": "21 de mayo 2022",
-    "playingTeam": "CELTA VIGO",
-    "formation": [
-      [
-        {
-          "name": "MATÍAS DITURO",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "NÉSTOR ARAÚJO",
-          "position": "DEF",
-          "number": "2"
         },
         {
-          "name": "JOSEPH AIDOO",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "JAVI GALÁN",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "DENIS SUÁREZ",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "KEVIN VÁZQUEZ",
-          "position": "DEF",
-          "number": "6"
-        }
-      ],
-      [
-        {
-          "name": "AUGUSTO SOLARI",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "NOLITO",
+          "name": "FRAN BELTRÁN",
           "position": "MID",
           "number": "8"
         },
         {
           "name": "BRAIS MÉNDEZ",
           "position": "MID",
-          "number": "9"
+          "number": "23"
+        },
+        {
+          "name": "DENIS SUÁREZ",
+          "position": "MID",
+          "number": "6"
         }
       ],
       [
@@ -1792,9 +817,9 @@
           "number": "10"
         },
         {
-          "name": "THIAGO GALHARDO",
+          "name": "SANTI MINA",
           "position": "FWD",
-          "number": "11"
+          "number": "22"
         }
       ]
     ]
@@ -1818,208 +843,58 @@
       ],
       [
         {
-          "name": "ÓSCAR MINGUEZA",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
           "name": "UNAI NÚÑEZ",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "JOSEPH AIDOO",
           "position": "DEF",
           "number": "4"
         },
         {
-          "name": "JAVI GALÁN",
+          "name": "JOSEPH AIDOO",
           "position": "DEF",
-          "number": "5"
+          "number": "15"
         },
         {
-          "name": "KEVIN VÁZQUEZ",
+          "name": "ÓSCAR MINGUEZA",
           "position": "DEF",
-          "number": "6"
+          "number": "3"
         }
       ],
       [
         {
-          "name": "GABRI VEIGA",
+          "name": "JAVI GALÁN",
           "position": "MID",
-          "number": "7"
+          "number": "17"
         },
         {
           "name": "RENATO TAPIA",
           "position": "MID",
-          "number": "8"
+          "number": "14"
+        },
+        {
+          "name": "GABRI VEIGA",
+          "position": "MID",
+          "number": "28"
+        },
+        {
+          "name": "KEVIN VÁZQUEZ",
+          "position": "MID",
+          "number": "20"
         }
       ],
       [
+        {
+          "name": "FRANCO CERVI",
+          "position": "FWD",
+          "number": "11"
+        },
         {
           "name": "GONÇALO PACIÊNCIA",
           "position": "FWD",
           "number": "9"
         },
         {
-          "name": "FRANCO CERVI",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
           "name": "CARLES PÉREZ",
           "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2022-23",
-    "homeTeam": "CELTA VIGO",
-    "awayTeam": "GETAFE",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "1-1",
-    "date": "24 de octubre 2022",
-    "playingTeam": "CELTA VIGO",
-    "formation": [
-      [
-        {
-          "name": "AGUSTÍN MARCHESÍN",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "UNAI NÚÑEZ",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "JOSEPH AIDOO",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "JAVI GALÁN",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "FRAN BELTRÁN",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "HUGO MALLO",
-          "position": "DEF",
-          "number": "6"
-        }
-      ],
-      [
-        {
-          "name": "GABRI VEIGA",
-          "position": "MID",
           "number": "7"
-        },
-        {
-          "name": "ÓSCAR RODRÍGUEZ",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "FRANCO CERVI",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "JØRGEN STRAND LARSEN",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "IAGO ASPAS",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2022-23",
-    "homeTeam": "CADIZ",
-    "awayTeam": "CELTA VIGO",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "1-0",
-    "date": "28 de mayo 2023",
-    "playingTeam": "CELTA VIGO",
-    "formation": [
-      [
-        {
-          "name": "IVÁN VILLAR",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "JOSEPH AIDOO",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "UNAI NÚÑEZ",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "JAVI GALÁN",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "HUGO MALLO",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "ÓSCAR RODRÍGUEZ",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "GABRI VEIGA",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "RENATO TAPIA",
-          "position": "MID",
-          "number": "8"
-        }
-      ],
-      [
-        {
-          "name": "JØRGEN STRAND LARSEN",
-          "position": "FWD",
-          "number": "9"
-        },
-        {
-          "name": "MIGUEL RODRÍGUEZ",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "CARLES PÉREZ",
-          "position": "FWD",
-          "number": "11"
         }
       ]
     ]

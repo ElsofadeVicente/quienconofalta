@@ -18,208 +18,58 @@
       ],
       [
         {
-          "name": "WELIGTON",
+          "name": "MIGUEL TORRES",
           "position": "DEF",
-          "number": "2"
+          "number": "23"
         },
         {
-          "name": "MARCOS ANGELERI",
+          "name": "WELIGTON",
           "position": "DEF",
           "number": "3"
         },
         {
-          "name": "MIGUEL TORRES",
+          "name": "MARCOS ANGELERI",
           "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "IGNACIO CAMACHO",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "SERGI DARDER",
-          "position": "DEF",
-          "number": "6"
+          "number": "15"
         },
         {
           "name": "ROBERTO ROSALES",
           "position": "DEF",
-          "number": "7"
+          "number": "18"
         }
       ],
       [
         {
-          "name": "NORDIN AMRABAT",
+          "name": "SAMU CASTILLEJO",
           "position": "MID",
-          "number": "8"
+          "number": "29"
+        },
+        {
+          "name": "SERGI DARDER",
+          "position": "MID",
+          "number": "30"
         },
         {
           "name": "RICARDO HORTA",
           "position": "MID",
-          "number": "9"
+          "number": "10"
         },
         {
-          "name": "SAMU CASTILLEJO",
+          "name": "IGNACIO CAMACHO",
           "position": "MID",
-          "number": "10"
+          "number": "6"
+        },
+        {
+          "name": "NORDIN AMRABAT",
+          "position": "MID",
+          "number": "2"
         }
       ],
       [
         {
           "name": "JAVI GUERRA",
           "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2014-15",
-    "homeTeam": "MALAGA",
-    "awayTeam": "SEVILLA",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "2-3",
-    "date": "23 de mayo 2015",
-    "playingTeam": "MALAGA",
-    "formation": [
-      [
-        {
-          "name": "CARLOS KAMENI",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "WELIGTON",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "MARCOS ANGELERI",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "ARTHUR BOKA",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "RECIO",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "IGNACIO CAMACHO",
-          "position": "DEF",
-          "number": "6"
-        },
-        {
-          "name": "ROBERTO ROSALES",
-          "position": "DEF",
-          "number": "7"
-        }
-      ],
-      [
-        {
-          "name": "NORDIN AMRABAT",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "JUANMI",
-          "position": "MID",
           "number": "9"
-        },
-        {
-          "name": "SAMU GARCÍA",
-          "position": "MID",
-          "number": "10"
-        }
-      ],
-      [
-        {
-          "name": "JAVI GUERRA",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2014-15",
-    "homeTeam": "MALAGA",
-    "awayTeam": "ELCHE",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "1-2",
-    "date": "03 de mayo 2015",
-    "playingTeam": "MALAGA",
-    "formation": [
-      [
-        {
-          "name": "CARLOS KAMENI",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "SERGIO SÁNCHEZ",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "WELIGTON",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "ARTHUR BOKA",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "SERGI DARDER",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "IGNACIO CAMACHO",
-          "position": "DEF",
-          "number": "6"
-        },
-        {
-          "name": "ROBERTO ROSALES",
-          "position": "DEF",
-          "number": "7"
-        }
-      ],
-      [
-        {
-          "name": "JUANMI",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "SAMU CASTILLEJO",
-          "position": "MID",
-          "number": "9"
-        },
-        {
-          "name": "SAMU GARCÍA",
-          "position": "MID",
-          "number": "10"
-        }
-      ],
-      [
-        {
-          "name": "NORDIN AMRABAT",
-          "position": "FWD",
-          "number": "11"
         }
       ]
     ]
@@ -243,281 +93,56 @@
       ],
       [
         {
-          "name": "WELIGTON",
+          "name": "ARTHUR BOKA",
           "position": "DEF",
-          "number": "2"
+          "number": "19"
         },
         {
-          "name": "MARCOS ANGELERI",
+          "name": "WELIGTON",
           "position": "DEF",
           "number": "3"
         },
         {
-          "name": "ARTHUR BOKA",
+          "name": "MARCOS ANGELERI",
           "position": "DEF",
-          "number": "4"
+          "number": "15"
         },
         {
           "name": "ROBERTO ROSALES",
           "position": "DEF",
-          "number": "5"
+          "number": "18"
         }
       ],
       [
+        {
+          "name": "JUANKAR",
+          "position": "MID",
+          "number": "7"
+        },
+        {
+          "name": "PABLO FORNALS",
+          "position": "MID",
+          "number": "31"
+        },
         {
           "name": "FERNANDO TISSONE",
           "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "PABLO FORNALS",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "JUANKAR",
-          "position": "MID",
-          "number": "8"
+          "number": "12"
         },
         {
           "name": "DUDA",
           "position": "MID",
-          "number": "9"
+          "number": "17"
         }
       ],
       [
+        {
+          "name": "CHARLES",
+          "position": "FWD",
+          "number": "9"
+        },
         {
           "name": "NORDIN AMRABAT",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "CHARLES",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2015-16",
-    "homeTeam": "EIBAR",
-    "awayTeam": "MALAGA",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "1-2",
-    "date": "30 de enero 2016",
-    "playingTeam": "MALAGA",
-    "formation": [
-      [
-        {
-          "name": "CARLOS KAMENI",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "ALBENTOSA",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "EGOR FILIPENKO",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "MIGUEL TORRES",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "ROBERTO ROSALES",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "RECIO",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "IGNACIO CAMACHO",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "GONZALO CASTRO",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "JUANPI",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "DUJE COP",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "CHARLES",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2015-16",
-    "homeTeam": "ATHLETIC CLUB",
-    "awayTeam": "MALAGA",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "0-0",
-    "date": "06 de diciembre 2015",
-    "playingTeam": "MALAGA",
-    "formation": [
-      [
-        {
-          "name": "CARLOS KAMENI",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "ALBENTOSA",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "MARCOS ANGELERI",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "JUANKAR",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "ROBERTO ROSALES",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "RECIO",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "EGOR FILIPENKO",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "PABLO FORNALS",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "DUDA",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "NORDIN AMRABAT",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "CHARLES",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2016-17",
-    "homeTeam": "REAL SOCIEDAD",
-    "awayTeam": "MALAGA",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "2-2",
-    "date": "14 de mayo 2017",
-    "playingTeam": "MALAGA",
-    "formation": [
-      [
-        {
-          "name": "CARLOS KAMENI",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "DIEGO LLORENTE",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "LUIS HERNÁNDEZ",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "FEDERICO RICCA",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "PABLO FORNALS",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "RECIO",
-          "position": "DEF",
-          "number": "6"
-        },
-        {
-          "name": "MIGUEL TORRES",
-          "position": "DEF",
-          "number": "7"
-        }
-      ],
-      [
-        {
-          "name": "JONY",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "JUANKAR",
-          "position": "MID",
-          "number": "9"
-        },
-        {
-          "name": "KEKO",
-          "position": "MID",
-          "number": "10"
-        }
-      ],
-      [
-        {
-          "name": "SANDRO RAMÍREZ",
           "position": "FWD",
           "number": "11"
         }
@@ -543,208 +168,58 @@
       ],
       [
         {
-          "name": "DIEGO LLORENTE",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
           "name": "MIGUEL TORRES",
           "position": "DEF",
-          "number": "3"
+          "number": "23"
         },
         {
           "name": "LUIS HERNÁNDEZ",
           "position": "DEF",
-          "number": "4"
+          "number": "24"
         },
         {
-          "name": "JUANKAR",
+          "name": "DIEGO LLORENTE",
           "position": "DEF",
           "number": "5"
         },
         {
           "name": "ROBERTO ROSALES",
           "position": "DEF",
-          "number": "6"
+          "number": "18"
         }
       ],
       [
         {
-          "name": "PABLO FORNALS",
+          "name": "JUANKAR",
           "position": "MID",
           "number": "7"
+        },
+        {
+          "name": "IGNACIO CAMACHO",
+          "position": "MID",
+          "number": "6"
+        },
+        {
+          "name": "PABLO FORNALS",
+          "position": "MID",
+          "number": "31"
         },
         {
           "name": "JOSÉ RODRÍGUEZ",
           "position": "MID",
-          "number": "8"
+          "number": "25"
         },
         {
-          "name": "IGNACIO CAMACHO",
+          "name": "KEKO GONTÁN",
           "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "KEKO",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "SANDRO RAMÍREZ",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2016-17",
-    "homeTeam": "MALAGA",
-    "awayTeam": "VALENCIA",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "2-0",
-    "date": "22 de abril 2017",
-    "playingTeam": "MALAGA",
-    "formation": [
-      [
-        {
-          "name": "CARLOS KAMENI",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "DIEGO LLORENTE",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "LUIS HERNÁNDEZ",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "FEDERICO RICCA",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "IGNACIO CAMACHO",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "RECIO",
-          "position": "DEF",
-          "number": "6"
-        },
-        {
-          "name": "ROBERTO ROSALES",
-          "position": "DEF",
-          "number": "7"
-        }
-      ],
-      [
-        {
-          "name": "PABLO FORNALS",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "JONY",
-          "position": "MID",
-          "number": "9"
-        },
-        {
-          "name": "JAVIER ONTIVEROS",
-          "position": "MID",
-          "number": "10"
+          "number": "20"
         }
       ],
       [
         {
           "name": "SANDRO RAMÍREZ",
           "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2017-18",
-    "homeTeam": "MALAGA",
-    "awayTeam": "GIRONA",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "0-0",
-    "date": "27 de enero 2018",
-    "playingTeam": "MALAGA",
-    "formation": [
-      [
-        {
-          "name": "ROBERTO JIMÉNEZ",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "LUIS HERNÁNDEZ",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "IGNASI MIQUEL",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "FEDERICO RICCA",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "ROBERTO ROSALES",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "MANUEL ITURRA",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "RECIO",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "GONZALO CASTRO",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "KEKO",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "BORJA BASTÓN",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "ADRIÁN GONZÁLEZ",
-          "position": "FWD",
-          "number": "11"
+          "number": "19"
         }
       ]
     ]
@@ -768,133 +243,58 @@
       ],
       [
         {
-          "name": "LUIS HERNÁNDEZ",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "IGNASI MIQUEL",
+          "name": "DIEGO GONZÁLEZ",
           "position": "DEF",
           "number": "3"
         },
         {
-          "name": "DIEGO GONZÁLEZ",
+          "name": "IGNASI MIQUEL",
+          "position": "DEF",
+          "number": "2"
+        },
+        {
+          "name": "LUIS HERNÁNDEZ",
           "position": "DEF",
           "number": "4"
         },
         {
           "name": "ROBERTO ROSALES",
           "position": "DEF",
-          "number": "5"
+          "number": "18"
         }
       ],
       [
+        {
+          "name": "CHORY CASTRO",
+          "position": "MID",
+          "number": "11"
+        },
+        {
+          "name": "MANUEL ITURRA",
+          "position": "MID",
+          "number": "7"
+        },
         {
           "name": "RECIO",
           "position": "MID",
-          "number": "6"
+          "number": "14"
         },
         {
-          "name": "MANUEL ITURRA",
+          "name": "KEKO GONTÁN",
           "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "GONZALO CASTRO",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "KEKO",
-          "position": "MID",
-          "number": "9"
+          "number": "20"
         }
       ],
       [
-        {
-          "name": "YOUSSEF EN-NESYRI",
-          "position": "FWD",
-          "number": "10"
-        },
         {
           "name": "ADALBERTO PEÑARANDA",
           "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2017-18",
-    "homeTeam": "ESPANYOL",
-    "awayTeam": "MALAGA",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "4-1",
-    "date": "13 de mayo 2018",
-    "playingTeam": "MALAGA",
-    "formation": [
-      [
-        {
-          "name": "ANDRÉS PRIETO",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "LUIS HERNÁNDEZ",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "IGNASI MIQUEL",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "DIEGO GONZÁLEZ",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "MAXIME LESTIENNE",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "ROBERTO ROSALES",
-          "position": "DEF",
-          "number": "6"
-        }
-      ],
-      [
-        {
-          "name": "MANUEL ITURRA",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "ADRIÁN GONZÁLEZ",
-          "position": "MID",
-          "number": "8"
-        }
-      ],
-      [
-        {
-          "name": "DIEGO ROLAN",
-          "position": "FWD",
-          "number": "9"
+          "number": "16"
         },
         {
           "name": "YOUSSEF EN-NESYRI",
           "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "ISAAC SUCCESS",
-          "position": "FWD",
-          "number": "11"
+          "number": "26"
         }
       ]
     ]

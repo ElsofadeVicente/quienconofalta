@@ -11,114 +11,34 @@
     "formation": [
       [
         {
-          "name": "CLAUDIO BRAVO",
+          "name": "MARC-ANDRÉ TER STEGEN",
           "position": "GK",
           "number": "1"
         }
       ],
       [
-        {
-          "name": "JAVIER MASCHERANO",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "GERARD PIQUÉ",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "JORDI ALBA",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "DANI ALVES",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "SERGIO BUSQUETS",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "IVAN RAKITIC",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "ANDRÉS INIESTA",
-          "position": "MID",
-          "number": "8"
-        }
-      ],
-      [
-        {
-          "name": "LUIS SUÁREZ",
-          "position": "FWD",
-          "number": "9"
-        },
-        {
-          "name": "NEYMAR",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "LIONEL MESSI",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2014-15",
-    "homeTeam": "BARCELONA",
-    "awayTeam": "MALAGA",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "0-1",
-    "date": "21 de febrero 2015",
-    "playingTeam": "BARCELONA",
-    "formation": [
-      [
-        {
-          "name": "CLAUDIO BRAVO",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "GERARD PIQUÉ",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "JÉRÉMY MATHIEU",
-          "position": "DEF",
-          "number": "15"
-        },
         {
           "name": "JORDI ALBA",
           "position": "DEF",
           "number": "18"
         },
         {
+          "name": "JAVIER MASCHERANO",
+          "position": "DEF",
+          "number": "14"
+        },
+        {
+          "name": "GERARD PIQUÉ",
+          "position": "DEF",
+          "number": "3"
+        },
+        {
           "name": "DANI ALVES",
           "position": "DEF",
-          "number": "2"
+          "number": "22"
         }
       ],
       [
-        {
-          "name": "RAFINHA",
-          "position": "MID",
-          "number": "16"
-        },
         {
           "name": "ANDRÉS INIESTA",
           "position": "MID",
@@ -128,18 +48,23 @@
           "name": "SERGIO BUSQUETS",
           "position": "MID",
           "number": "5"
+        },
+        {
+          "name": "IVAN RAKITIC",
+          "position": "MID",
+          "number": "4"
         }
       ],
       [
         {
-          "name": "LUIS SUÁREZ",
-          "position": "FWD",
-          "number": "9"
-        },
-        {
           "name": "NEYMAR",
           "position": "FWD",
           "number": "11"
+        },
+        {
+          "name": "LUIS SUÁREZ",
+          "position": "FWD",
+          "number": "9"
         },
         {
           "name": "LIONEL MESSI",
@@ -161,440 +86,65 @@
     "formation": [
       [
         {
-          "name": "CLAUDIO BRAVO",
+          "name": "MARC-ANDRÉ TER STEGEN",
           "position": "GK",
           "number": "1"
         }
       ],
       [
         {
-          "name": "GERARD PIQUÉ",
+          "name": "JORDI ALBA",
           "position": "DEF",
-          "number": "2"
+          "number": "18"
         },
         {
           "name": "JAVIER MASCHERANO",
           "position": "DEF",
-          "number": "3"
+          "number": "14"
         },
         {
-          "name": "JORDI ALBA",
+          "name": "GERARD PIQUÉ",
           "position": "DEF",
-          "number": "4"
+          "number": "3"
         },
         {
           "name": "DANI ALVES",
           "position": "DEF",
-          "number": "5"
+          "number": "22"
         }
       ],
       [
         {
           "name": "ANDRÉS INIESTA",
           "position": "MID",
-          "number": "6"
+          "number": "8"
         },
         {
           "name": "SERGIO BUSQUETS",
           "position": "MID",
-          "number": "7"
+          "number": "5"
         },
         {
           "name": "IVAN RAKITIC",
           "position": "MID",
-          "number": "8"
+          "number": "4"
         }
       ],
       [
+        {
+          "name": "NEYMAR",
+          "position": "FWD",
+          "number": "11"
+        },
+        {
+          "name": "LIONEL MESSI",
+          "position": "FWD",
+          "number": "10"
+        },
         {
           "name": "PEDRO",
           "position": "FWD",
-          "number": "9"
-        },
-        {
-          "name": "NEYMAR",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "LIONEL MESSI",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2014-15",
-    "homeTeam": "BARCELONA",
-    "awayTeam": "REAL SOCIEDAD",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "2-0",
-    "date": "09 de mayo 2015",
-    "playingTeam": "BARCELONA",
-    "formation": [
-      [
-        {
-          "name": "CLAUDIO BRAVO",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "MARC BARTRA",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "GERARD PIQUÉ",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "ADRIANO",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "DANI ALVES",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "RAFINHA",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "XAVI",
-          "position": "MID",
           "number": "7"
-        },
-        {
-          "name": "JAVIER MASCHERANO",
-          "position": "MID",
-          "number": "8"
-        }
-      ],
-      [
-        {
-          "name": "LUIS SUÁREZ",
-          "position": "FWD",
-          "number": "9"
-        },
-        {
-          "name": "NEYMAR",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "LIONEL MESSI",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2014-15",
-    "homeTeam": "BARCELONA",
-    "awayTeam": "GETAFE",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "6-0",
-    "date": "28 de abril 2015",
-    "playingTeam": "BARCELONA",
-    "formation": [
-      [
-        {
-          "name": "CLAUDIO BRAVO",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "JÉRÉMY MATHIEU",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "MARC BARTRA",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "ADRIANO",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "DANI ALVES",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "SERGIO BUSQUETS",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "RAFINHA",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "XAVI",
-          "position": "MID",
-          "number": "8"
-        }
-      ],
-      [
-        {
-          "name": "LUIS SUÁREZ",
-          "position": "FWD",
-          "number": "9"
-        },
-        {
-          "name": "NEYMAR",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "LIONEL MESSI",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2015-16",
-    "homeTeam": "VILLARREAL",
-    "awayTeam": "BARCELONA",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "2-2",
-    "date": "20 de marzo 2016",
-    "playingTeam": "BARCELONA",
-    "formation": [
-      [
-        {
-          "name": "CLAUDIO BRAVO",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "GERARD PIQUÉ",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "JAVIER MASCHERANO",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "JORDI ALBA",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "SERGI ROBERTO",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "ARDA TURAN",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "SERGIO BUSQUETS",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "IVAN RAKITIC",
-          "position": "MID",
-          "number": "8"
-        }
-      ],
-      [
-        {
-          "name": "LUIS SUÁREZ",
-          "position": "FWD",
-          "number": "9"
-        },
-        {
-          "name": "NEYMAR",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "LIONEL MESSI",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2015-16",
-    "homeTeam": "BARCELONA",
-    "awayTeam": "GRANADA",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "4-0",
-    "date": "09 de enero 2016",
-    "playingTeam": "BARCELONA",
-    "formation": [
-      [
-        {
-          "name": "CLAUDIO BRAVO",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "THOMAS VERMAELEN",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "GERARD PIQUÉ",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "JORDI ALBA",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "ALEIX VIDAL",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "IVAN RAKITIC",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "ARDA TURAN",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "SERGI ROBERTO",
-          "position": "MID",
-          "number": "8"
-        }
-      ],
-      [
-        {
-          "name": "LUIS SUÁREZ",
-          "position": "FWD",
-          "number": "9"
-        },
-        {
-          "name": "NEYMAR",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "LIONEL MESSI",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2015-16",
-    "homeTeam": "BARCELONA",
-    "awayTeam": "SEVILLA",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "2-1",
-    "date": "28 de febrero 2016",
-    "playingTeam": "BARCELONA",
-    "formation": [
-      [
-        {
-          "name": "CLAUDIO BRAVO",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "GERARD PIQUÉ",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "JÉRÉMY MATHIEU",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "JORDI ALBA",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "ALEIX VIDAL",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "SERGI ROBERTO",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "ARDA TURAN",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "SERGIO BUSQUETS",
-          "position": "MID",
-          "number": "8"
-        }
-      ],
-      [
-        {
-          "name": "LUIS SUÁREZ",
-          "position": "FWD",
-          "number": "9"
-        },
-        {
-          "name": "NEYMAR",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "LIONEL MESSI",
-          "position": "FWD",
-          "number": "11"
         }
       ]
     ]
@@ -613,14 +163,19 @@
         {
           "name": "CLAUDIO BRAVO",
           "position": "GK",
-          "number": "1"
+          "number": "13"
         }
       ],
       [
         {
+          "name": "JORDI ALBA",
+          "position": "DEF",
+          "number": "18"
+        },
+        {
           "name": "JÉRÉMY MATHIEU",
           "position": "DEF",
-          "number": "2"
+          "number": "24"
         },
         {
           "name": "GERARD PIQUÉ",
@@ -628,48 +183,43 @@
           "number": "3"
         },
         {
-          "name": "JORDI ALBA",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
           "name": "SERGI ROBERTO",
           "position": "DEF",
-          "number": "5"
+          "number": "20"
         }
       ],
       [
         {
           "name": "IVAN RAKITIC",
           "position": "MID",
-          "number": "6"
+          "number": "4"
         },
         {
           "name": "SERGIO BUSQUETS",
           "position": "MID",
-          "number": "7"
+          "number": "5"
         },
         {
           "name": "JAVIER MASCHERANO",
           "position": "MID",
-          "number": "8"
+          "number": "14"
         }
       ],
       [
+        {
+          "name": "NEYMAR",
+          "position": "FWD",
+          "number": "11"
+        },
         {
           "name": "LUIS SUÁREZ",
           "position": "FWD",
           "number": "9"
         },
         {
-          "name": "NEYMAR",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
           "name": "MUNIR EL HADDADI",
           "position": "FWD",
-          "number": "11"
+          "number": "17"
         }
       ]
     ]
@@ -677,74 +227,74 @@
   {
     "competition": "LA LIGA • TEMPORADA 2015-16",
     "homeTeam": "BARCELONA",
-    "awayTeam": "DEPORTIVO LA CORUNA",
+    "awayTeam": "SEVILLA",
     "homeBadge": "🏟️",
     "awayBadge": "⚽",
-    "score": "2-2",
-    "date": "12 de diciembre 2015",
+    "score": "2-1",
+    "date": "28 de febrero 2016",
     "playingTeam": "BARCELONA",
     "formation": [
       [
         {
           "name": "CLAUDIO BRAVO",
           "position": "GK",
-          "number": "1"
+          "number": "13"
         }
       ],
       [
         {
-          "name": "GERARD PIQUÉ",
+          "name": "JORDI ALBA",
           "position": "DEF",
-          "number": "2"
+          "number": "18"
         },
         {
-          "name": "JAVIER MASCHERANO",
+          "name": "JÉRÉMY MATHIEU",
+          "position": "DEF",
+          "number": "24"
+        },
+        {
+          "name": "GERARD PIQUÉ",
           "position": "DEF",
           "number": "3"
         },
         {
-          "name": "JORDI ALBA",
+          "name": "ALEIX VIDAL",
           "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "DANI ALVES",
-          "position": "DEF",
-          "number": "5"
+          "number": "22"
         }
       ],
       [
         {
-          "name": "SERGIO BUSQUETS",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "ANDRÉS INIESTA",
+          "name": "ARDA TURAN",
           "position": "MID",
           "number": "7"
         },
         {
-          "name": "IVAN RAKITIC",
+          "name": "SERGIO BUSQUETS",
           "position": "MID",
-          "number": "8"
+          "number": "5"
+        },
+        {
+          "name": "SERGI ROBERTO",
+          "position": "MID",
+          "number": "20"
         }
       ],
       [
+        {
+          "name": "NEYMAR",
+          "position": "FWD",
+          "number": "11"
+        },
         {
           "name": "LUIS SUÁREZ",
           "position": "FWD",
           "number": "9"
         },
         {
-          "name": "SANDRO RAMÍREZ",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
           "name": "LIONEL MESSI",
           "position": "FWD",
-          "number": "11"
+          "number": "10"
         }
       ]
     ]
@@ -768,283 +318,58 @@
       ],
       [
         {
+          "name": "JORDI ALBA",
+          "position": "DEF",
+          "number": "18"
+        },
+        {
+          "name": "GERARD PIQUÉ",
+          "position": "DEF",
+          "number": "3"
+        },
+        {
           "name": "JAVIER MASCHERANO",
           "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "GERARD PIQUÉ",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "JORDI ALBA",
-          "position": "DEF",
-          "number": "4"
+          "number": "14"
         },
         {
           "name": "SERGI ROBERTO",
           "position": "DEF",
-          "number": "5"
+          "number": "20"
         }
       ],
       [
-        {
-          "name": "ANDRÉ GOMES",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "SERGIO BUSQUETS",
-          "position": "MID",
-          "number": "7"
-        },
         {
           "name": "IVAN RAKITIC",
           "position": "MID",
-          "number": "8"
-        }
-      ],
-      [
-        {
-          "name": "LUIS SUÁREZ",
-          "position": "FWD",
-          "number": "9"
-        },
-        {
-          "name": "NEYMAR",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "LIONEL MESSI",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2016-17",
-    "homeTeam": "BARCELONA",
-    "awayTeam": "VILLARREAL",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "4-1",
-    "date": "06 de mayo 2017",
-    "playingTeam": "BARCELONA",
-    "formation": [
-      [
-        {
-          "name": "MARC-ANDRÉ TER STEGEN",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "SAMUEL UMTITI",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "GERARD PIQUÉ",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "LUCAS DIGNE",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "SERGI ROBERTO",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "ANDRÉS INIESTA",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "IVAN RAKITIC",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "SERGIO BUSQUETS",
-          "position": "MID",
-          "number": "8"
-        }
-      ],
-      [
-        {
-          "name": "LUIS SUÁREZ",
-          "position": "FWD",
-          "number": "9"
-        },
-        {
-          "name": "NEYMAR",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "LIONEL MESSI",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2016-17",
-    "homeTeam": "BARCELONA",
-    "awayTeam": "CELTA VIGO",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "5-0",
-    "date": "04 de marzo 2017",
-    "playingTeam": "BARCELONA",
-    "formation": [
-      [
-        {
-          "name": "MARC-ANDRÉ TER STEGEN",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "JORDI ALBA",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "GERARD PIQUÉ",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "SAMUEL UMTITI",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "IVAN RAKITIC",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "RAFINHA",
-          "position": "DEF",
-          "number": "6"
-        }
-      ],
-      [
-        {
-          "name": "SERGI ROBERTO",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "SERGIO BUSQUETS",
-          "position": "MID",
-          "number": "8"
-        }
-      ],
-      [
-        {
-          "name": "LUIS SUÁREZ",
-          "position": "FWD",
-          "number": "9"
-        },
-        {
-          "name": "NEYMAR",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "LIONEL MESSI",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2016-17",
-    "homeTeam": "BARCELONA",
-    "awayTeam": "REAL SOCIEDAD",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "3-2",
-    "date": "15 de abril 2017",
-    "playingTeam": "BARCELONA",
-    "formation": [
-      [
-        {
-          "name": "MARC-ANDRÉ TER STEGEN",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "SAMUEL UMTITI",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "GERARD PIQUÉ",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "JORDI ALBA",
-          "position": "DEF",
           "number": "4"
         },
         {
           "name": "SERGIO BUSQUETS",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "SERGI ROBERTO",
-          "position": "DEF",
-          "number": "6"
-        }
-      ],
-      [
-        {
-          "name": "LIONEL MESSI",
           "position": "MID",
-          "number": "7"
+          "number": "5"
         },
         {
           "name": "ANDRÉ GOMES",
           "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "IVAN RAKITIC",
-          "position": "MID",
-          "number": "9"
+          "number": "21"
         }
       ],
       [
         {
-          "name": "LUIS SUÁREZ",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "PACO ALCÁCER",
+          "name": "NEYMAR",
           "position": "FWD",
           "number": "11"
+        },
+        {
+          "name": "LUIS SUÁREZ",
+          "position": "FWD",
+          "number": "9"
+        },
+        {
+          "name": "LIONEL MESSI",
+          "position": "FWD",
+          "number": "10"
         }
       ]
     ]
@@ -1070,131 +395,56 @@
         {
           "name": "JÉRÉMY MATHIEU",
           "position": "DEF",
-          "number": "2"
+          "number": "24"
+        },
+        {
+          "name": "SAMUEL UMTITI",
+          "position": "DEF",
+          "number": "23"
         },
         {
           "name": "GERARD PIQUÉ",
           "position": "DEF",
           "number": "3"
-        },
-        {
-          "name": "SAMUEL UMTITI",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "SERGIO BUSQUETS",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "LIONEL MESSI",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "ANDRÉS INIESTA",
-          "position": "MID",
-          "number": "7"
         },
         {
           "name": "SERGI ROBERTO",
-          "position": "MID",
-          "number": "8"
+          "position": "DEF",
+          "number": "20"
         }
       ],
       [
-        {
-          "name": "LUIS SUÁREZ",
-          "position": "FWD",
-          "number": "9"
-        },
-        {
-          "name": "NEYMAR",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "RAFINHA",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2017-18",
-    "homeTeam": "ESPANYOL",
-    "awayTeam": "BARCELONA",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "1-1",
-    "date": "04 de febrero 2018",
-    "playingTeam": "BARCELONA",
-    "formation": [
-      [
-        {
-          "name": "MARC-ANDRÉ TER STEGEN",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "SAMUEL UMTITI",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "GERARD PIQUÉ",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "LUCAS DIGNE",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "NÉLSON SEMEDO",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "PAULINHO",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "SERGIO BUSQUETS",
-          "position": "MID",
-          "number": "7"
-        },
         {
           "name": "ANDRÉS INIESTA",
           "position": "MID",
           "number": "8"
+        },
+        {
+          "name": "SERGIO BUSQUETS",
+          "position": "MID",
+          "number": "5"
+        },
+        {
+          "name": "RAFINHA",
+          "position": "MID",
+          "number": "12"
         }
       ],
       [
+        {
+          "name": "NEYMAR",
+          "position": "FWD",
+          "number": "11"
+        },
         {
           "name": "LUIS SUÁREZ",
           "position": "FWD",
           "number": "9"
         },
         {
-          "name": "PHILIPPE COUTINHO",
+          "name": "LIONEL MESSI",
           "position": "FWD",
           "number": "10"
-        },
-        {
-          "name": "PACO ALCÁCER",
-          "position": "FWD",
-          "number": "11"
         }
       ]
     ]
@@ -1218,319 +468,19 @@
       ],
       [
         {
-          "name": "THOMAS VERMAELEN",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "GERARD PIQUÉ",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "JORDI ALBA",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "SERGI ROBERTO",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "SERGIO BUSQUETS",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "IVAN RAKITIC",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "ANDRÉS INIESTA",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "PAULINHO",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "LUIS SUÁREZ",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "LIONEL MESSI",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2017-18",
-    "homeTeam": "LAS PALMAS",
-    "awayTeam": "BARCELONA",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "1-1",
-    "date": "01 de marzo 2018",
-    "playingTeam": "BARCELONA",
-    "formation": [
-      [
-        {
-          "name": "MARC-ANDRÉ TER STEGEN",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "THOMAS VERMAELEN",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "SAMUEL UMTITI",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "LUCAS DIGNE",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "SERGI ROBERTO",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "PAULINHO",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "SERGIO BUSQUETS",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "ANDRÉS INIESTA",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "ALEIX VIDAL",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "LUIS SUÁREZ",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "LIONEL MESSI",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2017-18",
-    "homeTeam": "BARCELONA",
-    "awayTeam": "LAS PALMAS",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "3-0",
-    "date": "01 de octubre 2017",
-    "playingTeam": "BARCELONA",
-    "formation": [
-      [
-        {
-          "name": "MARC-ANDRÉ TER STEGEN",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "GERARD PIQUÉ",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "JAVIER MASCHERANO",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "JORDI ALBA",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "SERGI ROBERTO",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "PAULINHO",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "SERGIO BUSQUETS",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "DENIS SUÁREZ",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "ALEIX VIDAL",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "LUIS SUÁREZ",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "LIONEL MESSI",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2017-18",
-    "homeTeam": "CELTA VIGO",
-    "awayTeam": "BARCELONA",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "2-2",
-    "date": "17 de abril 2018",
-    "playingTeam": "BARCELONA",
-    "formation": [
-      [
-        {
-          "name": "MARC-ANDRÉ TER STEGEN",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "THOMAS VERMAELEN",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "YERRY MINA",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "LUCAS DIGNE",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "ANDRÉ GOMES",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "PAULINHO",
-          "position": "DEF",
-          "number": "6"
-        },
-        {
-          "name": "NÉLSON SEMEDO",
-          "position": "DEF",
-          "number": "7"
-        }
-      ],
-      [
-        {
-          "name": "DENIS SUÁREZ",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "PHILIPPE COUTINHO",
-          "position": "MID",
-          "number": "9"
-        },
-        {
-          "name": "OUSMANE DEMBÉLÉ",
-          "position": "MID",
-          "number": "10"
-        }
-      ],
-      [
-        {
-          "name": "PACO ALCÁCER",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2018-19",
-    "homeTeam": "GETAFE",
-    "awayTeam": "BARCELONA",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "1-2",
-    "date": "06 de enero 2019",
-    "playingTeam": "BARCELONA",
-    "formation": [
-      [
-        {
-          "name": "MARC-ANDRÉ TER STEGEN",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "GERARD PIQUÉ",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "CLÉMENT LENGLET",
-          "position": "DEF",
-          "number": "15"
-        },
-        {
           "name": "JORDI ALBA",
           "position": "DEF",
           "number": "18"
+        },
+        {
+          "name": "THOMAS VERMAELEN",
+          "position": "DEF",
+          "number": "25"
+        },
+        {
+          "name": "GERARD PIQUÉ",
+          "position": "DEF",
+          "number": "3"
         },
         {
           "name": "SERGI ROBERTO",
@@ -1540,12 +490,7 @@
       ],
       [
         {
-          "name": "ARTURO VIDAL",
-          "position": "MID",
-          "number": "22"
-        },
-        {
-          "name": "ARTHUR",
+          "name": "ANDRÉS INIESTA",
           "position": "MID",
           "number": "8"
         },
@@ -1553,6 +498,16 @@
           "name": "IVAN RAKITIC",
           "position": "MID",
           "number": "4"
+        },
+        {
+          "name": "SERGIO BUSQUETS",
+          "position": "MID",
+          "number": "5"
+        },
+        {
+          "name": "PAULINHO",
+          "position": "MID",
+          "number": "15"
         }
       ],
       [
@@ -1560,11 +515,6 @@
           "name": "LUIS SUÁREZ",
           "position": "FWD",
           "number": "9"
-        },
-        {
-          "name": "OUSMANE DEMBÉLÉ",
-          "position": "FWD",
-          "number": "11"
         },
         {
           "name": "LIONEL MESSI",
@@ -1575,13 +525,13 @@
     ]
   },
   {
-    "competition": "LA LIGA • TEMPORADA 2018-19",
-    "homeTeam": "BARCELONA",
-    "awayTeam": "LEVANTE",
+    "competition": "LA LIGA • TEMPORADA 2017-18",
+    "homeTeam": "ESPANYOL",
+    "awayTeam": "BARCELONA",
     "homeBadge": "🏟️",
     "awayBadge": "⚽",
-    "score": "1-0",
-    "date": "27 de abril 2019",
+    "score": "1-1",
+    "date": "04 de febrero 2018",
     "playingTeam": "BARCELONA",
     "formation": [
       [
@@ -1593,19 +543,19 @@
       ],
       [
         {
-          "name": "CLÉMENT LENGLET",
+          "name": "LUCAS DIGNE",
           "position": "DEF",
-          "number": "15"
+          "number": "19"
+        },
+        {
+          "name": "SAMUEL UMTITI",
+          "position": "DEF",
+          "number": "23"
         },
         {
           "name": "GERARD PIQUÉ",
           "position": "DEF",
           "number": "3"
-        },
-        {
-          "name": "JORDI ALBA",
-          "position": "DEF",
-          "number": "18"
         },
         {
           "name": "NÉLSON SEMEDO",
@@ -1615,19 +565,24 @@
       ],
       [
         {
-          "name": "IVAN RAKITIC",
-          "position": "MID",
-          "number": "4"
-        },
-        {
-          "name": "ARTHUR",
+          "name": "ANDRÉS INIESTA",
           "position": "MID",
           "number": "8"
         },
         {
-          "name": "ARTURO VIDAL",
+          "name": "SERGIO BUSQUETS",
           "position": "MID",
-          "number": "22"
+          "number": "5"
+        },
+        {
+          "name": "PAULINHO",
+          "position": "MID",
+          "number": "15"
+        },
+        {
+          "name": "PHILIPPE COUTINHO",
+          "position": "MID",
+          "number": "14"
         }
       ],
       [
@@ -1637,14 +592,9 @@
           "number": "9"
         },
         {
-          "name": "PHILIPPE COUTINHO",
+          "name": "PACO ALCÁCER",
           "position": "FWD",
-          "number": "7"
-        },
-        {
-          "name": "OUSMANE DEMBÉLÉ",
-          "position": "FWD",
-          "number": "11"
+          "number": "17"
         }
       ]
     ]
@@ -1668,6 +618,11 @@
       ],
       [
         {
+          "name": "JORDI ALBA",
+          "position": "DEF",
+          "number": "18"
+        },
+        {
           "name": "CLÉMENT LENGLET",
           "position": "DEF",
           "number": "15"
@@ -1678,22 +633,12 @@
           "number": "3"
         },
         {
-          "name": "JORDI ALBA",
-          "position": "DEF",
-          "number": "18"
-        },
-        {
           "name": "SERGI ROBERTO",
           "position": "DEF",
           "number": "20"
         }
       ],
       [
-        {
-          "name": "ARTHUR",
-          "position": "MID",
-          "number": "8"
-        },
         {
           "name": "IVAN RAKITIC",
           "position": "MID",
@@ -1703,18 +648,23 @@
           "name": "SERGIO BUSQUETS",
           "position": "MID",
           "number": "5"
+        },
+        {
+          "name": "ARTHUR MELO",
+          "position": "MID",
+          "number": "8"
         }
       ],
       [
         {
-          "name": "LUIS SUÁREZ",
-          "position": "FWD",
-          "number": "9"
-        },
-        {
           "name": "PHILIPPE COUTINHO",
           "position": "FWD",
           "number": "7"
+        },
+        {
+          "name": "LUIS SUÁREZ",
+          "position": "FWD",
+          "number": "9"
         },
         {
           "name": "RAFINHA",
@@ -1743,9 +693,9 @@
       ],
       [
         {
-          "name": "GERARD PIQUÉ",
+          "name": "SERGI ROBERTO",
           "position": "DEF",
-          "number": "3"
+          "number": "20"
         },
         {
           "name": "THOMAS VERMAELEN",
@@ -1753,9 +703,9 @@
           "number": "24"
         },
         {
-          "name": "SERGI ROBERTO",
+          "name": "GERARD PIQUÉ",
           "position": "DEF",
-          "number": "20"
+          "number": "3"
         },
         {
           "name": "NÉLSON SEMEDO",
@@ -1765,9 +715,9 @@
       ],
       [
         {
-          "name": "CARLES ALEÑÁ",
+          "name": "ARTURO VIDAL",
           "position": "MID",
-          "number": "21"
+          "number": "22"
         },
         {
           "name": "IVAN RAKITIC",
@@ -1775,326 +725,26 @@
           "number": "4"
         },
         {
-          "name": "ARTURO VIDAL",
+          "name": "CARLES ALEÑÁ",
           "position": "MID",
-          "number": "22"
+          "number": "21"
         }
       ],
       [
-        {
-          "name": "LUIS SUÁREZ",
-          "position": "FWD",
-          "number": "9"
-        },
         {
           "name": "PHILIPPE COUTINHO",
           "position": "FWD",
           "number": "7"
         },
         {
-          "name": "LIONEL MESSI",
-          "position": "FWD",
-          "number": "10"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2018-19",
-    "homeTeam": "BARCELONA",
-    "awayTeam": "REAL VALLADOLID",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "1-0",
-    "date": "16 de febrero 2019",
-    "playingTeam": "BARCELONA",
-    "formation": [
-      [
-        {
-          "name": "MARC-ANDRÉ TER STEGEN",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "THOMAS VERMAELEN",
-          "position": "DEF",
-          "number": "24"
-        },
-        {
-          "name": "GERARD PIQUÉ",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "JORDI ALBA",
-          "position": "DEF",
-          "number": "18"
-        },
-        {
-          "name": "SERGI ROBERTO",
-          "position": "DEF",
-          "number": "20"
-        }
-      ],
-      [
-        {
-          "name": "CARLES ALEÑÁ",
-          "position": "MID",
-          "number": "21"
-        },
-        {
-          "name": "ARTURO VIDAL",
-          "position": "MID",
-          "number": "22"
-        },
-        {
-          "name": "SERGIO BUSQUETS",
-          "position": "MID",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "KEVIN-PRINCE BOATENG",
-          "position": "FWD",
-          "number": "19"
-        },
-        {
-          "name": "OUSMANE DEMBÉLÉ",
-          "position": "FWD",
-          "number": "11"
-        },
-        {
-          "name": "LIONEL MESSI",
-          "position": "FWD",
-          "number": "10"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2019-20",
-    "homeTeam": "BARCELONA",
-    "awayTeam": "REAL SOCIEDAD",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "1-0",
-    "date": "07 de marzo 2020",
-    "playingTeam": "BARCELONA",
-    "formation": [
-      [
-        {
-          "name": "MARC-ANDRÉ TER STEGEN",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "CLÉMENT LENGLET",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "GERARD PIQUÉ",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "JORDI ALBA",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "NÉLSON SEMEDO",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "FRENKIE DE JONG",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "IVAN RAKITIC",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "SERGIO BUSQUETS",
-          "position": "MID",
-          "number": "8"
-        }
-      ],
-      [
-        {
-          "name": "LIONEL MESSI",
+          "name": "LUIS SUÁREZ",
           "position": "FWD",
           "number": "9"
         },
         {
-          "name": "MARTIN BRAITHWAITE",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "ANTOINE GRIEZMANN",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2019-20",
-    "homeTeam": "BARCELONA",
-    "awayTeam": "GRANADA",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "1-0",
-    "date": "19 de enero 2020",
-    "playingTeam": "BARCELONA",
-    "formation": [
-      [
-        {
-          "name": "MARC-ANDRÉ TER STEGEN",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "GERARD PIQUÉ",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "SERGI ROBERTO",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "SAMUEL UMTITI",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "SERGIO BUSQUETS",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "IVAN RAKITIC",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "ARTURO VIDAL",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "JORDI ALBA",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "ANSU FATI",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "ANTOINE GRIEZMANN",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
           "name": "LIONEL MESSI",
           "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2019-20",
-    "homeTeam": "BARCELONA",
-    "awayTeam": "LEGANES",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "2-0",
-    "date": "16 de junio 2020",
-    "playingTeam": "BARCELONA",
-    "formation": [
-      [
-        {
-          "name": "MARC-ANDRÉ TER STEGEN",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "GERARD PIQUÉ",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "CLÉMENT LENGLET",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "JUNIOR FIRPO",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "SERGI ROBERTO",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "SERGIO BUSQUETS",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "ARTHUR",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "IVAN RAKITIC",
-          "position": "MID",
-          "number": "8"
-        }
-      ],
-      [
-        {
-          "name": "ANTOINE GRIEZMANN",
-          "position": "FWD",
-          "number": "9"
-        },
-        {
-          "name": "ANSU FATI",
-          "position": "FWD",
           "number": "10"
-        },
-        {
-          "name": "LIONEL MESSI",
-          "position": "FWD",
-          "number": "11"
         }
       ]
     ]
@@ -2118,58 +768,58 @@
       ],
       [
         {
-          "name": "GERARD PIQUÉ",
+          "name": "JUNIOR FIRPO",
           "position": "DEF",
-          "number": "2"
+          "number": "24"
         },
         {
           "name": "CLÉMENT LENGLET",
           "position": "DEF",
-          "number": "3"
+          "number": "15"
         },
         {
-          "name": "JUNIOR FIRPO",
+          "name": "GERARD PIQUÉ",
           "position": "DEF",
-          "number": "4"
+          "number": "3"
         },
         {
           "name": "SERGI ROBERTO",
           "position": "DEF",
-          "number": "5"
+          "number": "20"
         }
       ],
       [
         {
           "name": "FRENKIE DE JONG",
           "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "IVAN RAKITIC",
-          "position": "MID",
-          "number": "7"
+          "number": "21"
         },
         {
           "name": "SERGIO BUSQUETS",
           "position": "MID",
-          "number": "8"
+          "number": "5"
+        },
+        {
+          "name": "IVAN RAKITIC",
+          "position": "MID",
+          "number": "4"
         }
       ],
       [
+        {
+          "name": "ANTOINE GRIEZMANN",
+          "position": "FWD",
+          "number": "17"
+        },
         {
           "name": "LUIS SUÁREZ",
           "position": "FWD",
           "number": "9"
         },
         {
-          "name": "ANTOINE GRIEZMANN",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
           "name": "LIONEL MESSI",
           "position": "FWD",
-          "number": "11"
+          "number": "10"
         }
       ]
     ]
@@ -2193,58 +843,133 @@
       ],
       [
         {
+          "name": "JUNIOR FIRPO",
+          "position": "DEF",
+          "number": "24"
+        },
+        {
           "name": "CLÉMENT LENGLET",
           "position": "DEF",
-          "number": "2"
+          "number": "15"
         },
         {
           "name": "SAMUEL UMTITI",
           "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "JUNIOR FIRPO",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "SERGIO BUSQUETS",
-          "position": "DEF",
-          "number": "5"
+          "number": "23"
         },
         {
           "name": "NÉLSON SEMEDO",
           "position": "DEF",
-          "number": "6"
+          "number": "2"
         }
       ],
       [
         {
-          "name": "ARTURO VIDAL",
+          "name": "FRENKIE DE JONG",
           "position": "MID",
-          "number": "7"
+          "number": "21"
+        },
+        {
+          "name": "SERGIO BUSQUETS",
+          "position": "MID",
+          "number": "5"
         },
         {
           "name": "SERGI ROBERTO",
           "position": "MID",
-          "number": "8"
+          "number": "20"
         },
         {
-          "name": "FRENKIE DE JONG",
+          "name": "ARTURO VIDAL",
           "position": "MID",
-          "number": "9"
+          "number": "22"
         }
       ],
       [
         {
           "name": "ANTOINE GRIEZMANN",
           "position": "FWD",
-          "number": "10"
+          "number": "17"
         },
         {
           "name": "LIONEL MESSI",
           "position": "FWD",
-          "number": "11"
+          "number": "10"
+        }
+      ]
+    ]
+  },
+  {
+    "competition": "LA LIGA • TEMPORADA 2020-21",
+    "homeTeam": "BARCELONA",
+    "awayTeam": "REAL MADRID",
+    "homeBadge": "🏟️",
+    "awayBadge": "⚽",
+    "score": "1-3",
+    "date": "24 de octubre 2020",
+    "playingTeam": "BARCELONA",
+    "formation": [
+      [
+        {
+          "name": "MARC-ANDRÉ TER STEGEN",
+          "position": "GK",
+          "number": "1"
+        }
+      ],
+      [
+        {
+          "name": "JORDI ALBA",
+          "position": "DEF",
+          "number": "18"
+        },
+        {
+          "name": "CLÉMENT LENGLET",
+          "position": "DEF",
+          "number": "15"
+        },
+        {
+          "name": "GERARD PIQUÉ",
+          "position": "DEF",
+          "number": "3"
+        },
+        {
+          "name": "SERGIÑO DEST",
+          "position": "DEF",
+          "number": "2"
+        }
+      ],
+      [
+        {
+          "name": "FRENKIE DE JONG",
+          "position": "MID",
+          "number": "21"
+        },
+        {
+          "name": "SERGIO BUSQUETS",
+          "position": "MID",
+          "number": "5"
+        },
+        {
+          "name": "PEDRI",
+          "position": "MID",
+          "number": "16"
+        }
+      ],
+      [
+        {
+          "name": "PHILIPPE COUTINHO",
+          "position": "FWD",
+          "number": "14"
+        },
+        {
+          "name": "ANSU FATI",
+          "position": "FWD",
+          "number": "22"
+        },
+        {
+          "name": "LIONEL MESSI",
+          "position": "FWD",
+          "number": "10"
         }
       ]
     ]
@@ -2270,356 +995,56 @@
         {
           "name": "GERARD PIQUÉ",
           "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "ÓSCAR MINGUEZA",
-          "position": "DEF",
           "number": "3"
         },
         {
           "name": "CLÉMENT LENGLET",
           "position": "DEF",
-          "number": "4"
+          "number": "15"
         },
         {
-          "name": "SERGIO BUSQUETS",
+          "name": "ÓSCAR MINGUEZA",
           "position": "DEF",
-          "number": "5"
+          "number": "28"
         }
       ],
       [
         {
-          "name": "PEDRI",
+          "name": "JORDI ALBA",
           "position": "MID",
-          "number": "6"
+          "number": "18"
         },
         {
           "name": "FRENKIE DE JONG",
           "position": "MID",
-          "number": "7"
+          "number": "21"
         },
         {
-          "name": "JORDI ALBA",
+          "name": "SERGIO BUSQUETS",
           "position": "MID",
-          "number": "8"
+          "number": "5"
         },
         {
           "name": "SERGIÑO DEST",
           "position": "MID",
-          "number": "9"
+          "number": "2"
+        },
+        {
+          "name": "PEDRI",
+          "position": "MID",
+          "number": "16"
         }
       ],
       [
         {
           "name": "OUSMANE DEMBÉLÉ",
           "position": "FWD",
-          "number": "10"
+          "number": "11"
         },
         {
           "name": "LIONEL MESSI",
           "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2020-21",
-    "homeTeam": "REAL VALLADOLID",
-    "awayTeam": "BARCELONA",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "0-1",
-    "date": "11 de julio 2020",
-    "playingTeam": "BARCELONA",
-    "formation": [
-      [
-        {
-          "name": "MARC-ANDRÉ TER STEGEN",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "CLÉMENT LENGLET",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "GERARD PIQUÉ",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "JORDI ALBA",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "SERGIO BUSQUETS",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "NÉLSON SEMEDO",
-          "position": "DEF",
-          "number": "6"
-        }
-      ],
-      [
-        {
-          "name": "ARTURO VIDAL",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "RIQUI PUIG",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "SERGI ROBERTO",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "ANTOINE GRIEZMANN",
-          "position": "FWD",
           "number": "10"
-        },
-        {
-          "name": "LIONEL MESSI",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2020-21",
-    "homeTeam": "VALENCIA",
-    "awayTeam": "BARCELONA",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "2-3",
-    "date": "02 de mayo 2021",
-    "playingTeam": "BARCELONA",
-    "formation": [
-      [
-        {
-          "name": "MARC-ANDRÉ TER STEGEN",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "CLÉMENT LENGLET",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "RONALD ARAUJO",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "GERARD PIQUÉ",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "SERGIO BUSQUETS",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "PEDRI",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "FRENKIE DE JONG",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "JORDI ALBA",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "SERGIÑO DEST",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "ANTOINE GRIEZMANN",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "LIONEL MESSI",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2020-21",
-    "homeTeam": "BARCELONA",
-    "awayTeam": "ATHLETIC CLUB",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "2-1",
-    "date": "31 de enero 2021",
-    "playingTeam": "BARCELONA",
-    "formation": [
-      [
-        {
-          "name": "MARC-ANDRÉ TER STEGEN",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "SAMUEL UMTITI",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "RONALD ARAUJO",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "JORDI ALBA",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "MIRALEM PJANIC",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "FRENKIE DE JONG",
-          "position": "DEF",
-          "number": "6"
-        },
-        {
-          "name": "ÓSCAR MINGUEZA",
-          "position": "DEF",
-          "number": "7"
-        }
-      ],
-      [
-        {
-          "name": "PEDRI",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "ANTOINE GRIEZMANN",
-          "position": "MID",
-          "number": "9"
-        },
-        {
-          "name": "OUSMANE DEMBÉLÉ",
-          "position": "MID",
-          "number": "10"
-        }
-      ],
-      [
-        {
-          "name": "LIONEL MESSI",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2020-21",
-    "homeTeam": "BARCELONA",
-    "awayTeam": "REAL MADRID",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "1-3",
-    "date": "24 de octubre 2020",
-    "playingTeam": "BARCELONA",
-    "formation": [
-      [
-        {
-          "name": "NETO",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "CLÉMENT LENGLET",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "GERARD PIQUÉ",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "JORDI ALBA",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "SERGIÑO DEST",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "SERGIO BUSQUETS",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "FRENKIE DE JONG",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "PHILIPPE COUTINHO",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "PEDRI",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "LIONEL MESSI",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "ANSU FATI",
-          "position": "FWD",
-          "number": "11"
         }
       ]
     ]
@@ -2643,58 +1068,58 @@
       ],
       [
         {
-          "name": "SAMUEL UMTITI",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "RONALD ARAUJO",
+          "name": "GERARD PIQUÉ",
           "position": "DEF",
           "number": "3"
         },
         {
-          "name": "GERARD PIQUÉ",
+          "name": "RONALD ARAUJO",
           "position": "DEF",
           "number": "4"
+        },
+        {
+          "name": "SAMUEL UMTITI",
+          "position": "DEF",
+          "number": "23"
         }
       ],
       [
         {
+          "name": "GAVI",
+          "position": "MID",
+          "number": "30"
+        },
+        {
           "name": "FRENKIE DE JONG",
           "position": "MID",
-          "number": "5"
-        },
-        {
-          "name": "ABDE EZZALZOULI",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "OUSMANE DEMBÉLÉ",
-          "position": "MID",
-          "number": "7"
+          "number": "21"
         },
         {
           "name": "SERGIO BUSQUETS",
           "position": "MID",
-          "number": "8"
+          "number": "5"
         },
         {
           "name": "NICO GONZÁLEZ",
           "position": "MID",
-          "number": "9"
-        },
-        {
-          "name": "GAVI",
-          "position": "MID",
-          "number": "10"
+          "number": "28"
         }
       ],
       [
         {
+          "name": "ABDE EZZALZOULI",
+          "position": "FWD",
+          "number": "33"
+        },
+        {
           "name": "LUUK DE JONG",
           "position": "FWD",
-          "number": "11"
+          "number": "17"
+        },
+        {
+          "name": "OUSMANE DEMBÉLÉ",
+          "position": "FWD",
+          "number": "7"
         }
       ]
     ]
@@ -2718,433 +1143,58 @@
       ],
       [
         {
-          "name": "ERIC GARCÍA",
+          "name": "JORDI ALBA",
           "position": "DEF",
-          "number": "2"
+          "number": "18"
         },
         {
           "name": "RONALD ARAUJO",
           "position": "DEF",
-          "number": "3"
+          "number": "4"
         },
         {
-          "name": "JORDI ALBA",
+          "name": "ERIC GARCÍA",
           "position": "DEF",
-          "number": "4"
+          "number": "24"
         },
         {
           "name": "SERGIÑO DEST",
           "position": "DEF",
-          "number": "5"
+          "number": "2"
         }
       ],
       [
         {
           "name": "FRENKIE DE JONG",
           "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "GAVI",
-          "position": "MID",
-          "number": "7"
+          "number": "21"
         },
         {
           "name": "SERGIO BUSQUETS",
           "position": "MID",
-          "number": "8"
+          "number": "5"
+        },
+        {
+          "name": "GAVI",
+          "position": "MID",
+          "number": "30"
         }
       ],
       [
         {
-          "name": "PIERRE-EMERICK AUBAMEYANG",
-          "position": "FWD",
-          "number": "9"
-        },
-        {
           "name": "FERRAN TORRES",
           "position": "FWD",
-          "number": "10"
+          "number": "19"
+        },
+        {
+          "name": "PIERRE-EMERICK AUBAMEYANG",
+          "position": "FWD",
+          "number": "25"
         },
         {
           "name": "OUSMANE DEMBÉLÉ",
           "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2021-22",
-    "homeTeam": "BARCELONA",
-    "awayTeam": "ESPANYOL",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "1-0",
-    "date": "20 de noviembre 2021",
-    "playingTeam": "BARCELONA",
-    "formation": [
-      [
-        {
-          "name": "MARC-ANDRÉ TER STEGEN",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "GERARD PIQUÉ",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "ERIC GARCÍA",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "JORDI ALBA",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "ÓSCAR MINGUEZA",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "NICO GONZÁLEZ",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "FRENKIE DE JONG",
-          "position": "MID",
           "number": "7"
-        },
-        {
-          "name": "SERGIO BUSQUETS",
-          "position": "MID",
-          "number": "8"
-        }
-      ],
-      [
-        {
-          "name": "MEMPHIS DEPAY",
-          "position": "FWD",
-          "number": "9"
-        },
-        {
-          "name": "GAVI",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "ILIAS AKHOMACH",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2021-22",
-    "homeTeam": "BARCELONA",
-    "awayTeam": "VILLARREAL",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "0-2",
-    "date": "22 de mayo 2022",
-    "playingTeam": "BARCELONA",
-    "formation": [
-      [
-        {
-          "name": "MARC-ANDRÉ TER STEGEN",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "CLÉMENT LENGLET",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "RONALD ARAUJO",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "JORDI ALBA",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "DANI ALVES",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "GAVI",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "FRENKIE DE JONG",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "SERGIO BUSQUETS",
-          "position": "MID",
-          "number": "8"
-        }
-      ],
-      [
-        {
-          "name": "PIERRE-EMERICK AUBAMEYANG",
-          "position": "FWD",
-          "number": "9"
-        },
-        {
-          "name": "FERRAN TORRES",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "ADAMA TRAORÉ",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2021-22",
-    "homeTeam": "VALENCIA",
-    "awayTeam": "BARCELONA",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "1-4",
-    "date": "20 de febrero 2022",
-    "playingTeam": "BARCELONA",
-    "formation": [
-      [
-        {
-          "name": "MARC-ANDRÉ TER STEGEN",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "RONALD ARAUJO",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "ERIC GARCÍA",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "JORDI ALBA",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "SERGIÑO DEST",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "SERGIO BUSQUETS",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "FRENKIE DE JONG",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "GAVI",
-          "position": "MID",
-          "number": "8"
-        }
-      ],
-      [
-        {
-          "name": "PIERRE-EMERICK AUBAMEYANG",
-          "position": "FWD",
-          "number": "9"
-        },
-        {
-          "name": "FERRAN TORRES",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "OUSMANE DEMBÉLÉ",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2022-23",
-    "homeTeam": "BARCELONA",
-    "awayTeam": "CADIZ",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "2-0",
-    "date": "19 de febrero 2023",
-    "playingTeam": "BARCELONA",
-    "formation": [
-      [
-        {
-          "name": "MARC-ANDRÉ TER STEGEN",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "ANDREAS CHRISTENSEN",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "ERIC GARCÍA",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "ALEJANDRO BALDE",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "JULES KOUNDÉ",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "FRENKIE DE JONG",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "GAVI",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "SERGI ROBERTO",
-          "position": "MID",
-          "number": "8"
-        }
-      ],
-      [
-        {
-          "name": "ROBERT LEWANDOWSKI",
-          "position": "FWD",
-          "number": "9"
-        },
-        {
-          "name": "ANSU FATI",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "FERRAN TORRES",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2022-23",
-    "homeTeam": "ELCHE",
-    "awayTeam": "BARCELONA",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "0-4",
-    "date": "01 de abril 2023",
-    "playingTeam": "BARCELONA",
-    "formation": [
-      [
-        {
-          "name": "MARC-ANDRÉ TER STEGEN",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "MARCOS ALONSO",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "RONALD ARAUJO",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "JORDI ALBA",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "JULES KOUNDÉ",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "ERIC GARCÍA",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "SERGI ROBERTO",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "GAVI",
-          "position": "MID",
-          "number": "8"
-        }
-      ],
-      [
-        {
-          "name": "ROBERT LEWANDOWSKI",
-          "position": "FWD",
-          "number": "9"
-        },
-        {
-          "name": "ANSU FATI",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "FERRAN TORRES",
-          "position": "FWD",
-          "number": "11"
         }
       ]
     ]
@@ -3168,9 +1218,14 @@
       ],
       [
         {
+          "name": "JORDI ALBA",
+          "position": "DEF",
+          "number": "18"
+        },
+        {
           "name": "MARCOS ALONSO",
           "position": "DEF",
-          "number": "2"
+          "number": "17"
         },
         {
           "name": "GERARD PIQUÉ",
@@ -3178,48 +1233,43 @@
           "number": "3"
         },
         {
-          "name": "JORDI ALBA",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
           "name": "ALEJANDRO BALDE",
           "position": "DEF",
-          "number": "5"
+          "number": "28"
         }
       ],
       [
-        {
-          "name": "SERGIO BUSQUETS",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "GAVI",
-          "position": "MID",
-          "number": "7"
-        },
         {
           "name": "PEDRI",
           "position": "MID",
           "number": "8"
+        },
+        {
+          "name": "SERGIO BUSQUETS",
+          "position": "MID",
+          "number": "5"
+        },
+        {
+          "name": "GAVI",
+          "position": "MID",
+          "number": "30"
         }
       ],
       [
+        {
+          "name": "FERRAN TORRES",
+          "position": "FWD",
+          "number": "11"
+        },
         {
           "name": "ROBERT LEWANDOWSKI",
           "position": "FWD",
           "number": "9"
         },
         {
-          "name": "FERRAN TORRES",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
           "name": "RAPHINHA",
           "position": "FWD",
-          "number": "11"
+          "number": "22"
         }
       ]
     ]
@@ -3243,133 +1293,58 @@
       ],
       [
         {
-          "name": "RONALD ARAUJO",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "ERIC GARCÍA",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
           "name": "MARCOS ALONSO",
+          "position": "DEF",
+          "number": "17"
+        },
+        {
+          "name": "RONALD ARAUJO",
           "position": "DEF",
           "number": "4"
         },
         {
+          "name": "ERIC GARCÍA",
+          "position": "DEF",
+          "number": "24"
+        },
+        {
           "name": "JULES KOUNDÉ",
           "position": "DEF",
-          "number": "5"
+          "number": "23"
         }
       ],
       [
         {
           "name": "GAVI",
           "position": "MID",
-          "number": "6"
+          "number": "30"
         },
         {
           "name": "SERGIO BUSQUETS",
           "position": "MID",
-          "number": "7"
+          "number": "5"
         },
         {
           "name": "FRENKIE DE JONG",
           "position": "MID",
-          "number": "8"
+          "number": "21"
         }
       ],
       [
         {
-          "name": "ANSU FATI",
+          "name": "OUSMANE DEMBÉLÉ",
           "position": "FWD",
-          "number": "9"
+          "number": "7"
         },
         {
-          "name": "OUSMANE DEMBÉLÉ",
+          "name": "ANSU FATI",
           "position": "FWD",
           "number": "10"
         },
         {
           "name": "RAPHINHA",
           "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2022-23",
-    "homeTeam": "ALMERIA",
-    "awayTeam": "BARCELONA",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "1-0",
-    "date": "26 de febrero 2023",
-    "playingTeam": "BARCELONA",
-    "formation": [
-      [
-        {
-          "name": "MARC-ANDRÉ TER STEGEN",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "ERIC GARCÍA",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "ANDREAS CHRISTENSEN",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "JORDI ALBA",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "SERGI ROBERTO",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "FRANCK KESSIÉ",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "SERGIO BUSQUETS",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "FRENKIE DE JONG",
-          "position": "MID",
-          "number": "8"
-        }
-      ],
-      [
-        {
-          "name": "ROBERT LEWANDOWSKI",
-          "position": "FWD",
-          "number": "9"
-        },
-        {
-          "name": "GAVI",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "FERRAN TORRES",
-          "position": "FWD",
-          "number": "11"
+          "number": "22"
         }
       ]
     ]

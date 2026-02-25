@@ -1,156 +1,6 @@
 [
   {
     "competition": "LA LIGA • TEMPORADA 2014-15",
-    "homeTeam": "CORDOBA",
-    "awayTeam": "ATHLETIC CLUB",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "0-1",
-    "date": "24 de abril 2015",
-    "playingTeam": "ATHLETIC CLUB",
-    "formation": [
-      [
-        {
-          "name": "G. IRAIZOZ",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "ETXEITA",
-          "position": "DEF",
-          "number": "16"
-        },
-        {
-          "name": "A. LAPORTE",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "JON AURTENETXE",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "M. SAN JOSÉ",
-          "position": "DEF",
-          "number": "6"
-        },
-        {
-          "name": "BEÑAT",
-          "position": "DEF",
-          "number": "7"
-        },
-        {
-          "name": "O. DE MARCOS",
-          "position": "DEF",
-          "number": "10"
-        }
-      ],
-      [
-        {
-          "name": "AGER AKETXE",
-          "position": "MID",
-          "number": "23"
-        },
-        {
-          "name": "IBAI GÓMEZ",
-          "position": "MID",
-          "number": "11"
-        },
-        {
-          "name": "I. WILLIAMS",
-          "position": "MID",
-          "number": "30"
-        }
-      ],
-      [
-        {
-          "name": "A. ADURIZ",
-          "position": "FWD",
-          "number": "20"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2014-15",
-    "homeTeam": "ATHLETIC CLUB",
-    "awayTeam": "VILLARREAL",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "4-0",
-    "date": "23 de mayo 2015",
-    "playingTeam": "ATHLETIC CLUB",
-    "formation": [
-      [
-        {
-          "name": "I. HERRERÍN",
-          "position": "GK",
-          "number": "13"
-        }
-      ],
-      [
-        {
-          "name": "ETXEITA",
-          "position": "DEF",
-          "number": "16"
-        },
-        {
-          "name": "A. LAPORTE",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "M. BALENZIAGA",
-          "position": "DEF",
-          "number": "24"
-        },
-        {
-          "name": "M. SAN JOSÉ",
-          "position": "DEF",
-          "number": "6"
-        },
-        {
-          "name": "BEÑAT",
-          "position": "DEF",
-          "number": "7"
-        },
-        {
-          "name": "O. DE MARCOS",
-          "position": "DEF",
-          "number": "10"
-        }
-      ],
-      [
-        {
-          "name": "I. WILLIAMS",
-          "position": "MID",
-          "number": "30"
-        },
-        {
-          "name": "AGER AKETXE",
-          "position": "MID",
-          "number": "23"
-        },
-        {
-          "name": "A. IRAOLA",
-          "position": "MID",
-          "number": "15"
-        }
-      ],
-      [
-        {
-          "name": "A. ADURIZ",
-          "position": "FWD",
-          "number": "20"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2014-15",
     "homeTeam": "GETAFE",
     "awayTeam": "ATHLETIC CLUB",
     "homeBadge": "🏟️",
@@ -161,53 +11,53 @@
     "formation": [
       [
         {
-          "name": "G. IRAIZOZ",
+          "name": "GORKA IRAIZOZ",
           "position": "GK",
           "number": "1"
         }
       ],
       [
         {
-          "name": "A. LAPORTE",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "M. SAN JOSÉ",
-          "position": "DEF",
-          "number": "6"
-        },
-        {
-          "name": "M. BALENZIAGA",
+          "name": "MIKEL BALENZIAGA",
           "position": "DEF",
           "number": "24"
         },
         {
-          "name": "MIKEL RICO",
+          "name": "AYMERIC LAPORTE",
           "position": "DEF",
-          "number": "17"
+          "number": "4"
         },
         {
-          "name": "A. ITURRASPE",
+          "name": "MIKEL SAN JOSÉ",
           "position": "DEF",
-          "number": "8"
+          "number": "6"
         },
         {
-          "name": "O. DE MARCOS",
+          "name": "ÓSCAR DE MARCOS",
           "position": "DEF",
           "number": "10"
         }
       ],
       [
         {
+          "name": "IKER MUNIAIN",
+          "position": "MID",
+          "number": "19"
+        },
+        {
+          "name": "ANDER ITURRASPE",
+          "position": "MID",
+          "number": "8"
+        },
+        {
           "name": "BEÑAT",
           "position": "MID",
           "number": "7"
         },
         {
-          "name": "IKER MUNIAIN",
+          "name": "MIKEL RICO",
           "position": "MID",
-          "number": "19"
+          "number": "17"
         },
         {
           "name": "UNAI LÓPEZ",
@@ -217,7 +67,7 @@
       ],
       [
         {
-          "name": "A. ADURIZ",
+          "name": "ARITZ ADURIZ",
           "position": "FWD",
           "number": "20"
         }
@@ -226,73 +76,73 @@
   },
   {
     "competition": "LA LIGA • TEMPORADA 2014-15",
-    "homeTeam": "ATHLETIC CLUB",
-    "awayTeam": "REAL SOCIEDAD",
+    "homeTeam": "CORDOBA",
+    "awayTeam": "ATHLETIC CLUB",
     "homeBadge": "🏟️",
     "awayBadge": "⚽",
-    "score": "1-1",
-    "date": "28 de abril 2015",
+    "score": "0-1",
+    "date": "24 de abril 2015",
     "playingTeam": "ATHLETIC CLUB",
     "formation": [
       [
         {
-          "name": "G. IRAIZOZ",
+          "name": "GORKA IRAIZOZ",
           "position": "GK",
           "number": "1"
         }
       ],
       [
         {
-          "name": "A. LAPORTE",
+          "name": "JON AURTENETXE",
+          "position": "DEF",
+          "number": "3"
+        },
+        {
+          "name": "AYMERIC LAPORTE",
           "position": "DEF",
           "number": "4"
         },
         {
-          "name": "C. GURPEGUI",
+          "name": "XABIER ETXEITA",
           "position": "DEF",
-          "number": "18"
+          "number": "16"
         },
         {
-          "name": "M. BALENZIAGA",
+          "name": "ÓSCAR DE MARCOS",
           "position": "DEF",
-          "number": "24"
-        },
-        {
-          "name": "BEÑAT",
-          "position": "DEF",
-          "number": "7"
-        },
-        {
-          "name": "M. SAN JOSÉ",
-          "position": "DEF",
-          "number": "6"
-        },
-        {
-          "name": "A. IRAOLA",
-          "position": "DEF",
-          "number": "15"
+          "number": "10"
         }
       ],
       [
+        {
+          "name": "IBAI GÓMEZ",
+          "position": "MID",
+          "number": "11"
+        },
+        {
+          "name": "MIKEL SAN JOSÉ",
+          "position": "MID",
+          "number": "6"
+        },
         {
           "name": "AGER AKETXE",
           "position": "MID",
           "number": "23"
         },
         {
-          "name": "I. WILLIAMS",
+          "name": "BEÑAT",
           "position": "MID",
-          "number": "30"
+          "number": "7"
         },
         {
-          "name": "M. SUSAETA",
+          "name": "IÑAKI WILLIAMS",
           "position": "MID",
-          "number": "14"
+          "number": "30"
         }
       ],
       [
         {
-          "name": "A. ADURIZ",
+          "name": "ARITZ ADURIZ",
           "position": "FWD",
           "number": "20"
         }
@@ -318,58 +168,58 @@
       ],
       [
         {
-          "name": "AYMERIC LAPORTE",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "GURPEGI",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
           "name": "MIKEL BALENZIAGA",
+          "position": "DEF",
+          "number": "24"
+        },
+        {
+          "name": "AYMERIC LAPORTE",
           "position": "DEF",
           "number": "4"
         },
         {
-          "name": "MIKEL SAN JOSÉ",
+          "name": "CARLOS GURPEGUI",
           "position": "DEF",
-          "number": "5"
+          "number": "18"
         },
         {
-          "name": "BEÑAT ETXEBARRIA",
+          "name": "ÍÑIGO LEKUE",
           "position": "DEF",
-          "number": "6"
-        },
-        {
-          "name": "ÓSCAR DE MARCOS",
-          "position": "DEF",
-          "number": "7"
+          "number": "30"
         }
       ],
       [
         {
-          "name": "RAÚL GARCÍA",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "ÍÑIGO LEKUE",
-          "position": "MID",
-          "number": "9"
-        },
-        {
           "name": "IÑAKI WILLIAMS",
           "position": "MID",
+          "number": "15"
+        },
+        {
+          "name": "MIKEL SAN JOSÉ",
+          "position": "MID",
+          "number": "6"
+        },
+        {
+          "name": "ÓSCAR DE MARCOS",
+          "position": "MID",
           "number": "10"
+        },
+        {
+          "name": "BEÑAT",
+          "position": "MID",
+          "number": "7"
+        },
+        {
+          "name": "RAÚL GARCÍA",
+          "position": "MID",
+          "number": "22"
         }
       ],
       [
         {
           "name": "ARITZ ADURIZ",
           "position": "FWD",
-          "number": "11"
+          "number": "20"
         }
       ]
     ]
@@ -393,433 +243,58 @@
       ],
       [
         {
-          "name": "AYMERIC LAPORTE",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "XABIER ETXEITA",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
           "name": "MIKEL BALENZIAGA",
           "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "BEÑAT ETXEBARRIA",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "MIKEL SAN JOSÉ",
-          "position": "DEF",
-          "number": "6"
-        },
-        {
-          "name": "ENEKO BÓVEDA",
-          "position": "DEF",
-          "number": "7"
-        }
-      ],
-      [
-        {
-          "name": "JAVIER ERASO",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "IKER MUNIAIN",
-          "position": "MID",
-          "number": "9"
-        },
-        {
-          "name": "ÓSCAR DE MARCOS",
-          "position": "MID",
-          "number": "10"
-        }
-      ],
-      [
-        {
-          "name": "IÑAKI WILLIAMS",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2015-16",
-    "homeTeam": "LAS PALMAS",
-    "awayTeam": "ATHLETIC CLUB",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "0-0",
-    "date": "08 de mayo 2016",
-    "playingTeam": "ATHLETIC CLUB",
-    "formation": [
-      [
-        {
-          "name": "GORKA IRAIZOZ",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "GORKA ELUSTONDO",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "ENEKO BÓVEDA",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "MIKEL BALENZIAGA",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "MIKEL SAN JOSÉ",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "BEÑAT ETXEBARRIA",
-          "position": "DEF",
-          "number": "6"
-        },
-        {
-          "name": "ÓSCAR DE MARCOS",
-          "position": "DEF",
-          "number": "7"
-        }
-      ],
-      [
-        {
-          "name": "RAÚL GARCÍA",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "IKER MUNIAIN",
-          "position": "MID",
-          "number": "9"
-        },
-        {
-          "name": "IÑAKI WILLIAMS",
-          "position": "MID",
-          "number": "10"
-        }
-      ],
-      [
-        {
-          "name": "ARITZ ADURIZ",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2015-16",
-    "homeTeam": "REAL MADRID",
-    "awayTeam": "ATHLETIC CLUB",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "4-2",
-    "date": "13 de febrero 2016",
-    "playingTeam": "ATHLETIC CLUB",
-    "formation": [
-      [
-        {
-          "name": "GORKA IRAIZOZ",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "XABIER ETXEITA",
-          "position": "DEF",
-          "number": "2"
+          "number": "24"
         },
         {
           "name": "AYMERIC LAPORTE",
           "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "MIKEL BALENZIAGA",
-          "position": "DEF",
           "number": "4"
         },
-        {
-          "name": "BEÑAT ETXEBARRIA",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "ANDER ITURRASPE",
-          "position": "DEF",
-          "number": "6"
-        },
-        {
-          "name": "ÓSCAR DE MARCOS",
-          "position": "DEF",
-          "number": "7"
-        }
-      ],
-      [
-        {
-          "name": "JAVIER ERASO",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "ÍÑIGO LEKUE",
-          "position": "MID",
-          "number": "9"
-        },
-        {
-          "name": "SABIN MERINO",
-          "position": "MID",
-          "number": "10"
-        }
-      ],
-      [
-        {
-          "name": "ARITZ ADURIZ",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2016-17",
-    "homeTeam": "ATHLETIC CLUB",
-    "awayTeam": "CELTA VIGO",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "2-1",
-    "date": "19 de diciembre 2016",
-    "playingTeam": "ATHLETIC CLUB",
-    "formation": [
-      [
-        {
-          "name": "KEPA",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "YERAY ÁLVAREZ",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "ENEKO BÓVEDA",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "MIKEL BALENZIAGA",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "MIKEL VESGA",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "BEÑAT ETXEBARRIA",
-          "position": "DEF",
-          "number": "6"
-        },
-        {
-          "name": "ÍÑIGO LEKUE",
-          "position": "DEF",
-          "number": "7"
-        }
-      ],
-      [
-        {
-          "name": "RAÚL GARCÍA",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "IKER MUNIAIN",
-          "position": "MID",
-          "number": "9"
-        },
-        {
-          "name": "IÑAKI WILLIAMS",
-          "position": "MID",
-          "number": "10"
-        }
-      ],
-      [
-        {
-          "name": "ARITZ ADURIZ",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2016-17",
-    "homeTeam": "ATHLETIC CLUB",
-    "awayTeam": "GRANADA",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "3-1",
-    "date": "26 de febrero 2017",
-    "playingTeam": "ATHLETIC CLUB",
-    "formation": [
-      [
-        {
-          "name": "GORKA IRAIZOZ",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "SABORIT",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "YERAY ÁLVAREZ",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "MIKEL BALENZIAGA",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "BEÑAT ETXEBARRIA",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "MIKEL SAN JOSÉ",
-          "position": "DEF",
-          "number": "6"
-        },
-        {
-          "name": "ENEKO BÓVEDA",
-          "position": "DEF",
-          "number": "7"
-        }
-      ],
-      [
-        {
-          "name": "IKER MUNIAIN",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "ÍÑIGO LEKUE",
-          "position": "MID",
-          "number": "9"
-        },
-        {
-          "name": "MARKEL SUSAETA",
-          "position": "MID",
-          "number": "10"
-        }
-      ],
-      [
-        {
-          "name": "IÑAKI WILLIAMS",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2016-17",
-    "homeTeam": "ESPANYOL",
-    "awayTeam": "ATHLETIC CLUB",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "0-0",
-    "date": "06 de noviembre 2016",
-    "playingTeam": "ATHLETIC CLUB",
-    "formation": [
-      [
-        {
-          "name": "KEPA",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
         {
           "name": "XABIER ETXEITA",
           "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "YERAY ÁLVAREZ",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "MIKEL BALENZIAGA",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "MIKEL RICO",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "MIKEL VESGA",
-          "position": "DEF",
-          "number": "6"
+          "number": "16"
         },
         {
           "name": "ENEKO BÓVEDA",
           "position": "DEF",
-          "number": "7"
+          "number": "2"
         }
       ],
       [
         {
+          "name": "IKER MUNIAIN",
+          "position": "MID",
+          "number": "19"
+        },
+        {
+          "name": "MIKEL SAN JOSÉ",
+          "position": "MID",
+          "number": "6"
+        },
+        {
           "name": "JAVIER ERASO",
           "position": "MID",
-          "number": "8"
+          "number": "5"
         },
         {
-          "name": "SABIN MERINO",
+          "name": "BEÑAT",
           "position": "MID",
-          "number": "9"
+          "number": "7"
         },
         {
-          "name": "IÑAKI WILLIAMS",
+          "name": "ÓSCAR DE MARCOS",
           "position": "MID",
           "number": "10"
         }
       ],
       [
         {
-          "name": "ARITZ ADURIZ",
+          "name": "IÑAKI WILLIAMS",
           "position": "FWD",
-          "number": "11"
+          "number": "15"
         }
       ]
     ]
@@ -843,283 +318,133 @@
       ],
       [
         {
-          "name": "XABIER ETXEITA",
+          "name": "MIKEL BALENZIAGA",
           "position": "DEF",
-          "number": "2"
+          "number": "24"
         },
         {
           "name": "AYMERIC LAPORTE",
           "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "MIKEL BALENZIAGA",
-          "position": "DEF",
           "number": "4"
         },
         {
-          "name": "BEÑAT ETXEBARRIA",
+          "name": "XABIER ETXEITA",
           "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "MIKEL SAN JOSÉ",
-          "position": "DEF",
-          "number": "6"
+          "number": "16"
         },
         {
           "name": "ÓSCAR DE MARCOS",
           "position": "DEF",
-          "number": "7"
+          "number": "18"
         }
       ],
       [
         {
-          "name": "RAÚL GARCÍA",
-          "position": "MID",
-          "number": "8"
-        },
-        {
           "name": "IKER MUNIAIN",
           "position": "MID",
-          "number": "9"
+          "number": "10"
         },
         {
-          "name": "IÑAKI WILLIAMS",
+          "name": "MIKEL SAN JOSÉ",
           "position": "MID",
-          "number": "10"
+          "number": "6"
+        },
+        {
+          "name": "RAÚL GARCÍA",
+          "position": "MID",
+          "number": "22"
+        },
+        {
+          "name": "BEÑAT",
+          "position": "MID",
+          "number": "7"
+        },
+        {
+          "name": "SABIN MERINO",
+          "position": "MID",
+          "number": "19"
+        }
+      ],
+      [
+        {
+          "name": "IÑAKI WILLIAMS",
+          "position": "FWD",
+          "number": "11"
+        }
+      ]
+    ]
+  },
+  {
+    "competition": "LA LIGA • TEMPORADA 2016-17",
+    "homeTeam": "ESPANYOL",
+    "awayTeam": "ATHLETIC CLUB",
+    "homeBadge": "🏟️",
+    "awayBadge": "⚽",
+    "score": "0-0",
+    "date": "06 de noviembre 2016",
+    "playingTeam": "ATHLETIC CLUB",
+    "formation": [
+      [
+        {
+          "name": "KEPA ARRIZABALAGA",
+          "position": "GK",
+          "number": "26"
+        }
+      ],
+      [
+        {
+          "name": "MIKEL BALENZIAGA",
+          "position": "DEF",
+          "number": "24"
+        },
+        {
+          "name": "YERAY ÁLVAREZ",
+          "position": "DEF",
+          "number": "27"
+        },
+        {
+          "name": "XABIER ETXEITA",
+          "position": "DEF",
+          "number": "16"
+        },
+        {
+          "name": "ENEKO BÓVEDA",
+          "position": "DEF",
+          "number": "2"
         }
       ],
       [
         {
           "name": "SABIN MERINO",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2017-18",
-    "homeTeam": "ATHLETIC CLUB",
-    "awayTeam": "MALAGA",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "2-1",
-    "date": "25 de febrero 2018",
-    "playingTeam": "ATHLETIC CLUB",
-    "formation": [
-      [
-        {
-          "name": "KEPA",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "ÍÑIGO MARTÍNEZ",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "YERAY ÁLVAREZ",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "ÍÑIGO LEKUE",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "BEÑAT ETXEBARRIA",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "MIKEL SAN JOSÉ",
-          "position": "DEF",
-          "number": "6"
-        },
-        {
-          "name": "ÓSCAR DE MARCOS",
-          "position": "DEF",
-          "number": "7"
-        }
-      ],
-      [
-        {
-          "name": "RAÚL GARCÍA",
           "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "IÑIGO CÓRDOBA",
-          "position": "MID",
-          "number": "9"
-        },
-        {
-          "name": "MARKEL SUSAETA",
-          "position": "MID",
-          "number": "10"
-        }
-      ],
-      [
-        {
-          "name": "ARITZ ADURIZ",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2017-18",
-    "homeTeam": "REAL SOCIEDAD",
-    "awayTeam": "ATHLETIC CLUB",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "3-1",
-    "date": "28 de abril 2018",
-    "playingTeam": "ATHLETIC CLUB",
-    "formation": [
-      [
-        {
-          "name": "KEPA",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "ÍÑIGO MARTÍNEZ",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "UNAI NÚÑEZ",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "MIKEL BALENZIAGA",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "MIKEL SAN JOSÉ",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "ANDER ITURRASPE",
-          "position": "DEF",
-          "number": "6"
-        },
-        {
-          "name": "ÓSCAR DE MARCOS",
-          "position": "DEF",
-          "number": "7"
-        }
-      ],
-      [
-        {
-          "name": "RAÚL GARCÍA",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "IÑIGO CÓRDOBA",
-          "position": "MID",
-          "number": "9"
-        },
-        {
-          "name": "ÍÑIGO LEKUE",
-          "position": "MID",
-          "number": "10"
-        }
-      ],
-      [
-        {
-          "name": "IÑAKI WILLIAMS",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2017-18",
-    "homeTeam": "ATHLETIC CLUB",
-    "awayTeam": "ESPANYOL",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "0-1",
-    "date": "20 de mayo 2018",
-    "playingTeam": "ATHLETIC CLUB",
-    "formation": [
-      [
-        {
-          "name": "KEPA",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "XABIER ETXEITA",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "UNAI NÚÑEZ",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "YERAY ÁLVAREZ",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "ÍÑIGO LEKUE",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "ÓSCAR DE MARCOS",
-          "position": "DEF",
-          "number": "6"
-        }
-      ],
-      [
-        {
-          "name": "IÑAKI WILLIAMS",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "IKER MUNIAIN",
-          "position": "MID",
-          "number": "8"
+          "number": "19"
         },
         {
           "name": "MIKEL VESGA",
           "position": "MID",
-          "number": "9"
+          "number": "12"
         },
         {
-          "name": "BEÑAT ETXEBARRIA",
+          "name": "JAVIER ERASO",
           "position": "MID",
-          "number": "10"
+          "number": "5"
+        },
+        {
+          "name": "MIKEL RICO",
+          "position": "MID",
+          "number": "17"
+        },
+        {
+          "name": "IÑAKI WILLIAMS",
+          "position": "MID",
+          "number": "11"
         }
       ],
       [
         {
           "name": "ARITZ ADURIZ",
           "position": "FWD",
-          "number": "11"
+          "number": "20"
         }
       ]
     ]
@@ -1136,109 +461,24 @@
     "formation": [
       [
         {
-          "name": "KEPA",
+          "name": "KEPA ARRIZABALAGA",
           "position": "GK",
           "number": "1"
         }
       ],
       [
         {
-          "name": "XABIER ETXEITA",
+          "name": "MIKEL BALENZIAGA",
           "position": "DEF",
-          "number": "2"
+          "number": "24"
         },
         {
           "name": "UNAI NÚÑEZ",
           "position": "DEF",
-          "number": "3"
+          "number": "30"
         },
         {
-          "name": "MIKEL BALENZIAGA",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "ANDER ITURRASPE",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "MIKEL RICO",
-          "position": "DEF",
-          "number": "6"
-        },
-        {
-          "name": "ÓSCAR DE MARCOS",
-          "position": "DEF",
-          "number": "7"
-        }
-      ],
-      [
-        {
-          "name": "RAÚL GARCÍA",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "MARKEL SUSAETA",
-          "position": "MID",
-          "number": "9"
-        },
-        {
-          "name": "IÑAKI WILLIAMS",
-          "position": "MID",
-          "number": "10"
-        }
-      ],
-      [
-        {
-          "name": "ARITZ ADURIZ",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2018-19",
-    "homeTeam": "GETAFE",
-    "awayTeam": "ATHLETIC CLUB",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "1-0",
-    "date": "07 de abril 2019",
-    "playingTeam": "ATHLETIC CLUB",
-    "formation": [
-      [
-        {
-          "name": "IAGO HERRERÍN",
-          "position": "GK",
-          "number": "13"
-        }
-      ],
-      [
-        {
-          "name": "YERAY ÁLVAREZ",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "ÍÑIGO MARTÍNEZ",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "YURI BERCHICHE",
-          "position": "DEF",
-          "number": "12"
-        },
-        {
-          "name": "MIKEL SAN JOSÉ",
-          "position": "DEF",
-          "number": "6"
-        },
-        {
-          "name": "DANI GARCÍA",
+          "name": "XABIER ETXEITA",
           "position": "DEF",
           "number": "16"
         },
@@ -1250,94 +490,29 @@
       ],
       [
         {
-          "name": "RAÚL GARCÍA",
-          "position": "MID",
-          "number": "22"
-        },
-        {
-          "name": "IÑIGO CÓRDOBA",
-          "position": "MID",
-          "number": "11"
-        },
-        {
-          "name": "IBAI GÓMEZ",
-          "position": "MID",
-          "number": "19"
-        }
-      ],
-      [
-        {
-          "name": "IÑAKI WILLIAMS",
-          "position": "FWD",
-          "number": "9"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2018-19",
-    "homeTeam": "ALAVES",
-    "awayTeam": "ATHLETIC CLUB",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "0-0",
-    "date": "17 de diciembre 2018",
-    "playingTeam": "ATHLETIC CLUB",
-    "formation": [
-      [
-        {
-          "name": "IAGO HERRERÍN",
-          "position": "GK",
-          "number": "13"
-        }
-      ],
-      [
-        {
-          "name": "ÍÑIGO MARTÍNEZ",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "YERAY ÁLVAREZ",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "YURI BERCHICHE",
-          "position": "DEF",
-          "number": "12"
-        },
-        {
-          "name": "DANI GARCÍA",
-          "position": "DEF",
-          "number": "16"
-        },
-        {
-          "name": "BEÑAT ETXEBARRIA",
-          "position": "DEF",
-          "number": "7"
-        },
-        {
-          "name": "ANDER CAPA",
-          "position": "DEF",
-          "number": "21"
-        }
-      ],
-      [
-        {
-          "name": "RAÚL GARCÍA",
-          "position": "MID",
-          "number": "22"
-        },
-        {
-          "name": "IÑIGO CÓRDOBA",
-          "position": "MID",
-          "number": "11"
-        },
-        {
           "name": "MARKEL SUSAETA",
           "position": "MID",
           "number": "14"
+        },
+        {
+          "name": "ANDER ITURRASPE",
+          "position": "MID",
+          "number": "8"
+        },
+        {
+          "name": "RAÚL GARCÍA",
+          "position": "MID",
+          "number": "22"
+        },
+        {
+          "name": "MIKEL RICO",
+          "position": "MID",
+          "number": "17"
+        },
+        {
+          "name": "IÑAKI WILLIAMS",
+          "position": "MID",
+          "number": "11"
         }
       ],
       [
@@ -1350,27 +525,27 @@
     ]
   },
   {
-    "competition": "LA LIGA • TEMPORADA 2018-19",
-    "homeTeam": "SEVILLA",
-    "awayTeam": "ATHLETIC CLUB",
+    "competition": "LA LIGA • TEMPORADA 2017-18",
+    "homeTeam": "ATHLETIC CLUB",
+    "awayTeam": "MALAGA",
     "homeBadge": "🏟️",
     "awayBadge": "⚽",
-    "score": "2-0",
-    "date": "18 de mayo 2019",
+    "score": "2-1",
+    "date": "25 de febrero 2018",
     "playingTeam": "ATHLETIC CLUB",
     "formation": [
       [
         {
-          "name": "IAGO HERRERÍN",
+          "name": "KEPA ARRIZABALAGA",
           "position": "GK",
-          "number": "13"
+          "number": "1"
         }
       ],
       [
         {
-          "name": "YERAY ÁLVAREZ",
+          "name": "ÍÑIGO LEKUE",
           "position": "DEF",
-          "number": "5"
+          "number": "15"
         },
         {
           "name": "ÍÑIGO MARTÍNEZ",
@@ -1378,48 +553,48 @@
           "number": "4"
         },
         {
-          "name": "MIKEL BALENZIAGA",
+          "name": "YERAY ÁLVAREZ",
           "position": "DEF",
-          "number": "24"
+          "number": "5"
         },
         {
-          "name": "BEÑAT ETXEBARRIA",
+          "name": "ÓSCAR DE MARCOS",
           "position": "DEF",
-          "number": "7"
-        },
-        {
-          "name": "DANI GARCÍA",
-          "position": "DEF",
-          "number": "16"
-        },
-        {
-          "name": "ANDER CAPA",
-          "position": "DEF",
-          "number": "21"
+          "number": "18"
         }
       ],
       [
+        {
+          "name": "MARKEL SUSAETA",
+          "position": "MID",
+          "number": "14"
+        },
+        {
+          "name": "MIKEL SAN JOSÉ",
+          "position": "MID",
+          "number": "6"
+        },
         {
           "name": "RAÚL GARCÍA",
           "position": "MID",
           "number": "22"
         },
         {
-          "name": "YURI BERCHICHE",
+          "name": "BEÑAT",
           "position": "MID",
-          "number": "12"
+          "number": "7"
         },
         {
-          "name": "IKER MUNIAIN",
+          "name": "IÑIGO CÓRDOBA",
           "position": "MID",
-          "number": "10"
+          "number": "28"
         }
       ],
       [
         {
-          "name": "IÑAKI WILLIAMS",
+          "name": "ARITZ ADURIZ",
           "position": "FWD",
-          "number": "9"
+          "number": "20"
         }
       ]
     ]
@@ -1443,6 +618,11 @@
       ],
       [
         {
+          "name": "YURI BERCHICHE",
+          "position": "DEF",
+          "number": "12"
+        },
+        {
           "name": "ÍÑIGO MARTÍNEZ",
           "position": "DEF",
           "number": "4"
@@ -1453,17 +633,17 @@
           "number": "31"
         },
         {
-          "name": "YURI BERCHICHE",
-          "position": "DEF",
-          "number": "12"
-        },
-        {
           "name": "ÓSCAR DE MARCOS",
           "position": "DEF",
           "number": "18"
         }
       ],
       [
+        {
+          "name": "MARKEL SUSAETA",
+          "position": "MID",
+          "number": "14"
+        },
         {
           "name": "DANI GARCÍA",
           "position": "MID",
@@ -1478,6 +658,11 @@
           "name": "IKER MUNIAIN",
           "position": "MID",
           "number": "10"
+        },
+        {
+          "name": "IÑAKI WILLIAMS",
+          "position": "MID",
+          "number": "9"
         }
       ],
       [
@@ -1485,16 +670,81 @@
           "name": "ARITZ ADURIZ",
           "position": "FWD",
           "number": "20"
+        }
+      ]
+    ]
+  },
+  {
+    "competition": "LA LIGA • TEMPORADA 2018-19",
+    "homeTeam": "ALAVES",
+    "awayTeam": "ATHLETIC CLUB",
+    "homeBadge": "🏟️",
+    "awayBadge": "⚽",
+    "score": "0-0",
+    "date": "17 de diciembre 2018",
+    "playingTeam": "ATHLETIC CLUB",
+    "formation": [
+      [
+        {
+          "name": "IAGO HERRERÍN",
+          "position": "GK",
+          "number": "13"
+        }
+      ],
+      [
+        {
+          "name": "YURI BERCHICHE",
+          "position": "DEF",
+          "number": "12"
         },
         {
-          "name": "IÑAKI WILLIAMS",
-          "position": "FWD",
-          "number": "9"
+          "name": "ÍÑIGO MARTÍNEZ",
+          "position": "DEF",
+          "number": "4"
         },
+        {
+          "name": "YERAY ÁLVAREZ",
+          "position": "DEF",
+          "number": "5"
+        },
+        {
+          "name": "ANDER CAPA",
+          "position": "DEF",
+          "number": "21"
+        }
+      ],
+      [
         {
           "name": "MARKEL SUSAETA",
-          "position": "FWD",
+          "position": "MID",
           "number": "14"
+        },
+        {
+          "name": "DANI GARCÍA",
+          "position": "MID",
+          "number": "16"
+        },
+        {
+          "name": "RAÚL GARCÍA",
+          "position": "MID",
+          "number": "22"
+        },
+        {
+          "name": "BEÑAT",
+          "position": "MID",
+          "number": "7"
+        },
+        {
+          "name": "IÑIGO CÓRDOBA",
+          "position": "MID",
+          "number": "11"
+        }
+      ],
+      [
+        {
+          "name": "ARITZ ADURIZ",
+          "position": "FWD",
+          "number": "20"
         }
       ]
     ]
@@ -1518,133 +768,58 @@
       ],
       [
         {
-          "name": "ÍÑIGO MARTÍNEZ",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "YERAY ÁLVAREZ",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
           "name": "YURI BERCHICHE",
+          "position": "DEF",
+          "number": "17"
+        },
+        {
+          "name": "ÍÑIGO MARTÍNEZ",
           "position": "DEF",
           "number": "4"
         },
         {
-          "name": "DANI GARCÍA",
+          "name": "YERAY ÁLVAREZ",
           "position": "DEF",
           "number": "5"
         },
         {
-          "name": "UNAI LÓPEZ",
-          "position": "DEF",
-          "number": "6"
-        },
-        {
           "name": "ANDER CAPA",
           "position": "DEF",
-          "number": "7"
+          "number": "21"
         }
       ],
       [
-        {
-          "name": "OIHAN SANCET",
-          "position": "MID",
-          "number": "8"
-        },
         {
           "name": "IÑIGO CÓRDOBA",
           "position": "MID",
-          "number": "9"
-        },
-        {
-          "name": "IÑAKI WILLIAMS",
-          "position": "MID",
-          "number": "10"
-        }
-      ],
-      [
-        {
-          "name": "RAÚL GARCÍA",
-          "position": "FWD",
           "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2019-20",
-    "homeTeam": "ATHLETIC CLUB",
-    "awayTeam": "OSASUNA",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "0-1",
-    "date": "16 de febrero 2020",
-    "playingTeam": "ATHLETIC CLUB",
-    "formation": [
-      [
-        {
-          "name": "UNAI SIMÓN",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "ÍÑIGO MARTÍNEZ",
-          "position": "DEF",
-          "number": "2"
         },
         {
-          "name": "UNAI NÚÑEZ",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "YERAY ÁLVAREZ",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "YURI BERCHICHE",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "ANDER CAPA",
-          "position": "DEF",
-          "number": "6"
-        }
-      ],
-      [
-        {
-          "name": "RAÚL GARCÍA",
+          "name": "DANI GARCÍA",
           "position": "MID",
-          "number": "7"
+          "number": "14"
         },
         {
-          "name": "UNAI VENCEDOR",
+          "name": "OIHAN SANCET",
+          "position": "MID",
+          "number": "34"
+        },
+        {
+          "name": "UNAI LÓPEZ",
           "position": "MID",
           "number": "8"
         },
         {
-          "name": "MIKEL VESGA",
+          "name": "RAÚL GARCÍA",
           "position": "MID",
-          "number": "9"
+          "number": "22"
         }
       ],
       [
         {
-          "name": "ASIER VILLALIBRE",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
           "name": "IÑAKI WILLIAMS",
           "position": "FWD",
-          "number": "11"
+          "number": "9"
         }
       ]
     ]
@@ -1663,14 +838,14 @@
         {
           "name": "IAGO HERRERÍN",
           "position": "GK",
-          "number": "1"
+          "number": "13"
         }
       ],
       [
         {
-          "name": "YERAY ÁLVAREZ",
+          "name": "YURI BERCHICHE",
           "position": "DEF",
-          "number": "2"
+          "number": "17"
         },
         {
           "name": "UNAI NÚÑEZ",
@@ -1683,268 +858,43 @@
           "number": "4"
         },
         {
-          "name": "YURI BERCHICHE",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "ANDER CAPA",
-          "position": "DEF",
-          "number": "6"
-        }
-      ],
-      [
-        {
-          "name": "MIKEL VESGA",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "DANI GARCÍA",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "IKER MUNIAIN",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "IÑAKI WILLIAMS",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "ASIER VILLALIBRE",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2019-20",
-    "homeTeam": "ATHLETIC CLUB",
-    "awayTeam": "VILLARREAL",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "1-0",
-    "date": "01 de marzo 2020",
-    "playingTeam": "ATHLETIC CLUB",
-    "formation": [
-      [
-        {
-          "name": "UNAI SIMÓN",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
           "name": "YERAY ÁLVAREZ",
           "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "ÍÑIGO MARTÍNEZ",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "YURI BERCHICHE",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "MIKEL VESGA",
-          "position": "DEF",
           "number": "5"
-        },
-        {
-          "name": "DANI GARCÍA",
-          "position": "DEF",
-          "number": "6"
         },
         {
           "name": "ANDER CAPA",
           "position": "DEF",
-          "number": "7"
+          "number": "21"
         }
       ],
       [
         {
           "name": "IKER MUNIAIN",
           "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "IÑIGO CÓRDOBA",
-          "position": "MID",
-          "number": "9"
-        },
-        {
-          "name": "IBAI GÓMEZ",
-          "position": "MID",
           "number": "10"
-        }
-      ],
-      [
-        {
-          "name": "RAÚL GARCÍA",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2020-21",
-    "homeTeam": "SD HUESCA",
-    "awayTeam": "ATHLETIC CLUB",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "1-0",
-    "date": "12 de mayo 2021",
-    "playingTeam": "ATHLETIC CLUB",
-    "formation": [
-      [
-        {
-          "name": "UNAI SIMÓN",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "UNAI NÚÑEZ",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "ÍÑIGO MARTÍNEZ",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "MIKEL BALENZIAGA",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "ÓSCAR DE MARCOS",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "MIKEL VESGA",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "UNAI LÓPEZ",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "JON MORCILLO",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "IBAI GÓMEZ",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "ASIER VILLALIBRE",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "OIHAN SANCET",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2020-21",
-    "homeTeam": "REAL MADRID",
-    "awayTeam": "ATHLETIC CLUB",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "3-1",
-    "date": "15 de diciembre 2020",
-    "playingTeam": "ATHLETIC CLUB",
-    "formation": [
-      [
-        {
-          "name": "UNAI SIMÓN",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "ÍÑIGO MARTÍNEZ",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "YERAY ÁLVAREZ",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "YURI BERCHICHE",
-          "position": "DEF",
-          "number": "4"
         },
         {
           "name": "DANI GARCÍA",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "UNAI VENCEDOR",
-          "position": "DEF",
-          "number": "6"
-        },
-        {
-          "name": "ANDER CAPA",
-          "position": "DEF",
-          "number": "7"
-        }
-      ],
-      [
-        {
-          "name": "RAÚL GARCÍA",
           "position": "MID",
-          "number": "8"
+          "number": "14"
         },
         {
-          "name": "ALEX BERENGUER",
+          "name": "MIKEL VESGA",
           "position": "MID",
-          "number": "9"
-        },
-        {
-          "name": "ÓSCAR DE MARCOS",
-          "position": "MID",
-          "number": "10"
+          "number": "16"
         }
       ],
       [
         {
           "name": "IÑAKI WILLIAMS",
           "position": "FWD",
-          "number": "11"
+          "number": "9"
+        },
+        {
+          "name": "ASIER VILLALIBRE",
+          "position": "FWD",
+          "number": "25"
         }
       ]
     ]
@@ -1968,70 +918,70 @@
       ],
       [
         {
-          "name": "YERAY ÁLVAREZ",
+          "name": "MIKEL BALENZIAGA",
           "position": "DEF",
-          "number": "2"
+          "number": "24"
         },
         {
           "name": "ÍÑIGO MARTÍNEZ",
           "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "MIKEL BALENZIAGA",
-          "position": "DEF",
           "number": "4"
         },
         {
-          "name": "UNAI LÓPEZ",
+          "name": "YERAY ÁLVAREZ",
           "position": "DEF",
           "number": "5"
         },
         {
-          "name": "DANI GARCÍA",
-          "position": "DEF",
-          "number": "6"
-        },
-        {
           "name": "ANDER CAPA",
           "position": "DEF",
-          "number": "7"
+          "number": "21"
         }
       ],
       [
         {
+          "name": "IKER MUNIAIN",
+          "position": "MID",
+          "number": "10"
+        },
+        {
+          "name": "DANI GARCÍA",
+          "position": "MID",
+          "number": "14"
+        },
+        {
           "name": "RAÚL GARCÍA",
+          "position": "MID",
+          "number": "22"
+        },
+        {
+          "name": "UNAI LÓPEZ",
           "position": "MID",
           "number": "8"
         },
         {
-          "name": "ALEX BERENGUER",
+          "name": "ÁLEX BERENGUER",
           "position": "MID",
-          "number": "9"
-        },
-        {
-          "name": "IKER MUNIAIN",
-          "position": "MID",
-          "number": "10"
+          "number": "12"
         }
       ],
       [
         {
           "name": "IÑAKI WILLIAMS",
           "position": "FWD",
-          "number": "11"
+          "number": "9"
         }
       ]
     ]
   },
   {
     "competition": "LA LIGA • TEMPORADA 2020-21",
-    "homeTeam": "ATHLETIC CLUB",
-    "awayTeam": "REAL MADRID",
+    "homeTeam": "REAL MADRID",
+    "awayTeam": "ATHLETIC CLUB",
     "homeBadge": "🏟️",
     "awayBadge": "⚽",
-    "score": "0-1",
-    "date": "16 de mayo 2021",
+    "score": "3-1",
+    "date": "15 de diciembre 2020",
     "playingTeam": "ATHLETIC CLUB",
     "formation": [
       [
@@ -2043,58 +993,58 @@
       ],
       [
         {
+          "name": "YURI BERCHICHE",
+          "position": "DEF",
+          "number": "17"
+        },
+        {
           "name": "ÍÑIGO MARTÍNEZ",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "YERAY ÁLVAREZ",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "MIKEL BALENZIAGA",
           "position": "DEF",
           "number": "4"
         },
         {
-          "name": "ÓSCAR DE MARCOS",
+          "name": "YERAY ÁLVAREZ",
           "position": "DEF",
           "number": "5"
+        },
+        {
+          "name": "ÓSCAR DE MARCOS",
+          "position": "DEF",
+          "number": "18"
         }
       ],
       [
         {
-          "name": "UNAI VENCEDOR",
+          "name": "ANDER CAPA",
           "position": "MID",
-          "number": "6"
+          "number": "21"
         },
         {
           "name": "DANI GARCÍA",
           "position": "MID",
-          "number": "7"
+          "number": "14"
         },
         {
-          "name": "JON MORCILLO",
+          "name": "RAÚL GARCÍA",
           "position": "MID",
-          "number": "8"
+          "number": "22"
         },
         {
-          "name": "ALEX BERENGUER",
+          "name": "UNAI VENCEDOR",
           "position": "MID",
-          "number": "9"
+          "number": "27"
+        },
+        {
+          "name": "ÁLEX BERENGUER",
+          "position": "MID",
+          "number": "12"
         }
       ],
       [
         {
           "name": "IÑAKI WILLIAMS",
           "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "OIHAN SANCET",
-          "position": "FWD",
-          "number": "11"
+          "number": "9"
         }
       ]
     ]
@@ -2118,208 +1068,58 @@
       ],
       [
         {
+          "name": "YURI BERCHICHE",
+          "position": "DEF",
+          "number": "17"
+        },
+        {
           "name": "YERAY ÁLVAREZ",
           "position": "DEF",
-          "number": "2"
+          "number": "5"
         },
         {
           "name": "DANI VIVIAN",
           "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "YURI BERCHICHE",
-          "position": "DEF",
-          "number": "4"
+          "number": "12"
         },
         {
           "name": "ÓSCAR DE MARCOS",
           "position": "DEF",
-          "number": "5"
+          "number": "18"
         }
       ],
       [
         {
-          "name": "UNAI VENCEDOR",
+          "name": "IKER MUNIAIN",
           "position": "MID",
-          "number": "6"
+          "number": "10"
         },
         {
           "name": "MIKEL VESGA",
           "position": "MID",
-          "number": "7"
+          "number": "6"
         },
         {
-          "name": "IKER MUNIAIN",
+          "name": "UNAI VENCEDOR",
           "position": "MID",
-          "number": "8"
+          "number": "16"
         },
-        {
-          "name": "ALEX BERENGUER",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
         {
           "name": "OIHAN SANCET",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "IÑAKI WILLIAMS",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2021-22",
-    "homeTeam": "SEVILLA",
-    "awayTeam": "ATHLETIC CLUB",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "1-0",
-    "date": "22 de mayo 2022",
-    "playingTeam": "ATHLETIC CLUB",
-    "formation": [
-      [
-        {
-          "name": "UNAI SIMÓN",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "DANI VIVIAN",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "ÍÑIGO MARTÍNEZ",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "YURI BERCHICHE",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "ÓSCAR DE MARCOS",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "UNAI VENCEDOR",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "MIKEL VESGA",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "IKER MUNIAIN",
           "position": "MID",
           "number": "8"
         },
         {
-          "name": "ALEX BERENGUER",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "RAÚL GARCÍA",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "IÑAKI WILLIAMS",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2021-22",
-    "homeTeam": "VILLARREAL",
-    "awayTeam": "ATHLETIC CLUB",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "1-1",
-    "date": "09 de abril 2022",
-    "playingTeam": "ATHLETIC CLUB",
-    "formation": [
-      [
-        {
-          "name": "UNAI SIMÓN",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "YERAY ÁLVAREZ",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "DANI VIVIAN",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "MIKEL BALENZIAGA",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "ÓSCAR DE MARCOS",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "MIKEL VESGA",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "UNAI VENCEDOR",
+          "name": "ÁLEX BERENGUER",
           "position": "MID",
           "number": "7"
-        },
-        {
-          "name": "IKER MUNIAIN",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "ALEX BERENGUER",
-          "position": "MID",
-          "number": "9"
         }
       ],
       [
         {
           "name": "IÑAKI WILLIAMS",
           "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "RAÚL GARCÍA",
-          "position": "FWD",
-          "number": "11"
+          "number": "9"
         }
       ]
     ]
@@ -2343,9 +1143,9 @@
       ],
       [
         {
-          "name": "DANI VIVIAN",
+          "name": "YURI BERCHICHE",
           "position": "DEF",
-          "number": "2"
+          "number": "17"
         },
         {
           "name": "UNAI NÚÑEZ",
@@ -2353,17 +1153,22 @@
           "number": "3"
         },
         {
-          "name": "YURI BERCHICHE",
+          "name": "DANI VIVIAN",
           "position": "DEF",
-          "number": "4"
+          "number": "12"
         },
         {
           "name": "ÓSCAR DE MARCOS",
           "position": "DEF",
-          "number": "5"
+          "number": "18"
         }
       ],
       [
+        {
+          "name": "IKER MUNIAIN",
+          "position": "MID",
+          "number": "10"
+        },
         {
           "name": "MIKEL VESGA",
           "position": "MID",
@@ -2372,82 +1177,7 @@
         {
           "name": "UNAI VENCEDOR",
           "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "IKER MUNIAIN",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "ALEX BERENGUER",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "OIHAN SANCET",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "IÑAKI WILLIAMS",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2022-23",
-    "homeTeam": "ATHLETIC CLUB",
-    "awayTeam": "REAL VALLADOLID",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "3-0",
-    "date": "08 de noviembre 2022",
-    "playingTeam": "ATHLETIC CLUB",
-    "formation": [
-      [
-        {
-          "name": "UNAI SIMÓN",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "YERAY ÁLVAREZ",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "DANI VIVIAN",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "ÍÑIGO LEKUE",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "MIKEL VESGA",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "ÓSCAR DE MARCOS",
-          "position": "DEF",
-          "number": "6"
-        }
-      ],
-      [
-        {
-          "name": "ANDER HERRERA",
-          "position": "MID",
-          "number": "7"
+          "number": "16"
         },
         {
           "name": "OIHAN SANCET",
@@ -2455,21 +1185,16 @@
           "number": "8"
         },
         {
-          "name": "NICO WILLIAMS",
+          "name": "ÁLEX BERENGUER",
           "position": "MID",
-          "number": "9"
-        },
-        {
-          "name": "IÑAKI WILLIAMS",
-          "position": "MID",
-          "number": "10"
+          "number": "7"
         }
       ],
       [
         {
-          "name": "GORKA GURUZETA",
+          "name": "IÑAKI WILLIAMS",
           "position": "FWD",
-          "number": "11"
+          "number": "9"
         }
       ]
     ]
@@ -2493,70 +1218,70 @@
       ],
       [
         {
-          "name": "ÍÑIGO MARTÍNEZ",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "YERAY ÁLVAREZ",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
           "name": "YURI BERCHICHE",
+          "position": "DEF",
+          "number": "17"
+        },
+        {
+          "name": "ÍÑIGO MARTÍNEZ",
           "position": "DEF",
           "number": "4"
         },
         {
-          "name": "MIKEL VESGA",
+          "name": "YERAY ÁLVAREZ",
           "position": "DEF",
           "number": "5"
         },
         {
-          "name": "ANDER HERRERA",
-          "position": "DEF",
-          "number": "6"
-        },
-        {
           "name": "ÓSCAR DE MARCOS",
           "position": "DEF",
-          "number": "7"
+          "number": "18"
         }
       ],
       [
         {
-          "name": "OIER ZARRAGA",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "ALEX BERENGUER",
-          "position": "MID",
-          "number": "9"
-        },
-        {
           "name": "NICO WILLIAMS",
           "position": "MID",
-          "number": "10"
+          "number": "11"
+        },
+        {
+          "name": "MIKEL VESGA",
+          "position": "MID",
+          "number": "6"
+        },
+        {
+          "name": "ANDER HERRERA",
+          "position": "MID",
+          "number": "23"
+        },
+        {
+          "name": "OIER ZARRAGA",
+          "position": "MID",
+          "number": "19"
+        },
+        {
+          "name": "ÁLEX BERENGUER",
+          "position": "MID",
+          "number": "7"
         }
       ],
       [
         {
           "name": "IÑAKI WILLIAMS",
           "position": "FWD",
-          "number": "11"
+          "number": "9"
         }
       ]
     ]
   },
   {
     "competition": "LA LIGA • TEMPORADA 2022-23",
-    "homeTeam": "ALMERIA",
-    "awayTeam": "ATHLETIC CLUB",
+    "homeTeam": "ATHLETIC CLUB",
+    "awayTeam": "REAL VALLADOLID",
     "homeBadge": "🏟️",
     "awayBadge": "⚽",
-    "score": "1-2",
-    "date": "22 de abril 2023",
+    "score": "3-0",
+    "date": "08 de noviembre 2022",
     "playingTeam": "ATHLETIC CLUB",
     "formation": [
       [
@@ -2568,133 +1293,58 @@
       ],
       [
         {
-          "name": "ÍÑIGO MARTÍNEZ",
+          "name": "ÍÑIGO LEKUE",
           "position": "DEF",
-          "number": "2"
+          "number": "15"
         },
         {
-          "name": "YERAY ÁLVAREZ",
+          "name": "DANI VIVIAN",
           "position": "DEF",
           "number": "3"
         },
         {
-          "name": "YURI BERCHICHE",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "MIKEL VESGA",
+          "name": "YERAY ÁLVAREZ",
           "position": "DEF",
           "number": "5"
         },
         {
-          "name": "ANDER HERRERA",
-          "position": "DEF",
-          "number": "6"
-        },
-        {
           "name": "ÓSCAR DE MARCOS",
           "position": "DEF",
-          "number": "7"
+          "number": "18"
         }
       ],
       [
+        {
+          "name": "NICO WILLIAMS",
+          "position": "MID",
+          "number": "11"
+        },
+        {
+          "name": "MIKEL VESGA",
+          "position": "MID",
+          "number": "6"
+        },
+        {
+          "name": "ANDER HERRERA",
+          "position": "MID",
+          "number": "23"
+        },
         {
           "name": "OIHAN SANCET",
           "position": "MID",
           "number": "8"
         },
         {
-          "name": "NICO WILLIAMS",
-          "position": "MID",
-          "number": "9"
-        },
-        {
           "name": "IÑAKI WILLIAMS",
           "position": "MID",
-          "number": "10"
+          "number": "9"
         }
       ],
       [
         {
           "name": "GORKA GURUZETA",
           "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2022-23",
-    "homeTeam": "OSASUNA",
-    "awayTeam": "ATHLETIC CLUB",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "2-0",
-    "date": "25 de mayo 2023",
-    "playingTeam": "ATHLETIC CLUB",
-    "formation": [
-      [
-        {
-          "name": "JULEN AGIRREZABALA",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "DANI VIVIAN",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "AITOR PAREDES",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "YURI BERCHICHE",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "OIER ZARRAGA",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "MIKEL VESGA",
-          "position": "DEF",
-          "number": "6"
-        },
-        {
-          "name": "ÓSCAR DE MARCOS",
-          "position": "DEF",
-          "number": "7"
-        }
-      ],
-      [
-        {
-          "name": "IKER MUNIAIN",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "ALEX BERENGUER",
-          "position": "MID",
-          "number": "9"
-        },
-        {
-          "name": "NICO WILLIAMS",
-          "position": "MID",
-          "number": "10"
-        }
-      ],
-      [
-        {
-          "name": "IÑAKI WILLIAMS",
-          "position": "FWD",
-          "number": "11"
+          "number": "12"
         }
       ]
     ]

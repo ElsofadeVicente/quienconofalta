@@ -1,81 +1,6 @@
 [
   {
     "competition": "LA LIGA • TEMPORADA 2014-15",
-    "homeTeam": "SEVILLA",
-    "awayTeam": "ELCHE",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "3-0",
-    "date": "15 de marzo 2015",
-    "playingTeam": "ELCHE",
-    "formation": [
-      [
-        {
-          "name": "P. TYTOŃ",
-          "position": "GK",
-          "number": "25"
-        }
-      ],
-      [
-        {
-          "name": "LOMBÁN",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "E. ROCO",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "CISMA",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "JOSÉ ÁNGEL",
-          "position": "DEF",
-          "number": "14"
-        },
-        {
-          "name": "MARIO PAŠALIĆ",
-          "position": "DEF",
-          "number": "24"
-        },
-        {
-          "name": "D. SUÁREZ",
-          "position": "DEF",
-          "number": "2"
-        }
-      ],
-      [
-        {
-          "name": "F. FAJR",
-          "position": "MID",
-          "number": "20"
-        },
-        {
-          "name": "VÍCTOR RODRÍGUEZ",
-          "position": "MID",
-          "number": "17"
-        },
-        {
-          "name": "COROMINAS",
-          "position": "MID",
-          "number": "10"
-        }
-      ],
-      [
-        {
-          "name": "JONATHAS",
-          "position": "FWD",
-          "number": "22"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2014-15",
     "homeTeam": "ATHLETIC CLUB",
     "awayTeam": "ELCHE",
     "homeBadge": "🏟️",
@@ -86,140 +11,65 @@
     "formation": [
       [
         {
-          "name": "P. TYTOŃ",
+          "name": "PRZEMYSŁAW TYTOŃ",
           "position": "GK",
           "number": "25"
         }
       ],
       [
         {
+          "name": "DAMIÁN SUÁREZ",
+          "position": "DEF",
+          "number": "2"
+        },
+        {
+          "name": "ENZO ROCO",
+          "position": "DEF",
+          "number": "3"
+        },
+        {
           "name": "LOMBÁN",
           "position": "DEF",
           "number": "4"
         },
         {
-          "name": "E. ROCO",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "CISMA",
+          "name": "DOMINGO CISMA",
           "position": "DEF",
           "number": "5"
-        },
-        {
-          "name": "D. SUÁREZ",
-          "position": "DEF",
-          "number": "2"
         }
       ],
       [
         {
-          "name": "MARIO PAŠALIĆ",
+          "name": "AARÓN ÑÍGUEZ",
           "position": "MID",
-          "number": "24"
+          "number": "7"
         },
         {
-          "name": "ADRIÁN",
+          "name": "ADRIÁN GONZÁLEZ",
           "position": "MID",
           "number": "8"
         },
         {
-          "name": "AARÓN",
+          "name": "MARIO PAŠALIĆ",
           "position": "MID",
-          "number": "7"
+          "number": "24"
         },
         {
           "name": "VÍCTOR RODRÍGUEZ",
           "position": "MID",
           "number": "17"
+        },
+        {
+          "name": "FAYÇAL FAJR",
+          "position": "MID",
+          "number": "20"
         }
       ],
       [
-        {
-          "name": "F. FAJR",
-          "position": "FWD",
-          "number": "20"
-        },
         {
           "name": "JONATHAS",
           "position": "FWD",
           "number": "22"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2014-15",
-    "homeTeam": "LEVANTE",
-    "awayTeam": "ELCHE",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "0-0",
-    "date": "23 de mayo 2015",
-    "playingTeam": "ELCHE",
-    "formation": [
-      [
-        {
-          "name": "P. TYTOŃ",
-          "position": "GK",
-          "number": "25"
-        }
-      ],
-      [
-        {
-          "name": "E. ROCO",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "LOMBÁN",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "CISMA",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "PEDRO MOSQUERA",
-          "position": "DEF",
-          "number": "6"
-        },
-        {
-          "name": "MARIO PAŠALIĆ",
-          "position": "DEF",
-          "number": "24"
-        },
-        {
-          "name": "D. SUÁREZ",
-          "position": "DEF",
-          "number": "2"
-        }
-      ],
-      [
-        {
-          "name": "F. FAJR",
-          "position": "MID",
-          "number": "20"
-        },
-        {
-          "name": "AARÓN",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "VÍCTOR RODRÍGUEZ",
-          "position": "MID",
-          "number": "17"
-        }
-      ],
-      [
-        {
-          "name": "C. HERRERA",
-          "position": "FWD",
-          "number": "9"
         }
       ]
     ]
@@ -245,153 +95,8 @@
         {
           "name": "DANI CALVO",
           "position": "DEF",
-          "number": "2"
+          "number": "12"
         },
-        {
-          "name": "DIEGO GONZÁLEZ",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "JOSEMA",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "HELIBELTON PALACIOS",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "OMENUKE MFULU",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "IVÁN MARCONE",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "FIDEL",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "JOSAN",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "LUCAS BOYÉ",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "GUIDO CARRILLO",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2020-21",
-    "homeTeam": "REAL SOCIEDAD",
-    "awayTeam": "ELCHE",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "2-0",
-    "date": "07 de mayo 2021",
-    "playingTeam": "ELCHE",
-    "formation": [
-      [
-        {
-          "name": "PAULO GAZZANIGA",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "GONZALO VERDÚ",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "DANI CALVO",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "HELIBELTON PALACIOS",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "ANTONIO BARRAGÁN",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "RAÚL GUTI",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "OMENUKE MFULU",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "FIDEL",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "JOSAN",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "LUCAS BOYÉ",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "PERE MILLA",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2020-21",
-    "homeTeam": "ELCHE",
-    "awayTeam": "VILLARREAL",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "2-2",
-    "date": "06 de febrero 2021",
-    "playingTeam": "ELCHE",
-    "formation": [
-      [
-        {
-          "name": "EDGAR BADIA",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
         {
           "name": "DIEGO GONZÁLEZ",
           "position": "DEF",
@@ -400,201 +105,46 @@
         {
           "name": "JOSEMA",
           "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "JOHAN MOJICA",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "CIFUENTES",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "RAÚL GUTI",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "IVÁN MARCONE",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "EMILIANO RIGONI",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "JOSAN",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "LUCAS BOYÉ",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "GUIDO CARRILLO",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2021-22",
-    "homeTeam": "OSASUNA",
-    "awayTeam": "ELCHE",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "1-1",
-    "date": "29 de noviembre 2021",
-    "playingTeam": "ELCHE",
-    "formation": [
-      [
-        {
-          "name": "EDGAR BADIA",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "DIEGO GONZÁLEZ",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "ENZO ROCO",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "JOHAN MOJICA",
-          "position": "DEF",
-          "number": "4"
+          "number": "24"
         },
         {
           "name": "HELIBELTON PALACIOS",
           "position": "DEF",
-          "number": "5"
+          "number": "18"
         }
       ],
       [
         {
-          "name": "OMAR MASCARELL",
+          "name": "JOSAN",
+          "position": "MID",
+          "number": "17"
+        },
+        {
+          "name": "OMENUKE MFULU",
           "position": "MID",
           "number": "6"
         },
         {
           "name": "IVÁN MARCONE",
           "position": "MID",
-          "number": "7"
+          "number": "4"
         },
         {
           "name": "FIDEL",
           "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "TETE MORENTE",
-          "position": "MID",
-          "number": "9"
+          "number": "16"
         }
       ],
       [
-        {
-          "name": "LUCAS PÉREZ",
-          "position": "FWD",
-          "number": "10"
-        },
         {
           "name": "LUCAS BOYÉ",
           "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2021-22",
-    "homeTeam": "CADIZ",
-    "awayTeam": "ELCHE",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "3-0",
-    "date": "07 de mayo 2022",
-    "playingTeam": "ELCHE",
-    "formation": [
-      [
-        {
-          "name": "EDGAR BADIA",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "ANTONIO BARRAGÁN",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "OMAR MASCARELL",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "PEDRO BIGAS",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "HELIBELTON PALACIOS",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "JOSAN",
-          "position": "DEF",
-          "number": "6"
-        }
-      ],
-      [
-        {
-          "name": "GERARD GUMBAU",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "RAÚL GUTI",
-          "position": "MID",
-          "number": "8"
-        }
-      ],
-      [
-        {
-          "name": "GUIDO CARRILLO",
-          "position": "FWD",
           "number": "9"
         },
         {
-          "name": "PERE MILLA",
+          "name": "GUIDO CARRILLO",
           "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "KIKE PÉREZ",
-          "position": "FWD",
-          "number": "11"
+          "number": "21"
         }
       ]
     ]
@@ -613,138 +163,63 @@
         {
           "name": "EDGAR BADIA",
           "position": "GK",
-          "number": "1"
+          "number": "13"
         }
       ],
       [
         {
-          "name": "DIEGO GONZÁLEZ",
+          "name": "JOHAN MOJICA",
           "position": "DEF",
-          "number": "2"
+          "number": "22"
         },
         {
           "name": "PEDRO BIGAS",
           "position": "DEF",
-          "number": "3"
+          "number": "6"
         },
         {
-          "name": "JOHAN MOJICA",
+          "name": "DIEGO GONZÁLEZ",
           "position": "DEF",
           "number": "4"
         },
         {
           "name": "HELIBELTON PALACIOS",
           "position": "DEF",
-          "number": "5"
+          "number": "14"
         }
       ],
       [
         {
-          "name": "JAVIER PASTORE",
+          "name": "TETE MORENTE",
           "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "OMAR MASCARELL",
-          "position": "MID",
-          "number": "7"
+          "number": "11"
         },
         {
           "name": "GERARD GUMBAU",
           "position": "MID",
-          "number": "8"
+          "number": "2"
+        },
+        {
+          "name": "OMAR MASCARELL",
+          "position": "MID",
+          "number": "21"
+        },
+        {
+          "name": "JAVIER PASTORE",
+          "position": "MID",
+          "number": "15"
         },
         {
           "name": "FIDEL",
           "position": "MID",
-          "number": "9"
-        },
-        {
-          "name": "TETE MORENTE",
-          "position": "MID",
-          "number": "10"
+          "number": "16"
         }
       ],
       [
         {
           "name": "GUIDO CARRILLO",
           "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2022-23",
-    "homeTeam": "GETAFE",
-    "awayTeam": "ELCHE",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "1-1",
-    "date": "20 de mayo 2023",
-    "playingTeam": "ELCHE",
-    "formation": [
-      [
-        {
-          "name": "EDGAR BADIA",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "LISANDRO MAGALLÁN",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "PEDRO BIGAS",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "CARLOS CLERC",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "LAUTARO BLANCO",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "TETE MORENTE",
-          "position": "DEF",
-          "number": "6"
-        }
-      ],
-      [
-        {
-          "name": "FIDEL",
-          "position": "MID",
           "number": "7"
-        },
-        {
-          "name": "JOHN DONALD",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "GERARD GUMBAU",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "RANDY NTEKA",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "LUCAS BOYÉ",
-          "position": "FWD",
-          "number": "11"
         }
       ]
     ]
@@ -763,138 +238,63 @@
         {
           "name": "EDGAR BADIA",
           "position": "GK",
-          "number": "1"
+          "number": "13"
         }
       ],
       [
         {
-          "name": "GONZALO VERDÚ",
+          "name": "CARLOS CLERC",
           "position": "DEF",
-          "number": "2"
+          "number": "23"
         },
         {
           "name": "OMAR MASCARELL",
           "position": "DEF",
-          "number": "3"
+          "number": "21"
         },
         {
           "name": "PEDRO BIGAS",
           "position": "DEF",
-          "number": "4"
+          "number": "6"
         },
         {
-          "name": "CARLOS CLERC",
+          "name": "GONZALO VERDÚ",
           "position": "DEF",
           "number": "5"
         },
         {
           "name": "TETE MORENTE",
           "position": "DEF",
-          "number": "6"
+          "number": "11"
         }
       ],
       [
-        {
-          "name": "JOHN DONALD",
-          "position": "MID",
-          "number": "7"
-        },
         {
           "name": "RAÚL GUTI",
           "position": "MID",
           "number": "8"
         },
         {
+          "name": "JOHN DONALD",
+          "position": "MID",
+          "number": "26"
+        },
+        {
           "name": "FIDEL",
           "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "PERE MILLA",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "LUCAS BOYÉ",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2022-23",
-    "homeTeam": "REAL VALLADOLID",
-    "awayTeam": "ELCHE",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "2-1",
-    "date": "05 de noviembre 2022",
-    "playingTeam": "ELCHE",
-    "formation": [
-      [
-        {
-          "name": "EDGAR BADIA",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "PEDRO BIGAS",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "ENZO ROCO",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "CARLOS CLERC",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "POL LIROLA",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "PERE MILLA",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "GERARD GUMBAU",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "OMAR MASCARELL",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "TETE MORENTE",
-          "position": "MID",
-          "number": "9"
-        },
-        {
-          "name": "ÁLEX COLLADO",
-          "position": "MID",
-          "number": "10"
+          "number": "16"
         }
       ],
       [
         {
           "name": "LUCAS BOYÉ",
           "position": "FWD",
-          "number": "11"
+          "number": "9"
+        },
+        {
+          "name": "PERE MILLA",
+          "position": "FWD",
+          "number": "10"
         }
       ]
     ]
