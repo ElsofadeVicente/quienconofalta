@@ -81,7 +81,16 @@
         </div>
     </div>
 
-    <div id="loading" class="loading" style="display: none;">CARGANDO PARTIDOS...</div>
+    <div id="loading" class="loading" style="display: none;">
+        <div class="loading-title">CARGANDO PARTIDOS</div>
+        <div class="loading-bar-wrap">
+            <div class="loading-bar-track">
+                <div class="loading-bar-fill" id="loading-bar-fill"></div>
+                <div class="loading-ball" id="loading-ball">⚽</div>
+            </div>
+        </div>
+        <div class="loading-percent" id="loading-percent">0%</div>
+    </div>
 
     <div id="game" style="display: none;">
         <div class="match-header">
@@ -166,10 +175,36 @@
                         <button class="key" data-key="B">B</button>
                         <button class="key" data-key="N">N</button>
                         <button class="key" data-key="M">M</button>
-                        <button class="key" data-key="Ñ">Ñ</button>
                         <button class="key wide" data-key="Delete">⌫</button>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de completado -->
+    <div id="completion-modal" class="completion-modal">
+        <div class="completion-content">
+            <div class="completion-title">✅ ALINEACIÓN COMPLETADA</div>
+            <div class="completion-match" id="completion-match"></div>
+            <div class="completion-stats">
+                <div class="completion-stat">
+                    <div class="completion-stat-value" id="comp-guessed">0</div>
+                    <div class="completion-stat-label">Adivinados</div>
+                </div>
+                <div class="completion-stat">
+                    <div class="completion-stat-value" id="comp-failed">0</div>
+                    <div class="completion-stat-label">Fallados</div>
+                </div>
+                <div class="completion-stat">
+                    <div class="completion-stat-value" id="comp-revealed">0</div>
+                    <div class="completion-stat-label">Revelados</div>
+                </div>
+            </div>
+            <div class="completion-streak" id="comp-streak"></div>
+            <div class="completion-buttons">
+                <button class="next-btn" onclick="nextMatch()">Siguiente partido →</button>
+                <button class="give-up-btn" onclick="closeCompletionModal()">Ver alineación</button>
             </div>
         </div>
     </div>

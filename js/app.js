@@ -10,6 +10,13 @@ let currentGuess = [];
 let playerAttempts = {}; // Contador de intentos por jugador
 let playerGuessHistory = {}; // Historial de intentos del wordle por jugador
 
+// Estadísticas del partido actual
+let matchStats = {
+    guessed: 0,    // adivinados correctamente
+    failed: 0,     // agotaron intentos
+    revealed: 0    // revelados voluntariamente
+};
+
 // Estadísticas
 let stats = {
     matchesCompleted: 0,
@@ -20,174 +27,109 @@ let stats = {
 };
 
 // CARGAR DATOS DESDE JSON
+function updateLoadingProgress(loaded, total) {
+    const pct = total === 0 ? 0 : Math.round((loaded / total) * 100);
+    const fill = document.getElementById('loading-bar-fill');
+    const ball = document.getElementById('loading-ball');
+    const pctEl = document.getElementById('loading-percent');
+    if (fill) fill.style.width = pct + '%';
+    if (ball) ball.style.left = pct + '%';
+    if (pctEl) pctEl.textContent = pct + '%';
+}
+
 async function loadMatchData(mode) {
     try {
         let folders = [];
-        
-        // Determinar qué carpetas cargar según el modo
         switch(mode) {
-            case 'liga':
-                folders = ['data/liga'];
-                break;
-            case 'champions':
-                folders = ['data/champions'];
-                break;
-            case 'historico':
-                folders = ['data/historico'];
-                break;
-            case 'random':
-                folders = ['data/liga', 'data/champions', 'data/historico'];
-                break;
+            case 'liga':      folders = ['data/liga'];      break;
+            case 'champions': folders = ['data/champions']; break;
+            case 'historico': folders = ['data/historico']; break;
+            case 'random':    folders = ['data/liga', 'data/champions', 'data/historico']; break;
         }
-        
-        // Array para almacenar todos los partidos
-        let allLoadedMatches = [];
-        
-        // Para cada carpeta, cargar todos sus archivos JSON
+
+        // Lista de archivos conocidos por carpeta
+        const knownFiles = {
+            'data/liga': [
+                'ALAVES.json','ALMERIA.json','ATHLETIC_CLUB.json','ATLETICO_MADRID.json',
+                'BARCELONA.json','CADIZ.json','CELTA_VIGO.json','CORDOBA.json',
+                'DEPORTIVO_LA_CORUNA.json','EIBAR.json','ELCHE.json','ESPANYOL.json',
+                'GETAFE.json','GIRONA.json','GRANADA.json','LAS_PALMAS.json',
+                'LEGANES.json','LEVANTE.json','MALAGA.json','MALLORCA.json',
+                'OSASUNA.json','RAYO_VALLECANO.json','REAL_BETIS.json','REAL_MADRID.json',
+                'REAL_SOCIEDAD.json','REAL_VALLADOLID.json','SD_HUESCA.json','SEVILLA.json',
+                'SPORTING_GIJON.json','VALENCIA.json','VILLARREAL.json'
+            ],
+            'data/champions': ['finales.json','semifinales.json','remontadas.json','clasicos.json'],
+            'data/historico': ['mundiales.json','eurocopas.json','olimpiadas.json']
+        };
+
+        // Construir lista total de URLs a intentar
+        const allUrls = [];
         for (const folder of folders) {
-            try {
-                // Intentar cargar el archivo manifest.json que lista las subcarpetas/archivos disponibles
-                const manifestResponse = await fetch(`${folder}/manifest.json`);
-                
-                if (manifestResponse.ok) {
-                    // Si existe manifest.json, usarlo
-                    const manifest = await manifestResponse.json();
-                    
-                    // Verificar si el manifest tiene "folders" (subcarpetas) o "files" (archivos directos)
-                    if (manifest.folders && Array.isArray(manifest.folders)) {
-                        // MODO SUBCARPETAS: Cargar todos los JSON de cada subcarpeta
-                        for (const subfolder of manifest.folders) {
-                            const subfolderPath = `${folder}/${subfolder}`;
-                            
-                            // Intentar cargar el manifest de la subcarpeta que lista sus archivos
-                            try {
-                                const subManifestResponse = await fetch(`${subfolderPath}/manifest.json`);
-                                
-                                if (subManifestResponse.ok) {
-                                    // Si la subcarpeta tiene su propio manifest.json
-                                    const subManifest = await subManifestResponse.json();
-                                    
-                                    if (subManifest.files && Array.isArray(subManifest.files)) {
-                                        for (const filename of subManifest.files) {
-                                            try {
-                                                const fileResponse = await fetch(`${subfolderPath}/${filename}`);
-                                                if (fileResponse.ok) {
-                                                    const data = await fileResponse.json();
-                                                    if (Array.isArray(data)) {
-                                                        allLoadedMatches.push(...data);
-                                                    }
-                                                }
-                                            } catch (err) {
-                                                console.warn(`No se pudo cargar ${subfolderPath}/${filename}:`, err);
-                                            }
-                                        }
-                                    }
-                                } else {
-                                    // Si no hay manifest en la subcarpeta, buscar archivos comunes
-                                    const commonJsonFiles = [
-                                        'partido1.json', 'partido2.json', 'partido3.json', 'partido4.json',
-                                        'partido5.json', 'partido6.json', 'partido7.json', 'partido8.json',
-                                        'partido9.json', 'partido10.json', 'partido11.json', 'partido12.json',
-                                        'partido13.json', 'partido14.json', 'partido15.json', 'partido16.json',
-                                        'partido17.json', 'partido18.json', 'partido19.json', 'partido20.json',
-                                        'partidos.json', 'data.json', 'matches.json',
-                                        // Patrones de temporadas
-                                        `${subfolder}_2014-15.json`, `${subfolder}_2015-16.json`, `${subfolder}_2016-17.json`,
-                                        `${subfolder}_2017-18.json`, `${subfolder}_2018-19.json`, `${subfolder}_2019-20.json`,
-                                        `${subfolder}_2020-21.json`, `${subfolder}_2021-22.json`, `${subfolder}_2022-23.json`,
-                                        `${subfolder}_2023-24.json`, `${subfolder}_2024-25.json`
-                                    ];
-                                    
-                                    for (const jsonFile of commonJsonFiles) {
-                                        try {
-                                            const fileResponse = await fetch(`${subfolderPath}/${jsonFile}`);
-                                            if (fileResponse.ok) {
-                                                const data = await fileResponse.json();
-                                                if (Array.isArray(data)) {
-                                                    allLoadedMatches.push(...data);
-                                                }
-                                            }
-                                        } catch (err) {
-                                            // Ignorar archivos que no existen
-                                        }
-                                    }
-                                }
-                            } catch (err) {
-                                console.warn(`Error procesando subcarpeta ${subfolderPath}:`, err);
-                            }
-                        }
-                    } else if (manifest.files && Array.isArray(manifest.files)) {
-                        // MODO ARCHIVOS DIRECTOS: Cargar archivos listados en el manifest
-                        for (const filename of manifest.files) {
-                            try {
-                                const fileResponse = await fetch(`${folder}/${filename}`);
-                                if (fileResponse.ok) {
-                                    const data = await fileResponse.json();
-                                    if (Array.isArray(data)) {
-                                        allLoadedMatches.push(...data);
-                                    }
-                                }
-                            } catch (err) {
-                                console.warn(`No se pudo cargar ${folder}/${filename}:`, err);
-                            }
-                        }
-                    }
-                } else {
-                    // Si no hay manifest.json, intentar cargar archivos comunes directamente
-                    const commonFiles = [
-                        'ALAVES.json', 'ALMERIA.json', 'ATHLETIC_CLUB.json', 'ATLETICO_MADRID.json',
-                        'BARCELONA.json', 'CADIZ.json', 'CELTA_VIGO.json', 'CORDOBA.json',
-                        'DEPORTIVO_LA_CORUNA.json', 'EIBAR.json', 'ELCHE.json', 'ESPANYOL.json',
-                        'GETAFE.json', 'GIRONA.json', 'GRANADA.json', 'LAS_PALMAS.json',
-                        'LEGANES.json', 'LEVANTE.json', 'MALAGA.json', 'MALLORCA.json',
-                        'OSASUNA.json', 'RAYO_VALLECANO.json', 'REAL_BETIS.json', 'REAL_MADRID.json',
-                        'REAL_SOCIEDAD.json', 'REAL_VALLADOLID.json', 'SD_HUESCA.json', 'SEVILLA.json',
-                        'SPORTING_GIJON.json', 'VALENCIA.json', 'VILLARREAL.json',
-                        // También nombres en minúsculas por compatibilidad
-                        'barcelona.json', 'real-madrid.json', 'atletico.json', 'sevilla.json',
-                        'valencia.json', 'athletic.json', 'real-sociedad.json', 'betis.json',
-                        'villarreal.json', 'celta.json', 'espanyol.json', 'getafe.json',
-                        'finales.json', 'semifinales.json', 'remontadas.json', 'clasicos.json',
-                        'mundiales.json', 'eurocopas.json', 'olimpiadas.json'
-                    ];
-                    
-                    for (const filename of commonFiles) {
-                        try {
-                            const fileResponse = await fetch(`${folder}/${filename}`);
-                            if (fileResponse.ok) {
-                                const data = await fileResponse.json();
-                                if (Array.isArray(data)) {
-                                    allLoadedMatches.push(...data);
-                                }
-                            }
-                        } catch (err) {
-                            // Ignorar archivos que no existen
-                        }
-                    }
-                }
-            } catch (err) {
-                console.warn(`Error procesando carpeta ${folder}:`, err);
+            const files = knownFiles[folder] || [];
+            for (const file of files) {
+                allUrls.push(`${folder}/${file}`);
             }
         }
-        
+
+        // También intentar manifest.json por si existe
+        const manifestUrls = folders.map(f => ({ folder: f, url: `${f}/manifest.json` }));
+        const manifests = await Promise.allSettled(
+            manifestUrls.map(({ url }) => fetch(url).then(r => r.ok ? r.json() : null))
+        );
+
+        // Añadir archivos del manifest si los hay (sin duplicar)
+        const existingUrls = new Set(allUrls);
+        manifests.forEach((result, i) => {
+            if (result.status === 'fulfilled' && result.value?.files) {
+                const folder = manifestUrls[i].folder;
+                result.value.files.forEach(file => {
+                    const url = `${folder}/${file}`;
+                    if (!existingUrls.has(url)) {
+                        allUrls.push(url);
+                        existingUrls.add(url);
+                    }
+                });
+            }
+        });
+
+        // Carga paralela con seguimiento de progreso
+        let loaded = 0;
+        const total = allUrls.length;
+        updateLoadingProgress(0, total);
+
+        const results = await Promise.allSettled(
+            allUrls.map(url =>
+                fetch(url)
+                    .then(r => r.ok ? r.json() : null)
+                    .catch(() => null)
+                    .finally(() => {
+                        loaded++;
+                        updateLoadingProgress(loaded, total);
+                    })
+            )
+        );
+
+        const allLoadedMatches = [];
+        results.forEach(result => {
+            if (result.status === 'fulfilled' && Array.isArray(result.value)) {
+                allLoadedMatches.push(...result.value);
+            }
+        });
+
         if (allLoadedMatches.length === 0) {
             throw new Error('No se encontraron partidos en las carpetas especificadas');
         }
-        
-        // Asignar todos los partidos cargados
-        allMatches = allLoadedMatches;
-        
-        // Mezclar siempre para que aparezcan en orden aleatorio
-        allMatches = shuffleArray(allMatches);
-        
+
+        allMatches = shuffleArray(allLoadedMatches);
         return allMatches.length > 0;
+
     } catch (error) {
         console.error('Error cargando datos:', error);
         alert('Error al cargar los datos. Asegúrate de que los archivos JSON estén en las carpetas correctas dentro de /data/');
         return false;
     }
 }
-
 function shuffleArray(array) {
     const shuffled = [...array];
     for (let i = shuffled.length - 1; i > 0; i--) {
@@ -229,6 +171,7 @@ function loadMatch() {
     failedPlayers = new Set();
     playerAttempts = {};
     playerGuessHistory = {};
+    matchStats = { guessed: 0, failed: 0, revealed: 0 };
     
     // Mostrar información del partido
     document.getElementById('competition').textContent = currentMatch.competition;
@@ -647,7 +590,7 @@ function checkGuess() {
         setTimeout(() => {
             revealPlayer(currentPlayerIndex);
             closeGuessModal();
-            updateStats(true);
+            updateStats('correct');
         }, 1500);
         return;
     }
@@ -717,7 +660,7 @@ function checkGuess() {
         setTimeout(() => {
             revealPlayer(currentPlayerIndex, true); // true = revelado por fallo
             closeGuessModal();
-            updateStats(false);
+            updateStats('failed');
         }, 1000);
     }
 }
@@ -785,13 +728,49 @@ function revealPlayerFromModal() {
     if (currentPlayerIndex !== null) {
         revealPlayer(currentPlayerIndex);
         closeGuessModal();
-        updateStats(false);
+        updateStats('voluntary');
     }
 }
 
 function updateRevealedCount() {
     const total = currentMatch.formation.reduce((sum, line) => sum + line.length, 0);
     document.getElementById('revealed-count').textContent = revealedPlayers.size;
+    
+    if (revealedPlayers.size === total) {
+        setTimeout(() => showCompletionModal(), 600);
+    }
+}
+
+function showCompletionModal() {
+    document.getElementById('completion-match').textContent = 
+        `${currentMatch.homeTeam} ${currentMatch.score} ${currentMatch.awayTeam} • ${currentMatch.date}`;
+    
+    document.getElementById('comp-guessed').textContent = matchStats.guessed;
+    document.getElementById('comp-failed').textContent = matchStats.failed;
+    document.getElementById('comp-revealed').textContent = matchStats.revealed;
+    
+    const streakEl = document.getElementById('comp-streak');
+    if (stats.currentStreak >= 3) {
+        streakEl.textContent = `🔥 Racha actual: ${stats.currentStreak}`;
+        streakEl.style.display = 'block';
+    } else {
+        streakEl.style.display = 'none';
+    }
+    
+    if (matchStats.guessed === 11) {
+        document.querySelector('.completion-title').textContent = '🏆 ¡ONCE PERFECTO!';
+    } else {
+        document.querySelector('.completion-title').textContent = '✅ ALINEACIÓN COMPLETADA';
+    }
+    
+    document.getElementById('completion-modal').classList.add('active');
+    
+    stats.matchesCompleted++;
+    saveStats();
+}
+
+function closeCompletionModal() {
+    document.getElementById('completion-modal').classList.remove('active');
 }
 
 function closeGuessModal() {
@@ -801,11 +780,7 @@ function closeGuessModal() {
 
 // NAVEGACIÓN
 function nextMatch() {
-    if (revealedPlayers.size === 11) {
-        stats.matchesCompleted++;
-        saveStats();
-    }
-    
+    document.getElementById('completion-modal').classList.remove('active');
     currentMatchIndex++;
     loadMatch();
 }
@@ -832,17 +807,26 @@ function returnHome() {
 }
 
 // ESTADÍSTICAS
-function updateStats(correct) {
+// mode: 'correct' | 'failed' | 'voluntary'
+function updateStats(mode) {
     stats.totalAttempts++;
-    if (correct) {
+    
+    if (mode === 'correct') {
         stats.playersGuessed++;
+        matchStats.guessed++;
         stats.currentStreak++;
         if (stats.currentStreak > stats.bestStreak) {
             stats.bestStreak = stats.currentStreak;
         }
-    } else {
+    } else if (mode === 'failed') {
+        matchStats.failed++;
         stats.currentStreak = 0;
+    } else if (mode === 'voluntary') {
+        matchStats.revealed++;
+        // No rompe racha ni suma adivinados
+        stats.totalAttempts--; // no contar como intento
     }
+    
     saveStats();
 }
 
