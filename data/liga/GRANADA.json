@@ -1,81 +1,6 @@
 [
   {
     "competition": "LA LIGA • TEMPORADA 2014-15",
-    "homeTeam": "ATLETICO MADRID",
-    "awayTeam": "GRANADA",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "2-0",
-    "date": "18 de enero 2015",
-    "playingTeam": "GRANADA",
-    "formation": [
-      [
-        {
-          "name": "OIER",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "J. BABIN",
-          "position": "DEF",
-          "number": "6"
-        },
-        {
-          "name": "D. MAINZ",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "A. SISSOKO",
-          "position": "DEF",
-          "number": "17"
-        },
-        {
-          "name": "HÉCTOR YUSTE",
-          "position": "DEF",
-          "number": "7"
-        },
-        {
-          "name": "ITURRA",
-          "position": "DEF",
-          "number": "16"
-        },
-        {
-          "name": "A. NYOM",
-          "position": "DEF",
-          "number": "2"
-        }
-      ],
-      [
-        {
-          "name": "PITI",
-          "position": "MID",
-          "number": "10"
-        },
-        {
-          "name": "LASS BANGOURA",
-          "position": "MID",
-          "number": "15"
-        },
-        {
-          "name": "ROBER IBÁÑEZ",
-          "position": "MID",
-          "number": "21"
-        }
-      ],
-      [
-        {
-          "name": "Y. EL-ARABI",
-          "position": "FWD",
-          "number": "9"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2014-15",
     "homeTeam": "GRANADA",
     "awayTeam": "ALMERIA",
     "homeBadge": "🏟️",
@@ -86,215 +11,65 @@
     "formation": [
       [
         {
-          "name": "ROBERTO",
+          "name": "FERNÁNDEZ",
           "position": "GK",
           "number": "13"
         }
       ],
       [
         {
-          "name": "J. BABIN",
-          "position": "DEF",
-          "number": "6"
-        },
-        {
-          "name": "J. MURILLO",
-          "position": "DEF",
-          "number": "24"
-        },
-        {
           "name": "JUANKAR",
           "position": "DEF",
           "number": "20"
         },
         {
-          "name": "ITURRA",
+          "name": "BABÍN",
           "position": "DEF",
-          "number": "16"
+          "number": "6"
         },
         {
-          "name": "FRAN RICO",
+          "name": "MURILLO",
           "position": "DEF",
-          "number": "4"
+          "number": "24"
         },
         {
-          "name": "D. FOULQUIER",
+          "name": "FOULQUIER",
           "position": "DEF",
           "number": "22"
         }
       ],
       [
         {
+          "name": "ITURRA",
+          "position": "MID",
+          "number": "16"
+        },
+        {
+          "name": "RICO",
+          "position": "MID",
+          "number": "4"
+        },
+        {
           "name": "PITI",
           "position": "MID",
           "number": "10"
-        },
+        }
+      ],
+      [
         {
-          "name": "A. SISSOKO",
-          "position": "MID",
+          "name": "SISSOKO",
+          "position": "FWD",
           "number": "17"
         },
         {
-          "name": "RUBÉN ROCHINA",
-          "position": "MID",
+          "name": "EL ARABI",
+          "position": "FWD",
+          "number": "9"
+        },
+        {
+          "name": "ROCHINA",
+          "position": "FWD",
           "number": "23"
-        }
-      ],
-      [
-        {
-          "name": "Y. EL-ARABI",
-          "position": "FWD",
-          "number": "9"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2014-15",
-    "homeTeam": "VILLARREAL",
-    "awayTeam": "GRANADA",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "2-0",
-    "date": "07 de febrero 2015",
-    "playingTeam": "GRANADA",
-    "formation": [
-      [
-        {
-          "name": "OIER",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "J. BABIN",
-          "position": "DEF",
-          "number": "6"
-        },
-        {
-          "name": "D. MAINZ",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "EMANUEL INSÚA",
-          "position": "DEF",
-          "number": "25"
-        },
-        {
-          "name": "RUBÉN PÉREZ",
-          "position": "DEF",
-          "number": "12"
-        },
-        {
-          "name": "FRAN RICO",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "A. NYOM",
-          "position": "DEF",
-          "number": "2"
-        }
-      ],
-      [
-        {
-          "name": "PITI",
-          "position": "MID",
-          "number": "10"
-        },
-        {
-          "name": "LASS BANGOURA",
-          "position": "MID",
-          "number": "15"
-        },
-        {
-          "name": "ROBER IBÁÑEZ",
-          "position": "MID",
-          "number": "21"
-        }
-      ],
-      [
-        {
-          "name": "J. CÓRDOBA",
-          "position": "FWD",
-          "number": "18"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2015-16",
-    "homeTeam": "SEVILLA",
-    "awayTeam": "GRANADA",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "1-4",
-    "date": "08 de mayo 2016",
-    "playingTeam": "GRANADA",
-    "formation": [
-      [
-        {
-          "name": "ANDRÉS FERNÁNDEZ",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "JEAN-SYLVAIN BABIN",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "RICARDO COSTA",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "CRISTIANO BIRAGHI",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "MIGUEL LOPES",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "ABDOULAYE DOUCOURÉ",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "RUBÉN PÉREZ",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "ISAAC CUENCA",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "RUBÉN ROCHINA",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "ADALBERTO PEÑARANDA",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "YOUSSEF EL ARABI",
-          "position": "FWD",
-          "number": "11"
         }
       ]
     ]
@@ -311,213 +86,63 @@
     "formation": [
       [
         {
-          "name": "ANDRÉS FERNÁNDEZ",
+          "name": "FERNÁNDEZ",
           "position": "GK",
-          "number": "1"
+          "number": "13"
         }
       ],
       [
         {
-          "name": "JEAN-SYLVAIN BABIN",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "DAVID LOMBÁN",
+          "name": "BIRAGHI",
           "position": "DEF",
           "number": "3"
         },
         {
-          "name": "CRISTIANO BIRAGHI",
+          "name": "BABÍN",
           "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "DIMITRI FOULQUIER",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "FRAN RICO",
-          "position": "MID",
           "number": "6"
         },
         {
-          "name": "RUBÉN PÉREZ",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "RUBÉN ROCHINA",
-          "position": "MID",
-          "number": "8"
-        }
-      ],
-      [
-        {
-          "name": "YOUSSEF EL ARABI",
-          "position": "FWD",
-          "number": "9"
-        },
-        {
-          "name": "ADALBERTO PEÑARANDA",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "ISAAC SUCCESS",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2015-16",
-    "homeTeam": "RAYO VALLECANO",
-    "awayTeam": "GRANADA",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "2-1",
-    "date": "07 de noviembre 2015",
-    "playingTeam": "GRANADA",
-    "formation": [
-      [
-        {
-          "name": "ANDRÉS FERNÁNDEZ",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "DAVID LOMBÁN",
+          "name": "LOMBÁN",
           "position": "DEF",
           "number": "2"
         },
         {
-          "name": "JEAN-SYLVAIN BABIN",
+          "name": "FOULQUIER",
           "position": "DEF",
-          "number": "3"
+          "number": "22"
+        }
+      ],
+      [
+        {
+          "name": "PÉREZ",
+          "position": "MID",
+          "number": "20"
         },
         {
-          "name": "CRISTIANO BIRAGHI",
-          "position": "DEF",
+          "name": "RICO",
+          "position": "MID",
           "number": "4"
         },
         {
-          "name": "RENE KRHIN",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "RUBÉN PÉREZ",
-          "position": "DEF",
-          "number": "6"
-        },
-        {
-          "name": "MIGUEL LOPES",
-          "position": "DEF",
-          "number": "7"
+          "name": "ROCHINA",
+          "position": "MID",
+          "number": "23"
         }
       ],
       [
         {
-          "name": "JAVI MÁRQUEZ",
-          "position": "MID",
-          "number": "8"
+          "name": "PEÑARANDA",
+          "position": "FWD",
+          "number": "27"
         },
         {
-          "name": "ROBER IBÁÑEZ",
-          "position": "MID",
+          "name": "EL ARABI",
+          "position": "FWD",
           "number": "9"
         },
         {
-          "name": "PITI",
-          "position": "MID",
-          "number": "10"
-        }
-      ],
-      [
-        {
-          "name": "YOUSSEF EL ARABI",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2016-17",
-    "homeTeam": "GRANADA",
-    "awayTeam": "SPORTING GIJON",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "0-0",
-    "date": "22 de octubre 2016",
-    "playingTeam": "GRANADA",
-    "formation": [
-      [
-        {
-          "name": "GUILLERMO OCHOA",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "DAVID LOMBÁN",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "RÚBEN VEZO",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "GABRIEL SILVA",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "TITO",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "VICTORIEN ANGBAN",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "UCHE AGBO",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "ANDREAS PEREIRA",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "ISAAC CUENCA",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "ARTEM KRAVETS",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "EZEQUIEL PONCE",
+          "name": "SUCCESS",
           "position": "FWD",
           "number": "11"
         }
@@ -536,290 +161,65 @@
     "formation": [
       [
         {
-          "name": "GUILLERMO OCHOA",
+          "name": "OCHOA",
           "position": "GK",
-          "number": "1"
+          "number": "13"
         }
       ],
       [
         {
-          "name": "DAVID LOMBÁN",
+          "name": "TABANOU",
           "position": "DEF",
-          "number": "2"
+          "number": "14"
         },
         {
-          "name": "RÚBEN VEZO",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "FRANCK TABANOU",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "UCHE AGBO",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "SERGI SAMPER",
+          "name": "LOMBÁN",
           "position": "DEF",
           "number": "6"
         },
         {
-          "name": "DIMITRI FOULQUIER",
+          "name": "VEZO",
           "position": "DEF",
-          "number": "7"
+          "number": "17"
+        },
+        {
+          "name": "FOULQUIER",
+          "position": "DEF",
+          "number": "22"
         }
       ],
       [
         {
-          "name": "OMER ATZILI",
+          "name": "SAMPER",
           "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "ANDREAS PEREIRA",
-          "position": "MID",
-          "number": "9"
-        },
-        {
-          "name": "JÉRÉMIE BOGA",
-          "position": "MID",
-          "number": "10"
-        }
-      ],
-      [
-        {
-          "name": "ARTEM KRAVETS",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2016-17",
-    "homeTeam": "OSASUNA",
-    "awayTeam": "GRANADA",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "2-1",
-    "date": "13 de mayo 2017",
-    "playingTeam": "GRANADA",
-    "formation": [
-      [
-        {
-          "name": "GUILLERMO OCHOA",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "DAVID LOMBÁN",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "SVERRIR INGASON",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "DIMITRI FOULQUIER",
-          "position": "DEF",
           "number": "4"
         },
         {
-          "name": "RÚBEN VEZO",
-          "position": "DEF",
+          "name": "AGBO",
+          "position": "MID",
           "number": "5"
+        },
+        {
+          "name": "PEREIRA",
+          "position": "MID",
+          "number": "18"
         }
       ],
       [
         {
-          "name": "VICTORIEN ANGBAN",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "MARTIN HONGLA",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "RENE KRHIN",
-          "position": "MID",
-          "number": "8"
-        }
-      ],
-      [
-        {
-          "name": "ADRIÁN RAMOS",
-          "position": "FWD",
-          "number": "9"
-        },
-        {
-          "name": "ANDREAS PEREIRA",
+          "name": "BOGA",
           "position": "FWD",
           "number": "10"
         },
         {
-          "name": "JÉRÉMIE BOGA",
+          "name": "KRAVETS",
           "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2019-20",
-    "homeTeam": "REAL BETIS",
-    "awayTeam": "GRANADA",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "2-2",
-    "date": "15 de junio 2020",
-    "playingTeam": "GRANADA",
-    "formation": [
-      [
-        {
-          "name": "RUI SILVA",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "JESÚS VALLEJO",
-          "position": "DEF",
-          "number": "2"
+          "number": "24"
         },
         {
-          "name": "GERMÁN SÁNCHEZ",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "CARLOS NEVA",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "RAMÓN AZEEZ",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "YAN ETEKI",
-          "position": "DEF",
-          "number": "6"
-        },
-        {
-          "name": "DIMITRI FOULQUIER",
-          "position": "DEF",
-          "number": "7"
-        }
-      ],
-      [
-        {
-          "name": "FEDE VICO",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "ANTONIO PUERTAS",
-          "position": "MID",
-          "number": "9"
-        },
-        {
-          "name": "DARWIN MACHÍS",
-          "position": "MID",
-          "number": "10"
-        }
-      ],
-      [
-        {
-          "name": "CARLOS FERNÁNDEZ",
+          "name": "ATZILI",
           "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2019-20",
-    "homeTeam": "OSASUNA",
-    "awayTeam": "GRANADA",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "0-3",
-    "date": "23 de febrero 2020",
-    "playingTeam": "GRANADA",
-    "formation": [
-      [
-        {
-          "name": "RUI SILVA",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "DOMINGOS DUARTE",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "GERMÁN SÁNCHEZ",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "VÍCTOR DÍAZ",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "CARLOS NEVA",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "DIMITRI FOULQUIER",
-          "position": "DEF",
-          "number": "6"
-        }
-      ],
-      [
-        {
-          "name": "MAXIME GONALONS",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "YANGEL HERRERA",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "DARWIN MACHÍS",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "ROBERTO SOLDADO",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "CARLOS FERNÁNDEZ",
-          "position": "FWD",
-          "number": "11"
+          "number": "15"
         }
       ]
     ]
@@ -836,215 +236,65 @@
     "formation": [
       [
         {
-          "name": "RUI SILVA",
+          "name": "SILVA",
           "position": "GK",
           "number": "1"
         }
       ],
       [
         {
-          "name": "DOMINGOS DUARTE",
+          "name": "NEVA",
           "position": "DEF",
-          "number": "2"
+          "number": "15"
         },
         {
-          "name": "GERMÁN SÁNCHEZ",
+          "name": "DUARTE",
           "position": "DEF",
-          "number": "3"
+          "number": "22"
         },
         {
-          "name": "CARLOS NEVA",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "YANGEL HERRERA",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "MAXIME GONALONS",
+          "name": "SÁNCHEZ",
           "position": "DEF",
           "number": "6"
         },
         {
           "name": "QUINI",
           "position": "DEF",
-          "number": "7"
+          "number": "17"
         }
       ],
       [
         {
-          "name": "RAMÓN AZEEZ",
+          "name": "GONALONS",
           "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "ÁLVARO VADILLO",
-          "position": "MID",
-          "number": "9"
-        },
-        {
-          "name": "ANTONIO PUERTAS",
-          "position": "MID",
-          "number": "10"
-        }
-      ],
-      [
-        {
-          "name": "ROBERTO SOLDADO",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2020-21",
-    "homeTeam": "GRANADA",
-    "awayTeam": "REAL SOCIEDAD",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "1-0",
-    "date": "14 de marzo 2021",
-    "playingTeam": "GRANADA",
-    "formation": [
-      [
-        {
-          "name": "RUI SILVA",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "DOMINGOS DUARTE",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "GERMÁN SÁNCHEZ",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "QUINI",
-          "position": "DEF",
           "number": "4"
         },
         {
-          "name": "YAN ETEKI",
-          "position": "DEF",
-          "number": "5"
+          "name": "HERRERA",
+          "position": "MID",
+          "number": "21"
         },
         {
-          "name": "YANGEL HERRERA",
-          "position": "DEF",
-          "number": "6"
-        },
-        {
-          "name": "DIMITRI FOULQUIER",
-          "position": "DEF",
-          "number": "7"
+          "name": "AZEEZ",
+          "position": "MID",
+          "number": "12"
         }
       ],
       [
         {
-          "name": "DOMINGOS QUINA",
-          "position": "MID",
-          "number": "8"
+          "name": "VADILLO",
+          "position": "FWD",
+          "number": "7"
         },
         {
-          "name": "KENEDY",
-          "position": "MID",
+          "name": "SOLDADO",
+          "position": "FWD",
           "number": "9"
         },
         {
-          "name": "FEDE VICO",
-          "position": "MID",
-          "number": "10"
-        }
-      ],
-      [
-        {
-          "name": "ROBERTO SOLDADO",
+          "name": "PUERTAS",
           "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2020-21",
-    "homeTeam": "MALLORCA",
-    "awayTeam": "GRANADA",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "1-2",
-    "date": "16 de julio 2020",
-    "playingTeam": "GRANADA",
-    "formation": [
-      [
-        {
-          "name": "RUI SILVA",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "JOSÉ MARTÍNEZ",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "GERMÁN SÁNCHEZ",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "CARLOS NEVA",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "YANGEL HERRERA",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "YAN ETEKI",
-          "position": "DEF",
-          "number": "6"
-        },
-        {
-          "name": "VÍCTOR DÍAZ",
-          "position": "DEF",
-          "number": "7"
-        }
-      ],
-      [
-        {
-          "name": "FEDE VICO",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "DARWIN MACHÍS",
-          "position": "MID",
-          "number": "9"
-        },
-        {
-          "name": "ANTONIO PUERTAS",
-          "position": "MID",
           "number": "10"
-        }
-      ],
-      [
-        {
-          "name": "ROBERTO SOLDADO",
-          "position": "FWD",
-          "number": "11"
         }
       ]
     ]
@@ -1061,215 +311,65 @@
     "formation": [
       [
         {
-          "name": "RUI SILVA",
+          "name": "SILVA",
           "position": "GK",
           "number": "1"
         }
       ],
       [
         {
-          "name": "DOMINGOS DUARTE",
+          "name": "NEVA",
           "position": "DEF",
-          "number": "2"
+          "number": "15"
         },
         {
-          "name": "GERMÁN SÁNCHEZ",
+          "name": "DUARTE",
           "position": "DEF",
-          "number": "3"
+          "number": "22"
         },
         {
-          "name": "CARLOS NEVA",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "MAXIME GONALONS",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "LUIS MILLA",
+          "name": "SÁNCHEZ",
           "position": "DEF",
           "number": "6"
         },
         {
-          "name": "JESÚS VALLEJO",
+          "name": "VALLEJO",
           "position": "DEF",
-          "number": "7"
+          "number": "20"
         }
       ],
       [
         {
-          "name": "ÁNGEL MONTORO",
+          "name": "GONALONS",
           "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "DARWIN MACHÍS",
-          "position": "MID",
-          "number": "9"
-        },
-        {
-          "name": "ANTONIO PUERTAS",
-          "position": "MID",
-          "number": "10"
-        }
-      ],
-      [
-        {
-          "name": "JORGE MOLINA",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2021-22",
-    "homeTeam": "ELCHE",
-    "awayTeam": "GRANADA",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "0-0",
-    "date": "02 de enero 2022",
-    "playingTeam": "GRANADA",
-    "formation": [
-      [
-        {
-          "name": "LUÍS MAXIMIANO",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "GERMÁN SÁNCHEZ",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "RAÚL TORRENTE",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "CARLOS NEVA",
-          "position": "DEF",
           "number": "4"
         },
         {
-          "name": "QUINI",
-          "position": "DEF",
+          "name": "MILLA",
+          "position": "MID",
           "number": "5"
+        },
+        {
+          "name": "MONTORO",
+          "position": "MID",
+          "number": "19"
         }
       ],
       [
         {
-          "name": "MAXIME GONALONS",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "LUIS MILLA",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "DARWIN MACHÍS",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "ANTONIO PUERTAS",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "JORGE MOLINA",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "LUIS SUÁREZ",
+          "name": "MACHÍS",
           "position": "FWD",
           "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2021-22",
-    "homeTeam": "OSASUNA",
-    "awayTeam": "GRANADA",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "1-1",
-    "date": "22 de octubre 2021",
-    "playingTeam": "GRANADA",
-    "formation": [
-      [
-        {
-          "name": "LUÍS MAXIMIANO",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "VÍCTOR DÍAZ",
-          "position": "DEF",
-          "number": "2"
         },
         {
-          "name": "LUIS ABRAM",
-          "position": "DEF",
-          "number": "3"
+          "name": "MOLINA",
+          "position": "FWD",
+          "number": "23"
         },
         {
-          "name": "CARLOS NEVA",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "QUINI",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "MAXIME GONALONS",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "LUIS MILLA",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "DARWIN MACHÍS",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "RUBÉN ROCHINA",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "CARLOS BACCA",
+          "name": "PUERTAS",
           "position": "FWD",
           "number": "10"
-        },
-        {
-          "name": "LUIS SUÁREZ",
-          "position": "FWD",
-          "number": "11"
         }
       ]
     ]
@@ -1286,65 +386,65 @@
     "formation": [
       [
         {
-          "name": "LUÍS MAXIMIANO",
+          "name": "MAXIMIANO",
           "position": "GK",
           "number": "1"
         }
       ],
       [
         {
-          "name": "RAÚL TORRENTE",
+          "name": "NEVA",
           "position": "DEF",
-          "number": "2"
+          "number": "15"
         },
         {
-          "name": "VÍCTOR DÍAZ",
+          "name": "TORRENTE",
           "position": "DEF",
-          "number": "3"
+          "number": "28"
         },
         {
-          "name": "CARLOS NEVA",
+          "name": "DÍAZ",
           "position": "DEF",
-          "number": "4"
+          "number": "16"
         },
         {
           "name": "QUINI",
           "position": "DEF",
-          "number": "5"
+          "number": "17"
         }
       ],
       [
         {
-          "name": "MAXIME GONALONS",
+          "name": "MACHÍS",
           "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "LUIS MILLA",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "DARWIN MACHÍS",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "ANTONIO PUERTAS",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "JORGE MOLINA",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "LUIS SUÁREZ",
-          "position": "FWD",
           "number": "11"
+        },
+        {
+          "name": "GONALONS",
+          "position": "MID",
+          "number": "4"
+        },
+        {
+          "name": "MILLA",
+          "position": "MID",
+          "number": "5"
+        },
+        {
+          "name": "PUERTAS",
+          "position": "MID",
+          "number": "10"
+        }
+      ],
+      [
+        {
+          "name": "SUÁREZ",
+          "position": "FWD",
+          "number": "9"
+        },
+        {
+          "name": "MOLINA",
+          "position": "FWD",
+          "number": "23"
         }
       ]
     ]

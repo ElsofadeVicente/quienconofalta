@@ -18,9 +18,9 @@
       ],
       [
         {
-          "name": "J.S. BABIN",
+          "name": "ISMA LÓPEZ",
           "position": "DEF",
-          "number": "3"
+          "number": "18"
         },
         {
           "name": "JORGE MERÉ",
@@ -28,12 +28,12 @@
           "number": "4"
         },
         {
-          "name": "ISMA LÓPEZ",
+          "name": "BABÍN",
           "position": "DEF",
-          "number": "18"
+          "number": "3"
         },
         {
-          "name": "LILLO",
+          "name": "CASTELLANO",
           "position": "DEF",
           "number": "16"
         }
@@ -45,31 +45,31 @@
           "number": "6"
         },
         {
-          "name": "MOI GÓMEZ",
-          "position": "MID",
-          "number": "23"
-        },
-        {
           "name": "DANI NDI",
           "position": "MID",
           "number": "20"
         },
         {
-          "name": "V. RODRÍGUEZ",
+          "name": "MOI GÓMEZ",
           "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "BURGUI",
-          "position": "MID",
-          "number": "14"
+          "number": "23"
         }
       ],
       [
         {
+          "name": "BURGUI",
+          "position": "FWD",
+          "number": "14"
+        },
+        {
           "name": "DUJE COP",
           "position": "FWD",
           "number": "24"
+        },
+        {
+          "name": "V. RODRÍGUEZ",
+          "position": "FWD",
+          "number": "7"
         }
       ]
     ]

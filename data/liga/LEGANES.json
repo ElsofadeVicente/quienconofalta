@@ -2,156 +2,6 @@
   {
     "competition": "LA LIGA • TEMPORADA 2016-17",
     "homeTeam": "LEGANES",
-    "awayTeam": "LAS PALMAS",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "3-0",
-    "date": "26 de abril 2017",
-    "playingTeam": "LEGANES",
-    "formation": [
-      [
-        {
-          "name": "IAGO HERRERÍN",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "DIMITRIOS SIOVAS",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "MARTÍN MANTOVANI",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "DIEGO RICO",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "TITO",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "DAVID TIMOR",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "RUBÉN PÉREZ",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "GABRIEL PIRES",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "SAMU GARCÍA",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "LUCIANO",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "MIGUEL ÁNGEL GUERRERO",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2016-17",
-    "homeTeam": "LEGANES",
-    "awayTeam": "ALAVES",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "1-1",
-    "date": "20 de mayo 2017",
-    "playingTeam": "LEGANES",
-    "formation": [
-      [
-        {
-          "name": "NEREO CHAMPAGNE",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "PABLO INSUA",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "DIMITRIOS SIOVAS",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "DIEGO RICO",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "ALBERTO MARTÍN",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "DAVID TIMOR",
-          "position": "DEF",
-          "number": "6"
-        },
-        {
-          "name": "VÍCTOR DÍAZ",
-          "position": "DEF",
-          "number": "7"
-        }
-      ],
-      [
-        {
-          "name": "GABRIEL PIRES",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "ALEXANDER SZYMANOWSKI",
-          "position": "MID",
-          "number": "9"
-        },
-        {
-          "name": "NABIL EL ZHAR",
-          "position": "MID",
-          "number": "10"
-        }
-      ],
-      [
-        {
-          "name": "MIGUEL ÁNGEL GUERRERO",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2016-17",
-    "homeTeam": "LEGANES",
     "awayTeam": "OSASUNA",
     "homeBadge": "🏟️",
     "awayBadge": "⚽",
@@ -161,140 +11,65 @@
     "formation": [
       [
         {
-          "name": "JON SERANTES",
+          "name": "SERANTES",
           "position": "GK",
-          "number": "1"
+          "number": "13"
         }
       ],
       [
         {
-          "name": "MARTÍN MANTOVANI",
+          "name": "RICO",
           "position": "DEF",
-          "number": "2"
+          "number": "15"
         },
         {
-          "name": "PABLO INSUA",
+          "name": "INSUA",
           "position": "DEF",
-          "number": "3"
+          "number": "18"
         },
         {
-          "name": "DIEGO RICO",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "ALBERTO MARTÍN",
+          "name": "MANTOVANI",
           "position": "DEF",
           "number": "5"
         },
         {
-          "name": "DAVID TIMOR",
+          "name": "BUSTINZA",
           "position": "DEF",
-          "number": "6"
-        },
-        {
-          "name": "UNAI BUSTINZA",
-          "position": "DEF",
-          "number": "7"
+          "number": "3"
         }
       ],
       [
+        {
+          "name": "MARTÍN",
+          "position": "MID",
+          "number": "6"
+        },
+        {
+          "name": "TÍMOR",
+          "position": "MID",
+          "number": "24"
+        },
         {
           "name": "GABRIEL PIRES",
           "position": "MID",
           "number": "8"
-        },
-        {
-          "name": "ALEXANDER SZYMANOWSKI",
-          "position": "MID",
-          "number": "9"
-        },
-        {
-          "name": "ROBER IBÁÑEZ",
-          "position": "MID",
-          "number": "10"
         }
       ],
       [
+        {
+          "name": "SZYMANOWSKI",
+          "position": "FWD",
+          "number": "11"
+        },
         {
           "name": "LUCIANO",
           "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2017-18",
-    "homeTeam": "REAL MADRID",
-    "awayTeam": "LEGANES",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "2-1",
-    "date": "28 de abril 2018",
-    "playingTeam": "LEGANES",
-    "formation": [
-      [
-        {
-          "name": "IVÁN CUÉLLAR",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "UNAI BUSTINZA",
-          "position": "DEF",
-          "number": "2"
+          "number": "20"
         },
         {
-          "name": "DIMITRIOS SIOVAS",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "DIEGO RICO",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "RUBÉN PÉREZ",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "DARKO BRASANAC",
-          "position": "DEF",
-          "number": "6"
-        },
-        {
-          "name": "JOSEBA ZALDÚA",
-          "position": "DEF",
-          "number": "7"
-        }
-      ],
-      [
-        {
-          "name": "GABRIEL PIRES",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "NORDIN AMRABAT",
-          "position": "MID",
-          "number": "9"
-        },
-        {
-          "name": "NABIL EL ZHAR",
-          "position": "MID",
-          "number": "10"
-        }
-      ],
-      [
-        {
-          "name": "MIGUEL ÁNGEL GUERRERO",
+          "name": "IBÁÑEZ",
           "position": "FWD",
-          "number": "11"
+          "number": "16"
         }
       ]
     ]
@@ -311,215 +86,65 @@
     "formation": [
       [
         {
-          "name": "IVÁN CUÉLLAR",
+          "name": "CUÉLLAR",
           "position": "GK",
           "number": "1"
         }
       ],
       [
         {
-          "name": "DIMITRIOS SIOVAS",
+          "name": "CARNERO",
           "position": "DEF",
-          "number": "2"
+          "number": "14"
         },
         {
-          "name": "MAURO DOS SANTOS",
+          "name": "SIOVAS",
           "position": "DEF",
-          "number": "3"
+          "number": "22"
         },
         {
-          "name": "RAÚL CARNERO",
+          "name": "DOS SANTOS",
           "position": "DEF",
-          "number": "4"
+          "number": "16"
         },
         {
-          "name": "JOSEBA ZALDÚA",
+          "name": "ZALDUA",
           "position": "DEF",
-          "number": "5"
+          "number": "20"
         }
       ],
       [
         {
-          "name": "JAVIER ERASO",
+          "name": "PÉREZ",
           "position": "MID",
-          "number": "6"
+          "number": "21"
         },
         {
-          "name": "RUBÉN PÉREZ",
+          "name": "ERASO",
           "position": "MID",
-          "number": "7"
+          "number": "17"
         },
         {
           "name": "GABRIEL PIRES",
           "position": "MID",
           "number": "8"
-        },
-        {
-          "name": "ALEXANDER SZYMANOWSKI",
-          "position": "MID",
-          "number": "9"
-        },
-        {
-          "name": "NORDIN AMRABAT",
-          "position": "MID",
-          "number": "10"
         }
       ],
       [
         {
-          "name": "CLAUDIO BEAUVUE",
+          "name": "SZYMANOWSKI",
           "position": "FWD",
           "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2017-18",
-    "homeTeam": "LEVANTE",
-    "awayTeam": "LEGANES",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "0-0",
-    "date": "19 de diciembre 2017",
-    "playingTeam": "LEGANES",
-    "formation": [
-      [
-        {
-          "name": "IVÁN CUÉLLAR",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "MAURO DOS SANTOS",
-          "position": "DEF",
-          "number": "2"
         },
         {
-          "name": "EZEQUIEL MUÑOZ",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "DIEGO RICO",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "GERARD GUMBAU",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "RUBÉN PÉREZ",
-          "position": "DEF",
-          "number": "6"
-        },
-        {
-          "name": "JOSEBA ZALDÚA",
-          "position": "DEF",
-          "number": "7"
-        }
-      ],
-      [
-        {
-          "name": "JAVIER ERASO",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "NORDIN AMRABAT",
-          "position": "MID",
-          "number": "9"
-        },
-        {
-          "name": "NABIL EL ZHAR",
-          "position": "MID",
-          "number": "10"
-        }
-      ],
-      [
-        {
-          "name": "CLAUDIO BEAUVUE",
+          "name": "BEAUVUE",
           "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2018-19",
-    "homeTeam": "ESPANYOL",
-    "awayTeam": "LEGANES",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "1-0",
-    "date": "04 de enero 2019",
-    "playingTeam": "LEGANES",
-    "formation": [
-      [
-        {
-          "name": "IVÁN CUÉLLAR",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "UNAI BUSTINZA",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "DIMITRIOS SIOVAS",
-          "position": "DEF",
-          "number": "22"
-        },
-        {
-          "name": "KENNETH OMERUO",
-          "position": "DEF",
-          "number": "24"
-        },
-        {
-          "name": "JONATHAN SILVA",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "ALLAN NYOM",
-          "position": "DEF",
           "number": "12"
-        }
-      ],
-      [
-        {
-          "name": "GERARD GUMBAU",
-          "position": "MID",
-          "number": "6"
         },
         {
-          "name": "MIKEL VESGA",
-          "position": "MID",
-          "number": "23"
-        },
-        {
-          "name": "ÓSCAR RODRÍGUEZ",
-          "position": "MID",
-          "number": "27"
-        }
-      ],
-      [
-        {
-          "name": "YOUSSEF EN-NESYRI",
+          "name": "AMRABAT",
           "position": "FWD",
-          "number": "26"
-        },
-        {
-          "name": "GUIDO CARRILLO",
-          "position": "FWD",
-          "number": "9"
+          "number": "25"
         }
       ]
     ]
@@ -536,215 +161,65 @@
     "formation": [
       [
         {
-          "name": "IVÁN CUÉLLAR",
+          "name": "CUÉLLAR",
           "position": "GK",
           "number": "1"
         }
       ],
       [
         {
-          "name": "UNAI BUSTINZA",
+          "name": "SILVA",
           "position": "DEF",
-          "number": "3"
+          "number": "5"
         },
         {
-          "name": "DIMITRIOS SIOVAS",
+          "name": "SIOVAS",
           "position": "DEF",
           "number": "22"
         },
         {
-          "name": "KENNETH OMERUO",
+          "name": "OMERUO",
           "position": "DEF",
           "number": "24"
         },
         {
-          "name": "RECIO",
+          "name": "BUSTINZA",
           "position": "DEF",
-          "number": "8"
-        }
-      ],
-      [
-        {
-          "name": "ÓSCAR RODRÍGUEZ",
-          "position": "MID",
-          "number": "27"
+          "number": "3"
         },
         {
-          "name": "MIKEL VESGA",
-          "position": "MID",
-          "number": "23"
-        },
-        {
-          "name": "JONATHAN SILVA",
-          "position": "MID",
-          "number": "5"
-        },
-        {
-          "name": "ALLAN NYOM",
-          "position": "MID",
+          "name": "NYOM",
+          "position": "DEF",
           "number": "12"
         }
       ],
       [
         {
-          "name": "MARTIN BRAITHWAITE",
+          "name": "RECIO",
+          "position": "MID",
+          "number": "8"
+        },
+        {
+          "name": "RODRÍGUEZ",
+          "position": "MID",
+          "number": "27"
+        },
+        {
+          "name": "VESGA",
+          "position": "MID",
+          "number": "23"
+        }
+      ],
+      [
+        {
+          "name": "BRAITHWAITE",
           "position": "FWD",
           "number": "25"
         },
         {
-          "name": "YOUSSEF EN-NESYRI",
+          "name": "EN-NESYRI",
           "position": "FWD",
           "number": "26"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2018-19",
-    "homeTeam": "GETAFE",
-    "awayTeam": "LEGANES",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "0-2",
-    "date": "30 de marzo 2019",
-    "playingTeam": "LEGANES",
-    "formation": [
-      [
-        {
-          "name": "IVÁN CUÉLLAR",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "RODRI TARÍN",
-          "position": "DEF",
-          "number": "15"
-        },
-        {
-          "name": "DIMITRIOS SIOVAS",
-          "position": "DEF",
-          "number": "22"
-        },
-        {
-          "name": "UNAI BUSTINZA",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "JONATHAN SILVA",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "ALLAN NYOM",
-          "position": "DEF",
-          "number": "12"
-        }
-      ],
-      [
-        {
-          "name": "RUBÉN PÉREZ",
-          "position": "MID",
-          "number": "21"
-        },
-        {
-          "name": "ÓSCAR RODRÍGUEZ",
-          "position": "MID",
-          "number": "27"
-        },
-        {
-          "name": "MIKEL VESGA",
-          "position": "MID",
-          "number": "23"
-        }
-      ],
-      [
-        {
-          "name": "GUIDO CARRILLO",
-          "position": "FWD",
-          "number": "9"
-        },
-        {
-          "name": "MICHAEL SANTOS",
-          "position": "FWD",
-          "number": "20"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2019-20",
-    "homeTeam": "LEGANES",
-    "awayTeam": "MALLORCA",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "1-0",
-    "date": "26 de octubre 2019",
-    "playingTeam": "LEGANES",
-    "formation": [
-      [
-        {
-          "name": "IVÁN CUÉLLAR",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "DIMITRIOS SIOVAS",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "UNAI BUSTINZA",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "JONATHAN SILVA",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "ROBERTO ROSALES",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "ROQUE MESA",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "CHRISTIAN RIVERA",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "RECIO",
-          "position": "MID",
-          "number": "8"
-        }
-      ],
-      [
-        {
-          "name": "GUIDO CARRILLO",
-          "position": "FWD",
-          "number": "9"
-        },
-        {
-          "name": "MARTIN BRAITHWAITE",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "ÓSCAR RODRÍGUEZ",
-          "position": "FWD",
-          "number": "11"
         }
       ]
     ]
@@ -761,43 +236,43 @@
     "formation": [
       [
         {
-          "name": "JUAN SORIANO",
+          "name": "SORIANO",
           "position": "GK",
-          "number": "1"
+          "number": "13"
         }
       ],
       [
         {
-          "name": "CHIDOZIE AWAZIEM",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "UNAI BUSTINZA",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "KENNETH OMERUO",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "JONATHAN SILVA",
+          "name": "SILVA",
           "position": "DEF",
           "number": "5"
         },
         {
-          "name": "ROBERTO ROSALES",
+          "name": "OMERUO",
           "position": "DEF",
-          "number": "6"
+          "number": "4"
+        },
+        {
+          "name": "BUSTINZA",
+          "position": "DEF",
+          "number": "3"
+        },
+        {
+          "name": "AWAZIEM",
+          "position": "DEF",
+          "number": "12"
+        },
+        {
+          "name": "ROSALES",
+          "position": "DEF",
+          "number": "16"
         }
       ],
       [
         {
-          "name": "ROQUE MESA",
+          "name": "RODRÍGUEZ",
           "position": "MID",
-          "number": "7"
+          "number": "24"
         },
         {
           "name": "RECIO",
@@ -805,321 +280,21 @@
           "number": "8"
         },
         {
-          "name": "KÉVIN RODRIGUES",
+          "name": "MESA",
           "position": "MID",
-          "number": "9"
-        },
-        {
-          "name": "JAVIER ERASO",
-          "position": "MID",
-          "number": "10"
-        }
-      ],
-      [
-        {
-          "name": "MARTIN BRAITHWAITE",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2019-20",
-    "homeTeam": "REAL VALLADOLID",
-    "awayTeam": "LEGANES",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "2-2",
-    "date": "03 de enero 2020",
-    "playingTeam": "LEGANES",
-    "formation": [
-      [
-        {
-          "name": "IVÁN CUÉLLAR",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "JONATHAN SILVA",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "CHIDOZIE AWAZIEM",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "KENNETH OMERUO",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "KÉVIN RODRIGUES",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "ROBERTO ROSALES",
-          "position": "DEF",
           "number": "6"
+        },
+        {
+          "name": "ERASO",
+          "position": "MID",
+          "number": "17"
         }
       ],
       [
         {
-          "name": "RUBÉN PÉREZ",
-          "position": "MID",
+          "name": "BRAITHWAITE",
+          "position": "FWD",
           "number": "7"
-        },
-        {
-          "name": "ÓSCAR RODRÍGUEZ",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "ROQUE MESA",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "YOUSSEF EN-NESYRI",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "MARTIN BRAITHWAITE",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2020-21",
-    "homeTeam": "EIBAR",
-    "awayTeam": "LEGANES",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "0-0",
-    "date": "09 de julio 2020",
-    "playingTeam": "LEGANES",
-    "formation": [
-      [
-        {
-          "name": "IVÁN CUÉLLAR",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "DIMITRIOS SIOVAS",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "RODRI TARÍN",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "UNAI BUSTINZA",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "JONATHAN SILVA",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "ROBERTO ROSALES",
-          "position": "DEF",
-          "number": "6"
-        }
-      ],
-      [
-        {
-          "name": "RUBÉN PÉREZ",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "IBRAHIM AMADOU",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "KÉVIN RODRIGUES",
-          "position": "MID",
-          "number": "9"
-        },
-        {
-          "name": "AITOR RUIBAL",
-          "position": "MID",
-          "number": "10"
-        }
-      ],
-      [
-        {
-          "name": "MIGUEL ÁNGEL GUERRERO",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2020-21",
-    "homeTeam": "ATHLETIC CLUB",
-    "awayTeam": "LEGANES",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "0-2",
-    "date": "16 de julio 2020",
-    "playingTeam": "LEGANES",
-    "formation": [
-      [
-        {
-          "name": "IVÁN CUÉLLAR",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "DIMITRIOS SIOVAS",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "RODRI TARÍN",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "UNAI BUSTINZA",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "ROBERTO ROSALES",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "AITOR RUIBAL",
-          "position": "DEF",
-          "number": "6"
-        }
-      ],
-      [
-        {
-          "name": "IBRAHIM AMADOU",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "RUBÉN PÉREZ",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "BRYAN GIL",
-          "position": "MID",
-          "number": "9"
-        },
-        {
-          "name": "JAVIER ERASO",
-          "position": "MID",
-          "number": "10"
-        }
-      ],
-      [
-        {
-          "name": "MANUEL GARRIDO",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2020-21",
-    "homeTeam": "LEGANES",
-    "awayTeam": "VALENCIA",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "1-0",
-    "date": "12 de julio 2020",
-    "playingTeam": "LEGANES",
-    "formation": [
-      [
-        {
-          "name": "IVÁN CUÉLLAR",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "RODRI TARÍN",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "CHIDOZIE AWAZIEM",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "DIMITRIOS SIOVAS",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "JONATHAN SILVA",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "ROBERTO ROSALES",
-          "position": "DEF",
-          "number": "6"
-        }
-      ],
-      [
-        {
-          "name": "IBRAHIM AMADOU",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "RUBÉN PÉREZ",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "KÉVIN RODRIGUES",
-          "position": "MID",
-          "number": "9"
-        },
-        {
-          "name": "AITOR RUIBAL",
-          "position": "MID",
-          "number": "10"
-        }
-      ],
-      [
-        {
-          "name": "MIGUEL ÁNGEL GUERRERO",
-          "position": "FWD",
-          "number": "11"
         }
       ]
     ]

@@ -1,81 +1,6 @@
 [
   {
     "competition": "LA LIGA • TEMPORADA 2014-15",
-    "homeTeam": "GRANADA",
-    "awayTeam": "RAYO VALLECANO",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "0-1",
-    "date": "17 de octubre 2014",
-    "playingTeam": "RAYO VALLECANO",
-    "formation": [
-      [
-        {
-          "name": "TOÑO",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "ABDOULAYE BA",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "ANTONIO AMAYA",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "EMILIANO INSÚA",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "ROBERTO TRASHORRAS",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "RAÚL BAENA",
-          "position": "DEF",
-          "number": "6"
-        },
-        {
-          "name": "TITO",
-          "position": "DEF",
-          "number": "7"
-        }
-      ],
-      [
-        {
-          "name": "BUENO",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "GAËL KAKUTA",
-          "position": "MID",
-          "number": "9"
-        },
-        {
-          "name": "LICÁ",
-          "position": "MID",
-          "number": "10"
-        }
-      ],
-      [
-        {
-          "name": "LÉO BAPTISTÃO",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2014-15",
     "homeTeam": "RAYO VALLECANO",
     "awayTeam": "CELTA VIGO",
     "homeBadge": "🏟️",
@@ -86,215 +11,65 @@
     "formation": [
       [
         {
-          "name": "CRISTIAN ÁLVAREZ",
+          "name": "JUAN CARLOS",
           "position": "GK",
-          "number": "1"
+          "number": "13"
         }
       ],
       [
         {
-          "name": "ZÉ CASTRO",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "ABDOULAYE BA",
+          "name": "NACHO MARTÍNEZ",
           "position": "DEF",
           "number": "3"
         },
         {
-          "name": "NACHO MARTÍNEZ",
+          "name": "BA",
           "position": "DEF",
-          "number": "4"
+          "number": "15"
         },
         {
-          "name": "RAÚL BAENA",
+          "name": "ZÉ CASTRO",
           "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "ROBERTO TRASHORRAS",
-          "position": "DEF",
-          "number": "6"
+          "number": "18"
         },
         {
           "name": "TITO",
           "position": "DEF",
-          "number": "7"
+          "number": "2"
         }
       ],
       [
         {
-          "name": "BUENO",
+          "name": "BAENA",
           "position": "MID",
           "number": "8"
         },
         {
-          "name": "GAËL KAKUTA",
-          "position": "MID",
-          "number": "9"
-        },
-        {
-          "name": "LICÁ",
+          "name": "TRASHORRAS",
           "position": "MID",
           "number": "10"
+        },
+        {
+          "name": "ALBERTO BUENO",
+          "position": "MID",
+          "number": "23"
         }
       ],
       [
+        {
+          "name": "KAKUTA",
+          "position": "FWD",
+          "number": "12"
+        },
         {
           "name": "LÉO BAPTISTÃO",
           "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2014-15",
-    "homeTeam": "RAYO VALLECANO",
-    "awayTeam": "LEVANTE",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "4-2",
-    "date": "28 de febrero 2015",
-    "playingTeam": "RAYO VALLECANO",
-    "formation": [
-      [
-        {
-          "name": "CRISTIAN ÁLVAREZ",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "ZÉ CASTRO",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "ANTONIO AMAYA",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "NACHO MARTÍNEZ",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "RAÚL BAENA",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "ROBERTO TRASHORRAS",
-          "position": "DEF",
-          "number": "6"
-        },
-        {
-          "name": "TITO",
-          "position": "DEF",
-          "number": "7"
-        }
-      ],
-      [
-        {
-          "name": "BUENO",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "GAËL KAKUTA",
-          "position": "MID",
-          "number": "9"
+          "number": "19"
         },
         {
           "name": "LICÁ",
-          "position": "MID",
-          "number": "10"
-        }
-      ],
-      [
-        {
-          "name": "MANUCHO",
           "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2015-16",
-    "homeTeam": "RAYO VALLECANO",
-    "awayTeam": "VILLARREAL",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "2-1",
-    "date": "17 de abril 2016",
-    "playingTeam": "RAYO VALLECANO",
-    "formation": [
-      [
-        {
-          "name": "JUAN CARLOS",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "JOSÉ CRESPO",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "ZÉ CASTRO",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "TITO",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "QUINI",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "DIEGO LLORENTE",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "ROBERTO TRASHORRAS",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "BEBÉ",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "PABLO HERNÁNDEZ",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "JAVI GUERRA",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "MIKU",
-          "position": "FWD",
-          "number": "11"
+          "number": "22"
         }
       ]
     ]
@@ -313,288 +88,63 @@
         {
           "name": "JUAN CARLOS",
           "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "ZÉ CASTRO",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "TITO",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "NACHO MARTÍNEZ",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "DIEGO LLORENTE",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "ROBERTO TRASHORRAS",
-          "position": "DEF",
-          "number": "6"
-        },
-        {
-          "name": "QUINI",
-          "position": "DEF",
-          "number": "7"
-        }
-      ],
-      [
-        {
-          "name": "JOZABED",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "BEBÉ",
-          "position": "MID",
-          "number": "9"
-        },
-        {
-          "name": "PABLO HERNÁNDEZ",
-          "position": "MID",
-          "number": "10"
-        }
-      ],
-      [
-        {
-          "name": "MIKU",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2015-16",
-    "homeTeam": "RAYO VALLECANO",
-    "awayTeam": "GETAFE",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "2-0",
-    "date": "01 de abril 2016",
-    "playingTeam": "RAYO VALLECANO",
-    "formation": [
-      [
-        {
-          "name": "JUAN CARLOS",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "TITO",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "JOSÉ CRESPO",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "QUINI",
-          "position": "DEF",
-          "number": "4"
-        }
-      ],
-      [
-        {
-          "name": "ROBERTO TRASHORRAS",
-          "position": "MID",
-          "number": "5"
-        },
-        {
-          "name": "RAÚL BAENA",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "DIEGO LLORENTE",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "BEBÉ",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "PABLO HERNÁNDEZ",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "JAVI GUERRA",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "MIKU",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2018-19",
-    "homeTeam": "BARCELONA",
-    "awayTeam": "RAYO VALLECANO",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "3-1",
-    "date": "09 de marzo 2019",
-    "playingTeam": "RAYO VALLECANO",
-    "formation": [
-      [
-        {
-          "name": "STOLE DIMITRIEVSKI",
-          "position": "GK",
           "number": "13"
         }
       ],
       [
         {
-          "name": "JORDI AMAT",
+          "name": "NACHO MARTÍNEZ",
           "position": "DEF",
-          "number": "16"
+          "number": "3"
         },
         {
-          "name": "ALEJANDRO GÁLVEZ",
+          "name": "ZÉ CASTRO",
           "position": "DEF",
-          "number": "23"
+          "number": "18"
         },
         {
-          "name": "EMILIANO VELÁZQUEZ",
+          "name": "TITO",
           "position": "DEF",
-          "number": "20"
+          "number": "2"
         },
         {
-          "name": "ÁLEX MORENO",
-          "position": "DEF",
-          "number": "7"
-        },
-        {
-          "name": "LUIS ADVÍNCULA",
+          "name": "QUINI",
           "position": "DEF",
           "number": "17"
         }
       ],
       [
         {
-          "name": "SANTI COMESAÑA",
+          "name": "LLORENTE",
           "position": "MID",
           "number": "27"
         },
         {
-          "name": "GIANNELLI IMBULA",
+          "name": "TRASHORRAS",
           "position": "MID",
-          "number": "12"
+          "number": "10"
         },
         {
-          "name": "ÁLVARO GARCÍA",
+          "name": "JOZABED SÁNCHEZ",
           "position": "MID",
-          "number": "18"
-        },
+          "number": "21"
+        }
+      ],
+      [
         {
           "name": "BEBÉ",
-          "position": "MID",
+          "position": "FWD",
+          "number": "23"
+        },
+        {
+          "name": "MIKU",
+          "position": "FWD",
+          "number": "7"
+        },
+        {
+          "name": "HERNÁNDEZ",
+          "position": "FWD",
           "number": "14"
-        }
-      ],
-      [
-        {
-          "name": "RAÚL DE TOMÁS",
-          "position": "FWD",
-          "number": "9"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2018-19",
-    "homeTeam": "CELTA VIGO",
-    "awayTeam": "RAYO VALLECANO",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "2-2",
-    "date": "18 de mayo 2019",
-    "playingTeam": "RAYO VALLECANO",
-    "formation": [
-      [
-        {
-          "name": "STOLE DIMITRIEVSKI",
-          "position": "GK",
-          "number": "13"
-        }
-      ],
-      [
-        {
-          "name": "ALEJANDRO CATENA",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "EMILIANO VELÁZQUEZ",
-          "position": "DEF",
-          "number": "20"
-        },
-        {
-          "name": "SERGIO AKIEME",
-          "position": "DEF",
-          "number": "28"
-        },
-        {
-          "name": "UCHE AGBO",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "ÁLVARO MEDRÁN JUST",
-          "position": "DEF",
-          "number": "18"
-        },
-        {
-          "name": "LUIS ADVÍNCULA",
-          "position": "DEF",
-          "number": "17"
-        }
-      ],
-      [
-        {
-          "name": "JOSÉ POZO",
-          "position": "MID",
-          "number": "22"
-        },
-        {
-          "name": "ÁLVARO GARCÍA",
-          "position": "MID",
-          "number": "18"
-        },
-        {
-          "name": "ADRI EMBARBA",
-          "position": "MID",
-          "number": "11"
-        }
-      ],
-      [
-        {
-          "name": "RAÚL DE TOMÁS",
-          "position": "FWD",
-          "number": "9"
         }
       ]
     ]
@@ -611,215 +161,65 @@
     "formation": [
       [
         {
-          "name": "ALBERTO GARCÍA",
+          "name": "IVÁN GARCÍA",
           "position": "GK",
           "number": "1"
         }
       ],
       [
         {
-          "name": "JORDI AMAT",
-          "position": "DEF",
-          "number": "16"
-        },
-        {
-          "name": "ALEJANDRO GÁLVEZ",
-          "position": "DEF",
-          "number": "23"
-        },
-        {
-          "name": "ÁLEX MORENO",
+          "name": "MORENO",
           "position": "DEF",
           "number": "7"
         },
         {
-          "name": "SANTI COMESAÑA",
+          "name": "AMAT",
           "position": "DEF",
-          "number": "27"
+          "number": "16"
         },
         {
-          "name": "LUIS ADVÍNCULA",
+          "name": "GÁLVEZ",
+          "position": "DEF",
+          "number": "23"
+        },
+        {
+          "name": "ADVÍNCULA",
           "position": "DEF",
           "number": "17"
         }
       ],
       [
         {
-          "name": "GIANNELLI IMBULA",
+          "name": "IMBULA",
           "position": "MID",
           "number": "12"
         },
         {
-          "name": "JOSÉ POZO",
+          "name": "KAKUTA",
+          "position": "MID",
+          "number": "10"
+        },
+        {
+          "name": "COMESAÑA",
+          "position": "MID",
+          "number": "27"
+        },
+        {
+          "name": "POZO",
           "position": "MID",
           "number": "22"
         },
         {
-          "name": "GAËL KAKUTA",
-          "position": "MID",
-          "number": "10"
-        },
-        {
-          "name": "ADRI EMBARBA",
+          "name": "EMBARBA",
           "position": "MID",
           "number": "11"
         }
       ],
       [
         {
-          "name": "RAÚL DE TOMÁS",
+          "name": "DE TOMÁS",
           "position": "FWD",
           "number": "9"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2021-22",
-    "homeTeam": "GRANADA",
-    "awayTeam": "RAYO VALLECANO",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "2-2",
-    "date": "03 de abril 2022",
-    "playingTeam": "RAYO VALLECANO",
-    "formation": [
-      [
-        {
-          "name": "STOLE DIMITRIEVSKI",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "MARIO SUÁREZ",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "ALEJANDRO CATENA",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "FRAN GARCÍA",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "SANTI COMESAÑA",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "ÓSCAR VALENTÍN",
-          "position": "DEF",
-          "number": "6"
-        },
-        {
-          "name": "IVÁN BALLIU",
-          "position": "DEF",
-          "number": "7"
-        }
-      ],
-      [
-        {
-          "name": "RANDY NTEKA",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "ÁLVARO GARCÍA",
-          "position": "MID",
-          "number": "9"
-        },
-        {
-          "name": "ISI PALAZÓN",
-          "position": "MID",
-          "number": "10"
-        }
-      ],
-      [
-        {
-          "name": "SERGI GUARDIOLA",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2021-22",
-    "homeTeam": "RAYO VALLECANO",
-    "awayTeam": "MALLORCA",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "3-1",
-    "date": "22 de noviembre 2021",
-    "playingTeam": "RAYO VALLECANO",
-    "formation": [
-      [
-        {
-          "name": "STOLE DIMITRIEVSKI",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "ESTEBAN SAVELJICH",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "ALEJANDRO CATENA",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "FRAN GARCÍA",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "ÓSCAR VALENTÍN",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "SANTI COMESAÑA",
-          "position": "DEF",
-          "number": "6"
-        },
-        {
-          "name": "IVÁN BALLIU",
-          "position": "DEF",
-          "number": "7"
-        }
-      ],
-      [
-        {
-          "name": "ÓSCAR TREJO",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "ÁLVARO GARCÍA",
-          "position": "MID",
-          "number": "9"
-        },
-        {
-          "name": "ISI PALAZÓN",
-          "position": "MID",
-          "number": "10"
-        }
-      ],
-      [
-        {
-          "name": "SERGI GUARDIOLA",
-          "position": "FWD",
-          "number": "11"
         }
       ]
     ]
@@ -836,140 +236,65 @@
     "formation": [
       [
         {
-          "name": "STOLE DIMITRIEVSKI",
+          "name": "DIMITRIEVSKI",
           "position": "GK",
-          "number": "1"
+          "number": "13"
         }
       ],
       [
         {
-          "name": "MARIO SUÁREZ",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "ALEJANDRO CATENA",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
           "name": "FRAN GARCÍA",
           "position": "DEF",
-          "number": "4"
+          "number": "33"
         },
         {
-          "name": "SANTI COMESAÑA",
+          "name": "CATENA",
           "position": "DEF",
           "number": "5"
         },
         {
-          "name": "ÓSCAR VALENTÍN",
+          "name": "SUÁREZ",
           "position": "DEF",
-          "number": "6"
+          "number": "4"
         },
         {
-          "name": "IVÁN BALLIU",
+          "name": "BALLIU",
           "position": "DEF",
-          "number": "7"
+          "number": "20"
         }
       ],
       [
         {
-          "name": "ÓSCAR TREJO",
+          "name": "VALENTÍN",
           "position": "MID",
-          "number": "8"
+          "number": "23"
         },
         {
-          "name": "ÁLVARO GARCÍA",
+          "name": "COMESAÑA",
           "position": "MID",
-          "number": "9"
+          "number": "6"
+        },
+        {
+          "name": "TREJO",
+          "position": "MID",
+          "number": "8"
+        }
+      ],
+      [
+        {
+          "name": "ÁLVARO GARCÍA",
+          "position": "FWD",
+          "number": "18"
+        },
+        {
+          "name": "GUARDIOLA",
+          "position": "FWD",
+          "number": "16"
         },
         {
           "name": "BEBÉ",
-          "position": "MID",
-          "number": "10"
-        }
-      ],
-      [
-        {
-          "name": "SERGI GUARDIOLA",
           "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2022-23",
-    "homeTeam": "VALENCIA",
-    "awayTeam": "RAYO VALLECANO",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "1-1",
-    "date": "03 de abril 2023",
-    "playingTeam": "RAYO VALLECANO",
-    "formation": [
-      [
-        {
-          "name": "STOLE DIMITRIEVSKI",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "FLORIAN LEJEUNE",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "ALEJANDRO CATENA",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "FRAN GARCÍA",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "ÓSCAR VALENTÍN",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "SANTI COMESAÑA",
-          "position": "DEF",
-          "number": "6"
-        },
-        {
-          "name": "IVÁN BALLIU",
-          "position": "DEF",
-          "number": "7"
-        }
-      ],
-      [
-        {
-          "name": "ÓSCAR TREJO",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "ÁLVARO GARCÍA",
-          "position": "MID",
-          "number": "9"
-        },
-        {
-          "name": "ISI PALAZÓN",
-          "position": "MID",
           "number": "10"
-        }
-      ],
-      [
-        {
-          "name": "SERGIO CAMELLO",
-          "position": "FWD",
-          "number": "11"
         }
       ]
     ]
@@ -986,140 +311,65 @@
     "formation": [
       [
         {
-          "name": "STOLE DIMITRIEVSKI",
+          "name": "DIMITRIEVSKI",
           "position": "GK",
           "number": "1"
         }
       ],
       [
         {
-          "name": "FLORIAN LEJEUNE",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "ALEJANDRO CATENA",
+          "name": "FRAN GARCÍA",
           "position": "DEF",
           "number": "3"
         },
         {
-          "name": "FRAN GARCÍA",
+          "name": "LEJEUNE",
           "position": "DEF",
-          "number": "4"
+          "number": "19"
         },
         {
-          "name": "IVÁN BALLIU",
+          "name": "CATENA",
           "position": "DEF",
           "number": "5"
+        },
+        {
+          "name": "BALLIU",
+          "position": "DEF",
+          "number": "20"
         }
       ],
       [
         {
-          "name": "ÓSCAR TREJO",
+          "name": "ÁLVARO GARCÍA",
           "position": "MID",
-          "number": "6"
+          "number": "18"
         },
         {
-          "name": "ÓSCAR VALENTÍN",
+          "name": "VALENTÍN",
           "position": "MID",
-          "number": "7"
+          "number": "23"
         },
         {
-          "name": "UNAI LÓPEZ",
+          "name": "TREJO",
           "position": "MID",
           "number": "8"
         },
         {
-          "name": "ÁLVARO GARCÍA",
+          "name": "LÓPEZ",
           "position": "MID",
-          "number": "9"
-        },
+          "number": "17"
+        }
+      ],
+      [
         {
           "name": "ISI PALAZÓN",
-          "position": "MID",
-          "number": "10"
-        }
-      ],
-      [
-        {
-          "name": "SERGIO CAMELLO",
           "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2022-23",
-    "homeTeam": "RAYO VALLECANO",
-    "awayTeam": "CADIZ",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "5-1",
-    "date": "22 de octubre 2022",
-    "playingTeam": "RAYO VALLECANO",
-    "formation": [
-      [
-        {
-          "name": "STOLE DIMITRIEVSKI",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "ALEJANDRO CATENA",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "FLORIAN LEJEUNE",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "FRAN GARCÍA",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "IVÁN BALLIU",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "ÓSCAR VALENTÍN",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "SANTI COMESAÑA",
-          "position": "MID",
           "number": "7"
         },
         {
-          "name": "ÁLVARO GARCÍA",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "ISI PALAZÓN",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "ÓSCAR TREJO",
+          "name": "CAMELLO",
           "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "SERGIO CAMELLO",
-          "position": "FWD",
-          "number": "11"
+          "number": "34"
         }
       ]
     ]
