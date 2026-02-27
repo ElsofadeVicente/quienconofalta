@@ -1,156 +1,6 @@
 [
   {
     "competition": "LA LIGA • TEMPORADA 2014-15",
-    "homeTeam": "GETAFE",
-    "awayTeam": "LEVANTE",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "0-1",
-    "date": "25 de abril 2015",
-    "playingTeam": "LEVANTE",
-    "formation": [
-      [
-        {
-          "name": "DIEGO MARIÑO",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "LOUKAS VYNTRA",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "IVÁN RAMIS",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "JUANFRAN",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "TOÑO",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "IVÁN LÓPEZ",
-          "position": "DEF",
-          "number": "6"
-        }
-      ],
-      [
-        {
-          "name": "JOSÉ MARI MARTÍN",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "SIMAO MATE",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "JOSÉ LUÍS MORALES",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "DAVID BARRAL",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "VÍCTOR CASADESÚS",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2014-15",
-    "homeTeam": "LEVANTE",
-    "awayTeam": "ELCHE",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "0-0",
-    "date": "23 de mayo 2015",
-    "playingTeam": "LEVANTE",
-    "formation": [
-      [
-        {
-          "name": "DIEGO MARIÑO",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "DAVID NAVARRO",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "LOUKAS VYNTRA",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "JUANFRAN",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "TOÑO",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "PEDRO LÓPEZ",
-          "position": "DEF",
-          "number": "6"
-        }
-      ],
-      [
-        {
-          "name": "VÍCTOR CAMARASA",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "JOSÉ LUÍS MORALES",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "JOSÉ MARI MARTÍN",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "DAVID BARRAL",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "VÍCTOR CASADESÚS",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2014-15",
     "homeTeam": "LEVANTE",
     "awayTeam": "MALAGA",
     "homeBadge": "🏟️",
@@ -161,140 +11,65 @@
     "formation": [
       [
         {
-          "name": "DIEGO MARIÑO",
+          "name": "MARIÑO",
           "position": "GK",
-          "number": "1"
+          "number": "13"
         }
       ],
       [
         {
-          "name": "DAVID NAVARRO",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "IVÁN RAMIS",
+          "name": "GARCÍA",
           "position": "DEF",
           "number": "3"
         },
         {
-          "name": "TOÑO",
+          "name": "NAVARRO",
           "position": "DEF",
           "number": "4"
         },
         {
-          "name": "IVÁN LÓPEZ",
+          "name": "RAMIS",
           "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "SIMAO MATE",
-          "position": "MID",
-          "number": "6"
+          "number": "14"
         },
         {
-          "name": "VÍCTOR CAMARASA",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "JOSÉ LUÍS MORALES",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "JORDI XUMETRA",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "KALU UCHE",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "DAVID BARRAL",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2015-16",
-    "homeTeam": "VALENCIA",
-    "awayTeam": "LEVANTE",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "3-0",
-    "date": "31 de octubre 2015",
-    "playingTeam": "LEVANTE",
-    "formation": [
-      [
-        {
-          "name": "RUBÉN MARTÍNEZ",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "JUANFRAN",
+          "name": "LÓPEZ",
           "position": "DEF",
           "number": "2"
-        },
-        {
-          "name": "DAVID NAVARRO",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "TOÑO",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "PEDRO LÓPEZ",
-          "position": "DEF",
-          "number": "5"
         }
       ],
       [
         {
-          "name": "JEFFERSON LERMA",
+          "name": "MORALES",
           "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "VÍCTOR CAMARASA",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "SIMAO MATE",
-          "position": "MID",
-          "number": "8"
-        }
-      ],
-      [
-        {
-          "name": "ROGER MARTÍ",
-          "position": "FWD",
-          "number": "9"
-        },
-        {
-          "name": "RUBÉN GARCÍA",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "JOSÉ LUÍS MORALES",
-          "position": "FWD",
           "number": "11"
+        },
+        {
+          "name": "CAMARASA",
+          "position": "MID",
+          "number": "26"
+        },
+        {
+          "name": "SIMÃO",
+          "position": "MID",
+          "number": "24"
+        },
+        {
+          "name": "XUMETRA",
+          "position": "MID",
+          "number": "17"
+        }
+      ],
+      [
+        {
+          "name": "UCHE",
+          "position": "FWD",
+          "number": "5"
+        },
+        {
+          "name": "BARRAL",
+          "position": "FWD",
+          "number": "7"
         }
       ]
     ]
@@ -311,215 +86,65 @@
     "formation": [
       [
         {
-          "name": "DIEGO MARIÑO",
+          "name": "MARIÑO",
           "position": "GK",
-          "number": "1"
+          "number": "25"
         }
       ],
       [
         {
-          "name": "DAVID NAVARRO",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "ZOUHAIR FEDDAL",
+          "name": "GARCÍA",
           "position": "DEF",
           "number": "3"
         },
         {
-          "name": "TOÑO",
+          "name": "FEDDAL",
+          "position": "DEF",
+          "number": "24"
+        },
+        {
+          "name": "NAVARRO",
           "position": "DEF",
           "number": "4"
         },
         {
-          "name": "SIMAO MATE",
+          "name": "LÓPEZ",
           "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "PEDRO LÓPEZ",
-          "position": "DEF",
-          "number": "6"
+          "number": "19"
         }
       ],
       [
         {
-          "name": "JEFFERSON LERMA",
+          "name": "SIMÃO",
           "position": "MID",
-          "number": "7"
+          "number": "5"
         },
         {
-          "name": "VÍCTOR CAMARASA",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "RUBÉN GARCÍA",
-          "position": "MID",
-          "number": "9"
-        },
-        {
-          "name": "JORDI XUMETRA",
+          "name": "GARCÍA",
           "position": "MID",
           "number": "10"
-        }
-      ],
-      [
-        {
-          "name": "NABIL GHILAS",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2015-16",
-    "homeTeam": "VILLARREAL",
-    "awayTeam": "LEVANTE",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "3-0",
-    "date": "28 de febrero 2016",
-    "playingTeam": "LEVANTE",
-    "formation": [
-      [
-        {
-          "name": "DIEGO MARIÑO",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "DAVID NAVARRO",
-          "position": "DEF",
-          "number": "2"
         },
         {
-          "name": "CARL MEDJANI",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "TOÑO",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "JEFFERSON LERMA",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "SIMAO MATE",
+          "name": "CAMARASA",
           "position": "MID",
           "number": "6"
         },
         {
-          "name": "VERZA",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "JOSÉ LUÍS MORALES",
+          "name": "LERMA",
           "position": "MID",
           "number": "8"
         },
         {
-          "name": "JOAN VERDÚ",
+          "name": "XUMETRA",
           "position": "MID",
-          "number": "9"
+          "number": "17"
         }
       ],
       [
         {
-          "name": "GIUSEPPE ROSSI",
+          "name": "CLINAS",
           "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "DEYVERSON",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2017-18",
-    "homeTeam": "ATLETICO MADRID",
-    "awayTeam": "LEVANTE",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "3-0",
-    "date": "15 de abril 2018",
-    "playingTeam": "LEVANTE",
-    "formation": [
-      [
-        {
-          "name": "OIER OLAZÁBAL",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "ERICK CABACO",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "ROBER PIER",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "ALY ABEID",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "PEDRO LÓPEZ",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "JOSÉ CAMPAÑA",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "JEFFERSON LERMA",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "JOSÉ LUÍS MORALES",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "JASON",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "ARMANDO SADIKU",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "ROGER MARTÍ",
-          "position": "FWD",
-          "number": "11"
+          "number": "23"
         }
       ]
     ]
@@ -536,215 +161,65 @@
     "formation": [
       [
         {
-          "name": "OIER OLAZÁBAL",
+          "name": "OLAZÁBAL",
           "position": "GK",
-          "number": "1"
+          "number": "13"
         }
       ],
       [
-        {
-          "name": "ERICK CABACO",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "ROBER PIER",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "COKE",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "PEDRO LÓPEZ",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "JOSÉ CAMPAÑA",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "JEFFERSON LERMA",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "IVI LÓPEZ",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "JOSÉ LUÍS MORALES",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "ROGER MARTÍ",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "EMMANUEL BOATENG",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2017-18",
-    "homeTeam": "LEVANTE",
-    "awayTeam": "SEVILLA",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "2-1",
-    "date": "27 de abril 2018",
-    "playingTeam": "LEVANTE",
-    "formation": [
-      [
-        {
-          "name": "OIER OLAZÁBAL",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "ROBER PIER",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "SERGIO POSTIGO",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "ANTONIO LUNA",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "COKE",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "SASA LUKIC",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "JOSÉ CAMPAÑA",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "ENIS BARDHI",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "JOSÉ LUÍS MORALES",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "EMMANUEL BOATENG",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "ROGER MARTÍ",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2018-19",
-    "homeTeam": "BARCELONA",
-    "awayTeam": "LEVANTE",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "1-0",
-    "date": "27 de abril 2019",
-    "playingTeam": "LEVANTE",
-    "formation": [
-      [
-        {
-          "name": "AITOR FERNÁNDEZ",
-          "position": "GK",
-          "number": "25"
-        }
-      ],
-      [
-        {
-          "name": "ROBER PIER",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "RÚBEN VEZO",
-          "position": "DEF",
-          "number": "14"
-        },
-        {
-          "name": "ANTONIO LUNA",
-          "position": "DEF",
-          "number": "22"
-        },
-        {
-          "name": "NIKOLA VUKCEVIC",
-          "position": "DEF",
-          "number": "17"
-        },
         {
           "name": "COKE",
           "position": "DEF",
           "number": "12"
+        },
+        {
+          "name": "CABACO",
+          "position": "DEF",
+          "number": "18"
+        },
+        {
+          "name": "PIER",
+          "position": "DEF",
+          "number": "4"
+        },
+        {
+          "name": "LÓPEZ",
+          "position": "DEF",
+          "number": "19"
         }
       ],
       [
         {
-          "name": "RUBÉN ROCHINA",
+          "name": "MORALES",
           "position": "MID",
-          "number": "16"
+          "number": "11"
         },
         {
-          "name": "JOSÉ CAMPAÑA",
+          "name": "LERMA",
+          "position": "MID",
+          "number": "8"
+        },
+        {
+          "name": "CAMPAÑA",
           "position": "MID",
           "number": "24"
         },
         {
-          "name": "MOSES SIMON",
+          "name": "LÓPEZ",
           "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "JASON",
-          "position": "MID",
-          "number": "23"
+          "number": "14"
         }
       ],
       [
         {
-          "name": "BORJA MAYORAL",
+          "name": "MARTÍ",
           "position": "FWD",
-          "number": "2"
+          "number": "9"
+        },
+        {
+          "name": "BOATENG",
+          "position": "FWD",
+          "number": "21"
         }
       ]
     ]
@@ -761,215 +236,65 @@
     "formation": [
       [
         {
-          "name": "AITOR FERNÁNDEZ",
+          "name": "FERNÁNDEZ",
           "position": "GK",
           "number": "25"
         }
       ],
       [
         {
-          "name": "RÚBEN VEZO",
-          "position": "DEF",
-          "number": "14"
-        },
-        {
-          "name": "ERICK CABACO",
-          "position": "DEF",
-          "number": "18"
-        },
-        {
-          "name": "ROBER PIER",
+          "name": "PIER",
           "position": "DEF",
           "number": "4"
         },
         {
-          "name": "ANTONIO LUNA",
+          "name": "CABACO",
           "position": "DEF",
+          "number": "18"
+        },
+        {
+          "name": "VEZO",
+          "position": "DEF",
+          "number": "14"
+        }
+      ],
+      [
+        {
+          "name": "LUNA",
+          "position": "MID",
           "number": "22"
         },
         {
-          "name": "MOSES SIMON",
-          "position": "DEF",
-          "number": "7"
-        }
-      ],
-      [
+          "name": "CAMPAÑA",
+          "position": "MID",
+          "number": "24"
+        },
         {
-          "name": "ENIS BARDHI",
+          "name": "BARDHI",
           "position": "MID",
           "number": "10"
         },
         {
-          "name": "RUBÉN ROCHINA",
-          "position": "MID",
-          "number": "16"
-        },
-        {
-          "name": "JOSÉ CAMPAÑA",
-          "position": "MID",
-          "number": "24"
-        }
-      ],
-      [
-        {
-          "name": "JOSÉ LUÍS MORALES",
-          "position": "FWD",
-          "number": "11"
-        },
-        {
-          "name": "ROGER MARTÍ",
-          "position": "FWD",
-          "number": "9"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2018-19",
-    "homeTeam": "LEVANTE",
-    "awayTeam": "REAL VALLADOLID",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "2-0",
-    "date": "20 de enero 2019",
-    "playingTeam": "LEVANTE",
-    "formation": [
-      [
-        {
-          "name": "OIER OLAZÁBAL",
-          "position": "GK",
-          "number": "13"
-        }
-      ],
-      [
-        {
-          "name": "ROBER PIER",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "ERICK CABACO",
-          "position": "DEF",
-          "number": "18"
-        },
-        {
-          "name": "COKE",
-          "position": "DEF",
-          "number": "12"
-        },
-        {
-          "name": "JOSÉ CAMPAÑA",
-          "position": "DEF",
-          "number": "24"
-        }
-      ],
-      [
-        {
-          "name": "ENIS BARDHI",
-          "position": "MID",
-          "number": "10"
-        },
-        {
-          "name": "RUBÉN ROCHINA",
-          "position": "MID",
-          "number": "16"
-        },
-        {
-          "name": "TOÑO",
-          "position": "MID",
-          "number": "3"
-        },
-        {
-          "name": "JASON",
-          "position": "MID",
-          "number": "23"
-        }
-      ],
-      [
-        {
-          "name": "BORJA MAYORAL",
-          "position": "FWD",
-          "number": "2"
-        },
-        {
-          "name": "JOSÉ LUÍS MORALES",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2019-20",
-    "homeTeam": "EIBAR",
-    "awayTeam": "LEVANTE",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "3-0",
-    "date": "29 de febrero 2020",
-    "playingTeam": "LEVANTE",
-    "formation": [
-      [
-        {
-          "name": "AITOR FERNÁNDEZ",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "SERGIO POSTIGO",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "BRUNO GONZÁLEZ",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "TOÑO",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "JORGE MIRAMÓN",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "NIKOLA VUKCEVIC",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "JOSÉ CAMPAÑA",
+          "name": "SIMON",
           "position": "MID",
           "number": "7"
         },
         {
-          "name": "ENIS BARDHI",
+          "name": "ROCHINA",
           "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "JOSÉ LUÍS MORALES",
-          "position": "MID",
-          "number": "9"
+          "number": "16"
         }
       ],
       [
         {
-          "name": "ROGER MARTÍ",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "BORJA MAYORAL",
+          "name": "MORALES",
           "position": "FWD",
           "number": "11"
+        },
+        {
+          "name": "MARTÍ",
+          "position": "FWD",
+          "number": "9"
         }
       ]
     ]
@@ -986,290 +311,65 @@
     "formation": [
       [
         {
-          "name": "AITOR FERNÁNDEZ",
+          "name": "FERNÁNDEZ",
           "position": "GK",
-          "number": "1"
+          "number": "13"
         }
       ],
       [
         {
-          "name": "SERGIO POSTIGO",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "ERICK CABACO",
+          "name": "GARCÍA",
           "position": "DEF",
           "number": "3"
         },
         {
-          "name": "TOÑO",
+          "name": "POSTIGO",
           "position": "DEF",
-          "number": "4"
+          "number": "15"
         },
         {
-          "name": "JORGE MIRAMÓN",
+          "name": "CABACO",
           "position": "DEF",
+          "number": "18"
+        },
+        {
+          "name": "MIRAMÓN",
+          "position": "DEF",
+          "number": "20"
+        }
+      ],
+      [
+        {
+          "name": "RADOJA",
+          "position": "MID",
           "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "NEMANJA RADOJA",
-          "position": "MID",
-          "number": "6"
         },
         {
-          "name": "JOSÉ CAMPAÑA",
+          "name": "CAMPAÑA",
           "position": "MID",
-          "number": "7"
+          "number": "24"
         },
         {
-          "name": "ENIS BARDHI",
+          "name": "BARDHI",
           "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "RUBÉN ROCHINA",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "JOSÉ LUÍS MORALES",
-          "position": "FWD",
           "number": "10"
         },
         {
-          "name": "ROGER MARTÍ",
+          "name": "ROCHINA",
+          "position": "MID",
+          "number": "16"
+        }
+      ],
+      [
+        {
+          "name": "MORALES",
           "position": "FWD",
           "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2019-20",
-    "homeTeam": "VALENCIA",
-    "awayTeam": "LEVANTE",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "1-1",
-    "date": "12 de junio 2020",
-    "playingTeam": "LEVANTE",
-    "formation": [
-      [
-        {
-          "name": "AITOR FERNÁNDEZ",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "SERGIO POSTIGO",
-          "position": "DEF",
-          "number": "2"
         },
         {
-          "name": "RÚBEN VEZO",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "CARLOS CLERC",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "JORGE MIRAMÓN",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "NIKOLA VUKCEVIC",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "JOSÉ CAMPAÑA",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "ENIS BARDHI",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "RUBÉN ROCHINA",
-          "position": "MID",
+          "name": "MARTÍ",
+          "position": "FWD",
           "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "ROGER MARTÍ",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "JOSÉ LUÍS MORALES",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2020-21",
-    "homeTeam": "REAL MADRID",
-    "awayTeam": "LEVANTE",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "1-2",
-    "date": "30 de enero 2021",
-    "playingTeam": "LEVANTE",
-    "formation": [
-      [
-        {
-          "name": "AITOR FERNÁNDEZ",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "ÓSCAR DUARTE",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "SERGIO POSTIGO",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "CARLOS CLERC",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "JORGE MIRAMÓN",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "MICKAËL MALSA",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "NEMANJA RADOJA",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "JOSÉ LUÍS MORALES",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "GONZALO MELERO",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "SERGIO LEÓN",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "ROGER MARTÍ",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2020-21",
-    "homeTeam": "LEVANTE",
-    "awayTeam": "GETAFE",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "1-0",
-    "date": "19 de julio 2020",
-    "playingTeam": "LEVANTE",
-    "formation": [
-      [
-        {
-          "name": "KOKE VEGAS",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "SERGIO POSTIGO",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "ÓSCAR DUARTE",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "TOÑO",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "COKE",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "NEMANJA RADOJA",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "GONZALO MELERO",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "JOSÉ LUÍS MORALES",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "HERNÂNI",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "SERGIO LEÓN",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "ROGER MARTÍ",
-          "position": "FWD",
-          "number": "11"
         }
       ]
     ]
@@ -1286,140 +386,65 @@
     "formation": [
       [
         {
-          "name": "AITOR FERNÁNDEZ",
+          "name": "FERNÁNDEZ",
           "position": "GK",
-          "number": "1"
+          "number": "13"
         }
       ],
       [
         {
-          "name": "RÚBEN VEZO",
+          "name": "DUARTE",
           "position": "DEF",
-          "number": "2"
+          "number": "6"
         },
         {
-          "name": "ROBER PIER",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "ÓSCAR DUARTE",
+          "name": "PIER",
           "position": "DEF",
           "number": "4"
         },
         {
-          "name": "NEMANJA RADOJA",
+          "name": "VEZO",
           "position": "DEF",
+          "number": "14"
+        }
+      ],
+      [
+        {
+          "name": "RADOJA",
+          "position": "MID",
           "number": "5"
-        }
-      ],
-      [
+        },
         {
-          "name": "MICKAËL MALSA",
+          "name": "GARCÍA",
           "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "RUBÉN ROCHINA",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "TOÑO",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "JORGE MIRAMÓN",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "SERGIO LEÓN",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "DANI GÓMEZ",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2021-22",
-    "homeTeam": "LEVANTE",
-    "awayTeam": "OSASUNA",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "0-0",
-    "date": "05 de diciembre 2021",
-    "playingTeam": "LEVANTE",
-    "formation": [
-      [
-        {
-          "name": "DANI CÁRDENAS",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "RÚBEN VEZO",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "SHKODRAN MUSTAFI",
-          "position": "DEF",
           "number": "3"
         },
         {
-          "name": "CARLOS CLERC",
-          "position": "DEF",
-          "number": "4"
+          "name": "MELERO",
+          "position": "MID",
+          "number": "12"
         },
         {
-          "name": "SON",
-          "position": "DEF",
-          "number": "5"
+          "name": "ROCHINA",
+          "position": "MID",
+          "number": "16"
+        },
+        {
+          "name": "MIRAMÓN",
+          "position": "MID",
+          "number": "20"
         }
       ],
       [
         {
-          "name": "JOSÉ CAMPAÑA",
-          "position": "MID",
-          "number": "6"
+          "name": "GÓMEZ",
+          "position": "FWD",
+          "number": "21"
         },
         {
-          "name": "PEPELU",
-          "position": "MID",
+          "name": "LEÓN",
+          "position": "FWD",
           "number": "7"
-        },
-        {
-          "name": "NEMANJA RADOJA",
-          "position": "MID",
-          "number": "8"
-        }
-      ],
-      [
-        {
-          "name": "ROGER MARTÍ",
-          "position": "FWD",
-          "number": "9"
-        },
-        {
-          "name": "JOSÉ LUÍS MORALES",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "JORGE DE FRUTOS",
-          "position": "FWD",
-          "number": "11"
         }
       ]
     ]
@@ -1436,140 +461,65 @@
     "formation": [
       [
         {
-          "name": "DANI CÁRDENAS",
+          "name": "CÁRDENAS",
           "position": "GK",
-          "number": "1"
+          "number": "34"
         }
       ],
       [
         {
-          "name": "SHKODRAN MUSTAFI",
+          "name": "CLERC",
           "position": "DEF",
-          "number": "2"
+          "number": "19"
         },
         {
-          "name": "RÚBEN VEZO",
+          "name": "VEZO",
           "position": "DEF",
-          "number": "3"
+          "number": "14"
         },
         {
-          "name": "CARLOS CLERC",
+          "name": "MUSTAFI",
           "position": "DEF",
-          "number": "4"
+          "number": "13"
         },
         {
           "name": "SON",
           "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "MICKAËL MALSA",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "ENIS BARDHI",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "JOSÉ CAMPAÑA",
-          "position": "MID",
-          "number": "8"
-        }
-      ],
-      [
-        {
-          "name": "ROGER MARTÍ",
-          "position": "FWD",
-          "number": "9"
-        },
-        {
-          "name": "JOSÉ LUÍS MORALES",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "JORGE DE FRUTOS",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2021-22",
-    "homeTeam": "RAYO VALLECANO",
-    "awayTeam": "LEVANTE",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "2-4",
-    "date": "20 de mayo 2022",
-    "playingTeam": "LEVANTE",
-    "formation": [
-      [
-        {
-          "name": "DANI CÁRDENAS",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "SERGIO POSTIGO",
-          "position": "DEF",
           "number": "2"
-        },
-        {
-          "name": "ROBER PIER",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "MARCELO SARACCHI",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "COKE",
-          "position": "DEF",
-          "number": "5"
         }
       ],
       [
         {
-          "name": "NEMANJA RADOJA",
+          "name": "BARDHI",
           "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "GONZALO MELERO",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "ENIS BARDHI",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "JOSÉ LUÍS MORALES",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "ALEJANDRO CANTERO",
-          "position": "FWD",
           "number": "10"
         },
         {
-          "name": "ROGER MARTÍ",
+          "name": "MELERO",
+          "position": "MID",
+          "number": "12"
+        },
+        {
+          "name": "CAMPAÑA",
+          "position": "MID",
+          "number": "24"
+        }
+      ],
+      [
+        {
+          "name": "MORALES",
           "position": "FWD",
           "number": "11"
+        },
+        {
+          "name": "MARTÍ",
+          "position": "FWD",
+          "number": "9"
+        },
+        {
+          "name": "DE FRUTOS",
+          "position": "FWD",
+          "number": "18"
         }
       ]
     ]

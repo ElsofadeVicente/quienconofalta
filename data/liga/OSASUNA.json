@@ -1,156 +1,6 @@
 [
   {
     "competition": "LA LIGA • TEMPORADA 2016-17",
-    "homeTeam": "REAL BETIS",
-    "awayTeam": "OSASUNA",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "2-0",
-    "date": "18 de marzo 2017",
-    "playingTeam": "OSASUNA",
-    "formation": [
-      [
-        {
-          "name": "SALVATORE SIRIGU",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "NIKOLA VUJADINOVIC",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "OIER SANJURJO",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "CARLOS CLERC",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "AITOR BUÑUEL",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "RAOUL LOÉ",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "FRAN MÉRIDA",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "ROBERTO TORRES",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "JAIME ROMERO",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "SERGIO LEÓN",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "KENAN KODRO",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2016-17",
-    "homeTeam": "OSASUNA",
-    "awayTeam": "EIBAR",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "1-1",
-    "date": "13 de marzo 2017",
-    "playingTeam": "OSASUNA",
-    "formation": [
-      [
-        {
-          "name": "SALVATORE SIRIGU",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "NIKOLA VUJADINOVIC",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "OIER SANJURJO",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "FUENTES",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "GORAN CAUSIC",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "RAOUL LOÉ",
-          "position": "DEF",
-          "number": "6"
-        },
-        {
-          "name": "AITOR BUÑUEL",
-          "position": "DEF",
-          "number": "7"
-        }
-      ],
-      [
-        {
-          "name": "ROBERTO TORRES",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "JAIME ROMERO",
-          "position": "MID",
-          "number": "9"
-        },
-        {
-          "name": "SERGIO LEÓN",
-          "position": "MID",
-          "number": "10"
-        }
-      ],
-      [
-        {
-          "name": "KENAN KODRO",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2016-17",
     "homeTeam": "OSASUNA",
     "awayTeam": "ATLETICO MADRID",
     "homeBadge": "🏟️",
@@ -161,215 +11,65 @@
     "formation": [
       [
         {
-          "name": "NAUZET PÉREZ",
+          "name": "PÉREZ",
           "position": "GK",
-          "number": "1"
+          "number": "13"
         }
       ],
       [
+        {
+          "name": "CLERC",
+          "position": "DEF",
+          "number": "21"
+        },
+        {
+          "name": "FLAÑO",
+          "position": "DEF",
+          "number": "4"
+        },
         {
           "name": "UNAI GARCÍA",
           "position": "DEF",
-          "number": "2"
+          "number": "15"
         },
         {
-          "name": "MIGUEL FLAÑO",
+          "name": "BONNÍN",
           "position": "DEF",
           "number": "3"
-        },
-        {
-          "name": "CARLOS CLERC",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "CAYETANO BONNIN",
-          "position": "DEF",
-          "number": "5"
         }
       ],
       [
         {
-          "name": "GORAN CAUSIC",
+          "name": "TORRES",
+          "position": "MID",
+          "number": "10"
+        },
+        {
+          "name": "SANJURJO",
           "position": "MID",
           "number": "6"
         },
         {
-          "name": "OIER SANJURJO",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "ALEX BERENGUER",
+          "name": "CAUSIC",
           "position": "MID",
           "number": "8"
         },
         {
-          "name": "ROBERTO TORRES",
+          "name": "BERENGUER",
           "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "ORIOL RIERA",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "KENAN KODRO",
-          "position": "FWD",
           "number": "11"
         }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2019-20",
-    "homeTeam": "VILLARREAL",
-    "awayTeam": "OSASUNA",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "3-1",
-    "date": "02 de febrero 2020",
-    "playingTeam": "OSASUNA",
-    "formation": [
-      [
-        {
-          "name": "SERGIO HERRERA",
-          "position": "GK",
-          "number": "1"
-        }
       ],
       [
         {
-          "name": "DAVID GARCÍA",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "ARIDANE HERNÁNDEZ",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "PERVIS ESTUPIÑÁN",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "JON MONCAYOLA",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "IÑIGO PÉREZ",
-          "position": "DEF",
-          "number": "6"
-        },
-        {
-          "name": "NACHO VIDAL",
-          "position": "DEF",
-          "number": "7"
-        }
-      ],
-      [
-        {
-          "name": "RUBÉN GARCÍA",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "ROBERTO TORRES",
-          "position": "MID",
+          "name": "RIERA",
+          "position": "FWD",
           "number": "9"
         },
         {
-          "name": "ROBER IBÁÑEZ",
-          "position": "MID",
-          "number": "10"
-        }
-      ],
-      [
-        {
-          "name": "MARC CARDONA",
+          "name": "KODRO",
           "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2019-20",
-    "homeTeam": "ATLETICO MADRID",
-    "awayTeam": "OSASUNA",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "2-0",
-    "date": "14 de diciembre 2019",
-    "playingTeam": "OSASUNA",
-    "formation": [
-      [
-        {
-          "name": "SERGIO HERRERA",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "RAÚL NAVAS",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "DAVID GARCÍA",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "PERVIS ESTUPIÑÁN",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "FACUNDO RONCAGLIA",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "FRAN MÉRIDA",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "OIER SANJURJO",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "DARKO BRASANAC",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "RUBÉN GARCÍA",
-          "position": "MID",
-          "number": "9"
-        },
-        {
-          "name": "ROBERTO TORRES",
-          "position": "MID",
-          "number": "10"
-        }
-      ],
-      [
-        {
-          "name": "CHIMY AVILA",
-          "position": "FWD",
-          "number": "11"
+          "number": "19"
         }
       ]
     ]
@@ -386,140 +86,65 @@
     "formation": [
       [
         {
-          "name": "SERGIO HERRERA",
+          "name": "HERRERA",
           "position": "GK",
           "number": "1"
         }
       ],
       [
         {
-          "name": "DAVID GARCÍA",
+          "name": "ESTUPIÑÁN",
           "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "FACUNDO RONCAGLIA",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "PERVIS ESTUPIÑÁN",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "LILLO",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "DARKO BRASANAC",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "FRAN MÉRIDA",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "RUBÉN GARCÍA",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "ROBERTO TORRES",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "JUAN VILLAR",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "CHIMY AVILA",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2020-21",
-    "homeTeam": "EIBAR",
-    "awayTeam": "OSASUNA",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "0-0",
-    "date": "18 de octubre 2020",
-    "playingTeam": "OSASUNA",
-    "formation": [
-      [
-        {
-          "name": "SERGIO HERRERA",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "ARIDANE HERNÁNDEZ",
-          "position": "DEF",
-          "number": "2"
+          "number": "30"
         },
         {
           "name": "DAVID GARCÍA",
           "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "IÑIGO PÉREZ",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "FACUNDO RONCAGLIA",
-          "position": "DEF",
           "number": "5"
+        },
+        {
+          "name": "RONCAGLIA",
+          "position": "DEF",
+          "number": "12"
+        },
+        {
+          "name": "CASTELLANO",
+          "position": "DEF",
+          "number": "16"
         }
       ],
       [
         {
-          "name": "JON MONCAYOLA",
+          "name": "RUBÉN GARCÍA",
           "position": "MID",
-          "number": "6"
+          "number": "14"
         },
         {
-          "name": "OIER SANJURJO",
+          "name": "BRASANAC",
           "position": "MID",
-          "number": "7"
+          "number": "20"
         },
         {
-          "name": "KIKE BARJA",
+          "name": "MÉRIDA",
           "position": "MID",
           "number": "8"
         },
         {
-          "name": "RUBÉN GARCÍA",
+          "name": "TORRES",
           "position": "MID",
-          "number": "9"
+          "number": "10"
         }
       ],
       [
         {
-          "name": "JONATHAN CALLERI",
+          "name": "ÁVILA",
           "position": "FWD",
-          "number": "10"
+          "number": "9"
         },
         {
-          "name": "ENRIC GALLEGO",
+          "name": "VILLAR",
           "position": "FWD",
-          "number": "11"
+          "number": "18"
         }
       ]
     ]
@@ -536,290 +161,65 @@
     "formation": [
       [
         {
-          "name": "SERGIO HERRERA",
+          "name": "HERRERA",
           "position": "GK",
           "number": "1"
         }
       ],
       [
         {
-          "name": "ARIDANE HERNÁNDEZ",
+          "name": "SÁNCHEZ",
           "position": "DEF",
-          "number": "2"
+          "number": "39"
         },
         {
           "name": "DAVID GARCÍA",
           "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "MANU SÁNCHEZ",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "NACHO VIDAL",
-          "position": "DEF",
           "number": "5"
+        },
+        {
+          "name": "HERNÁNDEZ",
+          "position": "DEF",
+          "number": "23"
+        },
+        {
+          "name": "VIDAL",
+          "position": "DEF",
+          "number": "2"
         }
       ],
       [
         {
-          "name": "JON MONCAYOLA",
+          "name": "BARJA",
           "position": "MID",
-          "number": "6"
+          "number": "11"
         },
         {
-          "name": "DARKO BRASANAC",
+          "name": "BRASANAC",
           "position": "MID",
-          "number": "7"
+          "number": "8"
+        },
+        {
+          "name": "MONCAYOLA",
+          "position": "MID",
+          "number": "27"
         },
         {
           "name": "RUBÉN GARCÍA",
           "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "KIKE BARJA",
-          "position": "MID",
-          "number": "9"
+          "number": "14"
         }
       ],
       [
         {
-          "name": "JONATHAN CALLERI",
+          "name": "CALLERI",
           "position": "FWD",
-          "number": "10"
+          "number": "16"
         },
         {
-          "name": "ANTE BUDIMIR",
+          "name": "BUDIMIR",
           "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2020-21",
-    "homeTeam": "REAL BETIS",
-    "awayTeam": "OSASUNA",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "1-0",
-    "date": "01 de febrero 2021",
-    "playingTeam": "OSASUNA",
-    "formation": [
-      [
-        {
-          "name": "SERGIO HERRERA",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "DAVID GARCÍA",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "UNAI GARCÍA",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "JUAN CRUZ",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "JON MONCAYOLA",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "NACHO VIDAL",
-          "position": "DEF",
-          "number": "6"
-        }
-      ],
-      [
-        {
-          "name": "IÑIGO PÉREZ",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "OIER SANJURJO",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "RUBÉN GARCÍA",
-          "position": "MID",
-          "number": "9"
-        },
-        {
-          "name": "KIKE BARJA",
-          "position": "MID",
-          "number": "10"
-        }
-      ],
-      [
-        {
-          "name": "JONATHAN CALLERI",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2021-22",
-    "homeTeam": "ELCHE",
-    "awayTeam": "OSASUNA",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "1-1",
-    "date": "01 de mayo 2022",
-    "playingTeam": "OSASUNA",
-    "formation": [
-      [
-        {
-          "name": "SERGIO HERRERA",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "JUAN CRUZ",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "ARIDANE HERNÁNDEZ",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "DAVID GARCÍA",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "MANU SÁNCHEZ",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "NACHO VIDAL",
-          "position": "DEF",
-          "number": "6"
-        }
-      ],
-      [
-        {
-          "name": "DARKO BRASANAC",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "JON MONCAYOLA",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "LUCAS TORRÓ",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "CHIMY AVILA",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "ANTE BUDIMIR",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2021-22",
-    "homeTeam": "GRANADA",
-    "awayTeam": "OSASUNA",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "0-2",
-    "date": "23 de enero 2022",
-    "playingTeam": "OSASUNA",
-    "formation": [
-      [
-        {
-          "name": "SERGIO HERRERA",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "JUAN CRUZ",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "DAVID GARCÍA",
-          "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "MANU SÁNCHEZ",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "NACHO VIDAL",
-          "position": "DEF",
-          "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "JON MONCAYOLA",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "LUCAS TORRÓ",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "RUBÉN GARCÍA",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "DARKO BRASANAC",
-          "position": "MID",
-          "number": "9"
-        }
-      ],
-      [
-        {
-          "name": "CHIMY AVILA",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "ANTE BUDIMIR",
-          "position": "FWD",
-          "number": "11"
+          "number": "17"
         }
       ]
     ]
@@ -836,215 +236,65 @@
     "formation": [
       [
         {
-          "name": "SERGIO HERRERA",
+          "name": "HERRERA",
           "position": "GK",
           "number": "1"
         }
       ],
       [
-        {
-          "name": "UNAI GARCÍA",
-          "position": "DEF",
-          "number": "2"
-        },
-        {
-          "name": "DAVID GARCÍA",
-          "position": "DEF",
-          "number": "3"
-        },
         {
           "name": "COTE",
           "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "LUCAS TORRÓ",
-          "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "NACHO VIDAL",
-          "position": "DEF",
-          "number": "6"
-        }
-      ],
-      [
-        {
-          "name": "DARKO BRASANAC",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "OIER SANJURJO",
-          "position": "MID",
-          "number": "8"
-        },
-        {
-          "name": "RUBÉN GARCÍA",
-          "position": "MID",
-          "number": "9"
-        },
-        {
-          "name": "ROBERTO TORRES",
-          "position": "MID",
-          "number": "10"
-        }
-      ],
-      [
-        {
-          "name": "CHIMY AVILA",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2022-23",
-    "homeTeam": "ATLETICO MADRID",
-    "awayTeam": "OSASUNA",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "3-0",
-    "date": "21 de mayo 2023",
-    "playingTeam": "OSASUNA",
-    "formation": [
-      [
-        {
-          "name": "SERGIO HERRERA",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "ARIDANE HERNÁNDEZ",
-          "position": "DEF",
-          "number": "2"
+          "number": "16"
         },
         {
           "name": "DAVID GARCÍA",
           "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "MANU SÁNCHEZ",
-          "position": "DEF",
-          "number": "4"
-        },
-        {
-          "name": "RUBÉN PEÑA",
-          "position": "DEF",
           "number": "5"
-        }
-      ],
-      [
-        {
-          "name": "JON MONCAYOLA",
-          "position": "MID",
-          "number": "6"
-        },
-        {
-          "name": "LUCAS TORRÓ",
-          "position": "MID",
-          "number": "7"
-        },
-        {
-          "name": "AIMAR OROZ",
-          "position": "MID",
-          "number": "8"
-        }
-      ],
-      [
-        {
-          "name": "ANTE BUDIMIR",
-          "position": "FWD",
-          "number": "9"
-        },
-        {
-          "name": "CHIMY AVILA",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "RUBÉN GARCÍA",
-          "position": "FWD",
-          "number": "11"
-        }
-      ]
-    ]
-  },
-  {
-    "competition": "LA LIGA • TEMPORADA 2022-23",
-    "homeTeam": "GIRONA",
-    "awayTeam": "OSASUNA",
-    "homeBadge": "🏟️",
-    "awayBadge": "⚽",
-    "score": "1-1",
-    "date": "23 de octubre 2022",
-    "playingTeam": "OSASUNA",
-    "formation": [
-      [
-        {
-          "name": "SERGIO HERRERA",
-          "position": "GK",
-          "number": "1"
-        }
-      ],
-      [
-        {
-          "name": "JUAN CRUZ",
-          "position": "DEF",
-          "number": "2"
         },
         {
           "name": "UNAI GARCÍA",
           "position": "DEF",
-          "number": "3"
-        },
-        {
-          "name": "MANU SÁNCHEZ",
-          "position": "DEF",
           "number": "4"
         },
         {
-          "name": "LUCAS TORRÓ",
+          "name": "VIDAL",
           "position": "DEF",
-          "number": "5"
-        },
-        {
-          "name": "NACHO VIDAL",
-          "position": "DEF",
-          "number": "6"
+          "number": "2"
         }
       ],
       [
         {
-          "name": "JON MONCAYOLA",
+          "name": "TORRÓ",
           "position": "MID",
-          "number": "7"
+          "number": "24"
         },
         {
-          "name": "MOI GÓMEZ",
+          "name": "BRASANAC",
           "position": "MID",
           "number": "8"
         },
         {
-          "name": "ABDE EZZALZOULI",
+          "name": "SANJURJO",
           "position": "MID",
-          "number": "9"
+          "number": "6"
         },
         {
-          "name": "RUBÉN PEÑA",
+          "name": "TORRES",
           "position": "MID",
           "number": "10"
+        },
+        {
+          "name": "RUBÉN GARCÍA",
+          "position": "MID",
+          "number": "14"
         }
       ],
       [
         {
-          "name": "CHIMY AVILA",
+          "name": "ÁVILA",
           "position": "FWD",
-          "number": "11"
+          "number": "9"
         }
       ]
     ]
@@ -1063,63 +313,63 @@
         {
           "name": "AITOR FERNÁNDEZ",
           "position": "GK",
-          "number": "1"
+          "number": "25"
         }
       ],
       [
         {
-          "name": "UNAI GARCÍA",
+          "name": "SÁNCHEZ",
           "position": "DEF",
-          "number": "2"
+          "number": "20"
         },
         {
           "name": "DAVID GARCÍA",
           "position": "DEF",
-          "number": "3"
+          "number": "5"
         },
         {
-          "name": "MANU SÁNCHEZ",
+          "name": "UNAI GARCÍA",
           "position": "DEF",
           "number": "4"
         },
         {
-          "name": "RUBÉN PEÑA",
+          "name": "PEÑA",
           "position": "DEF",
-          "number": "5"
+          "number": "15"
         }
       ],
       [
         {
-          "name": "LUCAS TORRÓ",
+          "name": "TORRÓ",
           "position": "MID",
           "number": "6"
         },
         {
-          "name": "AIMAR OROZ",
+          "name": "OROZ",
           "position": "MID",
-          "number": "7"
+          "number": "22"
         },
         {
-          "name": "MOI GÓMEZ",
+          "name": "GÓMEZ",
           "position": "MID",
-          "number": "8"
+          "number": "16"
         }
       ],
       [
         {
-          "name": "ANTE BUDIMIR",
-          "position": "FWD",
-          "number": "9"
-        },
-        {
-          "name": "KIKE BARJA",
-          "position": "FWD",
-          "number": "10"
-        },
-        {
-          "name": "CHIMY AVILA",
+          "name": "BARJA",
           "position": "FWD",
           "number": "11"
+        },
+        {
+          "name": "BUDIMIR",
+          "position": "FWD",
+          "number": "17"
+        },
+        {
+          "name": "ÁVILA",
+          "position": "FWD",
+          "number": "9"
         }
       ]
     ]
