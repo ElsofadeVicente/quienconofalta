@@ -362,13 +362,6 @@ function openGuessModal(playerIndex) {
     }
     
     document.getElementById('guess-modal').classList.add('active');
-    // En móvil, enfocar el input oculto para abrir teclado nativo
-    if (isMobile()) {
-        setTimeout(() => {
-            const mi = document.getElementById('mobile-hidden-input');
-            if (mi) { mi.removeAttribute('readonly'); mi.focus(); }
-        }, 100);
-    }
     
     // Si es modo solo lectura (jugador fallido), desactivar teclado y botón revelar
     if (isReadOnly) {
@@ -400,6 +393,16 @@ function openGuessModal(playerIndex) {
         
         document.getElementById('reveal-btn-modal').style.display = 'block';
         document.querySelector('.modal-title').textContent = 'ADIVINA EL JUGADOR';
+    }
+
+    // En móvil enfocar el input oculto AQUÍ, dentro del mismo evento de tap
+    if (isMobile()) {
+        const mi = document.getElementById('mobile-hidden-input');
+        if (mi) {
+            mi.style.pointerEvents = 'auto';
+            mi.focus();
+            mi.style.pointerEvents = 'none';
+        }
     }
 }
 
@@ -904,7 +907,6 @@ function loadSettings() {
     }
 }
 
-// Detectar móvil
 function isMobile() {
     return /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(navigator.userAgent) || window.innerWidth <= 600;
 }
@@ -914,40 +916,38 @@ document.addEventListener('DOMContentLoaded', () => {
     loadStats();
     loadSettings();
 
-    // Input oculto para teclado nativo en móvil
+    // --- Input oculto para teclado nativo en móvil ---
     const mobileInput = document.createElement('input');
+    mobileInput.id = 'mobile-hidden-input';
     mobileInput.setAttribute('type', 'text');
     mobileInput.setAttribute('autocomplete', 'off');
     mobileInput.setAttribute('autocorrect', 'off');
     mobileInput.setAttribute('autocapitalize', 'characters');
     mobileInput.setAttribute('spellcheck', 'false');
-    mobileInput.id = 'mobile-hidden-input';
+    // font-size 16px evita el zoom automático de iOS al enfocar
     mobileInput.style.cssText = `
         position: fixed;
-        bottom: 10px;
+        top: 50%;
         left: 50%;
-        transform: translateX(-50%);
-        width: 1px;
-        height: 1px;
+        width: 2px;
+        height: 2px;
         opacity: 0;
-        pointer-events: none;
         border: none;
         outline: none;
         background: transparent;
         color: transparent;
         font-size: 16px;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        z-index: -1;
     `;
     document.body.appendChild(mobileInput);
 
-    // Capturar entrada del input móvil
-    mobileInput.addEventListener('input', (e) => {
+    mobileInput.addEventListener('input', () => {
         const val = mobileInput.value;
         if (!val) return;
-        // Procesar cada carácter nuevo
         for (const ch of val) {
-            if (/^[a-zA-ZñÑ]$/.test(ch)) {
-                handleKeyPress(ch.toUpperCase());
-            }
+            if (/^[a-zA-ZñÑ]$/.test(ch)) handleKeyPress(ch.toUpperCase());
         }
         mobileInput.value = '';
     });
@@ -963,8 +963,9 @@ document.addEventListener('DOMContentLoaded', () => {
             mobileInput.value = '';
         }
     });
+    // -------------------------------------------------
 
-    // Teclado
+    // Teclado custom (solo visible en escritorio)
     document.querySelectorAll('.key').forEach(key => {
         key.addEventListener('click', () => {
             const keyValue = key.getAttribute('data-key');
@@ -972,10 +973,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
-    // Teclado físico
+    // Teclado físico (escritorio)
     document.addEventListener('keydown', (e) => {
         if (!document.getElementById('guess-modal').classList.contains('active')) return;
-        if (isMobile()) return; // en móvil lo maneja el mobileInput
+        if (isMobile()) return;
         
         if (e.key === 'Enter') {
             handleKeyPress('Enter');
