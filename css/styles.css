@@ -1176,3 +1176,47 @@
         letter-spacing: 1px;
     }
 }
+
+/* ===== BARRA TÁCTIL MÓVIL ===== */
+.mobile-tap-bar {
+    display: none; /* oculta en escritorio */
+}
+
+@media (max-width: 600px) {
+    .mobile-tap-bar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 12px 0 4px;
+        padding: 14px 20px;
+        background: rgba(200, 168, 75, 0.1);
+        border: 2px dashed var(--neon-green);
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background 0.2s;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .mobile-tap-bar:active {
+        background: rgba(200, 168, 75, 0.25);
+    }
+
+    .mobile-tap-text {
+        font-family: 'Rajdhani', sans-serif;
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--neon-green);
+        letter-spacing: 1px;
+        pointer-events: none;
+    }
+
+    /* Ocultar teclado custom en móvil */
+    .keyboard {
+        display: none;
+    }
+
+    /* Quitar el pseudo-elemento anterior si existe */
+    .modal-content::after {
+        display: none;
+    }
+}

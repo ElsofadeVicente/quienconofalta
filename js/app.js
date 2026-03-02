@@ -394,16 +394,6 @@ function openGuessModal(playerIndex) {
         document.getElementById('reveal-btn-modal').style.display = 'block';
         document.querySelector('.modal-title').textContent = 'ADIVINA EL JUGADOR';
     }
-
-    // En móvil enfocar el input oculto AQUÍ, dentro del mismo evento de tap
-    if (isMobile()) {
-        const mi = document.getElementById('mobile-hidden-input');
-        if (mi) {
-            mi.style.pointerEvents = 'auto';
-            mi.focus();
-            mi.style.pointerEvents = 'none';
-        }
-    }
 }
 
 function getPlayerByIndex(index) {
@@ -911,6 +901,11 @@ function isMobile() {
     return /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(navigator.userAgent) || window.innerWidth <= 600;
 }
 
+function focusMobileInput() {
+    const mi = document.getElementById('mobile-hidden-input');
+    if (mi) mi.focus();
+}
+
 // EVENT LISTENERS
 document.addEventListener('DOMContentLoaded', () => {
     loadStats();
@@ -924,20 +919,15 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileInput.setAttribute('autocorrect', 'off');
     mobileInput.setAttribute('autocapitalize', 'characters');
     mobileInput.setAttribute('spellcheck', 'false');
-    // font-size 16px evita el zoom automático de iOS al enfocar
     mobileInput.style.cssText = `
         position: fixed;
-        top: 50%;
-        left: 50%;
-        width: 2px;
-        height: 2px;
+        top: 0; left: 0;
+        width: 1px; height: 1px;
         opacity: 0;
-        border: none;
-        outline: none;
+        border: none; outline: none;
         background: transparent;
         color: transparent;
         font-size: 16px;
-        transform: translate(-50%, -50%);
         pointer-events: none;
         z-index: -1;
     `;
@@ -965,19 +955,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     // -------------------------------------------------
 
-    // Teclado custom (solo visible en escritorio)
+    // Teclado custom (escritorio)
     document.querySelectorAll('.key').forEach(key => {
         key.addEventListener('click', () => {
             const keyValue = key.getAttribute('data-key');
             handleKeyPress(keyValue);
         });
     });
-    
+
     // Teclado físico (escritorio)
     document.addEventListener('keydown', (e) => {
         if (!document.getElementById('guess-modal').classList.contains('active')) return;
         if (isMobile()) return;
-        
         if (e.key === 'Enter') {
             handleKeyPress('Enter');
         } else if (e.key === 'Backspace') {
@@ -986,7 +975,7 @@ document.addEventListener('DOMContentLoaded', () => {
             handleKeyPress(e.key.toUpperCase());
         }
     });
-    
+
     // Botones
     document.getElementById('next-match-btn').addEventListener('click', nextMatch);
     document.getElementById('give-up-btn').addEventListener('click', giveUp);
