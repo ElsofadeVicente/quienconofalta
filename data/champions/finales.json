@@ -1,5 +1,830 @@
 [
   {
+    "competition": "CHAMPIONS LEAGUE FINAL 2009",
+    "homeTeam": "FC BARCELONA",
+    "awayTeam": "MANCHESTER UNITED",
+    "homeBadge": "🔵🔴",
+    "awayBadge": "🔴⚫",
+    "score": "2-0",
+    "date": "27 MAY 2009",
+    "playingTeam": "FC BARCELONA",
+    "formation": [
+      [
+        {
+          "name": "VÍCTOR VALDÉS",
+          "number": "1",
+          "position": "GK"
+        }
+      ],
+      [
+        {
+          "name": "SYLVINHO",
+          "number": "16",
+          "position": "LB"
+        },
+        {
+          "name": "CARLES PUYOL",
+          "number": "5",
+          "position": "CB"
+        },
+        {
+          "name": "GERARD PIQUÉ",
+          "number": "3",
+          "position": "CB"
+        },
+        {
+          "name": "DANI ALVES",
+          "number": "2",
+          "position": "RB"
+        }
+      ],
+      [
+        {
+          "name": "ANDRÉS INIESTA",
+          "number": "8",
+          "position": "CM"
+        },
+        {
+          "name": "SERGIO BUSQUETS",
+          "number": "16",
+          "position": "CDM"
+        },
+        {
+          "name": "XAVI HERNÁNDEZ",
+          "number": "6",
+          "position": "CM"
+        }
+      ],
+      [
+        {
+          "name": "THIERRY HENRY",
+          "number": "14",
+          "position": "LW"
+        },
+        {
+          "name": "SAMUEL ETO'O",
+          "number": "9",
+          "position": "ST"
+        },
+        {
+          "name": "LIONEL MESSI",
+          "number": "10",
+          "position": "RW"
+        }
+      ]
+    ]
+  },
+  {
+    "competition": "CHAMPIONS LEAGUE FINAL 2008",
+    "homeTeam": "MANCHESTER UNITED",
+    "awayTeam": "CHELSEA",
+    "homeBadge": "🔴⚫",
+    "awayBadge": "🔵⚪",
+    "score": "1-1 (6-5 pen)",
+    "date": "21 MAY 2008",
+    "playingTeam": "MANCHESTER UNITED",
+    "formation": [
+      [
+        {
+          "name": "EDWIN VAN DER SAR",
+          "number": "1",
+          "position": "GK"
+        }
+      ],
+      [
+        {
+          "name": "PATRICE EVRA",
+          "number": "3",
+          "position": "LB"
+        },
+        {
+          "name": "NEMANJA VIDIĆ",
+          "number": "15",
+          "position": "CB"
+        },
+        {
+          "name": "RIO FERDINAND",
+          "number": "5",
+          "position": "CB"
+        },
+        {
+          "name": "WES BROWN",
+          "number": "23",
+          "position": "RB"
+        }
+      ],
+      [
+        {
+          "name": "PAUL SCHOLES",
+          "number": "18",
+          "position": "CM"
+        },
+        {
+          "name": "OWEN HARGREAVES",
+          "number": "4",
+          "position": "CM"
+        },
+        {
+          "name": "MICHAEL CARRICK",
+          "number": "16",
+          "position": "CM"
+        }
+      ],
+      [
+        {
+          "name": "CARLOS TEVEZ",
+          "number": "32",
+          "position": "LW"
+        },
+        {
+          "name": "WAYNE ROONEY",
+          "number": "10",
+          "position": "ST"
+        },
+        {
+          "name": "CRISTIANO RONALDO",
+          "number": "7",
+          "position": "RW"
+        }
+      ]
+    ]
+  },
+  {
+    "competition": "CHAMPIONS LEAGUE FINAL 2007",
+    "homeTeam": "AC MILAN",
+    "awayTeam": "LIVERPOOL",
+    "homeBadge": "🔴⚫",
+    "awayBadge": "🔴",
+    "score": "2-1",
+    "date": "23 MAY 2007",
+    "playingTeam": "AC MILAN",
+    "formation": [
+      [
+        {
+          "name": "DIDA",
+          "number": "1",
+          "position": "GK"
+        }
+      ],
+      [
+        {
+          "name": "MASSIMO ODDO",
+          "number": "44",
+          "position": "LB"
+        },
+        {
+          "name": "PAOLO MALDINI",
+          "number": "3",
+          "position": "CB"
+        },
+        {
+          "name": "ALESSANDRO NESTA",
+          "number": "13",
+          "position": "CB"
+        },
+        {
+          "name": "MAREK JANKULOVSKI",
+          "number": "18",
+          "position": "RB"
+        }
+      ],
+      [
+        {
+          "name": "KAKÁ",
+          "number": "22",
+          "position": "CAM"
+        },
+        {
+          "name": "CLARENCE SEEDORF",
+          "number": "10",
+          "position": "CM"
+        },
+        {
+          "name": "ANDREA PIRLO",
+          "number": "21",
+          "position": "CM"
+        },
+        {
+          "name": "GENNARO GATTUSO",
+          "number": "8",
+          "position": "CM"
+        }
+      ],
+      [
+        {
+          "name": "RICARDO KAKÁ",
+          "number": "22",
+          "position": "ST"
+        },
+        {
+          "name": "FILIPPO INZAGHI",
+          "number": "9",
+          "position": "ST"
+        }
+      ]
+    ]
+  },
+  {
+    "competition": "CHAMPIONS LEAGUE FINAL 2006",
+    "homeTeam": "FC BARCELONA",
+    "awayTeam": "ARSENAL",
+    "homeBadge": "🔵🔴",
+    "awayBadge": "🔴⚪",
+    "score": "2-1",
+    "date": "17 MAY 2006",
+    "playingTeam": "FC BARCELONA",
+    "formation": [
+      [
+        {
+          "name": "VÍCTOR VALDÉS",
+          "number": "1",
+          "position": "GK"
+        }
+      ],
+      [
+        {
+          "name": "GIOVANNI VAN BRONCKHORST",
+          "number": "23",
+          "position": "LB"
+        },
+        {
+          "name": "CARLES PUYOL",
+          "number": "5",
+          "position": "CB"
+        },
+        {
+          "name": "RAFAEL MÁRQUEZ",
+          "number": "4",
+          "position": "CB"
+        },
+        {
+          "name": "JULIANO BELLETTI",
+          "number": "2",
+          "position": "RB"
+        }
+      ],
+      [
+        {
+          "name": "ANDRÉS INIESTA",
+          "number": "8",
+          "position": "CM"
+        },
+        {
+          "name": "DECO",
+          "number": "20",
+          "position": "CM"
+        },
+        {
+          "name": "MARK VAN BOMMEL",
+          "number": "6",
+          "position": "CDM"
+        }
+      ],
+      [
+        {
+          "name": "RONALDINHO",
+          "number": "10",
+          "position": "LW"
+        },
+        {
+          "name": "SAMUEL ETO'O",
+          "number": "9",
+          "position": "ST"
+        },
+        {
+          "name": "LUDOVIC GIULY",
+          "number": "14",
+          "position": "RW"
+        }
+      ]
+    ]
+  },
+  {
+    "competition": "CHAMPIONS LEAGUE FINAL 2005",
+    "homeTeam": "LIVERPOOL",
+    "awayTeam": "AC MILAN",
+    "homeBadge": "🔴",
+    "awayBadge": "🔴⚫",
+    "score": "3-3 (3-2 pen)",
+    "date": "25 MAY 2005",
+    "playingTeam": "LIVERPOOL",
+    "formation": [
+      [
+        {
+          "name": "JERZY DUDEK",
+          "number": "1",
+          "position": "GK"
+        }
+      ],
+      [
+        {
+          "name": "DJIMI TRAORÉ",
+          "number": "17",
+          "position": "LB"
+        },
+        {
+          "name": "JAMIE CARRAGHER",
+          "number": "23",
+          "position": "CB"
+        },
+        {
+          "name": "SAMI HYYPIÄ",
+          "number": "4",
+          "position": "CB"
+        },
+        {
+          "name": "STEVE FINNAN",
+          "number": "3",
+          "position": "RB"
+        }
+      ],
+      [
+        {
+          "name": "JOHN ARNE RIISE",
+          "number": "6",
+          "position": "LW"
+        },
+        {
+          "name": "STEVEN GERRARD",
+          "number": "8",
+          "position": "CM"
+        },
+        {
+          "name": "XABI ALONSO",
+          "number": "14",
+          "position": "CM"
+        },
+        {
+          "name": "LUIS GARCÍA",
+          "number": "10",
+          "position": "RW"
+        }
+      ],
+      [
+        {
+          "name": "HARRY KEWELL",
+          "number": "7",
+          "position": "LW"
+        },
+        {
+          "name": "MILAN BAROŠ",
+          "number": "5",
+          "position": "ST"
+        }
+      ]
+    ]
+  },
+  {
+    "competition": "CHAMPIONS LEAGUE FINAL 2004",
+    "homeTeam": "FC PORTO",
+    "awayTeam": "AS MONACO",
+    "homeBadge": "🔵⚪",
+    "awayBadge": "🔴⚪",
+    "score": "3-0",
+    "date": "26 MAY 2004",
+    "playingTeam": "FC PORTO",
+    "formation": [
+      [
+        {
+          "name": "VÍTOR BAÍA",
+          "number": "99",
+          "position": "GK"
+        }
+      ],
+      [
+        {
+          "name": "NUNO VALENTE",
+          "number": "19",
+          "position": "LB"
+        },
+        {
+          "name": "RICARDO CARVALHO",
+          "number": "6",
+          "position": "CB"
+        },
+        {
+          "name": "JORGE COSTA",
+          "number": "5",
+          "position": "CB"
+        },
+        {
+          "name": "PAULO FERREIRA",
+          "number": "2",
+          "position": "RB"
+        }
+      ],
+      [
+        {
+          "name": "DECO",
+          "number": "20",
+          "position": "CAM"
+        },
+        {
+          "name": "MANICHE",
+          "number": "10",
+          "position": "CM"
+        },
+        {
+          "name": "COSTINHA",
+          "number": "18",
+          "position": "CDM"
+        },
+        {
+          "name": "PEDRO MENDES",
+          "number": "4",
+          "position": "CM"
+        }
+      ],
+      [
+        {
+          "name": "DERLEI",
+          "number": "9",
+          "position": "ST"
+        },
+        {
+          "name": "CARLOS ALBERTO",
+          "number": "77",
+          "position": "ST"
+        }
+      ]
+    ]
+  },
+  {
+    "competition": "CHAMPIONS LEAGUE FINAL 2003",
+    "homeTeam": "AC MILAN",
+    "awayTeam": "JUVENTUS",
+    "homeBadge": "🔴⚫",
+    "awayBadge": "⚫⚪",
+    "score": "0-0 (3-2 pen)",
+    "date": "28 MAY 2003",
+    "playingTeam": "AC MILAN",
+    "formation": [
+      [
+        {
+          "name": "DIDA",
+          "number": "1",
+          "position": "GK"
+        }
+      ],
+      [
+        {
+          "name": "ROQUE JÚNIOR",
+          "number": "4",
+          "position": "LB"
+        },
+        {
+          "name": "PAOLO MALDINI",
+          "number": "3",
+          "position": "CB"
+        },
+        {
+          "name": "ALESSANDRO NESTA",
+          "number": "13",
+          "position": "CB"
+        },
+        {
+          "name": "CAFU",
+          "number": "2",
+          "position": "RB"
+        }
+      ],
+      [
+        {
+          "name": "CLARENCE SEEDORF",
+          "number": "10",
+          "position": "CM"
+        },
+        {
+          "name": "ANDREA PIRLO",
+          "number": "21",
+          "position": "CM"
+        },
+        {
+          "name": "GENNARO GATTUSO",
+          "number": "8",
+          "position": "CM"
+        }
+      ],
+      [
+        {
+          "name": "JON DAHL TOMASSON",
+          "number": "11",
+          "position": "ST"
+        },
+        {
+          "name": "FILIPPO INZAGHI",
+          "number": "9",
+          "position": "ST"
+        },
+        {
+          "name": "ANDRIY SHEVCHENKO",
+          "number": "7",
+          "position": "ST"
+        }
+      ]
+    ]
+  },
+  {
+    "competition": "CHAMPIONS LEAGUE FINAL 2002",
+    "homeTeam": "REAL MADRID",
+    "awayTeam": "BAYER LEVERKUSEN",
+    "homeBadge": "⚪",
+    "awayBadge": "🔴⚫",
+    "score": "2-1",
+    "date": "15 MAY 2002",
+    "playingTeam": "REAL MADRID",
+    "formation": [
+      [
+        {
+          "name": "IKER CASILLAS",
+          "number": "1",
+          "position": "GK"
+        }
+      ],
+      [
+        {
+          "name": "ROBERTO CARLOS",
+          "number": "3",
+          "position": "LB"
+        },
+        {
+          "name": "IVÁN HELGUERA",
+          "number": "4",
+          "position": "CB"
+        },
+        {
+          "name": "FERNANDO HIERRO",
+          "number": "6",
+          "position": "CB"
+        },
+        {
+          "name": "MÍCHEL SALGADO",
+          "number": "2",
+          "position": "RB"
+        }
+      ],
+      [
+        {
+          "name": "LUIS FIGO",
+          "number": "10",
+          "position": "LW"
+        },
+        {
+          "name": "ZINÉDINE ZIDANE",
+          "number": "5",
+          "position": "CM"
+        },
+        {
+          "name": "CLAUDE MAKÉLÉLÉ",
+          "number": "24",
+          "position": "CDM"
+        },
+        {
+          "name": "STEVE McMANAMAN",
+          "number": "8",
+          "position": "RW"
+        }
+      ],
+      [
+        {
+          "name": "FERNANDO MORIENTES",
+          "number": "9",
+          "position": "ST"
+        },
+        {
+          "name": "RAÚL GONZÁLEZ",
+          "number": "7",
+          "position": "ST"
+        }
+      ]
+    ]
+  },
+  {
+    "competition": "CHAMPIONS LEAGUE FINAL 2001",
+    "homeTeam": "BAYERN MÜNCHEN",
+    "awayTeam": "VALENCIA",
+    "homeBadge": "🔴⚪",
+    "awayBadge": "⚪🟠",
+    "score": "1-1 (5-4 pen)",
+    "date": "23 MAY 2001",
+    "playingTeam": "BAYERN MÜNCHEN",
+    "formation": [
+      [
+        {
+          "name": "OLIVER KAHN",
+          "number": "1",
+          "position": "GK"
+        }
+      ],
+      [
+        {
+          "name": "BIXENTE LIZARAZU",
+          "number": "3",
+          "position": "LB"
+        },
+        {
+          "name": "SAMUEL KUFFOUR",
+          "number": "4",
+          "position": "CB"
+        },
+        {
+          "name": "THOMAS LINKE",
+          "number": "5",
+          "position": "CB"
+        },
+        {
+          "name": "WILLY SAGNOL",
+          "number": "2",
+          "position": "RB"
+        }
+      ],
+      [
+        {
+          "name": "PAULO SÉRGIO",
+          "number": "20",
+          "position": "LW"
+        },
+        {
+          "name": "JENS JEREMIES",
+          "number": "16",
+          "position": "CDM"
+        },
+        {
+          "name": "STEFAN EFFENBERG",
+          "number": "11",
+          "position": "CM"
+        },
+        {
+          "name": "MEHMET SCHOLL",
+          "number": "7",
+          "position": "RW"
+        }
+      ],
+      [
+        {
+          "name": "ÉLBER",
+          "number": "9",
+          "position": "ST"
+        },
+        {
+          "name": "CARSTEN JANCKER",
+          "number": "21",
+          "position": "ST"
+        }
+      ]
+    ]
+  },
+  {
+    "competition": "CHAMPIONS LEAGUE FINAL 2000",
+    "homeTeam": "REAL MADRID",
+    "awayTeam": "VALENCIA",
+    "homeBadge": "⚪",
+    "awayBadge": "⚪🟠",
+    "score": "3-0",
+    "date": "24 MAY 2000",
+    "playingTeam": "REAL MADRID",
+    "formation": [
+      [
+        {
+          "name": "IKER CASILLAS",
+          "number": "25",
+          "position": "GK"
+        }
+      ],
+      [
+        {
+          "name": "ROBERTO CARLOS",
+          "number": "3",
+          "position": "LB"
+        },
+        {
+          "name": "IVÁN HELGUERA",
+          "number": "4",
+          "position": "CB"
+        },
+        {
+          "name": "FERNANDO HIERRO",
+          "number": "6",
+          "position": "CB"
+        },
+        {
+          "name": "MÍCHEL SALGADO",
+          "number": "2",
+          "position": "RB"
+        }
+      ],
+      [
+        {
+          "name": "SANTIAGO SOLARI",
+          "number": "20",
+          "position": "LW"
+        },
+        {
+          "name": "CLAUDE MAKÉLÉLÉ",
+          "number": "24",
+          "position": "CM"
+        },
+        {
+          "name": "FERNANDO REDONDO",
+          "number": "5",
+          "position": "CDM"
+        },
+        {
+          "name": "STEVE McMANAMAN",
+          "number": "8",
+          "position": "RW"
+        }
+      ],
+      [
+        {
+          "name": "FERNANDO MORIENTES",
+          "number": "9",
+          "position": "ST"
+        },
+        {
+          "name": "RAÚL GONZÁLEZ",
+          "number": "7",
+          "position": "ST"
+        }
+      ]
+    ]
+  },
+  {
+    "competition": "CHAMPIONS LEAGUE FINAL 1999",
+    "homeTeam": "MANCHESTER UNITED",
+    "awayTeam": "BAYERN MÜNCHEN",
+    "homeBadge": "🔴⚫",
+    "awayBadge": "🔴⚪",
+    "score": "2-1",
+    "date": "26 MAY 1999",
+    "playingTeam": "MANCHESTER UNITED",
+    "formation": [
+      [
+        {
+          "name": "PETER SCHMEICHEL",
+          "number": "1",
+          "position": "GK"
+        }
+      ],
+      [
+        {
+          "name": "DENIS IRWIN",
+          "number": "3",
+          "position": "LB"
+        },
+        {
+          "name": "JAAP STAM",
+          "number": "6",
+          "position": "CB"
+        },
+        {
+          "name": "RONNY JOHNSEN",
+          "number": "5",
+          "position": "CB"
+        },
+        {
+          "name": "GARY NEVILLE",
+          "number": "2",
+          "position": "RB"
+        }
+      ],
+      [
+        {
+          "name": "RYAN GIGGS",
+          "number": "11",
+          "position": "LW"
+        },
+        {
+          "name": "ROY KEANE",
+          "number": "16",
+          "position": "CM"
+        },
+        {
+          "name": "NICKY BUTT",
+          "number": "8",
+          "position": "CM"
+        },
+        {
+          "name": "DAVID BECKHAM",
+          "number": "7",
+          "position": "RW"
+        }
+      ],
+      [
+        {
+          "name": "ANDY COLE",
+          "number": "9",
+          "position": "ST"
+        },
+        {
+          "name": "DWIGHT YORKE",
+          "number": "19",
+          "position": "ST"
+        }
+      ]
+    ]
+  },
+  {
     "competition": "CHAMPIONS LEAGUE FINAL 2010",
     "homeTeam": "INTER MILAN",
     "awayTeam": "BAYERN MÜNCHEN",

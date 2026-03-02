@@ -1,0 +1,1127 @@
+[
+  {
+    "competition": "Copa del Mundo 1966 - Final",
+    "homeTeam": "Inglaterra",
+    "awayTeam": "Alemania Occidental",
+    "homeBadge": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+    "awayBadge": "🇩🇪",
+    "score": "4-2",
+    "date": "30 de julio 1966",
+    "playingTeam": "Inglaterra",
+    "formation": [
+      [
+        {
+          "name": "GORDON BANKS",
+          "position": "GK",
+          "number": "1"
+        }
+      ],
+      [
+        {
+          "name": "RAY WILSON",
+          "position": "DEF",
+          "number": "3"
+        },
+        {
+          "name": "JACK CHARLTON",
+          "position": "DEF",
+          "number": "5"
+        },
+        {
+          "name": "BOBBY MOORE",
+          "position": "DEF",
+          "number": "6"
+        },
+        {
+          "name": "GEORGE COHEN",
+          "position": "DEF",
+          "number": "2"
+        }
+      ],
+      [
+        {
+          "name": "ALAN BALL",
+          "position": "MID",
+          "number": "8"
+        },
+        {
+          "name": "NOBBY STILES",
+          "position": "MID",
+          "number": "4"
+        },
+        {
+          "name": "MARTIN PETERS",
+          "position": "MID",
+          "number": "16"
+        },
+        {
+          "name": "BOBBY CHARLTON",
+          "position": "MID",
+          "number": "9"
+        }
+      ],
+      [
+        {
+          "name": "ROGER HUNT",
+          "position": "FWD",
+          "number": "21"
+        },
+        {
+          "name": "GEOFF HURST",
+          "position": "FWD",
+          "number": "10"
+        }
+      ]
+    ]
+  },
+  {
+    "competition": "Copa del Mundo 1970 - Final",
+    "homeTeam": "Brasil",
+    "awayTeam": "Italia",
+    "homeBadge": "🇧🇷",
+    "awayBadge": "🇮🇹",
+    "score": "4-1",
+    "date": "21 de junio 1970",
+    "playingTeam": "Brasil",
+    "formation": [
+      [
+        {
+          "name": "FÉLIX",
+          "position": "GK",
+          "number": "1"
+        }
+      ],
+      [
+        {
+          "name": "EVERALDO",
+          "position": "DEF",
+          "number": "6"
+        },
+        {
+          "name": "BRITO",
+          "position": "DEF",
+          "number": "4"
+        },
+        {
+          "name": "PIAZZA",
+          "position": "DEF",
+          "number": "5"
+        },
+        {
+          "name": "CARLOS ALBERTO",
+          "position": "DEF",
+          "number": "2"
+        }
+      ],
+      [
+        {
+          "name": "CLODOALDO",
+          "position": "MID",
+          "number": "8"
+        },
+        {
+          "name": "GERSON",
+          "position": "MID",
+          "number": "11"
+        },
+        {
+          "name": "RIVELINO",
+          "position": "MID",
+          "number": "3"
+        }
+      ],
+      [
+        {
+          "name": "JAIRZINHO",
+          "position": "FWD",
+          "number": "7"
+        },
+        {
+          "name": "TOSTÃO",
+          "position": "FWD",
+          "number": "9"
+        },
+        {
+          "name": "PELÉ",
+          "position": "FWD",
+          "number": "10"
+        }
+      ]
+    ]
+  },
+  {
+    "competition": "Copa del Mundo 1974 - Final",
+    "homeTeam": "Alemania Occidental",
+    "awayTeam": "Países Bajos",
+    "homeBadge": "🇩🇪",
+    "awayBadge": "🇳🇱",
+    "score": "2-1",
+    "date": "07 de julio 1974",
+    "playingTeam": "Alemania Occidental",
+    "formation": [
+      [
+        {
+          "name": "SEPP MAIER",
+          "position": "GK",
+          "number": "1"
+        }
+      ],
+      [
+        {
+          "name": "PAUL BREITNER",
+          "position": "DEF",
+          "number": "3"
+        },
+        {
+          "name": "FRANZ BECKENBAUER",
+          "position": "DEF",
+          "number": "5"
+        },
+        {
+          "name": "HANS-GEORG SCHWARZENBECK",
+          "position": "DEF",
+          "number": "4"
+        },
+        {
+          "name": "BERTI VOGTS",
+          "position": "DEF",
+          "number": "2"
+        }
+      ],
+      [
+        {
+          "name": "RAINER BONHOF",
+          "position": "MID",
+          "number": "6"
+        },
+        {
+          "name": "ULI HOENESS",
+          "position": "MID",
+          "number": "15"
+        },
+        {
+          "name": "BERNHARD CULLMANN",
+          "position": "MID",
+          "number": "14"
+        },
+        {
+          "name": "HEINZ FLOHE",
+          "position": "MID",
+          "number": "9"
+        }
+      ],
+      [
+        {
+          "name": "BERND HÖLZENBEIN",
+          "position": "FWD",
+          "number": "11"
+        },
+        {
+          "name": "GERD MÜLLER",
+          "position": "FWD",
+          "number": "13"
+        }
+      ]
+    ]
+  },
+  {
+    "competition": "Copa del Mundo 1982 - Semifinal",
+    "homeTeam": "Francia",
+    "awayTeam": "Alemania Occidental",
+    "homeBadge": "🇫🇷",
+    "awayBadge": "🇩🇪",
+    "score": "3-3",
+    "date": "08 de julio 1982",
+    "playingTeam": "Francia",
+    "formation": [
+      [
+        {
+          "name": "JEAN-LUC ETTORI",
+          "position": "GK",
+          "number": "1"
+        }
+      ],
+      [
+        {
+          "name": "MARIUS TRÉSOR",
+          "position": "DEF",
+          "number": "5"
+        },
+        {
+          "name": "MAXIME BOSSIS",
+          "position": "DEF",
+          "number": "3"
+        },
+        {
+          "name": "CHRISTIAN LOPEZ",
+          "position": "DEF",
+          "number": "6"
+        },
+        {
+          "name": "MANUEL AMOROS",
+          "position": "DEF",
+          "number": "2"
+        }
+      ],
+      [
+        {
+          "name": "JEAN TIGANA",
+          "position": "MID",
+          "number": "7"
+        },
+        {
+          "name": "MICHEL PLATINI",
+          "position": "MID",
+          "number": "10"
+        },
+        {
+          "name": "ALAIN GIRESSE",
+          "position": "MID",
+          "number": "11"
+        }
+      ],
+      [
+        {
+          "name": "DOMINIQUE ROCHETEAU",
+          "position": "FWD",
+          "number": "8"
+        },
+        {
+          "name": "DIDIER SIX",
+          "position": "FWD",
+          "number": "9"
+        },
+        {
+          "name": "BERNARD GENGHINI",
+          "position": "FWD",
+          "number": "12"
+        }
+      ]
+    ]
+  },
+  {
+    "competition": "Copa del Mundo 1986 - Cuartos de Final",
+    "homeTeam": "Argentina",
+    "awayTeam": "Inglaterra",
+    "homeBadge": "🇦🇷",
+    "awayBadge": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+    "score": "2-1",
+    "date": "22 de junio 1986",
+    "playingTeam": "Argentina",
+    "formation": [
+      [
+        {
+          "name": "NERY PUMPIDO",
+          "position": "GK",
+          "number": "18"
+        }
+      ],
+      [
+        {
+          "name": "JULIO OLARTICOECHEA",
+          "position": "DEF",
+          "number": "16"
+        },
+        {
+          "name": "OSCAR RUGGERI",
+          "position": "DEF",
+          "number": "19"
+        },
+        {
+          "name": "JOSÉ BROWN",
+          "position": "DEF",
+          "number": "5"
+        }
+      ],
+      [
+        {
+          "name": "JOSÉ CUCIUFFO",
+          "position": "MID",
+          "number": "9"
+        },
+        {
+          "name": "SERGIO BATISTA",
+          "position": "MID",
+          "number": "2"
+        },
+        {
+          "name": "HÉCTOR ENRIQUE",
+          "position": "MID",
+          "number": "12"
+        },
+        {
+          "name": "RICARDO GIUSTI",
+          "position": "MID",
+          "number": "14"
+        },
+        {
+          "name": "JORGE BURRUCHAGA",
+          "position": "MID",
+          "number": "7"
+        }
+      ],
+      [
+        {
+          "name": "DIEGO MARADONA",
+          "position": "FWD",
+          "number": "10"
+        },
+        {
+          "name": "JORGE VALDANO",
+          "position": "FWD",
+          "number": "11"
+        }
+      ]
+    ]
+  },
+  {
+    "competition": "Copa del Mundo 1986 - Final",
+    "homeTeam": "Argentina",
+    "awayTeam": "Alemania Occidental",
+    "homeBadge": "🇦🇷",
+    "awayBadge": "🇩🇪",
+    "score": "3-2",
+    "date": "29 de junio 1986",
+    "playingTeam": "Argentina",
+    "formation": [
+      [
+        {
+          "name": "NERY PUMPIDO",
+          "position": "GK",
+          "number": "18"
+        }
+      ],
+      [
+        {
+          "name": "JULIO OLARTICOECHEA",
+          "position": "DEF",
+          "number": "16"
+        },
+        {
+          "name": "OSCAR RUGGERI",
+          "position": "DEF",
+          "number": "19"
+        },
+        {
+          "name": "JOSÉ BROWN",
+          "position": "DEF",
+          "number": "5"
+        }
+      ],
+      [
+        {
+          "name": "JOSÉ CUCIUFFO",
+          "position": "MID",
+          "number": "9"
+        },
+        {
+          "name": "SERGIO BATISTA",
+          "position": "MID",
+          "number": "2"
+        },
+        {
+          "name": "HÉCTOR ENRIQUE",
+          "position": "MID",
+          "number": "12"
+        },
+        {
+          "name": "RICARDO GIUSTI",
+          "position": "MID",
+          "number": "14"
+        },
+        {
+          "name": "JORGE BURRUCHAGA",
+          "position": "MID",
+          "number": "7"
+        }
+      ],
+      [
+        {
+          "name": "DIEGO MARADONA",
+          "position": "FWD",
+          "number": "10"
+        },
+        {
+          "name": "JORGE VALDANO",
+          "position": "FWD",
+          "number": "11"
+        }
+      ]
+    ]
+  },
+  {
+    "competition": "Copa del Mundo 1990 - Final",
+    "homeTeam": "Alemania Occidental",
+    "awayTeam": "Argentina",
+    "homeBadge": "🇩🇪",
+    "awayBadge": "🇦🇷",
+    "score": "1-0",
+    "date": "08 de julio 1990",
+    "playingTeam": "Alemania Occidental",
+    "formation": [
+      [
+        {
+          "name": "BODO ILLGNER",
+          "position": "GK",
+          "number": "1"
+        }
+      ],
+      [
+        {
+          "name": "ANDREAS BREHME",
+          "position": "DEF",
+          "number": "3"
+        },
+        {
+          "name": "JÜRGEN KOHLER",
+          "position": "DEF",
+          "number": "5"
+        },
+        {
+          "name": "GUIDO BUCHWALD",
+          "position": "DEF",
+          "number": "6"
+        },
+        {
+          "name": "THOMAS BERTHOLD",
+          "position": "DEF",
+          "number": "4"
+        }
+      ],
+      [
+        {
+          "name": "THOMAS HÄSLER",
+          "position": "MID",
+          "number": "8"
+        },
+        {
+          "name": "LOTHAR MATTHÄUS",
+          "position": "MID",
+          "number": "10"
+        },
+        {
+          "name": "PIERRE LITTBARSKI",
+          "position": "MID",
+          "number": "7"
+        },
+        {
+          "name": "PAUL STEINER",
+          "position": "MID",
+          "number": "14"
+        }
+      ],
+      [
+        {
+          "name": "RUDI VÖLLER",
+          "position": "FWD",
+          "number": "9"
+        },
+        {
+          "name": "JÜRGEN KLINSMANN",
+          "position": "FWD",
+          "number": "18"
+        }
+      ]
+    ]
+  },
+  {
+    "competition": "Copa del Mundo 1994 - Final",
+    "homeTeam": "Brasil",
+    "awayTeam": "Italia",
+    "homeBadge": "🇧🇷",
+    "awayBadge": "🇮🇹",
+    "score": "0-0",
+    "date": "17 de julio 1994",
+    "playingTeam": "Brasil",
+    "formation": [
+      [
+        {
+          "name": "TAFFAREL",
+          "position": "GK",
+          "number": "1"
+        }
+      ],
+      [
+        {
+          "name": "JORGINHO",
+          "position": "DEF",
+          "number": "2"
+        },
+        {
+          "name": "ALDAIR",
+          "position": "DEF",
+          "number": "13"
+        },
+        {
+          "name": "MÁRCIO SANTOS",
+          "position": "DEF",
+          "number": "15"
+        },
+        {
+          "name": "BRANCO",
+          "position": "DEF",
+          "number": "6"
+        }
+      ],
+      [
+        {
+          "name": "MAURO SILVA",
+          "position": "MID",
+          "number": "5"
+        },
+        {
+          "name": "MAZINHO",
+          "position": "MID",
+          "number": "17"
+        },
+        {
+          "name": "DUNGA",
+          "position": "MID",
+          "number": "8"
+        },
+        {
+          "name": "ZINHO",
+          "position": "MID",
+          "number": "9"
+        }
+      ],
+      [
+        {
+          "name": "BEBETO",
+          "position": "FWD",
+          "number": "7"
+        },
+        {
+          "name": "ROMÁRIO",
+          "position": "FWD",
+          "number": "11"
+        }
+      ]
+    ]
+  },
+  {
+    "competition": "Copa del Mundo 1998 - Final",
+    "homeTeam": "Francia",
+    "awayTeam": "Brasil",
+    "homeBadge": "🇫🇷",
+    "awayBadge": "🇧🇷",
+    "score": "3-0",
+    "date": "12 de julio 1998",
+    "playingTeam": "Francia",
+    "formation": [
+      [
+        {
+          "name": "FABIEN BARTHEZ",
+          "position": "GK",
+          "number": "16"
+        }
+      ],
+      [
+        {
+          "name": "BIXENTE LIZARAZU",
+          "position": "DEF",
+          "number": "3"
+        },
+        {
+          "name": "FRANK LEBOEUF",
+          "position": "DEF",
+          "number": "18"
+        },
+        {
+          "name": "MARCEL DESAILLY",
+          "position": "DEF",
+          "number": "8"
+        },
+        {
+          "name": "LILIAN THURAM",
+          "position": "DEF",
+          "number": "15"
+        }
+      ],
+      [
+        {
+          "name": "DIDIER DESCHAMPS",
+          "position": "MID",
+          "number": "7"
+        },
+        {
+          "name": "EMMANUEL PETIT",
+          "position": "MID",
+          "number": "17"
+        },
+        {
+          "name": "CHRISTIAN KAREMBEU",
+          "position": "MID",
+          "number": "19"
+        },
+        {
+          "name": "YOURI DJORKAEFF",
+          "position": "MID",
+          "number": "6"
+        },
+        {
+          "name": "ZINÉDINE ZIDANE",
+          "position": "MID",
+          "number": "10"
+        }
+      ],
+      [
+        {
+          "name": "STÉPHANE GUIVARC'H",
+          "position": "FWD",
+          "number": "9"
+        }
+      ]
+    ]
+  },
+  {
+    "competition": "Copa del Mundo 2002 - Final",
+    "homeTeam": "Brasil",
+    "awayTeam": "Alemania",
+    "homeBadge": "🇧🇷",
+    "awayBadge": "🇩🇪",
+    "score": "2-0",
+    "date": "30 de junio 2002",
+    "playingTeam": "Brasil",
+    "formation": [
+      [
+        {
+          "name": "MARCOS",
+          "position": "GK",
+          "number": "12"
+        }
+      ],
+      [
+        {
+          "name": "ROBERTO CARLOS",
+          "position": "DEF",
+          "number": "6"
+        },
+        {
+          "name": "LÚCIO",
+          "position": "DEF",
+          "number": "3"
+        },
+        {
+          "name": "EDMÍLSON",
+          "position": "DEF",
+          "number": "17"
+        },
+        {
+          "name": "CAFU",
+          "position": "DEF",
+          "number": "2"
+        }
+      ],
+      [
+        {
+          "name": "GILBERTO SILVA",
+          "position": "MID",
+          "number": "5"
+        },
+        {
+          "name": "RONALDINHO",
+          "position": "MID",
+          "number": "11"
+        },
+        {
+          "name": "KLÉBERSON",
+          "position": "MID",
+          "number": "15"
+        },
+        {
+          "name": "RIVALDO",
+          "position": "MID",
+          "number": "10"
+        }
+      ],
+      [
+        {
+          "name": "RONALDO",
+          "position": "FWD",
+          "number": "9"
+        },
+        {
+          "name": "JUNIOR",
+          "position": "FWD",
+          "number": "7"
+        }
+      ]
+    ]
+  },
+  {
+    "competition": "Copa del Mundo 2006 - Final",
+    "homeTeam": "Italia",
+    "awayTeam": "Francia",
+    "homeBadge": "🇮🇹",
+    "awayBadge": "🇫🇷",
+    "score": "1-1",
+    "date": "09 de julio 2006",
+    "playingTeam": "Italia",
+    "formation": [
+      [
+        {
+          "name": "GIANLUIGI BUFFON",
+          "position": "GK",
+          "number": "1"
+        }
+      ],
+      [
+        {
+          "name": "FABIO GROSSO",
+          "position": "DEF",
+          "number": "3"
+        },
+        {
+          "name": "FABIO CANNAVARO",
+          "position": "DEF",
+          "number": "5"
+        },
+        {
+          "name": "MARCO MATERAZZI",
+          "position": "DEF",
+          "number": "23"
+        },
+        {
+          "name": "GIANLUCA ZAMBROTTA",
+          "position": "DEF",
+          "number": "19"
+        }
+      ],
+      [
+        {
+          "name": "MAURO CAMORANESI",
+          "position": "MID",
+          "number": "16"
+        },
+        {
+          "name": "ANDREA PIRLO",
+          "position": "MID",
+          "number": "21"
+        },
+        {
+          "name": "GENNARO GATTUSO",
+          "position": "MID",
+          "number": "8"
+        },
+        {
+          "name": "SIMONE PERROTTA",
+          "position": "MID",
+          "number": "20"
+        }
+      ],
+      [
+        {
+          "name": "ALBERTO GILARDINO",
+          "position": "FWD",
+          "number": "11"
+        },
+        {
+          "name": "LUCA TONI",
+          "position": "FWD",
+          "number": "9"
+        }
+      ]
+    ]
+  },
+  {
+    "competition": "Copa del Mundo 2010 - Final",
+    "homeTeam": "España",
+    "awayTeam": "Países Bajos",
+    "homeBadge": "🇪🇸",
+    "awayBadge": "🇳🇱",
+    "score": "1-0",
+    "date": "11 de julio 2010",
+    "playingTeam": "España",
+    "formation": [
+      [
+        {
+          "name": "IKER CASILLAS",
+          "position": "GK",
+          "number": "1"
+        }
+      ],
+      [
+        {
+          "name": "JOAN CAPDEVILA",
+          "position": "DEF",
+          "number": "11"
+        },
+        {
+          "name": "CARLES PUYOL",
+          "position": "DEF",
+          "number": "5"
+        },
+        {
+          "name": "GERARD PIQUÉ",
+          "position": "DEF",
+          "number": "3"
+        },
+        {
+          "name": "SERGIO RAMOS",
+          "position": "DEF",
+          "number": "15"
+        }
+      ],
+      [
+        {
+          "name": "SERGIO BUSQUETS",
+          "position": "MID",
+          "number": "16"
+        },
+        {
+          "name": "XABI ALONSO",
+          "position": "MID",
+          "number": "14"
+        },
+        {
+          "name": "XAVI HERNÁNDEZ",
+          "position": "MID",
+          "number": "8"
+        }
+      ],
+      [
+        {
+          "name": "ANDRÉS INIESTA",
+          "position": "FWD",
+          "number": "6"
+        },
+        {
+          "name": "DAVID VILLA",
+          "position": "FWD",
+          "number": "7"
+        },
+        {
+          "name": "PEDRO",
+          "position": "FWD",
+          "number": "18"
+        }
+      ]
+    ]
+  },
+  {
+    "competition": "Copa del Mundo 2014 - Final",
+    "homeTeam": "Alemania",
+    "awayTeam": "Argentina",
+    "homeBadge": "🇩🇪",
+    "awayBadge": "🇦🇷",
+    "score": "1-0",
+    "date": "13 de julio 2014",
+    "playingTeam": "Alemania",
+    "formation": [
+      [
+        {
+          "name": "MANUEL NEUER",
+          "position": "GK",
+          "number": "1"
+        }
+      ],
+      [
+        {
+          "name": "BENEDIKT HÖWEDES",
+          "position": "DEF",
+          "number": "16"
+        },
+        {
+          "name": "MATS HUMMELS",
+          "position": "DEF",
+          "number": "5"
+        },
+        {
+          "name": "JEROME BOATENG",
+          "position": "DEF",
+          "number": "17"
+        },
+        {
+          "name": "PHILIPP LAHM",
+          "position": "DEF",
+          "number": "21"
+        }
+      ],
+      [
+        {
+          "name": "SAMI KHEDIRA",
+          "position": "MID",
+          "number": "6"
+        },
+        {
+          "name": "TONI KROOS",
+          "position": "MID",
+          "number": "18"
+        },
+        {
+          "name": "BASTIAN SCHWEINSTEIGER",
+          "position": "MID",
+          "number": "7"
+        }
+      ],
+      [
+        {
+          "name": "THOMAS MÜLLER",
+          "position": "FWD",
+          "number": "13"
+        },
+        {
+          "name": "MIROSLAV KLOSE",
+          "position": "FWD",
+          "number": "11"
+        },
+        {
+          "name": "MESUT ÖZIL",
+          "position": "FWD",
+          "number": "8"
+        }
+      ]
+    ]
+  },
+  {
+    "competition": "Copa del Mundo 2018 - Final",
+    "homeTeam": "Francia",
+    "awayTeam": "Croacia",
+    "homeBadge": "🇫🇷",
+    "awayBadge": "🇭🇷",
+    "score": "4-2",
+    "date": "15 de julio 2018",
+    "playingTeam": "Francia",
+    "formation": [
+      [
+        {
+          "name": "HUGO LLORIS",
+          "position": "GK",
+          "number": "1"
+        }
+      ],
+      [
+        {
+          "name": "LUCAS HERNÁNDEZ",
+          "position": "DEF",
+          "number": "21"
+        },
+        {
+          "name": "RAPHAËL VARANE",
+          "position": "DEF",
+          "number": "4"
+        },
+        {
+          "name": "SAMUEL UMTITI",
+          "position": "DEF",
+          "number": "5"
+        },
+        {
+          "name": "BENJAMIN PAVARD",
+          "position": "DEF",
+          "number": "2"
+        }
+      ],
+      [
+        {
+          "name": "NGOLO KANTÉ",
+          "position": "MID",
+          "number": "13"
+        },
+        {
+          "name": "PAUL POGBA",
+          "position": "MID",
+          "number": "6"
+        },
+        {
+          "name": "BLAISE MATUIDI",
+          "position": "MID",
+          "number": "14"
+        },
+        {
+          "name": "ANTOINE GRIEZMANN",
+          "position": "MID",
+          "number": "7"
+        }
+      ],
+      [
+        {
+          "name": "KYLIAN MBAPPÉ",
+          "position": "FWD",
+          "number": "10"
+        },
+        {
+          "name": "OLIVIER GIROUD",
+          "position": "FWD",
+          "number": "9"
+        }
+      ]
+    ]
+  },
+  {
+    "competition": "Copa del Mundo 2022 - Final",
+    "homeTeam": "Argentina",
+    "awayTeam": "Francia",
+    "homeBadge": "🇦🇷",
+    "awayBadge": "🇫🇷",
+    "score": "3-3",
+    "date": "18 de diciembre 2022",
+    "playingTeam": "Argentina",
+    "formation": [
+      [
+        {
+          "name": "EMILIANO MARTÍNEZ",
+          "position": "GK",
+          "number": "23"
+        }
+      ],
+      [
+        {
+          "name": "MARCOS ACUÑA",
+          "position": "DEF",
+          "number": "8"
+        },
+        {
+          "name": "CRISTIAN ROMERO",
+          "position": "DEF",
+          "number": "13"
+        },
+        {
+          "name": "NICOLÁS OTAMENDI",
+          "position": "DEF",
+          "number": "19"
+        },
+        {
+          "name": "NAHUEL MOLINA",
+          "position": "DEF",
+          "number": "26"
+        }
+      ],
+      [
+        {
+          "name": "RODRIGO DE PAUL",
+          "position": "MID",
+          "number": "7"
+        },
+        {
+          "name": "ENZO FERNÁNDEZ",
+          "position": "MID",
+          "number": "24"
+        },
+        {
+          "name": "ALEXIS MAC ALLISTER",
+          "position": "MID",
+          "number": "20"
+        }
+      ],
+      [
+        {
+          "name": "ÁNGEL DI MARÍA",
+          "position": "FWD",
+          "number": "11"
+        },
+        {
+          "name": "LIONEL MESSI",
+          "position": "FWD",
+          "number": "10"
+        },
+        {
+          "name": "JULIÁN ÁLVAREZ",
+          "position": "FWD",
+          "number": "9"
+        }
+      ]
+    ]
+  }
+]
