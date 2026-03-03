@@ -158,8 +158,9 @@
 }
 
 .cruc-cell {
-  width: 36px;
-  height: 36px;
+  /* Tamaño calculado dinámicamente en JS según viewport */
+  width: 44px;
+  height: 44px;
   position: relative;
   border-radius: 3px;
 }
@@ -566,16 +567,15 @@
   .cruc-keyboard { display: none; }
 
   .cruc-cell {
-    width: 30px;
-    height: 30px;
+    /* El JS recalcula en móvil automáticamente */
   }
 
   .cruc-cell-letter {
-    font-size: 1.1rem;
+    /* font-size calculado en JS */
   }
 
   .cruc-cell-number {
-    font-size: 0.46rem;
+    /* font-size calculado en JS */
   }
 
   .cruc-clues-panel {
@@ -589,15 +589,6 @@
 
 @media (max-width: 400px) {
   .cruc-cell {
-    width: 26px;
-    height: 26px;
-  }
-
-  .cruc-cell-letter {
-    font-size: 0.95rem;
-  }
-
-  .cruc-cell-number {
-    font-size: 0.42rem;
+    /* El JS recalcula automáticamente */
   }
 }

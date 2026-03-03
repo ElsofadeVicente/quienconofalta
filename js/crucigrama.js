@@ -247,6 +247,11 @@ function buildCrucigramaScreen() {
     renderCluesList();
     bindCrucigramaMobileInput();
     bindCrucigramaKeyboard();
+
+    // Recalcular tamaño si cambia el viewport
+    window._crucResizeHandler && window.removeEventListener('resize', window._crucResizeHandler);
+    window._crucResizeHandler = () => renderGrid();
+    window.addEventListener('resize', window._crucResizeHandler);
 }
 
 // ── RENDER GRID ──────────────────────────────
@@ -256,8 +261,29 @@ function renderGrid() {
     if (!container || !crucData) return;
 
     const { rows, cols } = crucData.grid_size;
-    container.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+
+    // Calcular tamaño de celda dinámicamente según el ancho disponible
+    const availableWidth  = Math.min(window.innerWidth - 32, 640);
+    const availableHeight = window.innerHeight * 0.5; // max 50vh para el grid
+    const cellByWidth  = Math.floor((availableWidth  - 10) / cols);  // 10 = padding + gap
+    const cellByHeight = Math.floor((availableHeight - 10) / rows);
+    const cellSize = Math.max(28, Math.min(52, cellByWidth, cellByHeight));
+
+    container.style.gridTemplateColumns = `repeat(${cols}, ${cellSize}px)`;
     container.innerHTML = '';
+
+    // Inyectar tamaño dinámico en el DOM para que el CSS lo use
+    let styleEl = document.getElementById('cruc-dynamic-style');
+    if (!styleEl) {
+        styleEl = document.createElement('style');
+        styleEl.id = 'cruc-dynamic-style';
+        document.head.appendChild(styleEl);
+    }
+    styleEl.textContent = `
+        .cruc-cell { width: ${cellSize}px; height: ${cellSize}px; }
+        .cruc-cell-letter { font-size: ${Math.round(cellSize * 0.62)}px; }
+        .cruc-cell-number { font-size: ${Math.max(7, Math.round(cellSize * 0.22))}px; }
+    `;
 
     // Build number map: (r,c) -> number
     const numMap = {};
@@ -661,12 +687,20 @@ function crucTimeUntilMidnight() {
 }
 
 // ── MOBILE INPUT ─────────────────────────────
+// Usamos el input oculto SOLO en móvil (táctil).
+// En desktop el teclado físico lo maneja bindCrucigramaKeyboard.
+// La flag _crucKeyFromPhysical evita que el evento 'input' del input oculto
+// se dispare además del keydown físico (que ya llama a crucHandleKey directamente).
+
+let _crucKeyFromPhysical = false;
 
 function bindCrucigramaMobileInput() {
     const input = document.getElementById('cruc-hidden-input');
     if (!input) return;
 
+    // Solo procesar el evento 'input' si NO vino de un keydown físico ya procesado
     input.addEventListener('input', () => {
+        if (_crucKeyFromPhysical) { _crucKeyFromPhysical = false; input.value = ''; return; }
         const val = input.value;
         if (!val) return;
         for (const ch of val) {
@@ -676,8 +710,19 @@ function bindCrucigramaMobileInput() {
     });
 
     input.addEventListener('keydown', (e) => {
-        if (e.key === 'Backspace') { e.preventDefault(); crucHandleKey('Delete'); input.value = ''; }
-        else if (e.key === 'Tab')  { e.preventDefault(); crucHandleKey('Tab'); }
+        if (e.key === 'Backspace') {
+            e.preventDefault();
+            _crucKeyFromPhysical = true;
+            crucHandleKey('Delete');
+            input.value = '';
+        } else if (e.key === 'Tab') {
+            e.preventDefault();
+            _crucKeyFromPhysical = true;
+            crucHandleKey('Tab');
+        } else if (/^[a-záéíóúüñA-ZÁÉÍÓÚÜÑ]$/.test(e.key)) {
+            // Marcar que el keydown físico ya manejará esta tecla
+            _crucKeyFromPhysical = true;
+        }
     });
 }
 
@@ -697,9 +742,20 @@ function bindCrucigramaKeyboard() {
         const modal = document.getElementById('cruc-completion-modal');
         if (modal && modal.classList.contains('active')) return;
 
-        if (e.key === 'Backspace') { e.preventDefault(); crucHandleKey('Delete'); }
-        else if (e.key === 'Tab')  { e.preventDefault(); crucHandleKey('Tab'); }
-        else if (/^[a-záéíóúüñA-ZÁÉÍÓÚÜÑ]$/.test(e.key)) crucHandleKey(e.key.toUpperCase());
+        if (e.key === 'Backspace') {
+            e.preventDefault();
+            crucHandleKey('Delete');
+        } else if (e.key === 'Tab') {
+            e.preventDefault();
+            crucHandleKey('Tab');
+        } else if (/^[a-záéíóúüñA-ZÁÉÍÓÚÜÑ]$/.test(e.key)) {
+            // Solo actuar desde el listener global si el input oculto NO tiene foco
+            // (en móvil tiene foco el input oculto, en desktop no)
+            const hiddenInput = document.getElementById('cruc-hidden-input');
+            if (document.activeElement !== hiddenInput) {
+                crucHandleKey(e.key.toUpperCase());
+            }
+        }
     };
     document.addEventListener('keydown', window._crucKeyHandler);
 }
