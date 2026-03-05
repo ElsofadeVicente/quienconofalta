@@ -140,6 +140,11 @@
   flex: 1;
 }
 
+/* Columnas laterales: ocultas por defecto (móvil), solo visibles en desktop */
+.cruc-clues-desktop {
+  display: none;
+}
+
 /* ── LAYOUT DESKTOP 3 COLUMNAS ── */
 @media (min-width: 601px) {
   .cruc-body {
@@ -155,7 +160,7 @@
     display: flex;
     flex-direction: column;
     gap: 0;
-    width: 210px;
+    width: 240px;
     flex-shrink: 0;
     position: sticky;
     top: 20px;
@@ -165,7 +170,27 @@
 
   .cruc-clues-desktop .cruc-clues-section {
     border-radius: 8px;
-    padding: 10px 12px;
+    padding: 12px 14px;
+  }
+
+  .cruc-clues-desktop .cruc-clues-heading {
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+  }
+
+  .cruc-clues-desktop .cruc-clue-num {
+    font-size: 1.1rem;
+    min-width: 24px;
+  }
+
+  .cruc-clues-desktop .cruc-clue-desc {
+    font-size: 0.92rem;
+    opacity: 0.85;
+  }
+
+  .cruc-clues-desktop .cruc-clue-item {
+    padding: 6px 8px;
+    margin-bottom: 3px;
   }
 
   /* Columna central */
