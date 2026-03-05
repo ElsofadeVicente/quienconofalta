@@ -7,10 +7,11 @@
 const CadenaData = (() => {
 
   /* ── Estado interno ── */
-  let nameIndex   = null;  // [[id, name], ...]
-  let teamNames   = null;  // [string, ...]
-  let playerCache = {};    // { id: playerData }
-  let chunkCache  = {};    // { chunkFile: chunkData }
+  let nameIndex      = null;  // [[id, name], ...]
+  let teamNames      = null;  // [string, ...]
+  let teamPopularity = null;  // { teamName: playerCount }
+  let playerCache    = {};    // { id: playerData }
+  let chunkCache     = {};    // { chunkFile: chunkData }
 
   let selectedSuggestion = null;  // ítem seleccionado del autocomplete
   let suggestionItems    = [];
@@ -57,12 +58,14 @@ const CadenaData = (() => {
 
   /* ── Inicialización: carga índices ── */
   async function init() {
-    const [ni, tn] = await Promise.all([
+    const [ni, tn, tp] = await Promise.all([
       fetch('../data/players/name-index.json').then(r => r.json()),
-      fetch('../data/teams/team-names.json').then(r => r.json())
+      fetch('../data/teams/team-names.json').then(r => r.json()),
+      fetch('../data/teams/team-popularity.json').then(r => r.json())
     ]);
-    nameIndex = ni;
-    teamNames = tn;
+    nameIndex      = ni;
+    teamNames      = tn;
+    teamPopularity = tp;
     console.log(`✅ CadenaData: ${nameIndex.length.toLocaleString()} jugadores, ${teamNames.length.toLocaleString()} equipos`);
   }
 
@@ -189,6 +192,14 @@ const CadenaData = (() => {
         else if (wordBoundaryMatch(n, q))   wordBound.push(t);
         else if (n.includes(q))             contains.push(t);
       }
+
+      // Ordenar cada categoría por popularidad (nº de jugadores) DESC
+      const byPop = (a, b) => (teamPopularity?.[b] || 0) - (teamPopularity?.[a] || 0);
+      exact.sort(byPop);
+      starts.sort(byPop);
+      wordBound.sort(byPop);
+      contains.sort(byPop);
+
       results = [...exact, ...starts, ...wordBound, ...contains].slice(0, 8);
       results = results.map(name => ({ type: 'team', name }));
       renderSuggestions(results, query);
