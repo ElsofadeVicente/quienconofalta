@@ -324,7 +324,7 @@
 .sug-icon { font-size: 0.85rem; flex-shrink: 0; }
 .sug-name { font-weight: 600; font-size: 0.95rem; min-width: 0; }
 .sug-meta {
-  font-size: 0.7rem; opacity: 0.65; margin-left: auto; flex-shrink: 0;
+  font-size: 0.7rem; opacity: 0.65; flex-shrink: 0;
   background: rgba(200,168,75,0.1); border-radius: 4px;
   padding: 1px 6px; white-space: nowrap; color: var(--neon-gold);
 }
