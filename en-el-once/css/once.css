@@ -193,13 +193,44 @@
                 );
         }
 
+        /* Botón de menú (volver al hub) */
+        .menu-back-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(200,168,75,0.15);
+            border: 2px solid var(--neon-green);
+            color: var(--neon-green);
+            padding: 8px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 700;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            transition: all 0.2s;
+            z-index: 10;
+        }
+
+        .menu-back-btn:hover {
+            background: rgba(200,168,75,0.3);
+        }
+
+        .menu-back-btn svg {
+            flex-shrink: 0;
+        }
+
         .mode-title {
             font-family: 'Bebas Neue', sans-serif;
-            font-size: clamp(2.4rem, 8vw, 5rem);
-            letter-spacing: 8px;
+            font-size: clamp(3.5rem, 10vw, 6rem);
+            letter-spacing: 12px;
             color: var(--neon-green);
-            text-shadow: 3px 3px 0px #000, 1px 1px 0px rgba(0,0,0,0.8);
+            text-shadow: 4px 4px 0px #000, 2px 2px 0px rgba(0,0,0,0.8);
             margin: 0;
+            margin-top: 60px;
             text-align: center;
             line-height: 1;
         }
@@ -207,13 +238,6 @@
         @keyframes pulse {
             0%, 100% { opacity: 1; }
             50% { opacity: 0.85; }
-        }
-
-        .mode-subtitle {
-            font-size: clamp(0.85rem, 1.5vw, 1.1rem);
-            text-align: center;
-            opacity: 0.9;
-            margin: 0;
         }
 
         .mode-buttons {
@@ -940,9 +964,21 @@
 
         /* Responsive mejorado */
         @media (max-width: 600px) {
+            .menu-back-btn {
+                top: 12px;
+                left: 12px;
+                padding: 6px 12px;
+                font-size: 0.85rem;
+            }
+
+            .menu-back-btn span {
+                display: none;
+            }
+
             .mode-title {
-                font-size: 2.5rem;
-                letter-spacing: 4px;
+                font-size: 2.8rem;
+                letter-spacing: 6px;
+                margin-top: 50px;
             }
 
             .mode-btn {
