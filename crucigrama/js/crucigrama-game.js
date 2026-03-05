@@ -274,10 +274,13 @@ function renderGrid() {
     const availableWidth  = isDesktop
         ? Math.min(window.innerWidth - 32 - 2 * 230, 480)
         : Math.min(window.innerWidth - 32, 640);
-    const availableHeight = window.innerHeight * (isDesktop ? 0.65 : 0.5);
+    // En móvil el chrome (header ~90px, clue bar ~80px, tap bar ~60px, bottom bar ~58px, paddings ~36px) ocupa ~324px
+    // Usamos 0.38 para dejar espacio suficiente al chrome y que el crucigrama quepa sin scroll
+    const availableHeight = window.innerHeight * (isDesktop ? 0.65 : 0.38);
     const cellByWidth  = Math.floor((availableWidth  - 10) / cols);
     const cellByHeight = Math.floor((availableHeight - 10) / rows);
-    const cellSize = Math.max(28, Math.min(52, cellByWidth, cellByHeight));
+    // En móvil bajamos el mínimo a 20px para que crucígramas grandes quepan en pantalla
+    const cellSize = Math.max(isDesktop ? 28 : 20, Math.min(52, cellByWidth, cellByHeight));
 
     container.style.gridTemplateColumns = `repeat(${cols}, ${cellSize}px)`;
     container.innerHTML = '';
