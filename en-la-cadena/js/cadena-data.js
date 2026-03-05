@@ -102,40 +102,44 @@ const CadenaData = (() => {
     let results = [];
 
     if (type === 'player') {
-      // Buscar en el índice de nombres, guardando la categoría de cada match
+      // Recoger candidatos por categoría sin límite fijo por categoría,
+      // para no perder jugadores famosos que estén más adelante en el índice.
+      // Sí ponemos un tope por categoría para evitar queries muy genéricas ("a"):
+      //   exact: sin límite  |  starts: 300  |  wordBound: 150  |  contains: 80
       let exact = [], starts = [], wordBound = [], contains = [];
       for (const [id, name] of nameIndex) {
         const n = norm(name);
-        if (n === q)                        exact.push([id, name]);
-        else if (n.startsWith(q))           starts.push([id, name]);
-        else if (wordBoundaryMatch(n, q))   wordBound.push([id, name]);
-        else if (n.includes(q))             contains.push([id, name]);
-        if (exact.length + starts.length + wordBound.length + contains.length >= 50) break;
+        if      (n === q)                                          exact.push([id, name]);
+        else if (n.startsWith(q)          && starts.length   < 300) starts.push([id, name]);
+        else if (wordBoundaryMatch(n, q)  && wordBound.length < 150) wordBound.push([id, name]);
+        else if (n.includes(q)            && contains.length  <  80) contains.push([id, name]);
+        // Parar solo cuando todas las categorías están llenas
+        if (starts.length >= 300 && wordBound.length >= 150 && contains.length >= 80) break;
       }
 
-      // Taggear cada candidato con su categoría para poder ordenar por popularidad
-      // dentro de cada categoría manteniendo la prioridad de relevancia
+      // Taggear con categoría para mantener prioridad de relevancia
       const tagged = [
-        ...exact.map(([id, name])      => ({ id, name, cat: 0 })),
-        ...starts.map(([id, name])     => ({ id, name, cat: 1 })),
-        ...wordBound.map(([id, name])  => ({ id, name, cat: 2 })),
-        ...contains.map(([id, name])   => ({ id, name, cat: 3 })),
-      ].slice(0, 30);
+        ...exact.map(([id, name])     => ({ id, name, cat: 0 })),
+        ...starts.map(([id, name])    => ({ id, name, cat: 1 })),
+        ...wordBound.map(([id, name]) => ({ id, name, cat: 2 })),
+        ...contains.map(([id, name])  => ({ id, name, cat: 3 })),
+      ];
 
-      // Mostrar sugerencias rápidamente (sin ordenar por popularidad aún)
+      // Mostrar una preview rápida mientras se cargan los datos
       renderSuggestions(
         tagged.slice(0, 8).map(({ id, name }) => ({ type: 'player', id, name })),
         query
       );
 
-      // Cargar datos en paralelo (para apps + info de diferenciación)
-      const dataList = await Promise.all(tagged.map(t => getPlayerById(t.id)));
-      const itemsWithData = tagged.map((t, i) => ({
+      // Cargar datos en paralelo — máx 300 para no saturar
+      // (los chunks se cachean, así que el segundo render es casi instantáneo)
+      const toLoad = tagged.slice(0, 300);
+      const dataList = await Promise.all(toLoad.map(t => getPlayerById(t.id)));
+      const itemsWithData = toLoad.map((t, i) => ({
         type: 'player', id: t.id, name: t.name, cat: t.cat, data: dataList[i]
       }));
 
-      // Ordenar: primero por categoría (exacto > empieza > límite palabra > contiene),
-      // luego dentro de cada categoría por apps DESC (más conocido primero)
+      // Ordenar: categoría primero, luego apps DESC dentro de cada categoría
       itemsWithData.sort((a, b) => {
         if (a.cat !== b.cat) return a.cat - b.cat;
         return (b.data?.apps || 0) - (a.data?.apps || 0);
