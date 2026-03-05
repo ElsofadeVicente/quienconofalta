@@ -551,8 +551,13 @@ const App = (() => {
     const names = getPlayerNames();
     if (names.length < 2) { showToast('Necesitas al menos 2 jugadores', 'error'); return; }
 
-    // Esperar a que los datos estén cargados
-    await CadenaData.init();
+    try {
+      await CadenaData.init();
+    } catch (err) {
+      showToast('Error al cargar datos: ' + err.message, 'error');
+      console.error('CadenaData.init error:', err);
+      return;
+    }
 
     if (selectedType === 'online') {
       if (!window._FB?.configured) {

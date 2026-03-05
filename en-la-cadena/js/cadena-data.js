@@ -58,14 +58,24 @@ const CadenaData = (() => {
 
   /* ── Inicialización: carga índices ── */
   async function init() {
-    const [ni, tn, tp] = await Promise.all([
+    // Guard: no recargar si ya está inicializado
+    if (nameIndex && teamNames) return;
+
+    // Cargar los tres ficheros; team-popularity es opcional (no bloquea si falla)
+    const [ni, tn] = await Promise.all([
       fetch('../data/players/name-index.json').then(r => r.json()),
       fetch('../data/teams/team-names.json').then(r => r.json()),
-      fetch('../data/teams/team-popularity.json').then(r => r.json())
     ]);
-    nameIndex      = ni;
-    teamNames      = tn;
-    teamPopularity = tp;
+    nameIndex = ni;
+    teamNames = tn;
+
+    try {
+      teamPopularity = await fetch('../data/teams/team-popularity.json').then(r => r.json());
+    } catch (e) {
+      console.warn('⚠️ team-popularity.json no disponible, orden por defecto');
+      teamPopularity = {};
+    }
+
     console.log(`✅ CadenaData: ${nameIndex.length.toLocaleString()} jugadores, ${teamNames.length.toLocaleString()} equipos`);
   }
 
