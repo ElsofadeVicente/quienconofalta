@@ -1025,4 +1025,7 @@ const App = (() => {
    ══════════════════════════════════════════════ */
 document.addEventListener('DOMContentLoaded', () => {
   App.init();
+  // Precargar datos en background nada más cargar la página,
+  // para que al iniciar partida ya estén listos y no haya lag en el primer turno.
+  CadenaData.init().catch(() => {});
 });

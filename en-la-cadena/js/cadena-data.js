@@ -7,11 +7,11 @@
 const CadenaData = (() => {
 
   /* ── Estado interno ── */
-  let nameIndex      = null;  // [[id, name], ...]
-  let teamNames      = null;  // [string, ...]
-  let teamPopularity = null;  // { teamName: playerCount }
-  let playerCache    = {};    // { id: playerData }
-  let chunkCache     = {};    // { chunkFile: chunkData }
+  let nameIndex        = null;  // [[id, name], ...]
+  let teamNames        = null;  // [string, ...]
+  let teamLeaguePrio   = null;  // { teamName: priorityNumber } (1=LaLiga … 12=Argentina, 999=sin liga)
+  let playerCache      = {};    // { id: playerData }
+  let chunkCache       = {};    // { chunkFile: chunkData }
 
   let selectedSuggestion = null;  // ítem seleccionado del autocomplete
   let suggestionItems    = [];
@@ -61,19 +61,29 @@ const CadenaData = (() => {
     // Guard: no recargar si ya está inicializado
     if (nameIndex && teamNames) return;
 
-    // Cargar los tres ficheros; team-popularity es opcional (no bloquea si falla)
-    const [ni, tn] = await Promise.all([
+    // Cargar los tres ficheros en paralelo
+    const [ni, tn, leagueData] = await Promise.all([
       fetch('../data/players/name-index.json').then(r => r.json()),
       fetch('../data/teams/team-names.json').then(r => r.json()),
+      fetch('../data/teams/league-teams.json').then(r => r.json()).catch(() => null),
     ]);
     nameIndex = ni;
     teamNames = tn;
 
-    try {
-      teamPopularity = await fetch('../data/teams/team-popularity.json').then(r => r.json());
-    } catch (e) {
-      console.warn('⚠️ team-popularity.json no disponible, orden por defecto');
-      teamPopularity = {};
+    teamLeaguePrio = {};
+    if (leagueData) {
+      for (const league of leagueData.leagues) {
+        for (const teamName of league.teams) {
+          // Usar nombre normalizado como clave; si el equipo ya aparece en una
+          // liga de mayor prioridad (número más bajo), no sobreescribir.
+          const key = norm(teamName);
+          if (teamLeaguePrio[key] === undefined || league.priority < teamLeaguePrio[key]) {
+            teamLeaguePrio[key] = league.priority;
+          }
+        }
+      }
+    } else {
+      console.warn('⚠️ league-teams.json no disponible, sin prioridad de ligas');
     }
 
     console.log(`✅ CadenaData: ${nameIndex.length.toLocaleString()} jugadores, ${teamNames.length.toLocaleString()} equipos`);
@@ -194,24 +204,39 @@ const CadenaData = (() => {
 
     } else {
       // Buscar en lista de equipos — escaneamos TODOS para no perdernos nada
-      let exact = [], starts = [], wordBound = [], contains = [];
+      // Cada candidato recibe un código de categoría de match:
+      //   0=exact  1=starts  2=wordBound  3=contains
+      const candidates = [];
       for (const t of teamNames) {
         const n = norm(t);
-        if (n === q)                        exact.push(t);
-        else if (n.startsWith(q))           starts.push(t);
-        else if (wordBoundaryMatch(n, q))   wordBound.push(t);
-        else if (n.includes(q))             contains.push(t);
+        let cat;
+        if      (n === q)                   cat = 0;
+        else if (n.startsWith(q))           cat = 1;
+        else if (wordBoundaryMatch(n, q))   cat = 2;
+        else if (n.includes(q))             cat = 3;
+        else continue;
+        candidates.push({ t, cat });
       }
 
-      // Ordenar cada categoría por popularidad (nº de jugadores) DESC
-      const byPop = (a, b) => (teamPopularity?.[b] || 0) - (teamPopularity?.[a] || 0);
-      exact.sort(byPop);
-      starts.sort(byPop);
-      wordBound.sort(byPop);
-      contains.sort(byPop);
+      // Ordenar en dos bloques:
+      //   BLOQUE 1 — matches relevantes (exact/starts/wordBound, cat 0-2):
+      //     dentro del bloque: liga primero, luego cat, luego popularidad DESC.
+      //     Así "Le" → Leganés [LaLiga,word] y Lecce [SerieA,word] salen antes
+      //     que Leyton Orient [desconocido,starts].
+      //   BLOQUE 2 — matches "contains" (cat 3):
+      //     solo por popularidad; nunca suben sobre el bloque 1.
+      //     Así Valencia CF ("va-le-ncia") no ocupa sitios de Lecce o Leyton.
+      candidates.sort((a, b) => {
+        const aIsContains = a.cat === 3;
+        const bIsContains = b.cat === 3;
+        if (aIsContains !== bIsContains) return aIsContains ? 1 : -1;  // contains al final
+        const prioA = teamLeaguePrio?.[norm(a.t)] ?? 999;
+        const prioB = teamLeaguePrio?.[norm(b.t)] ?? 999;
+        if (prioA !== prioB) return prioA - prioB;
+        return a.cat - b.cat;
+      });
 
-      results = [...exact, ...starts, ...wordBound, ...contains].slice(0, 8);
-      results = results.map(name => ({ type: 'team', name }));
+      results = candidates.slice(0, 8).map(({ t }) => ({ type: 'team', name: t }));
       renderSuggestions(results, query);
     }
   }
@@ -398,6 +423,15 @@ const CadenaData = (() => {
           }
           playerId   = found[0];
           playerName = found[1];
+        }
+
+        // Comprobar que el jugador no ha aparecido ya en la cadena
+        const alreadyInChain = state.chain.some(e => e.type === 'player' && e.id === playerId);
+        if (alreadyInChain) {
+          App.showToast(`⚽ ${playerName} ya ha aparecido en la cadena`, 'error');
+          CadenaGame.penalizeWrongAnswer(value, 'player', null);
+          resetInput(input);
+          return;
         }
 
         const lastTeam = state.chain.length > 0 ? state.chain[state.chain.length - 1].value : null;
