@@ -80,6 +80,18 @@ const CadenaData = (() => {
     _debounceTimer = setTimeout(() => buildSuggestions(value), 150);
   }
 
+  // Comprueba si la query coincide con el inicio de alguna palabra del nombre
+  function wordBoundaryMatch(n, q) {
+    // n y q ya están normalizados
+    const words = n.split(' ');
+    // q puede ser varias palabras (ej: "boca juniors") → buscar subcadena que empiece en límite de palabra
+    for (let i = 0; i < words.length; i++) {
+      const fromWord = words.slice(i).join(' ');
+      if (fromWord.startsWith(q)) return true;
+    }
+    return false;
+  }
+
   function buildSuggestions(query) {
     if (!nameIndex || !teamNames) return;
     const q = norm(query);
@@ -88,27 +100,28 @@ const CadenaData = (() => {
 
     if (type === 'player') {
       // Buscar en el índice de nombres
-      let exact = [], starts = [], contains = [];
+      let exact = [], starts = [], wordBound = [], contains = [];
       for (const [id, name] of nameIndex) {
         const n = norm(name);
-        if (n === q)              exact.push([id, name]);
-        else if (n.startsWith(q)) starts.push([id, name]);
-        else if (n.includes(q))   contains.push([id, name]);
-        if (exact.length + starts.length + contains.length >= 30) break;
+        if (n === q)                        exact.push([id, name]);
+        else if (n.startsWith(q))           starts.push([id, name]);
+        else if (wordBoundaryMatch(n, q))   wordBound.push([id, name]);
+        else if (n.includes(q))             contains.push([id, name]);
+        if (exact.length + starts.length + wordBound.length + contains.length >= 50) break;
       }
-      results = [...exact, ...starts, ...contains].slice(0, 8);
+      results = [...exact, ...starts, ...wordBound, ...contains].slice(0, 8);
       results = results.map(([id, name]) => ({ type: 'player', id, name }));
     } else {
-      // Buscar en lista de equipos
-      let exact = [], starts = [], contains = [];
+      // Buscar en lista de equipos — escaneamos TODOS para no perdernos nada
+      let exact = [], starts = [], wordBound = [], contains = [];
       for (const t of teamNames) {
         const n = norm(t);
-        if (n === q)              exact.push(t);
-        else if (n.startsWith(q)) starts.push(t);
-        else if (n.includes(q))   contains.push(t);
-        if (exact.length + starts.length + contains.length >= 30) break;
+        if (n === q)                        exact.push(t);
+        else if (n.startsWith(q))           starts.push(t);
+        else if (wordBoundaryMatch(n, q))   wordBound.push(t);
+        else if (n.includes(q))             contains.push(t);
       }
-      results = [...exact, ...starts, ...contains].slice(0, 8);
+      results = [...exact, ...starts, ...wordBound, ...contains].slice(0, 8);
       results = results.map(name => ({ type: 'team', name }));
     }
 
@@ -263,6 +276,15 @@ const CadenaData = (() => {
     const input = document.getElementById('answer-input');
     const value = (input.value || '').trim();
     if (!value) return;
+
+    // Si hay sugerencias visibles y no se ha seleccionado nada explícitamente,
+    // usar la sugerencia resaltada o la primera disponible
+    if (!selectedSuggestion && suggestionItems.length > 0) {
+      const idx = suggestionIndex >= 0 ? suggestionIndex : 0;
+      selectedSuggestion = suggestionItems[idx];
+      input.value = selectedSuggestion.name;
+      closeSuggestions();
+    }
 
     // Disable input mientras validamos
     input.disabled = true;
