@@ -322,8 +322,12 @@
   background: rgba(200,168,75,0.12);
 }
 .sug-icon { font-size: 0.85rem; flex-shrink: 0; }
-.sug-name { font-weight: 600; font-size: 0.95rem; }
-.sug-meta { font-size: 0.72rem; opacity: 0.5; margin-left: auto; flex-shrink: 0; }
+.sug-name { font-weight: 600; font-size: 0.95rem; min-width: 0; }
+.sug-meta {
+  font-size: 0.7rem; opacity: 0.65; margin-left: auto; flex-shrink: 0;
+  background: rgba(200,168,75,0.1); border-radius: 4px;
+  padding: 1px 6px; white-space: nowrap; color: var(--neon-gold);
+}
 .sug-highlight { color: var(--neon-gold); }
 
 /* Waiting message */

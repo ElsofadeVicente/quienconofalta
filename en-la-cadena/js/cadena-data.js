@@ -92,14 +92,17 @@ const CadenaData = (() => {
     return false;
   }
 
-  function buildSuggestions(query) {
+  // Traducciones cortas de posición
+  const POS_LABEL = { GK: 'Portero', DEF: 'Defensa', MID: 'Centrocampista', FWD: 'Delantero' };
+
+  async function buildSuggestions(query) {
     if (!nameIndex || !teamNames) return;
     const q = norm(query);
     const type = CadenaGame.getCurrentTurnType();
     let results = [];
 
     if (type === 'player') {
-      // Buscar en el índice de nombres
+      // Buscar en el índice de nombres, guardando la categoría de cada match
       let exact = [], starts = [], wordBound = [], contains = [];
       for (const [id, name] of nameIndex) {
         const n = norm(name);
@@ -109,8 +112,69 @@ const CadenaData = (() => {
         else if (n.includes(q))             contains.push([id, name]);
         if (exact.length + starts.length + wordBound.length + contains.length >= 50) break;
       }
-      results = [...exact, ...starts, ...wordBound, ...contains].slice(0, 8);
-      results = results.map(([id, name]) => ({ type: 'player', id, name }));
+
+      // Taggear cada candidato con su categoría para poder ordenar por popularidad
+      // dentro de cada categoría manteniendo la prioridad de relevancia
+      const tagged = [
+        ...exact.map(([id, name])      => ({ id, name, cat: 0 })),
+        ...starts.map(([id, name])     => ({ id, name, cat: 1 })),
+        ...wordBound.map(([id, name])  => ({ id, name, cat: 2 })),
+        ...contains.map(([id, name])   => ({ id, name, cat: 3 })),
+      ].slice(0, 30);
+
+      // Mostrar sugerencias rápidamente (sin ordenar por popularidad aún)
+      renderSuggestions(
+        tagged.slice(0, 8).map(({ id, name }) => ({ type: 'player', id, name })),
+        query
+      );
+
+      // Cargar datos en paralelo (para apps + info de diferenciación)
+      const dataList = await Promise.all(tagged.map(t => getPlayerById(t.id)));
+      const itemsWithData = tagged.map((t, i) => ({
+        type: 'player', id: t.id, name: t.name, cat: t.cat, data: dataList[i]
+      }));
+
+      // Ordenar: primero por categoría (exacto > empieza > límite palabra > contiene),
+      // luego dentro de cada categoría por apps DESC (más conocido primero)
+      itemsWithData.sort((a, b) => {
+        if (a.cat !== b.cat) return a.cat - b.cat;
+        return (b.data?.apps || 0) - (a.data?.apps || 0);
+      });
+
+      results = itemsWithData.slice(0, 8);
+
+      // Calcular qué info mostrar para diferenciar jugadores con el mismo nombre
+      const finalItems = results.map((item, _, arr) => {
+        const d = item.data;
+        if (!d) return item;
+
+        const sameName = arr.filter(o => norm(o.name) === norm(item.name));
+
+        let tags = [];
+
+        // Siempre mostrar posición
+        const posLabel = POS_LABEL[d.p] || d.p || '';
+        if (posLabel) tags.push(posLabel);
+
+        // Si hay otro jugador con mismo nombre Y misma posición → añadir nacionalidad
+        if (sameName.length > 1) {
+          const samePos = sameName.filter(o => o.data?.p === d.p);
+          if (samePos.length > 1 && d.nat) {
+            tags.push(d.nat);
+
+            // Si además misma nacionalidad → añadir altura
+            const sameNat = samePos.filter(o => o.data?.nat === d.nat);
+            if (sameNat.length > 1 && d.h) {
+              tags.push(d.h + ' cm');
+            }
+          }
+        }
+
+        return { ...item, disambig: tags.join(' · ') };
+      });
+
+      renderSuggestions(finalItems, query);
+
     } else {
       // Buscar en lista de equipos — escaneamos TODOS para no perdernos nada
       let exact = [], starts = [], wordBound = [], contains = [];
@@ -123,9 +187,8 @@ const CadenaData = (() => {
       }
       results = [...exact, ...starts, ...wordBound, ...contains].slice(0, 8);
       results = results.map(name => ({ type: 'team', name }));
+      renderSuggestions(results, query);
     }
-
-    renderSuggestions(results, query);
   }
 
   function highlightMatch(name, query) {
@@ -148,12 +211,12 @@ const CadenaData = (() => {
 
     box.innerHTML = items.map((item, i) => {
       const icon = item.type === 'player' ? '⚽' : '🏟️';
-      const meta = item.type === 'player' ? `#${item.id}` : '';
+      const meta = item.type === 'player' ? (item.disambig || '') : '';
       return `<div class="suggestion-item" data-index="${i}"
                 onclick="CadenaData.selectSuggestion(${i})">
         <span class="sug-icon">${icon}</span>
         <span class="sug-name">${highlightMatch(item.name, query)}</span>
-        <span class="sug-meta">${meta}</span>
+        ${meta ? `<span class="sug-meta">${meta}</span>` : ''}
       </div>`;
     }).join('');
 
