@@ -541,22 +541,12 @@ function getKnownName(fullName) {
     const words = name.split(' ');
     if (words.length === 1) return words[0];
 
-    const monoNames = [
-        'NEYMAR','RONALDINHO','RONALDO','RIVALDO','CAFU','ROBERTO','CASEMIRO',
-        'FERNANDINHO','WILLIAN','FRED','PAULINHO','HULK','OSCAR','RAMIRES',
-        'LUCAS','RAFAEL','FABINHO','EDERSON','ALISSON','ADRIANO','ROBINHO',
-        'KAKÁ','THIAGO','FIRMINO','RICHARLISON','RAPHINHA','RODRYGO',
-        'VINÍCIUS','MILITÃO','MARQUINHOS','DANILO','FELIPE','RENAN','EMERSON',
-        'ALEX','ANDERSON','PEPE'
-    ];
-    if (monoNames.includes(words[0])) return words[0];
-
     const suffixes = ['JR','JR.','SR','SR.','II','III','IV'];
     let cleanWords = [...words];
     if (suffixes.includes(cleanWords[cleanWords.length - 1])) cleanWords.pop();
     if (cleanWords.length === 1) return cleanWords[0];
 
-    const particles = ['DE','VAN','DER','TER','VON','DA','DI','DEL','LA','LE','VAN DER','VAN DE','DOS','DAS','SAN'];
+    const particles = ['DE','VAN','DER','TER','VON','DA','DI','DEL','LA','LE','LO','VAN DER','VAN DE','DOS','DAS','SAN'];
     if (cleanWords.length === 2 && particles.includes(cleanWords[0])) return cleanWords.join(' ');
 
     if (cleanWords.length >= 3) {
