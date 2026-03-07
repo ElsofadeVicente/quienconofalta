@@ -102,7 +102,7 @@ async function loadMatchData(mode) {
                 'REAL_SOCIEDAD.json','REAL_VALLADOLID.json','SD_HUESCA.json','SEVILLA.json',
                 'SPORTING_GIJON.json','VALENCIA.json','VILLARREAL.json'
             ],
-            '../data/champions': ['finales.json','semifinales.json','remontadas.json','clasicos.json'],
+            '../data/champions': ['finales.json','semifinales.json','cuartos.json','remontadas.json','clasicos.json'],
             '../data/historico': ['mundiales.json','eurocopas.json','olimpiadas.json']
         };
 
@@ -531,7 +531,10 @@ function getKnownName(fullName) {
         'DANI ALVES': 'ALVES', 'DANIEL ALVES': 'ALVES',
         'DANIEL CARVAJAL': 'CARVAJAL', 'DIEGO COSTA': 'DIEGO COSTA',
         'WISSAM BEN YEDDER': 'BEN YEDDER', 'MUNIR EL HADDADI': 'MUNIR',
-        'MOI GOMEZ': 'MOI GOMEZ', 'CUCHO HERNANDEZ': 'CUCHO', 'CUCHO HERNÁNDEZ': 'CUCHO'
+        'MOI GOMEZ': 'MOI GOMEZ', 'CUCHO HERNANDEZ': 'CUCHO', 'CUCHO HERNÁNDEZ': 'CUCHO',
+        'RAFA SILVA': 'RAFA', 'JOAO MARIO': 'JOAO MARIO', 'JOÃO MARIO': 'JOAO MARIO',
+        'XAVI HERNANDEZ': 'XAVI', 'XAVI HERNÁNDEZ': 'XAVI',
+        'ERIC MAXIM CHOUPO-MOTING': 'CHOUPO-MOTING', 'CHOUPO-MOTING': 'CHOUPO-MOTING'
     };
     if (exceptions[name]) return exceptions[name];
 

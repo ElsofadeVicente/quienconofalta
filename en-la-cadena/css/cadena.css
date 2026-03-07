@@ -431,37 +431,6 @@
 }
 .elim-options-list { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; }
 
-/* ── OVERLAY CUENTA ATRÁS ─────────────────── */
-.countdown-overlay {
-  position: fixed; inset: 0; z-index: 9999;
-  background: #000;
-  display: flex; align-items: center; justify-content: center;
-}
-.countdown-overlay.hidden { display: none; }
-
-.countdown-inner { text-align: center; }
-
-.countdown-label {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.8rem; letter-spacing: 6px;
-  color: rgba(255,255,255,0.5);
-  margin-bottom: 16px;
-}
-
-.countdown-number {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 14rem; line-height: 1;
-  color: var(--neon-gold);
-  text-shadow: 0 0 60px rgba(200,168,75,0.6);
-  animation: countPulse 1s ease-in-out infinite;
-}
-
-@keyframes countPulse {
-  0%   { transform: scale(1);    opacity: 1; }
-  50%  { transform: scale(1.06); opacity: 0.85; }
-  100% { transform: scale(1);    opacity: 1; }
-}
-
 /* ── RESPONSIVE ───────────────────────────── */
 @media (max-width: 400px) {
   .mode-cards { flex-direction: column; }

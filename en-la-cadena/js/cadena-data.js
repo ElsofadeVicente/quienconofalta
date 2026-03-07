@@ -57,16 +57,10 @@ const CadenaData = (() => {
   }
 
   /* ── Inicialización: carga índices ── */
-  let _initPromise = null;  // Singleton: evita cargas duplicadas en paralelo
-
   async function init() {
     // Guard: no recargar si ya está inicializado
     if (nameIndex && teamNames) return;
 
-    // Si ya hay una carga en curso, esperar a que termine en lugar de lanzar otra
-    if (_initPromise) return _initPromise;
-
-    _initPromise = (async () => {
     // Cargar los tres ficheros en paralelo
     const [ni, tn, leagueData] = await Promise.all([
       fetch('../data/players/name-index.json').then(r => r.json()),
@@ -93,8 +87,6 @@ const CadenaData = (() => {
     }
 
     console.log(`✅ CadenaData: ${nameIndex.length.toLocaleString()} jugadores, ${teamNames.length.toLocaleString()} equipos`);
-    })();
-    return _initPromise;
   }
 
   /* ── Autocomplete ── */
@@ -505,25 +497,7 @@ const CadenaData = (() => {
     input.focus();
   }
 
-  /* ── Precarga de todos los chunks de jugadores ── */
-  const ALL_CHUNKS = [
-    '0-99999.json','100000-199999.json','200000-299999.json','300000-399999.json',
-    '400000-499999.json','500000-599999.json','600000-699999.json','700000-799999.json',
-    '800000-899999.json','900000-999999.json','1000000-1099999.json','1100000-1199999.json',
-    '1200000-1299999.json','1300000-1399999.json','1400000-1499999.json'
-  ];
-
-  let _chunksPromise = null;
-
-  async function preloadAllChunks() {
-    if (_chunksPromise) return _chunksPromise;
-    _chunksPromise = Promise.all(
-      ALL_CHUNKS.map(cf => loadPlayerChunk(cf).catch(() => null))
-    );
-    return _chunksPromise;
-  }
-
   /* ── API pública ── */
-  return { init, preloadAllChunks, onInput, onKeyDown, selectSuggestion, submitAnswer, closeSuggestions, getPlayerById };
+  return { init, onInput, onKeyDown, selectSuggestion, submitAnswer, closeSuggestions, getPlayerById };
 
 })();

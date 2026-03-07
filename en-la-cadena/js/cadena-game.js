@@ -803,10 +803,6 @@ const App = (() => {
       cp.eliminated = true;
       _showEliminated(cp, `"${value}" no es válido`, validOptions);
     } else {
-      // Reiniciar cadena al perder vida
-      s.chain = [];
-      s.chainLength = 0;
-      document.getElementById('chain-entries').innerHTML = '';
       // Mostrar opciones válidas en el panel del juego (no-eliminación)
       _showValidOptionsPanel(validOptions);
       App.showToast(`❤️ Le quedan ${cp.lives} vida${cp.lives !== 1 ? 's' : ''}`, 'error');
@@ -840,32 +836,19 @@ const App = (() => {
 
     const isMyTurn = (s.mode === 'local') || (s.myPlayerId !== null && cp.id === s.myPlayerId);
 
-    // Período de gracia al inicio de la partida (cadena vacía): 3 segundos antes de arrancar el timer
-    const isFirstTurn = s.chain.length === 0 && !s._graceGiven;
-    if (isFirstTurn) s._graceGiven = true;
-    const graceMs = isFirstTurn ? 10000 : 0;
-
     if (isMyTurn) {
       answerZone.classList.remove('hidden');
       waitingMsg.classList.add('hidden');
       input.disabled = false;
       input.value = '';
       CadenaData.closeSuggestions();
-      if (graceMs > 0) {
-        _showCountdownOverlay(graceMs, () => { _startTimer(); setTimeout(() => input.focus(), 50); });
-      } else {
-        _startTimer();
-        setTimeout(() => input.focus(), 100);
-      }
+      _startTimer();
+      setTimeout(() => input.focus(), 100);
     } else {
       answerZone.classList.add('hidden');
       waitingMsg.classList.remove('hidden');
       document.getElementById('waiting-name').textContent = cp.name;
-      if (graceMs > 0) {
-        _showCountdownOverlay(graceMs, () => _startTimer());
-      } else {
-        _startTimer();
-      }
+      _startTimer();
     }
   };
 
@@ -921,14 +904,7 @@ const App = (() => {
           if (cp) {
             cp.lives--;
             if (cp.lives <= 0) { cp.eliminated = true; _showEliminated(cp, 'Se quedó sin tiempo', null); }
-            else {
-              // Reiniciar cadena al perder vida por tiempo
-              s.chain = [];
-              s.chainLength = 0;
-              document.getElementById('chain-entries').innerHTML = '';
-              App.showToast(`❤️ Le quedan ${cp.lives} vida${cp.lives !== 1 ? 's' : ''}`, 'error');
-              _nextTurn();
-            }
+            else { App.showToast(`❤️ Le quedan ${cp.lives} vida${cp.lives !== 1 ? 's' : ''}`, 'error'); _nextTurn(); }
           }
         }
       }
@@ -978,52 +954,6 @@ const App = (() => {
     } else {
       panel.classList.add('hidden');
     }
-  }
-
-  function _showCountdownOverlay(totalMs, onDone) {
-    const SECS = Math.round(totalMs / 1000);
-    const overlay = document.getElementById('countdown-overlay');
-    const numEl   = document.getElementById('countdown-number');
-    if (!overlay || !numEl) { onDone(); return; }
-
-    let remaining = SECS;
-    let countdownDone = false;
-    let dataReady = false;
-
-    numEl.textContent = remaining;
-    overlay.classList.remove('hidden');
-
-    // Lanzar carga de índices Y todos los chunks en paralelo con la cuenta atrás
-    const dataPromise = Promise.all([
-      CadenaData.init().catch(() => {}),
-      CadenaData.preloadAllChunks().catch(() => {})
-    ]);
-    dataPromise.then(() => {
-      dataReady = true;
-      // Si la cuenta ya terminó, arrancar ahora
-      if (countdownDone) {
-        overlay.classList.add('hidden');
-        onDone();
-      }
-    });
-
-    const iv = setInterval(() => {
-      remaining--;
-      if (remaining <= 0) {
-        clearInterval(iv);
-        countdownDone = true;
-        if (dataReady) {
-          // Datos listos: arrancar
-          overlay.classList.add('hidden');
-          onDone();
-        } else {
-          // Datos aún cargando: mostrar espera
-          numEl.textContent = '⏳';
-        }
-      } else {
-        numEl.textContent = remaining;
-      }
-    }, 1000);
   }
 
   function _endGame(winner) {
@@ -1095,8 +1025,7 @@ const App = (() => {
    ══════════════════════════════════════════════ */
 document.addEventListener('DOMContentLoaded', () => {
   App.init();
-  // Precargar índices y todos los chunks en background nada más cargar la página,
-  // para que al iniciar partida ya estén listos y no haya lag en ningún turno.
+  // Precargar datos en background nada más cargar la página,
+  // para que al iniciar partida ya estén listos y no haya lag en el primer turno.
   CadenaData.init().catch(() => {});
-  CadenaData.preloadAllChunks().catch(() => {});
 });
