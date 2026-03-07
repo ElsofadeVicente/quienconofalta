@@ -208,7 +208,7 @@
       "col": 6,
       "direction": "down",
       "length": 8,
-      "clue": "tiro suave que supera al portero pasando el balón por encima."
+      "clue": "Tiro suave que supera al portero pasando el balón por encima."
     },
     {
       "id": 3,
@@ -218,7 +218,7 @@
       "col": 11,
       "direction": "down",
       "length": 5,
-      "clue": "equipo de la capital de Polonia"
+      "clue": "Equipo de la capital de Polonia"
     },
     {
       "id": 4,
@@ -248,7 +248,7 @@
       "col": 4,
       "direction": "down",
       "length": 8,
-      "clue": "canterano del valencia que juega en el Arsenal"
+      "clue": "Canterano del valencia que juega en el Arsenal"
     },
     {
       "id": 7,
@@ -268,7 +268,7 @@
       "col": 2,
       "direction": "across",
       "length": 5,
-      "clue": "Premio al máximo goleador de la liga español"
+      "clue": "Premio al máximo goleador español de la liga española"
     }
   ]
 }
