@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "totalPlayers": 52329,
-  "lastUpdated": "2025-03-04",
+  "totalPlayers": 52332,
+  "lastUpdated": "2026-03-08",
   "chunkSize": 100000,
   "ranges": [
     {
@@ -44,7 +44,7 @@
       "min": 1400000,
       "max": 1499999,
       "file": "chunks/1400000-1499999.json",
-      "count": 24
+      "count": 27
     },
     {
       "min": 200000,
