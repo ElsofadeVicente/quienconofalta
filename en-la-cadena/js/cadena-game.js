@@ -459,6 +459,13 @@ const CadenaGame = (() => {
 
 })();
 
+/* ── Helper global: Firebase convierte arrays en objetos {0:{...},1:{...}} ── */
+function toPlayersArray(players) {
+  if (!players) return [];
+  if (!Array.isArray(players)) players = Object.values(players);
+  return players.filter(p => p && p.name);
+}
+
 /* ══════════════════════════════════════════════
    APP — Navegación y setup
    ══════════════════════════════════════════════ */
@@ -725,9 +732,8 @@ const App = (() => {
   }
 
   function renderLobbyPlayers(players, myId) {
-    // Acepta tanto array de objetos {id,name,...} como array de strings
-    const normalized = players.map(p => typeof p === 'string' ? { id: null, name: p } : p)
-                               .filter(p => p && p.name);
+    const normalized = toPlayersArray(players)
+      .map(p => typeof p === 'string' ? { id: null, name: p } : p);
     const list = document.getElementById('lobby-players-list');
     list.innerHTML = normalized.map((p, i) => {
       const pid = p.id !== null ? p.id : i;
@@ -840,7 +846,7 @@ const App = (() => {
       }
 
       const finalRoom = result.snapshot.val();
-      _enterLobby(roomCode, myId, myName, finalRoom.lives || lives, finalRoom.players);
+      _enterLobby(roomCode, myId, myName, finalRoom.lives || lives, toPlayersArray(finalRoom.players));
     } catch(e) {
       showToast('Error al volver al lobby: ' + e.message, 'error');
       showMenu();
@@ -867,7 +873,7 @@ const App = (() => {
     const unsub = onValue(rRef, snap => {
       if (!snap.exists()) return;
       const remote = snap.val();
-      const freshPlayers = remote.players || [];
+      const freshPlayers = toPlayersArray(remote.players);
       // Buscar mi id por nombre (resiste resets de sala)
       const me = freshPlayers.find(p => p.name === myName);
       const freshMyId = me ? me.id : myId;
@@ -1113,7 +1119,7 @@ const App = (() => {
 
     let needsBeginTurn = false;
 
-    if (remote.players) s.players = remote.players;
+    if (remote.players) s.players = toPlayersArray(remote.players);
 
     // Solo reaccionar a cambio de turno si el índice cambió Y no soy yo quien acaba de actuar
     if (typeof remote.turnIndex === 'number' && remote.turnIndex !== s._lastAppliedTurn) {
