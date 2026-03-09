@@ -639,6 +639,8 @@ const App = (() => {
   }
 
   function _startGameUI(names, lives, mode, roomCode, myId, turnSecs) {
+    // Guardar nombre propio como fallback para playAgain
+    if (myId !== null && names[myId]) window._myLobbyName = names[myId];
     const state = {
       players: names.map((name, i) => ({ id: i, name, lives, eliminated: false })),
       currentIndex: 0,
@@ -789,16 +791,20 @@ const App = (() => {
     const s = CadenaGame._state;
 
     if (s?.mode === 'online') {
-      const roomCode = s.roomCode;
-      const myName   = s.players.find(p => p.id === s.myPlayerId)?.name || '';
-      const lives    = s.lives;
+      // Guardar todo antes de resetear el estado
+      const roomCode     = s.roomCode;
+      const myOriginalId = s.myPlayerId;
+      const lives        = s.lives;
+      // Buscar nombre por id numérico, comparando con == para tolerar string/number
+      const myPlayer = s.players.find(p => p.id == myOriginalId);
+      const myName   = myPlayer?.name || window._myLobbyName || '';
 
       CadenaGame.FBSync.cleanup();
       CadenaGame._resetState(null);
       document.getElementById('chain-entries').innerHTML = '';
       document.getElementById('players-lives').innerHTML = '';
 
-      await _rejoinLobby(roomCode, myName, s.myPlayerId, lives);
+      await _rejoinLobby(roomCode, myName, myOriginalId, lives);
       return;
     }
 
@@ -824,7 +830,7 @@ const App = (() => {
       const room = snap.val();
       const roomLives = room.lives || lives;
 
-      if (myOriginalId === 0) {
+      if (myOriginalId == 0) {
         // Soy el host original — reseteo la sala y escribo el slot 0
         await update(roomRef, {
           status: 'lobby', chain: null, chainLength: 0, turnIndex: 0, players: null
