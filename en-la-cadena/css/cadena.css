@@ -412,3 +412,21 @@
   .logo-title { font-size: 2.8rem; }
   .room-code { font-size: 2.8rem; letter-spacing: 8px; }
 }
+
+/* ── ONLINE INLINE JOIN ───────────────────── */
+.online-divider {
+  text-align: center; color: var(--text-light); opacity: 0.45;
+  font-size: 0.85rem; margin: 20px 0 4px; letter-spacing: 1px;
+}
+.join-inline-row {
+  display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin-top: 10px;
+}
+.join-inline-row .code-input {
+  width: 110px; flex-shrink: 0;
+}
+.join-inline-row .player-name-input {
+  flex: 1; min-width: 100px;
+}
+.join-inline-row .btn-primary {
+  width: auto; padding: 12px 18px; font-size: 1rem; flex-shrink: 0;
+}

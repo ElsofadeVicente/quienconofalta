@@ -101,12 +101,24 @@ const CadenaData = (() => {
     '1200000-1299999.json','1300000-1399999.json','1400000-1499999.json'
   ];
   let _chunksPromise = null;
+  let _chunksLoaded  = false;
 
   async function preloadAllChunks() {
-    if (_chunksPromise) return _chunksPromise;
+    if (_chunksLoaded) return;           // ya cargados con éxito, no repetir
+    if (_chunksPromise) return _chunksPromise; // carga en curso, esperar
     _chunksPromise = Promise.all(
       ALL_CHUNKS.map(cf => loadPlayerChunk(cf).catch(() => null))
-    );
+    ).then(results => {
+      // Solo marcar como cargado si todos los chunks respondieron (no null)
+      const failed = results.filter(r => r === null).length;
+      if (failed === 0) {
+        _chunksLoaded = true;
+      } else {
+        // Hubo fallos — resetear para poder reintentar
+        _chunksPromise = null;
+        console.warn(`⚠️ ${failed} chunks fallaron al precargar`);
+      }
+    });
     return _chunksPromise;
   }
 
@@ -383,17 +395,33 @@ const CadenaData = (() => {
           return;
         }
 
-        CadenaGame.addToChain({ type: 'player', id: playerId, name: playerName, data: playerData });
+        CadenaGame.addToChain({
+          type: 'player', id: playerId, name: playerName, data: playerData,
+          nat: playerData?.nat || null,
+          b:   playerData?.b   || null
+        });
 
       } else {
         const lastEntry = state.chain[state.chain.length - 1];
         const prevTeam  = state.chain.length >= 2 ? state.chain[state.chain.length - 2].value : null;
 
+        // En online lastEntry.data no viaja por Firebase — cargar por id desde chunks locales
+        // Los chunks están precargados en memoria tras el countdown, así que esto es instantáneo
+        let playerData = lastEntry?.data;
+        if (!playerData && lastEntry?.id) {
+          playerData = await getPlayerById(lastEntry.id);
+        }
+        if (!playerData) {
+          App.showToast('Error: no se encontró el jugador anterior', 'error');
+          resetInput(input);
+          return;
+        }
+
         let teamName = selectedSuggestion?.name || value;
         const q = norm(teamName);
         const canonical = teamNames.find(t => norm(t) === q);
 
-        const playerTeams  = lastEntry?.data?.teams || [];
+        const playerTeams  = playerData?.teams || [];
         const isOCM        = playerTeams.length === 1;
         const prevTeamNorm = prevTeam ? norm(prevTeam) : null;
         const validTeams   = playerTeams.filter(t => !prevTeamNorm || isOCM || norm(t) !== prevTeamNorm);
@@ -406,7 +434,7 @@ const CadenaData = (() => {
         }
         teamName = canonical;
 
-        const { valid, reason, isOneClubMan } = validateTeam(teamName, lastEntry.data, prevTeam);
+        const { valid, reason, isOneClubMan } = validateTeam(teamName, playerData, prevTeam);
 
         if (!valid) {
           App.showToast(reason, 'error');
@@ -433,6 +461,6 @@ const CadenaData = (() => {
   }
 
   /* ── API pública ── */
-  return { init, preloadAllChunks, onInput, onKeyDown, selectSuggestion, submitAnswer, closeSuggestions, getPlayerById };
+  return { init, preloadAllChunks, chunksLoaded: () => _chunksLoaded, onInput, onKeyDown, selectSuggestion, submitAnswer, closeSuggestions, getPlayerById };
 
 })();
