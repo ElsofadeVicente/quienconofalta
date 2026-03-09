@@ -683,7 +683,7 @@ const App = (() => {
     try {
       const code = await CadenaGame.FBSync.createRoom(names, lives);
       if (!code) return;
-      _enterLobby(code, 0, lives, names.map((name, i) => ({ id: i, name, lives, eliminated: false })));
+      _enterLobby(code, 0, names[0], lives, names.map((name, i) => ({ id: i, name, lives, eliminated: false })));
     } catch (err) {
       showToast('Error al crear sala: ' + err.message, 'error');
     }
@@ -710,21 +710,26 @@ const App = (() => {
     showToast('Conectando…');
     try {
       const { roomData, myId } = await CadenaGame.FBSync.joinRoom(code, name);
-      _enterLobby(code, myId, roomData.lives, roomData.players);
+      _enterLobby(code, myId, name, roomData.lives, roomData.players);
     } catch (err) {
       showToast(err.message, 'error');
     }
   }
 
-  function renderLobbyPlayers(names, myId) {
+  function renderLobbyPlayers(players, myId) {
+    // Acepta tanto array de objetos {id,name,...} como array de strings
+    const normalized = players.map(p => typeof p === 'string' ? { id: null, name: p } : p)
+                               .filter(p => p && p.name);
     const list = document.getElementById('lobby-players-list');
-    list.innerHTML = names.filter(n => n).map((name, i) => `
-      <div class="lobby-player-item">
-        <div class="lobby-player-avatar">${(name || '?')[0].toUpperCase()}</div>
-        <span class="lobby-player-name">${name}</span>
-        ${i === 0 ? '<span class="lobby-player-host">👑 Host</span>' : ''}
-        ${i === myId ? '<span class="lobby-player-host">← Tú</span>' : ''}
-      </div>`).join('');
+    list.innerHTML = normalized.map((p, i) => {
+      const pid = p.id !== null ? p.id : i;
+      return `<div class="lobby-player-item">
+        <div class="lobby-player-avatar">${p.name[0].toUpperCase()}</div>
+        <span class="lobby-player-name">${p.name}</span>
+        ${pid === 0 ? '<span class="lobby-player-host">👑 Host</span>' : ''}
+        ${pid === myId ? '<span class="lobby-player-host">← Tú</span>' : ''}
+      </div>`;
+    }).join('');
 
     const btnStart = document.getElementById('btn-start-online');
     const hintEl   = document.getElementById('lobby-hint-players');
@@ -821,15 +826,16 @@ const App = (() => {
         });
       }
 
-      _enterLobby(roomCode, myId, lives, players);
+      _enterLobby(roomCode, myId, myName, lives, players);
     } catch(e) {
       showToast('Error al volver al lobby', 'error');
       showMenu();
     }
   }
 
-  /* Muestra la pantalla de lobby y registra el listener */
-  function _enterLobby(roomCode, myId, lives, currentPlayers) {
+  /* Muestra la pantalla de lobby y registra el listener
+     myName: nombre propio (pasado directamente, no derivado del array) */
+  function _enterLobby(roomCode, myId, myName, lives, currentPlayers) {
     showScreen('screen-lobby');
     document.getElementById('room-code-display').textContent = roomCode;
     document.getElementById('lobby-mode-display').textContent =
@@ -837,8 +843,9 @@ const App = (() => {
     window._pendingRoomCode = roomCode;
     window._pendingLives    = lives;
     window._myLobbyId       = myId;
+    window._myLobbyName     = myName;
 
-    renderLobbyPlayers(currentPlayers.map(p => p.name), myId);
+    renderLobbyPlayers(currentPlayers, myId);
 
     const FB = window._FB;
     const { db, ref, onValue } = FB;
@@ -846,11 +853,11 @@ const App = (() => {
     const unsub = onValue(rRef, snap => {
       if (!snap.exists()) return;
       const remote = snap.val();
-      // Recalcular myId por nombre en caso de que la sala se haya reseteado
       const freshPlayers = remote.players || [];
-      const me = freshPlayers.find(p => p.name === currentPlayers[myId]?.name);
+      // Buscar mi id por nombre (resiste resets de sala)
+      const me = freshPlayers.find(p => p.name === myName);
       const freshMyId = me ? me.id : myId;
-      if (remote.players) renderLobbyPlayers(freshPlayers.map(p => p.name), freshMyId);
+      renderLobbyPlayers(freshPlayers, freshMyId);
       if (remote.status === 'countdown' || remote.status === 'playing') {
         unsub();
         _startGameUI(freshPlayers.map(p => p.name), remote.lives || lives, 'online', roomCode, freshMyId, 15);
@@ -953,6 +960,11 @@ const App = (() => {
     const active = s.players.filter(p => !p.eliminated);
     const cp = active[s.currentIndex % active.length];
     entry.submittedBy = cp?.name || '?';
+    // Promover nat y b al nivel raíz para que Firebase los serialice y _renderEntry los lea
+    if (entry.type === 'player' && entry.data) {
+      if (!entry.nat) entry.nat = entry.data.nat || null;
+      if (!entry.b)   entry.b   = entry.data.b   || null;
+    }
     s.chain.push(entry);
     s.chainLength++;
 
@@ -964,7 +976,9 @@ const App = (() => {
       s.currentIndex = nextIndex;
       const chainSerial = s.chain.map(e => ({
         type: e.type, name: e.name || null, value: e.value || null,
-        id: e.id || null, isOneClubMan: e.isOneClubMan || false, submittedBy: e.submittedBy || ''
+        id: e.id || null, isOneClubMan: e.isOneClubMan || false, submittedBy: e.submittedBy || '',
+        nat: e.nat || e.data?.nat || null,
+        b:   e.b   || e.data?.b   || null
       }));
       const FB = window._FB;
       if (FB?.configured && s.roomCode) {
@@ -1278,11 +1292,19 @@ const App = (() => {
   function _renderEntry(entry) {
     const container = document.getElementById('chain-entries');
     const div = document.createElement('div');
-    const val  = entry.name || entry.value || '?';
-    const meta = entry.type === 'player'
-      ? (entry.data?.nat || '') + (entry.data?.b ? ` · ${entry.data.b}` : '')
-      : (entry.isOneClubMan ? '★ One-club man' : '');
+    const val = entry.name || entry.value || '?';
     div.className = `chain-entry type-${entry.type}`;
+
+    let meta = '';
+    if (entry.type === 'team') {
+      meta = entry.isOneClubMan ? '★ One-club man' : '';
+    } else {
+      // nat y b vienen directamente en el entry (guardados al añadir y al serializar a Firebase)
+      const nat = entry.nat || entry.data?.nat || '';
+      const b   = entry.b   || entry.data?.b   || '';
+      meta = nat + (b ? ' · ' + b : '');
+    }
+
     div.innerHTML = `
       <span class="ce-icon">${entry.type === 'player' ? '⚽' : '🏟️'}</span>
       <div class="ce-content">
