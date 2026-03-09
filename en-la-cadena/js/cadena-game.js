@@ -676,7 +676,6 @@ const App = (() => {
 
     showToast('Conectando…');
     try {
-      await CadenaData.init();
       const { roomData, myId } = await CadenaGame.FBSync.joinRoom(code, name);
 
       showScreen('screen-lobby');
@@ -688,9 +687,11 @@ const App = (() => {
       CadenaGame.FBSync.listenRoom(code, remote => {
         if (remote.players) renderLobbyPlayers(remote.players.map(p => p.name), myId);
         if (remote.status === 'playing') {
-          _startGameUI(remote.players.map(p => p.name), remote.lives, 'online', code, myId);
-          // Re-aplicar cambios remotos en curso
-          CadenaGame.FBSync.listenRoom(code, CadenaGame.applyRemoteState);
+          // Cargar datos justo antes de empezar a jugar
+          CadenaData.init().catch(() => {}).finally(() => {
+            _startGameUI(remote.players.map(p => p.name), remote.lives, 'online', code, myId);
+            CadenaGame.FBSync.listenRoom(code, CadenaGame.applyRemoteState);
+          });
         }
       });
 
