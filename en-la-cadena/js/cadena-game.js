@@ -811,42 +811,52 @@ const App = (() => {
   }
 
   /* Vuelve al lobby de la sala con el mismo codigo.
-     Usa runTransaction para evitar race conditions cuando dos jugadores
-     pulsan "Jugar de nuevo" al mismo tiempo. */
+     Cada jugador escribe solo su slot en /rejoining/nombre para evitar
+     race conditions al sobrescribir el array completo de players. */
   async function _rejoinLobby(roomCode, myName, lives) {
     const FB = window._FB;
     if (!FB?.configured) { showMenu(); return; }
     try {
-      const { db, ref, runTransaction } = FB;
-      const rRef = ref(db, 'rooms/' + roomCode);
+      const { db, ref, get, update } = FB;
+      const roomRef = ref(db, 'rooms/' + roomCode);
 
-      let myId = null;
+      // 1. Leer sala actual
+      const snap = await get(roomRef);
+      if (!snap.exists()) { showToast('La sala ya no existe', 'error'); showMenu(); return; }
+      const room = snap.val();
+      const roomLives = room.lives || lives;
 
-      const result = await runTransaction(rRef, (room) => {
-        if (!room) return room;
-        const existing = room.players || [];
-        if (room.status === 'lobby') {
-          myId = existing.length;
-          return { ...room, players: [
-            ...existing,
-            { id: myId, name: myName, lives: room.lives || lives, eliminated: false }
-          ]};
-        } else {
-          myId = 0;
-          return { ...room,
-            status: 'lobby',
-            players: [{ id: 0, name: myName, lives: room.lives || lives, eliminated: false }],
-            chain: [], chainLength: 0, turnIndex: 0
-          };
-        }
-      });
-
-      if (!result.committed) {
-        showToast('La sala ya no existe', 'error'); showMenu(); return;
+      // 2. Si la sala no está en lobby, resetearla (solo escribe status y limpia, no players)
+      if (room.status !== 'lobby') {
+        await update(roomRef, {
+          status: 'lobby',
+          chain: null, chainLength: 0, turnIndex: 0,
+          rejoining: null   // limpiar rejoining anterior
+        });
       }
 
-      const finalRoom = result.snapshot.val();
-      _enterLobby(roomCode, myId, myName, finalRoom.lives || lives, toPlayersArray(finalRoom.players));
+      // 3. Cada jugador escribe su entrada en /rejoining/<nombre> (sin tocar al resto)
+      const safeKey = myName.replace(/[.#$\/\[\]]/g, '_');
+      await update(ref(db, 'rooms/' + roomCode + '/rejoining'), {
+        [safeKey]: { name: myName, lives: roomLives, ts: Date.now() }
+      });
+
+      // 4. Pequeña espera para que otros jugadores también escriban
+      await new Promise(r => setTimeout(r, 800));
+
+      // 5. Leer lista final de rejoining y construir players con ids estables por orden de llegada
+      const snapR = await get(ref(db, 'rooms/' + roomCode + '/rejoining'));
+      const rejoining = snapR.val() || {};
+      const sorted = Object.values(rejoining).sort((a, b) => a.ts - b.ts);
+      const players = sorted.map((p, i) => ({ id: i, name: p.name, lives: p.lives, eliminated: false }));
+      const myId = players.findIndex(p => p.name === myName);
+
+      // 6. El primero (ts más bajo) escribe el array final de players
+      if (myId === 0) {
+        await update(roomRef, { players });
+      }
+
+      _enterLobby(roomCode, myId >= 0 ? myId : 0, myName, roomLives, players);
     } catch(e) {
       showToast('Error al volver al lobby: ' + e.message, 'error');
       showMenu();
