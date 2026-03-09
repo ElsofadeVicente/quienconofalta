@@ -660,15 +660,19 @@ const App = (() => {
   }
 
   function startOnlineGame() {
+    const btn = document.getElementById('btn-start-online');
+    if (btn && btn.disabled) { showToast('Necesitas al menos 2 jugadores para empezar', 'error'); return; }
     CadenaGame.FBSync.startGame(window._pendingRoomCode);
   }
 
   /* ── Online: unirse ── */
   async function joinRoom() {
-    const name = document.getElementById('join-name').value.trim();
-    const code = document.getElementById('join-code').value.trim().toUpperCase();
+    const nameEl = document.getElementById('join-name-inline') || document.getElementById('join-name');
+    const codeEl = document.getElementById('join-code-inline') || document.getElementById('join-code');
+    const name = nameEl?.value.trim();
+    const code = codeEl?.value.trim().toUpperCase();
     if (!name) { showToast('Escribe tu nombre', 'error'); return; }
-    if (code.length !== 6) { showToast('El código debe tener 6 caracteres', 'error'); return; }
+    if (!code || code.length !== 6) { showToast('El código debe tener 6 caracteres', 'error'); return; }
 
     showToast('Conectando…');
     try {
@@ -704,6 +708,18 @@ const App = (() => {
         ${i === 0 ? '<span class="lobby-player-host">👑 Host</span>' : ''}
         ${i === myId ? '<span class="lobby-player-host">← Tú</span>' : ''}
       </div>`).join('');
+
+    // Habilitar botón de inicio solo si hay ≥2 jugadores y soy el host
+    const btnStart = document.getElementById('btn-start-online');
+    const hintEl   = document.getElementById('lobby-hint-players');
+    if (btnStart && myId === 0) {
+      const enough = names.length >= 2;
+      btnStart.disabled = !enough;
+      btnStart.style.opacity = enough ? '1' : '0.45';
+      if (hintEl) hintEl.textContent = enough
+        ? `${names.length} jugadores listos — ¡puedes empezar!`
+        : `Esperando jugadores… (${names.length}/2 mínimo para empezar)`;
+    }
   }
 
   /* ── Sala: copiar código ── */

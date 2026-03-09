@@ -22,8 +22,7 @@
       <p class="logo-sub">Jugador → Equipo → Jugador → Equipo…</p>
     </div>
     <div class="menu-buttons">
-      <button class="btn-primary" onclick="App.showCreateGame()">🏠 Crear Partida</button>
-      <button class="btn-secondary" onclick="App.showJoinGame()">🔗 Unirse con Código</button>
+      <button class="btn-primary" onclick="App.showCreateGame()">▶ Nueva Partida</button>
     </div>
     <div class="firebase-note" id="firebase-status">
       <span id="fb-indicator">●</span> <span id="fb-text">Modo local — configura Firebase para jugar online</span>
@@ -92,6 +91,15 @@
       <label class="block-label">TU NOMBRE</label>
       <input id="online-host-name" class="player-name-input big" type="text" placeholder="Tu nombre de jugador" maxlength="20" />
       <p class="type-note" style="margin-top:12px">🌐 Se creará una sala con un código que compartirás con tus amigos. Cada jugador se une desde su propio dispositivo.</p>
+      <div class="online-divider">— o bien —</div>
+      <label class="block-label" style="margin-top:14px">UNIRSE A UNA SALA</label>
+      <div class="join-inline-row">
+        <input id="join-code-inline" class="code-input" type="text" placeholder="CÓDIGO" maxlength="6"
+               oninput="this.value=this.value.toUpperCase()" />
+        <input id="join-name-inline" class="player-name-input" type="text" placeholder="Tu nombre" maxlength="20" />
+        <button class="btn-primary" onclick="App.joinRoom()">UNIRSE ▶</button>
+      </div>
+      <p class="error-msg hidden" id="join-error"></p>
     </div>
 
     <button class="btn-primary btn-start" onclick="App.startGame()">CREAR SALA ▶</button>
@@ -130,9 +138,10 @@
       <!-- jugadores conectados -->
     </div>
     <div class="lobby-mode" id="lobby-mode-display"></div>
-    <button class="btn-primary" id="btn-start-online" onclick="App.startOnlineGame()" style="display:none">
+    <button class="btn-primary" id="btn-start-online" onclick="App.startOnlineGame()" style="display:none" disabled>
       EMPEZAR PARTIDA ▶
     </button>
+    <p class="lobby-hint" id="lobby-hint-players">Esperando jugadores… (mínimo 2 para empezar)</p>
     <p class="lobby-hint">Comparte el código con tus amigos para que se unan</p>
   </div>
 </div>
