@@ -636,7 +636,7 @@ const App = (() => {
       isHost: myId === 0,
       myPlayerId: myId,
       phase: 'playing',
-      _lastAppliedTurn: 0,
+      _lastAppliedTurn: -1,  // -1 para que turnIndex 0 siempre se aplique
       _graceGiven: true   // countdown ya hace de gracia, no repetir en beginTurn
     };
 
@@ -809,8 +809,12 @@ const App = (() => {
 
   /* ── Jugar de nuevo ── */
   function playAgain() {
-    showScreen('screen-create');
+    clearInterval(window._timerInterval);
+    CadenaGame.FBSync.cleanup();
+    CadenaGame._resetState(null);
     document.getElementById('chain-entries').innerHTML = '';
+    document.getElementById('players-lives').innerHTML = '';
+    showScreen('screen-create');
   }
 
   /* ── Toast ── */
