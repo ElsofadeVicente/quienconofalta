@@ -501,8 +501,16 @@ const App = (() => {
     selectedType = type;
     document.getElementById('btn-local').classList.toggle('active', type === 'local');
     document.getElementById('btn-online').classList.toggle('active', type === 'online');
-    document.getElementById('type-note-local').classList.toggle('hidden', type !== 'local');
-    document.getElementById('type-note-online').classList.toggle('hidden', type !== 'online');
+
+    // Mostrar bloque jugadores (local) u online-host (online)
+    const localBlock  = document.getElementById('local-players-block');
+    const onlineBlock = document.getElementById('online-host-block');
+    if (localBlock)  localBlock.classList.toggle('hidden', type !== 'local');
+    if (onlineBlock) onlineBlock.classList.toggle('hidden', type !== 'online');
+
+    // Cambiar texto del botón de inicio
+    const btnStart = document.querySelector('.btn-start');
+    if (btnStart) btnStart.textContent = type === 'online' ? 'CREAR SALA ▶' : 'EMPEZAR ▶';
   }
 
   /* ── Jugadores ── */
@@ -548,6 +556,26 @@ const App = (() => {
 
   /* ── Iniciar partida ── */
   async function startGame() {
+    if (selectedType === 'online') {
+      const hostName = document.getElementById('online-host-name')?.value.trim();
+      if (!hostName) { showToast('Escribe tu nombre para crear la sala', 'error'); return; }
+
+      try {
+        await CadenaData.init();
+      } catch (err) {
+        showToast('Error al cargar datos: ' + err.message, 'error');
+        return;
+      }
+
+      if (!window._FB?.configured) {
+        showToast('Firebase no configurado para modo online', 'error');
+        return;
+      }
+      await startOnlineAsHost([hostName], selectedLives, selectedTime);
+      return;
+    }
+
+    // Modo local
     const names = getPlayerNames();
     if (names.length < 2) { showToast('Necesitas al menos 2 jugadores', 'error'); return; }
 
@@ -559,15 +587,7 @@ const App = (() => {
       return;
     }
 
-    if (selectedType === 'online') {
-      if (!window._FB?.configured) {
-        showToast('Firebase no configurado para modo online', 'error');
-        return;
-      }
-      await startOnlineAsHost(names, selectedLives, selectedTime);
-    } else {
-      startLocalGame(names, selectedLives, selectedTime);
-    }
+    startLocalGame(names, selectedLives, selectedTime);
   }
 
   function startLocalGame(names, lives, turnSecs) {

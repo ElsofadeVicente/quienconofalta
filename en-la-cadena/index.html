@@ -37,6 +37,15 @@
   <div class="setup-container">
     <h2 class="section-title">⚙️ Nueva Partida</h2>
 
+    <!-- Tipo de partida (PRIMERO) -->
+    <div class="setup-block">
+      <label class="block-label">TIPO DE PARTIDA</label>
+      <div class="type-toggle">
+        <button class="type-btn active" id="btn-local" onclick="App.setType('local')">📱 Local</button>
+        <button class="type-btn" id="btn-online" onclick="App.setType('online')">🌐 Online</button>
+      </div>
+    </div>
+
     <!-- Modo de juego -->
     <div class="setup-block">
       <label class="block-label">MODO DE VIDAS</label>
@@ -59,9 +68,10 @@
       </div>
     </div>
 
-    <!-- Jugadores -->
-    <div class="setup-block">
+    <!-- Jugadores (solo LOCAL) -->
+    <div class="setup-block" id="local-players-block">
       <label class="block-label">JUGADORES <span class="hint">(mín. 2, máx. 8)</span></label>
+      <p class="type-note" style="margin-bottom:10px">Todos los jugadores se pasan el dispositivo por turnos.</p>
       <div id="player-inputs">
         <div class="player-input-row">
           <span class="player-num">1</span>
@@ -77,18 +87,14 @@
       <button class="btn-add-player" onclick="App.addPlayer()">+ Añadir jugador</button>
     </div>
 
-    <!-- Tipo de partida -->
-    <div class="setup-block" id="online-block">
-      <label class="block-label">TIPO DE PARTIDA</label>
-      <div class="type-toggle">
-        <button class="type-btn active" id="btn-local" onclick="App.setType('local')">📱 Local (mismo dispositivo)</button>
-        <button class="type-btn" id="btn-online" onclick="App.setType('online')">🌐 Online (distintos dispositivos)</button>
-      </div>
-      <p class="type-note" id="type-note-local">Todos los jugadores se pasan el dispositivo por turnos.</p>
-      <p class="type-note hidden" id="type-note-online">Se generará un código de sala para que los demás se unan desde sus dispositivos.</p>
+    <!-- Tu nombre + info (solo ONLINE) -->
+    <div class="setup-block hidden" id="online-host-block">
+      <label class="block-label">TU NOMBRE</label>
+      <input id="online-host-name" class="player-name-input big" type="text" placeholder="Tu nombre de jugador" maxlength="20" />
+      <p class="type-note" style="margin-top:12px">🌐 Se creará una sala con un código que compartirás con tus amigos. Cada jugador se une desde su propio dispositivo.</p>
     </div>
 
-    <button class="btn-primary btn-start" onclick="App.startGame()">EMPEZAR ▶</button>
+    <button class="btn-primary btn-start" onclick="App.startGame()">CREAR SALA ▶</button>
   </div>
 </div>
 
