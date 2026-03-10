@@ -84,7 +84,7 @@ async function loadMatchData(mode) {
     try {
         let folders = [];
         switch (mode) {
-            case 'diario':
+            case 'diario':    folders = ['../data/once-diario']; break;
             case 'random':    folders = ['../data/liga', '../data/champions', '../data/historico']; break;
             case 'liga':      folders = ['../data/liga'];      break;
             case 'champions': folders = ['../data/champions']; break;
@@ -92,6 +92,7 @@ async function loadMatchData(mode) {
         }
 
         const knownFiles = {
+            '../data/once-diario': ['once-diario.json'],
             '../data/liga': [
                 'ALAVES.json','ALMERIA.json','ATHLETIC_CLUB.json','ATLETICO_MADRID.json',
                 'BARCELONA.json','CADIZ.json','CELTA_VIGO.json','CORDOBA.json',
@@ -173,14 +174,9 @@ function shuffleArray(array) {
 }
 
 function getDailyMatchForOffset(offset) {
-    const d = new Date();
-    d.setDate(d.getDate() - offset);
-    const seed = d.getFullYear() * 10000 + (d.getMonth() + 1) * 100 + d.getDate();
-    let hash = seed;
-    hash = ((hash >>> 16) ^ hash) * 0x45d9f3b;
-    hash = ((hash >>> 16) ^ hash) * 0x45d9f3b;
-    hash = (hash >>> 16) ^ hash;
-    return dailyPool[Math.abs(hash) % dailyPool.length];
+    const edition = getDailyEditionNumber(offset); // 1, 2, 3...
+    const index = (edition - 1) % dailyPool.length;
+    return dailyPool[index];
 }
 
 function getDailyEditionNumber(offset) {
@@ -534,19 +530,30 @@ function getKnownName(fullName) {
         'MOI GOMEZ': 'MOI GOMEZ', 'CUCHO HERNANDEZ': 'CUCHO', 'CUCHO HERNÁNDEZ': 'CUCHO',
         'RAFA SILVA': 'RAFA', 'JOAO MARIO': 'JOAO MARIO', 'JOÃO MARIO': 'JOAO MARIO',
         'XAVI HERNANDEZ': 'XAVI', 'XAVI HERNÁNDEZ': 'XAVI',
-        'ERIC MAXIM CHOUPO-MOTING': 'CHOUPO-MOTING', 'CHOUPO-MOTING': 'CHOUPO-MOTING'
+        'ERIC MAXIM CHOUPO-MOTING': 'CHOUPO-MOTING', 'CHOUPO-MOTING': 'CHOUPO-MOTING',
+        'ALISSON BECKER': 'ALISSON'
     };
     if (exceptions[name]) return exceptions[name];
 
     const words = name.split(' ');
     if (words.length === 1) return words[0];
 
+    const monoNames = [
+        'NEYMAR','RONALDINHO','RONALDO','RIVALDO','CAFU','ROBERTO','CASEMIRO',
+        'FERNANDINHO','WILLIAN','FRED','PAULINHO','HULK','OSCAR','RAMIRES',
+        'LUCAS','RAFAEL','FABINHO','EDERSON','ALISSON','ADRIANO','ROBINHO',
+        'KAKÁ','THIAGO','FIRMINO','RICHARLISON','RAPHINHA','RODRYGO',
+        'VINÍCIUS','MILITÃO','MARQUINHOS','DANILO','FELIPE','RENAN','EMERSON',
+        'ALEX','ANDERSON','PEPE'
+    ];
+    if (monoNames.includes(words[0])) return words[0];
+
     const suffixes = ['JR','JR.','SR','SR.','II','III','IV'];
     let cleanWords = [...words];
     if (suffixes.includes(cleanWords[cleanWords.length - 1])) cleanWords.pop();
     if (cleanWords.length === 1) return cleanWords[0];
 
-    const particles = ['DE','VAN','DER','TER','VON','DA','DI','DEL','LA','LE','LO','VAN DER','VAN DE','DOS','DAS','SAN'];
+    const particles = ['DE','VAN','DER','TER','VON','DA','DI','DEL','LA','LE','VAN DER','VAN DE','DOS','DAS','SAN'];
     if (cleanWords.length === 2 && particles.includes(cleanWords[0])) return cleanWords.join(' ');
 
     if (cleanWords.length >= 3) {
