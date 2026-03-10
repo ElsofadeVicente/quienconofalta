@@ -6,16 +6,64 @@
 
 /* ── CONFIGURACIÓN ── */
 const HOL_CONFIG = {
-  // Archivos de datos por liga
-  leagueFiles: [
-    { key: 'laliga',         file: 'laliga.json',         name: 'La Liga' },
-    { key: 'premier-league', file: 'premier-league.json', name: 'Premier League' },
-    { key: 'serie-a',        file: 'serie-a.json',        name: 'Serie A' },
-    { key: 'bundesliga',     file: 'bundesliga.json',     name: 'Bundesliga' },
-    { key: 'ligue-1',        file: 'ligue-1.json',        name: 'Ligue 1' },
+  // Modos de juego disponibles
+  modes: [
+    {
+      key:        'top-players',
+      folder:     'top-players/',        // Carpeta con un JSON por liga
+      files:      ['laliga.json', 'premier-league.json', 'serie-a.json', 'bundesliga.json', 'ligue-1.json'],
+      mvMin:      15000000,              // Filtro: solo jugadores con mv >= 15M
+      name:       'Top Players',
+      emoji:      '⭐',
+      desc:       'Los mejores de las 5 grandes ligas',
+      multiFile:  true,
+    },
+    {
+      key:        'laliga',
+      file:       'laliga.json',
+      name:       'La Liga',
+      emoji:      '🇪🇸',
+      desc:       'Todos los jugadores de La Liga',
+      multiFile:  false,
+    },
+    {
+      key:        'premier-league',
+      file:       'premier-league.json',
+      name:       'Premier League',
+      emoji:      '🏴󠁧󠁢󠁥󠁮󠁧󠁿',
+      desc:       'Todos los jugadores de la Premier',
+      multiFile:  false,
+    },
+    {
+      key:        'serie-a',
+      file:       'serie-a.json',
+      name:       'Serie A',
+      emoji:      '🇮🇹',
+      desc:       'Todos los jugadores de la Serie A',
+      multiFile:  false,
+    },
+    {
+      key:        'bundesliga',
+      file:       'bundesliga.json',
+      name:       'Bundesliga',
+      emoji:      '🇩🇪',
+      desc:       'Todos los jugadores de la Bundesliga',
+      multiFile:  false,
+    },
+    {
+      key:        'ligue-1',
+      file:       'ligue-1.json',
+      name:       'Ligue 1',
+      emoji:      '🇫🇷',
+      desc:       'Todos los jugadores de la Ligue 1',
+      multiFile:  false,
+    },
   ],
+
   dataPath: '../data/higher-or-lower/',
-  storageKey: 'hol_record',
+
+  // Récord por modo: se guarda como 'hol_record_<modeKey>'
+  storageKeyPrefix: 'hol_record_',
 
   // Categorías de comparación (preparado para expandir)
   categories: {
@@ -58,6 +106,7 @@ const HOL = {
   score: 0,
   record: 0,
   currentCategory: 'mv',
+  currentMode: null,  // clave del modo activo
   isAnimating: false,
   gameOver: false,
 };
@@ -69,6 +118,9 @@ function cacheDom() {
   DOM = {
     loading:        document.getElementById('hol-loading'),
     game:           document.getElementById('hol-game'),
+    modeMenu:       document.getElementById('hol-mode-menu'),
+    modeGrid:       document.getElementById('hol-mode-grid'),
+    modeName:       document.getElementById('hol-mode-name'),
     scoreValue:     document.getElementById('hol-score-value'),
     recordValue:    document.getElementById('hol-record-value'),
     // Left panel
@@ -96,36 +148,123 @@ function cacheDom() {
     goScore:        document.getElementById('hol-go-score'),
     goRecord:       document.getElementById('hol-go-record'),
     playAgainBtn:   document.getElementById('hol-play-again'),
+    changeModeBtn:  document.getElementById('hol-change-mode'),
   };
 }
 
-/* ── CARGA DE DATOS ── */
-async function loadData() {
-  const allPlayers = {};
-  let loaded = 0;
+/* ── MENÚ DE MODOS ── */
 
-  for (const league of HOL_CONFIG.leagueFiles) {
-    try {
-      const url = `${HOL_CONFIG.dataPath}${league.file}`;
-      const res = await fetch(url);
-      if (!res.ok) continue;
-      const data = await res.json();
-      for (const [id, player] of Object.entries(data)) {
-        allPlayers[id] = player;
-      }
-      loaded++;
-      console.log(`✅ [HOL] ${league.name}: ${Object.keys(data).length} jugadores`);
-    } catch (e) {
-      console.warn(`⚠️ [HOL] No se pudo cargar ${league.file}:`, e.message);
-    }
+function buildModeMenu() {
+  DOM.modeGrid.innerHTML = '';
+  for (const mode of HOL_CONFIG.modes) {
+    const record = parseInt(localStorage.getItem(HOL_CONFIG.storageKeyPrefix + mode.key) || '0', 10);
+    const card = document.createElement('button');
+    card.className = 'hol-mode-card';
+    card.dataset.modeKey = mode.key;
+    card.innerHTML = `
+      <span class="hol-mode-emoji">${mode.emoji}</span>
+      <span class="hol-mode-title">${mode.name}</span>
+      <span class="hol-mode-desc">${mode.desc}</span>
+      <span class="hol-mode-record">🏆 ${record}</span>
+    `;
+    card.addEventListener('click', () => selectMode(mode.key));
+    DOM.modeGrid.appendChild(card);
+  }
+}
+
+function showModeMenu() {
+  buildModeMenu();
+  DOM.modeMenu.classList.add('active');
+}
+
+function hideModeMenu() {
+  DOM.modeMenu.classList.remove('active');
+}
+
+async function selectMode(modeKey) {
+  hideModeMenu();
+  HOL.currentMode = modeKey;
+
+  const mode = HOL_CONFIG.modes.find(m => m.key === modeKey);
+
+  // Mostrar loading
+  DOM.loading.classList.remove('hidden');
+
+  // Cargar datos del modo
+  const rawData = await loadModeData(mode);
+
+  // Filtrar jugadores válidos
+  HOL.pool = Object.entries(rawData)
+    .filter(([, p]) => p.mv != null && p.n)
+    .map(([id, p]) => ({ id, ...p }));
+
+  console.log(`🎮 [HOL] Modo "${mode.name}" — Pool: ${HOL.pool.length} jugadores`);
+
+  if (HOL.pool.length < 2) {
+    alert(`No hay suficientes jugadores para el modo "${mode.name}". Revisa los datos en data/higher-or-lower/`);
+    DOM.loading.classList.add('hidden');
+    showModeMenu();
+    return;
   }
 
-  if (loaded === 0) {
-    console.log('⚠️ [HOL] No hay archivos de liga, cargando datos demo…');
+  // Cargar récord del modo
+  HOL.record = parseInt(localStorage.getItem(HOL_CONFIG.storageKeyPrefix + modeKey) || '0', 10);
+  DOM.recordValue.textContent = HOL.record;
+
+  // Nombre del modo en topbar
+  if (DOM.modeName) DOM.modeName.textContent = mode.name.toUpperCase();
+
+  // Ocultar loading, iniciar partida
+  DOM.loading.classList.add('hidden');
+  startNewGame();
+}
+
+/* ── CARGA DE DATOS ── */
+
+async function loadModeData(mode) {
+  if (mode.multiFile) {
+    // Modo con múltiples archivos en una subcarpeta (ej: top-players/)
+    const allPlayers = {};
+    let loaded = 0;
+    for (const file of mode.files) {
+      try {
+        const url = `${HOL_CONFIG.dataPath}${mode.folder}${file}`;
+        const res = await fetch(url);
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = await res.json();
+        for (const [id, player] of Object.entries(data)) {
+          // Aplicar filtro de mv mínimo si está definido
+          if (mode.mvMin == null || (player.mv != null && player.mv >= mode.mvMin)) {
+            allPlayers[id] = player;
+          }
+        }
+        loaded++;
+        console.log(`✅ [HOL] ${mode.name}/${file} cargado`);
+      } catch (e) {
+        console.warn(`⚠️ [HOL] No se pudo cargar ${mode.folder}${file}:`, e.message);
+      }
+    }
+    if (loaded === 0) {
+      console.warn('⚠️ [HOL] Ningún archivo cargado, usando demo…');
+      return loadDemoData();
+    }
+    console.log(`🎮 [HOL] ${mode.name}: ${Object.keys(allPlayers).length} jugadores (mv >= ${(mode.mvMin/1e6).toFixed(0)}M)`);
+    return allPlayers;
+  }
+
+  // Modo con un único archivo
+  try {
+    const url = `${HOL_CONFIG.dataPath}${mode.file}`;
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    console.log(`✅ [HOL] ${mode.name}: ${Object.keys(data).length} jugadores`);
+    return data;
+  } catch (e) {
+    console.warn(`⚠️ [HOL] No se pudo cargar ${mode.file}:`, e.message);
+    console.log('⚠️ [HOL] Cargando datos demo…');
     return loadDemoData();
   }
-
-  return allPlayers;
 }
 
 /** Datos demo embebidos para testing sin archivos de liga */
@@ -153,36 +292,19 @@ function loadDemoData() {
 async function initGame() {
   cacheDom();
 
-  // Cargar récord
-  HOL.record = parseInt(localStorage.getItem(HOL_CONFIG.storageKey) || '0', 10);
-  DOM.recordValue.textContent = HOL.record;
-
-  // Cargar datos
-  const rawData = await loadData();
-
-  // Convertir a array y filtrar jugadores con mv
-  HOL.pool = Object.entries(rawData)
-    .filter(([, p]) => p.mv != null && p.n)
-    .map(([id, p]) => ({ id, ...p }));
-
-  console.log(`🎮 [HOL] Pool listo: ${HOL.pool.length} jugadores`);
-
-  if (HOL.pool.length < 2) {
-    alert('No hay suficientes jugadores para jugar. Añade datos a data/higher-or-lower/');
-    return;
-  }
-
-  // Ocultar loading, mostrar juego
-  DOM.loading.classList.add('hidden');
-
   // Setup botones
   DOM.btnHigher.addEventListener('click', () => handleChoice('higher'));
   DOM.btnEqual.addEventListener('click',  () => handleChoice('equal'));
   DOM.btnLower.addEventListener('click',  () => handleChoice('lower'));
   DOM.playAgainBtn.addEventListener('click', restartGame);
+  if (DOM.changeModeBtn) DOM.changeModeBtn.addEventListener('click', () => {
+    DOM.gameoverScreen.classList.remove('active');
+    showModeMenu();
+  });
 
-  // Empezar
-  startNewGame();
+  // Ocultar loading y mostrar menú de modos
+  DOM.loading.classList.add('hidden');
+  showModeMenu();
 }
 
 /* ── LÓGICA DEL JUEGO ── */
@@ -196,10 +318,8 @@ function startNewGame() {
   DOM.scoreValue.textContent = '0';
   DOM.gameoverScreen.classList.remove('active');
 
-  // Elegir categoría (de momento solo mv)
   HOL.currentCategory = 'mv';
 
-  // Elegir dos jugadores iniciales
   HOL.leftPlayer  = pickRandomPlayer();
   HOL.rightPlayer = pickRandomPlayer();
 
@@ -214,11 +334,9 @@ function restartGame() {
 
 /** Escoge un jugador aleatorio no usado en esta partida */
 function pickRandomPlayer() {
-  // Si ya usamos casi todos, resetear
   if (HOL.usedIds.size >= HOL.pool.length - 2) {
     HOL.usedIds.clear();
-    // Mantener solo los dos actuales
-    if (HOL.leftPlayer) HOL.usedIds.add(HOL.leftPlayer.id);
+    if (HOL.leftPlayer)  HOL.usedIds.add(HOL.leftPlayer.id);
     if (HOL.rightPlayer) HOL.usedIds.add(HOL.rightPlayer.id);
   }
 
@@ -239,16 +357,13 @@ function renderLeft() {
   const p = HOL.leftPlayer;
   const cat = HOL_CONFIG.categories[HOL.currentCategory];
 
-  // Background image
   setPlayerBg(DOM.leftBg, p);
 
-  // Info
   DOM.leftName.textContent = p.n;
   DOM.leftClub.textContent = p.club || (p.teams && p.teams[0]) || '';
   DOM.leftStatLabel.textContent = cat.label;
   DOM.leftStatValue.textContent = cat.format(getStatValue(p));
 
-  // Reset animations
   DOM.leftPanel.classList.remove('sliding-out', 'sliding-in', 'flash-correct', 'flash-wrong');
 }
 
@@ -256,19 +371,15 @@ function renderRight() {
   const p = HOL.rightPlayer;
   const cat = HOL_CONFIG.categories[HOL.currentCategory];
 
-  // Background image
   setPlayerBg(DOM.rightBg, p);
 
-  // Info
   DOM.rightName.textContent = p.n;
   DOM.rightClub.textContent = p.club || (p.teams && p.teams[0]) || '';
 
-  // Stat (oculto al principio)
   DOM.rightStatLabel.textContent = cat.label;
   DOM.rightStatValue.textContent = cat.format(getStatValue(p));
   DOM.rightReveal.classList.remove('visible');
 
-  // Reset
   DOM.rightPanel.classList.remove('sliding-out', 'sliding-in', 'flash-correct', 'flash-wrong');
 }
 
@@ -276,7 +387,6 @@ function setPlayerBg(bgEl, player) {
   if (player.img) {
     bgEl.style.backgroundImage = `url(${player.img})`;
   } else {
-    // Fallback: gradiente sutil
     bgEl.style.backgroundImage = 'linear-gradient(135deg, #1a2a3a 0%, #0f1a28 100%)';
   }
 }
@@ -297,55 +407,43 @@ function handleChoice(choice) {
   const leftVal  = getStatValue(HOL.leftPlayer);
   const rightVal = getStatValue(HOL.rightPlayer);
 
-  // Determinar respuesta correcta
   let correctChoice;
-  if (rightVal > leftVal)      correctChoice = 'higher';
+  if (rightVal > leftVal)        correctChoice = 'higher';
   else if (rightVal === leftVal) correctChoice = 'equal';
   else                           correctChoice = 'lower';
 
   const isCorrect = (choice === correctChoice);
 
-  // Revelar stat del derecho
   DOM.rightReveal.classList.add('visible');
 
-  // Marcar botón elegido
   const btnMap = { higher: DOM.btnHigher, equal: DOM.btnEqual, lower: DOM.btnLower };
   disableChoices();
   btnMap[choice].classList.add(isCorrect ? 'correct-pick' : 'wrong-pick');
 
-  // Flash en el panel
   DOM.rightPanel.classList.add(isCorrect ? 'flash-correct' : 'flash-wrong');
 
   if (isCorrect) {
-    // Actualizar puntuación
     HOL.score++;
     DOM.scoreValue.textContent = HOL.score;
-
-    // Tras un delay, hacer la transición de cadena
     setTimeout(() => chainTransition(), 1400);
   } else {
-    // Game over
     setTimeout(() => triggerGameOver(), 1600);
   }
 }
 
 /** Transición de cadena: derecho → izquierdo, nuevo → derecho */
 function chainTransition() {
-  // Animate out
   DOM.leftPanel.classList.add('sliding-out');
   DOM.rightPanel.classList.add('sliding-out');
 
   setTimeout(() => {
-    // Mover derecho a izquierdo
-    HOL.leftPlayer = HOL.rightPlayer;
+    HOL.leftPlayer  = HOL.rightPlayer;
     HOL.rightPlayer = pickRandomPlayer();
 
-    // Render nuevos datos
     renderLeft();
     renderRight();
     enableChoices();
 
-    // Animate in
     DOM.leftPanel.classList.add('sliding-in');
     DOM.rightPanel.classList.add('sliding-in');
 
@@ -357,16 +455,15 @@ function triggerGameOver() {
   HOL.gameOver = true;
   HOL.isAnimating = false;
 
-  // Actualizar récord
   let isNewRecord = false;
   if (HOL.score > HOL.record) {
     HOL.record = HOL.score;
-    localStorage.setItem(HOL_CONFIG.storageKey, String(HOL.record));
+    const key = HOL_CONFIG.storageKeyPrefix + HOL.currentMode;
+    localStorage.setItem(key, String(HOL.record));
     isNewRecord = true;
   }
   DOM.recordValue.textContent = HOL.record;
 
-  // Mostrar pantalla
   DOM.goScore.textContent = HOL.score;
   if (isNewRecord) {
     DOM.goRecord.innerHTML = `<span class="new-record">🏆 ¡NUEVO RÉCORD!</span>`;

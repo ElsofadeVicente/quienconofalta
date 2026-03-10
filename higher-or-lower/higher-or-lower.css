@@ -4,466 +4,364 @@
    QUIÉN COÑO FALTA
    ============================================= */
 
-/* ── LAYOUT PRINCIPAL ── */
+/* ── PÁGINA COMPLETA ── */
 .hol-game {
   position: relative;
   width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  background: var(--bg-dark);
+  min-height: 100vh;
+  background: var(--bg-dark, #0a0c10);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
 }
 
 /* ── TOP BAR ── */
 .hol-topbar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 50;
+  width: 100%;
+  max-width: 900px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 14px 24px;
-  background: linear-gradient(180deg, rgba(10,10,8,0.92) 0%, transparent 100%);
-  pointer-events: none;
-}
-
-.hol-score-label {
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--text-light);
-  opacity: 0.7;
-  pointer-events: auto;
-}
-
-.hol-score-value {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.6rem;
-  letter-spacing: 2px;
-  color: var(--neon-yellow);
-  margin-left: 8px;
+  padding: 18px 24px 10px;
+  z-index: 50;
 }
 
 .hol-score-left,
 .hol-score-right {
   display: flex;
-  align-items: center;
-  gap: 4px;
+  align-items: baseline;
+  gap: 6px;
 }
 
-/* ── ARENA (las dos mitades) ── */
+.hol-score-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hol-score-label {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+}
+
+.hol-score-value {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  color: var(--neon-yellow, #c8a84b);
+  line-height: 1;
+}
+
+.hol-mode-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 4px;
+  color: rgba(255,255,255,0.2);
+  text-transform: uppercase;
+}
+
+/* ── ARENA: contenedor de las dos tarjetas ── */
 .hol-arena {
   display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 0;
   width: 100%;
-  height: 100%;
+  max-width: 900px;
+  padding: 8px 16px 24px;
+  flex: 1;
 }
 
-/* ── PANEL DE JUGADOR (cada mitad) ── */
+/* ── TARJETA DE JUGADOR ── */
 .hol-panel {
   position: relative;
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  max-width: 380px;
+  aspect-ratio: 3 / 4;
+  border-radius: 18px;
   overflow: hidden;
-  transition: opacity 0.4s ease;
+  box-shadow: 0 12px 48px rgba(0,0,0,0.6);
+  transition: box-shadow 0.2s ease;
 }
 
-/* Imagen de fondo del jugador */
+/* Imagen de fondo */
 .hol-panel-bg {
   position: absolute;
   inset: 0;
   background-size: cover;
-  background-position: center top;
+  background-position: center 15%;
   background-repeat: no-repeat;
-  transition: opacity 0.5s ease;
+  transition: transform 0.6s ease;
 }
 
-/* Overlay oscuro */
+.hol-panel:hover .hol-panel-bg {
+  transform: scale(1.03);
+}
+
+/* Gradiente oscuro sobre la imagen */
 .hol-panel-bg::after {
   content: '';
   position: absolute;
   inset: 0;
-}
-
-.hol-panel--left .hol-panel-bg::after {
   background: linear-gradient(
-    135deg,
-    rgba(15, 25, 45, 0.82) 0%,
-    rgba(20, 30, 50, 0.75) 50%,
-    rgba(10, 20, 40, 0.88) 100%
+    to bottom,
+    rgba(0,0,0,0.15) 0%,
+    rgba(0,0,0,0.08) 35%,
+    rgba(0,0,0,0.55) 65%,
+    rgba(0,0,0,0.9) 100%
   );
 }
 
-.hol-panel--right .hol-panel-bg::after {
-  background: linear-gradient(
-    225deg,
-    rgba(15, 25, 45, 0.82) 0%,
-    rgba(20, 30, 50, 0.75) 50%,
-    rgba(10, 20, 40, 0.88) 100%
-  );
-}
-
-/* Separador central */
-.hol-panel--left::after {
-  content: '';
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: linear-gradient(
-    180deg,
-    transparent 10%,
-    rgba(200, 168, 75, 0.3) 50%,
-    transparent 90%
-  );
-  z-index: 10;
-}
-
-/* ── CONTENIDO DEL PANEL ── */
+/* Contenido sobre la imagen */
 .hol-panel-content {
-  position: relative;
-  z-index: 5;
+  position: absolute;
+  inset: 0;
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   align-items: center;
-  gap: 16px;
-  padding: 20px;
-  width: 100%;
-  max-width: 400px;
-}
-
-/* Nombre del jugador */
-.hol-player-name {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(1.4rem, 3.5vw, 2.2rem);
-  letter-spacing: 4px;
-  color: #ffffff;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+  padding: 20px 16px 22px;
+  z-index: 5;
   text-align: center;
-  line-height: 1.1;
 }
 
 /* Club */
 .hol-player-club {
   font-family: 'Rajdhani', sans-serif;
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 2px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
   text-transform: uppercase;
-  color: var(--text-light);
-  opacity: 0.6;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 4px;
 }
 
-/* ── STAT DISPLAY (panel izquierdo) ── */
+/* Nombre del jugador */
+.hol-player-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(1.2rem, 2.8vw, 1.9rem);
+  letter-spacing: 3px;
+  color: #ffffff;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.7);
+  line-height: 1.1;
+  margin-bottom: 12px;
+}
+
+/* ── STAT BLOCK (panel izquierdo) ── */
 .hol-stat-block {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
-  margin-top: 12px;
+  gap: 2px;
+  background: rgba(0,0,0,0.48);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px;
+  padding: 10px 20px 12px;
+  backdrop-filter: blur(8px);
+  min-width: 155px;
 }
 
 .hol-stat-label {
   font-family: 'Rajdhani', sans-serif;
-  font-size: 0.75rem;
+  font-size: 0.62rem;
   font-weight: 700;
-  letter-spacing: 3px;
+  letter-spacing: 2.5px;
   text-transform: uppercase;
-  color: var(--text-light);
-  opacity: 0.65;
+  color: rgba(255,255,255,0.5);
 }
 
 .hol-stat-value {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(2.4rem, 6vw, 3.8rem);
-  letter-spacing: 2px;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  letter-spacing: 1px;
   color: #ffffff;
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
   line-height: 1;
 }
 
-/* Stat revelado en el panel derecho */
+/* ── STAT REVEAL (panel derecho, oculto hasta responder) ── */
 .hol-stat-reveal {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
-  margin-top: 12px;
+  gap: 2px;
+  background: rgba(0,0,0,0.48);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px;
+  padding: 10px 20px 12px;
+  backdrop-filter: blur(8px);
+  min-width: 155px;
+  margin-bottom: 12px;
   opacity: 0;
-  transform: scale(0.8);
-  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transform: scale(0.85) translateY(6px);
+  transition: all 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .hol-stat-reveal.visible {
   opacity: 1;
-  transform: scale(1);
+  transform: scale(1) translateY(0);
 }
 
 /* ── BOTONES DE RESPUESTA ── */
 .hol-choices {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 7px;
   width: 100%;
-  max-width: 280px;
-  margin-top: 16px;
+  max-width: 210px;
 }
 
 .hol-choice-btn {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  padding: 14px 24px;
+  gap: 8px;
+  padding: 10px 14px;
   border: none;
-  border-radius: 12px;
+  border-radius: 9px;
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.2rem;
+  font-size: 1rem;
   letter-spacing: 3px;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.15s ease;
+  position: relative;
   overflow: hidden;
 }
 
-.hol-choice-btn::before {
+.hol-choice-btn::after {
   content: '';
   position: absolute;
   inset: 0;
+  background: rgba(255,255,255,0.12);
   opacity: 0;
-  transition: opacity 0.2s;
+  transition: opacity 0.15s;
 }
 
-.hol-choice-btn:hover::before {
-  opacity: 1;
-}
+.hol-choice-btn:hover::after { opacity: 1; }
+.hol-choice-btn:hover { transform: translateY(-1px); }
+.hol-choice-btn:active { transform: scale(0.98); }
 
-/* Superior (verde) */
 .hol-choice-btn--higher {
-  background: linear-gradient(135deg, #1a8a4a, #22a558);
-  color: #ffffff;
-  box-shadow: 0 4px 16px rgba(26, 138, 74, 0.35);
+  background: linear-gradient(135deg, #1a7a42, #20994e);
+  color: #fff;
+  box-shadow: 0 3px 10px rgba(26,138,74,0.4);
 }
 
-.hol-choice-btn--higher::before {
-  background: linear-gradient(135deg, #22a558, #2bbd68);
-}
-
-.hol-choice-btn--higher:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 24px rgba(26, 138, 74, 0.5);
-}
-
-/* Igual (gris) */
 .hol-choice-btn--equal {
-  background: linear-gradient(135deg, #4a4a52, #5c5c65);
-  color: #ffffff;
-  box-shadow: 0 4px 16px rgba(74, 74, 82, 0.35);
+  background: linear-gradient(135deg, #36363f, #48484e);
+  color: #fff;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.3);
 }
 
-.hol-choice-btn--equal::before {
-  background: linear-gradient(135deg, #5c5c65, #6e6e78);
-}
-
-.hol-choice-btn--equal:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 24px rgba(74, 74, 82, 0.5);
-}
-
-/* Inferior (rojo) */
 .hol-choice-btn--lower {
-  background: linear-gradient(135deg, #c0392b, #e04030);
-  color: #ffffff;
-  box-shadow: 0 4px 16px rgba(192, 57, 43, 0.35);
+  background: linear-gradient(135deg, #a82820, #c63028);
+  color: #fff;
+  box-shadow: 0 3px 10px rgba(180,48,37,0.4);
 }
 
-.hol-choice-btn--lower::before {
-  background: linear-gradient(135deg, #e04030, #e8524a);
-}
-
-.hol-choice-btn--lower:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 24px rgba(192, 57, 43, 0.5);
-}
-
-/* Flechitas en los botones */
 .hol-btn-arrow {
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   opacity: 0.7;
 }
 
-/* Estados tras responder */
+/* Estados post-respuesta */
 .hol-choice-btn.disabled {
   pointer-events: none;
-  opacity: 0.3;
-  transform: scale(0.95);
+  opacity: 0.22;
+  transform: scale(0.96);
 }
 
 .hol-choice-btn.correct-pick {
   opacity: 1 !important;
-  transform: scale(1.05) !important;
-  box-shadow: 0 0 30px rgba(74, 222, 128, 0.6) !important;
+  transform: scale(1.04) !important;
+  box-shadow: 0 0 20px rgba(74,222,128,0.7) !important;
 }
 
 .hol-choice-btn.wrong-pick {
   opacity: 1 !important;
-  transform: scale(1.05) !important;
-  box-shadow: 0 0 30px rgba(239, 68, 68, 0.6) !important;
-  background: linear-gradient(135deg, #991b1b, #b91c1c) !important;
+  transform: scale(1.04) !important;
+  box-shadow: 0 0 20px rgba(239,68,68,0.7) !important;
+  background: linear-gradient(135deg, #6f1a1a, #8b1f1f) !important;
 }
 
 /* ── VS BADGE ── */
 .hol-vs {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
   z-index: 20;
-  width: 52px;
-  height: 52px;
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  align-self: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #1e293b, #2d3a4f);
-  border: 2px solid rgba(200, 168, 75, 0.4);
-  border-radius: 10px;
+  background: var(--bg-dark, #0a0c10);
+  border: 1.5px solid rgba(200,168,75,0.4);
+  border-radius: 50%;
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   letter-spacing: 2px;
-  color: #ffffff;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  color: rgba(200,168,75,0.75);
+  box-shadow: 0 0 18px rgba(0,0,0,0.5);
+  margin: 0 -8px; /* solapa levemente las cards */
 }
 
-/* ── FEEDBACK FLASH (correct/wrong) ── */
-.hol-panel.flash-correct .hol-panel-bg::after {
-  background: rgba(34, 165, 88, 0.3) !important;
-  transition: background 0.3s;
-}
-
-.hol-panel.flash-wrong .hol-panel-bg::after {
-  background: rgba(192, 57, 43, 0.3) !important;
-  transition: background 0.3s;
-}
-
-/* ── GAME OVER OVERLAY ── */
-.hol-gameover {
+/* ── FEEDBACK FLASH ── */
+.hol-panel.flash-correct::before {
+  content: '';
   position: absolute;
   inset: 0;
-  z-index: 100;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0, 0, 0, 0.92);
-  animation: fadeIn 0.4s ease;
+  z-index: 8;
+  border-radius: 18px;
+  box-shadow: inset 0 0 0 3px rgba(34,197,94,0.85);
+  background: rgba(34,197,94,0.1);
+  animation: flashFade 0.9s ease forwards;
+  pointer-events: none;
 }
 
-.hol-gameover.active {
-  display: flex;
-}
-
-.hol-gameover-content {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-  padding: 40px;
-  max-width: 420px;
-  width: 90%;
-  background: linear-gradient(135deg, var(--bg-purple), #3a2e1c);
-  border: 2px solid var(--neon-gold);
-  border-radius: 20px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
-  animation: slideUp 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-.hol-gameover-icon {
-  font-size: 3.5rem;
-}
-
-.hol-gameover-title {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 2.4rem;
-  letter-spacing: 6px;
-  color: var(--neon-yellow);
-}
-
-.hol-gameover-score {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 4rem;
-  letter-spacing: 3px;
-  color: #ffffff;
-  line-height: 1;
-}
-
-.hol-gameover-score-label {
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: var(--text-light);
-  opacity: 0.6;
-  margin-top: -8px;
-}
-
-.hol-gameover-record {
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-  color: var(--neon-green);
-}
-
-.hol-gameover-record .new-record {
-  color: var(--neon-yellow);
-  font-weight: 700;
-}
-
-.hol-play-again-btn {
-  background: var(--neon-green);
-  color: var(--bg-dark);
-  border: none;
-  padding: 14px 40px;
-  border-radius: 10px;
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.3rem;
-  letter-spacing: 4px;
-  cursor: pointer;
-  transition: all 0.2s;
-  margin-top: 8px;
-}
-
-.hol-play-again-btn:hover {
-  background: var(--neon-yellow);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 24px rgba(200, 168, 75, 0.4);
-}
-
-.hol-back-hub-link {
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--text-light);
-  opacity: 0.5;
-  text-decoration: none;
-  letter-spacing: 1px;
-  transition: opacity 0.2s;
-}
-
-.hol-back-hub-link:hover {
-  opacity: 0.8;
-}
-
-/* ── LOADING SCREEN ── */
-.hol-loading {
+.hol-panel.flash-wrong::before {
+  content: '';
   position: absolute;
+  inset: 0;
+  z-index: 8;
+  border-radius: 18px;
+  box-shadow: inset 0 0 0 3px rgba(239,68,68,0.85);
+  background: rgba(239,68,68,0.1);
+  animation: flashFade 0.9s ease forwards;
+  pointer-events: none;
+}
+
+@keyframes flashFade {
+  0%   { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* ── TRANSICIÓN DE CADENA ── */
+.hol-panel.sliding-out {
+  animation: holSlideOut 0.4s ease-in forwards;
+}
+
+.hol-panel.sliding-in {
+  animation: holSlideIn 0.4s ease-out forwards;
+}
+
+@keyframes holSlideOut {
+  from { transform: translateX(0) scale(1);    opacity: 1; }
+  to   { transform: translateX(-20px) scale(0.97); opacity: 0; }
+}
+
+@keyframes holSlideIn {
+  from { transform: translateX(20px) scale(0.97); opacity: 0; }
+  to   { transform: translateX(0) scale(1);    opacity: 1; }
+}
+
+/* ── LOADING ── */
+.hol-loading {
+  position: fixed;
   inset: 0;
   z-index: 200;
   display: flex;
@@ -471,25 +369,23 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
-  background: var(--bg-dark);
+  background: var(--bg-dark, #0a0c10);
 }
 
-.hol-loading.hidden {
-  display: none;
-}
+.hol-loading.hidden { display: none; }
 
 .hol-loading-title {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 2rem;
+  font-size: 1.8rem;
   letter-spacing: 6px;
-  color: var(--neon-yellow);
+  color: var(--neon-yellow, #c8a84b);
 }
 
 .hol-loading-spinner {
-  width: 40px;
-  height: 40px;
-  border: 3px solid rgba(200, 168, 75, 0.2);
-  border-top-color: var(--neon-gold);
+  width: 36px;
+  height: 36px;
+  border: 3px solid rgba(200,168,75,0.2);
+  border-top-color: var(--neon-gold, #c8a84b);
   border-radius: 50%;
   animation: holSpin 0.8s linear infinite;
 }
@@ -498,117 +394,311 @@
   to { transform: rotate(360deg); }
 }
 
-/* ── TRANSICIÓN DE CADENA ── */
-.hol-panel.sliding-out {
-  animation: holSlideOutLeft 0.5s ease-in forwards;
+/* ── GAME OVER OVERLAY ── */
+.hol-gameover {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.88);
+  backdrop-filter: blur(6px);
+  animation: fadeIn 0.35s ease;
 }
 
-.hol-panel.sliding-in {
-  animation: holSlideInRight 0.5s ease-out forwards;
+.hol-gameover.active { display: flex; }
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
-@keyframes holSlideOutLeft {
-  from { transform: translateX(0); opacity: 1; }
-  to   { transform: translateX(-30px); opacity: 0; }
+.hol-gameover-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 13px;
+  padding: 34px 36px;
+  max-width: 360px;
+  width: 90%;
+  background: linear-gradient(160deg, #121620, #1c1508);
+  border: 1.5px solid rgba(200,168,75,0.3);
+  border-radius: 20px;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.7);
+  animation: slideUp 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-@keyframes holSlideInRight {
-  from { transform: translateX(30px); opacity: 0; }
-  to   { transform: translateX(0); opacity: 1; }
+@keyframes slideUp {
+  from { transform: translateY(28px) scale(0.95); opacity: 0; }
+  to   { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+.hol-gameover-icon  { font-size: 2.8rem; }
+
+.hol-gameover-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.1rem;
+  letter-spacing: 6px;
+  color: var(--neon-yellow, #c8a84b);
+}
+
+.hol-gameover-score {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 4.2rem;
+  letter-spacing: 2px;
+  color: #fff;
+  line-height: 1;
+}
+
+.hol-gameover-score-label {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.38);
+  margin-top: -8px;
+}
+
+.hol-gameover-record {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--neon-green, #22c55e);
+}
+
+.hol-gameover-record .new-record {
+  color: var(--neon-yellow, #c8a84b);
+  font-weight: 700;
+}
+
+.hol-play-again-btn {
+  background: var(--neon-green, #22c55e);
+  color: #0a0c10;
+  border: none;
+  padding: 13px 32px;
+  border-radius: 10px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 4px;
+  width: 100%;
+}
+
+.hol-play-again-btn:hover {
+  background: var(--neon-yellow, #c8a84b);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(200,168,75,0.3);
+}
+
+.hol-change-mode-btn {
+  background: transparent;
+  color: rgba(255,255,255,0.45);
+  border: 1px solid rgba(255,255,255,0.13);
+  padding: 9px 22px;
+  border-radius: 10px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 3px;
+  cursor: pointer;
+  transition: all 0.2s;
+  width: 100%;
+}
+
+.hol-change-mode-btn:hover {
+  border-color: rgba(255,255,255,0.3);
+  color: rgba(255,255,255,0.75);
+}
+
+.hol-back-hub-link {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.28);
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: color 0.2s;
+}
+
+.hol-back-hub-link:hover { color: rgba(255,255,255,0.6); }
+
+/* ============================================= */
+/* ── MENÚ DE SELECCIÓN DE MODO ──               */
+/* ============================================= */
+
+.hol-mode-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 150;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(6,8,14,0.97);
+  backdrop-filter: blur(8px);
+  overflow-y: auto;
+  animation: fadeIn 0.3s ease;
+}
+
+.hol-mode-menu.active { display: flex; }
+
+.hol-mode-menu-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  padding: 40px 20px 48px;
+  width: 100%;
+  max-width: 580px;
+}
+
+.hol-mode-header { text-align: center; }
+
+.hol-mode-header-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2.2rem, 6vw, 3.4rem);
+  letter-spacing: 8px;
+  color: var(--neon-yellow, #c8a84b);
+  line-height: 1;
+}
+
+.hol-mode-header-sub {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+  margin-top: 6px;
+  display: block;
+}
+
+.hol-mode-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 11px;
+  width: 100%;
+}
+
+.hol-mode-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding: 18px 12px 15px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.hol-mode-card:hover {
+  border-color: rgba(200,168,75,0.38);
+  background: rgba(200,168,75,0.05);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.35);
+}
+
+.hol-mode-card:first-child {
+  grid-column: 1 / -1;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 14px;
+  padding: 18px 22px;
+  background: rgba(200,168,75,0.07);
+  border-color: rgba(200,168,75,0.22);
+}
+
+.hol-mode-card:first-child .hol-mode-title { font-size: 1.35rem; letter-spacing: 5px; }
+.hol-mode-card:first-child .hol-mode-emoji { font-size: 1.9rem; flex-shrink: 0; }
+.hol-mode-card:first-child .hol-mode-record { margin-left: auto; flex-shrink: 0; }
+
+.hol-mode-emoji  { font-size: 1.5rem; line-height: 1; }
+
+.hol-mode-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.05rem;
+  letter-spacing: 4px;
+  color: #fff;
+  line-height: 1;
+}
+
+.hol-mode-desc {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: rgba(255,255,255,0.33);
+  text-transform: uppercase;
+}
+
+.hol-mode-record {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: rgba(200,168,75,0.6);
+  margin-top: 2px;
 }
 
 /* ── RESPONSIVE ── */
-@media (max-width: 768px) {
+@media (max-width: 700px) {
   .hol-arena {
     flex-direction: column;
+    align-items: center;
+    padding: 4px 12px 20px;
   }
 
-  .hol-panel--left::after {
-    /* Separador horizontal en vez de vertical */
-    right: 0;
-    left: 0;
-    top: auto;
-    bottom: 0;
+  .hol-panel {
     width: 100%;
-    height: 2px;
-    background: linear-gradient(
-      90deg,
-      transparent 10%,
-      rgba(200, 168, 75, 0.3) 50%,
-      transparent 90%
-    );
+    max-width: 340px;
+    aspect-ratio: 4 / 3;
   }
+
+  .hol-panel--left  { border-radius: 16px 16px 0 0; }
+  .hol-panel--right { border-radius: 0 0 16px 16px; }
 
   .hol-vs {
-    width: 44px;
-    height: 44px;
-    font-size: 0.95rem;
+    width: 38px;
+    height: 38px;
+    font-size: 0.8rem;
+    margin: -9px 0;
+    z-index: 25;
   }
 
-  .hol-topbar {
-    padding: 10px 16px;
-  }
+  .hol-player-name { font-size: 1.15rem; }
+  .hol-stat-value  { font-size: 1.5rem; }
 
-  .hol-score-value {
-    font-size: 1.3rem;
-  }
-
-  .hol-player-name {
-    font-size: clamp(1.2rem, 5vw, 1.6rem);
-    letter-spacing: 3px;
-  }
-
-  .hol-stat-value {
-    font-size: clamp(2rem, 8vw, 3rem);
-  }
-
-  .hol-choices {
-    max-width: 240px;
-    gap: 8px;
-  }
+  .hol-choices { max-width: 190px; gap: 5px; }
 
   .hol-choice-btn {
-    padding: 11px 20px;
-    font-size: 1.05rem;
-    border-radius: 10px;
+    padding: 9px 10px;
+    font-size: 0.9rem;
   }
 
-  .hol-panel-content {
-    gap: 10px;
-    padding: 14px;
-  }
+  .hol-panel-content { padding: 12px 10px 14px; }
 
   .hol-stat-block,
   .hol-stat-reveal {
-    margin-top: 6px;
+    padding: 7px 12px 9px;
+    min-width: 120px;
   }
 
-  .hol-gameover-content {
-    padding: 28px 24px;
-  }
+  .hol-topbar { padding: 12px 14px 6px; }
 
-  .hol-gameover-title {
-    font-size: 1.8rem;
-  }
-
-  .hol-gameover-score {
-    font-size: 3rem;
-  }
+  .hol-mode-grid { grid-template-columns: 1fr; }
+  .hol-mode-card:first-child { grid-column: 1; }
 }
 
 @media (max-width: 400px) {
+  .hol-panel { aspect-ratio: 3 / 2; }
+
   .hol-choice-btn {
-    padding: 10px 16px;
-    font-size: 0.95rem;
+    font-size: 0.82rem;
     letter-spacing: 2px;
-  }
-
-  .hol-player-name {
-    font-size: 1.1rem;
-    letter-spacing: 2px;
-  }
-
-  .hol-stat-value {
-    font-size: 1.8rem;
   }
 }

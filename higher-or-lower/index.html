@@ -46,11 +46,28 @@
     <div class="hol-loading-title">CARGANDO JUGADORES…</div>
   </div>
 
+  <!-- ========== MENÚ DE SELECCIÓN DE MODO ========== -->
+  <div class="hol-mode-menu" id="hol-mode-menu">
+    <div class="hol-mode-menu-inner">
+      <div class="hol-mode-header">
+        <div class="hol-mode-header-title">HIGHER OR LOWER</div>
+        <div class="hol-mode-header-sub">¿Quién vale más?</div>
+        <div class="hol-mode-header-sub">Elige un modo de juego</div>
+      </div>
+      <div class="hol-mode-grid" id="hol-mode-grid">
+        <!-- Cards generadas por JS -->
+      </div>
+    </div>
+  </div>
+
   <!-- TOP BAR -->
   <div class="hol-topbar">
     <div class="hol-score-left">
       <span class="hol-score-label">PUNTOS</span>
       <span class="hol-score-value" id="hol-score-value">0</span>
+    </div>
+    <div class="hol-score-center">
+      <span class="hol-mode-name" id="hol-mode-name"></span>
     </div>
     <div class="hol-score-right">
       <span class="hol-score-label">MI RÉCORD</span>
@@ -123,6 +140,7 @@
       <div class="hol-gameover-score-label">PUNTOS</div>
       <div class="hol-gameover-record" id="hol-go-record">Tu récord: <strong>0</strong></div>
       <button class="hol-play-again-btn" id="hol-play-again">JUGAR DE NUEVO</button>
+      <button class="hol-change-mode-btn" id="hol-change-mode">CAMBIAR MODO</button>
       <a href="../" class="hol-back-hub-link">← Volver al Hub</a>
     </div>
   </div>
