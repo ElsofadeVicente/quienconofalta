@@ -365,25 +365,37 @@ function loadMatch() {
 // =============================================
 
 /**
- * RENDER FORMACIÓN
+ * Cada posición tiene un "grupo de fila" (rowGroup).
+ * Todos los jugadores del mismo grupo se muestran en la misma fila visual.
+ * El número determina la altura: mayor número = más arriba en el campo.
  *
- * Regla simple:
- * - Se respetan las líneas del JSON tal como están.
- * - Solo se hace UNA separación: si en una línea hay jugadores CAM
- *   mezclados con no-CAM, los CAM se extraen a su propia línea visual
- *   encima del resto (más cerca de los delanteros).
- * - LM/RM van con CAM si hay CAM en esa línea, si no se quedan donde están.
- * - CDM, CM, RW, LW... todo lo demás se queda en su línea original.
+ * Grupos:
+ *  1 → Portero (GK)
+ *  2 → Defensas (CB, LB, RB, LWB, RWB, SW)
+ *  3 → Centrocampistas: CM, CDM, DM y cualquier posición de mediocampo
+ *  4 → CAM / Mediapunta  (línea propia entre medios y delanteros)
+ *  5 → Delanteros: ST, CF, LW, RW, LM, RM y similares
  *
- * El contenedor .formation usa flex-direction: column-reverse, así que
- * insertar en orden [portero → defensas → medios → delanteros] produce
- * visualmente el campo correcto (portero abajo, delanteros arriba).
+ * LM/RM = extremos/bandas → grupo 5 (delanteros), igual que LW/RW
  */
+const ROW_GROUP = {
+    'GK':1,
+    'CB':2,'LB':2,'RB':2,'DF':2,'SW':2,'LCB':2,'RCB':2,
+    'CDM':3,'DM':3,'MCD':3,'PIVOT':3,'PIVOTE':3,'VOL':3,
+    'CM':3,'MC':3,'MF':3,'BOX':3,
+    'LWB':3,'RWB':3,                          // carrileros siempre con los CM
+    'CAM':4,'AM':4,'MCO':4,'TREQUARTISTA':4,'MEZ':4,'MEDIAPUNTA':4,
+    'ST':5,'CF':5,'LW':5,'RW':5,'FW':5,'ATT':5,'SS':5,'DC':5,
+};
 
-const CAM_POS = new Set(['CAM','AM','MCO','TREQUARTISTA','MEZ','MEDIAPUNTA']);
+// LM/RM: fila 3 si no hay CAM, fila 4 si hay CAM
+const WIDE_MID = new Set(['LM','RM','ML','MR']);
 
-function isCAM(position) {
-    return CAM_POS.has((position || '').toUpperCase().trim());
+function getRowGroup(position, hasCAM) {
+    if (!position) return 3;
+    const pos = position.toUpperCase().trim();
+    if (WIDE_MID.has(pos)) return hasCAM ? 4 : 3;
+    return ROW_GROUP[pos] ?? 3;
 }
 
 function buildPlayerCard(player, globalIndex) {
@@ -424,44 +436,36 @@ function renderFormation() {
     formationContainer.innerHTML = '';
     const formation = currentMatch.formation;
 
+    // 1. Aplanar todos los jugadores manteniendo su índice global
+    const allPlayers = [];
     let globalOffset = 0;
-
     formation.forEach(line => {
-        // Construir lista con índices globales
-        const indexed = line.map((player, i) => ({
-            player,
-            globalIndex: globalOffset + i
-        }));
+        line.forEach((player, i) => {
+            allPlayers.push({ player, globalIndex: globalOffset + i });
+        });
         globalOffset += line.length;
+    });
 
-        const camPlayers   = indexed.filter(p => isCAM(p.player.position));
-        const otherPlayers = indexed.filter(p => !isCAM(p.player.position));
+    // 2. Detectar si hay CAM en la alineación (afecta a LM/RM)
+    const hasCAM = allPlayers.some(({ player }) => ROW_GROUP[(player.position || '').toUpperCase().trim()] === 4);
 
-        if (camPlayers.length === 0 || otherPlayers.length === 0) {
-            // Línea homogénea: renderizar tal cual
-            const lineDiv = document.createElement('div');
-            lineDiv.className = 'line';
-            indexed.forEach(({ player, globalIndex }) => {
-                lineDiv.appendChild(buildPlayerCard(player, globalIndex));
-            });
-            formationContainer.appendChild(lineDiv);
-        } else {
-            // Línea mixta con CAM: primero los no-CAM (más abajo), luego los CAM (más arriba)
-            // column-reverse: insertar no-CAM antes → quedan más abajo en campo
-            const baseDiv = document.createElement('div');
-            baseDiv.className = 'line';
-            otherPlayers.forEach(({ player, globalIndex }) => {
-                baseDiv.appendChild(buildPlayerCard(player, globalIndex));
-            });
-            formationContainer.appendChild(baseDiv);
+    // 3. Agrupar por rowGroup manteniendo el orden original dentro de cada grupo
+    const groups = new Map(); // rowGroup → [{player, globalIndex}]
+    allPlayers.forEach(({ player, globalIndex }) => {
+        const group = getRowGroup(player.position, hasCAM);
+        if (!groups.has(group)) groups.set(group, []);
+        groups.get(group).push({ player, globalIndex });
+    });
 
-            const camDiv = document.createElement('div');
-            camDiv.className = 'line';
-            camPlayers.forEach(({ player, globalIndex }) => {
-                camDiv.appendChild(buildPlayerCard(player, globalIndex));
-            });
-            formationContainer.appendChild(camDiv);
-        }
+    // 3. Renderizar en orden ascendente de grupo
+    // column-reverse del contenedor invierte la visual: grupo 1 (GK) queda abajo, grupo 5 (delanteros) arriba
+    [...groups.keys()].sort((a, b) => a - b).forEach(group => {
+        const lineDiv = document.createElement('div');
+        lineDiv.className = 'line';
+        groups.get(group).forEach(({ player, globalIndex }) => {
+            lineDiv.appendChild(buildPlayerCard(player, globalIndex));
+        });
+        formationContainer.appendChild(lineDiv);
     });
 }
 
