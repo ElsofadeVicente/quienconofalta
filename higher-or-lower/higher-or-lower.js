@@ -245,8 +245,8 @@ async function loadModeData(mode) {
       }
     }
     if (loaded === 0) {
-      console.warn('⚠️ [HOL] Ningún archivo cargado, usando demo…');
-      return loadDemoData();
+      console.error('❌ [HOL] Ningún archivo cargado. Revisa la ruta y el formato del JSON.');
+      return {};
     }
     console.log(`🎮 [HOL] ${mode.name}: ${Object.keys(allPlayers).length} jugadores (mv >= ${(mode.mvMin/1e6).toFixed(0)}M)`);
     return allPlayers;
@@ -261,32 +261,11 @@ async function loadModeData(mode) {
     console.log(`✅ [HOL] ${mode.name}: ${Object.keys(data).length} jugadores`);
     return data;
   } catch (e) {
-    console.warn(`⚠️ [HOL] No se pudo cargar ${mode.file}:`, e.message);
-    console.log('⚠️ [HOL] Cargando datos demo…');
-    return loadDemoData();
+    console.error(`❌ [HOL] No se pudo cargar ${mode.file}:`, e.message);
+    return {};
   }
 }
 
-/** Datos demo embebidos para testing sin archivos de liga */
-function loadDemoData() {
-  return {
-    "28003": { n:"Lionel Messi", p:"FWD", nat:"Argentina", b:"1987", h:"170", club:"Inter Miami", img:"https://img.a.transfermarkt.technology/portrait/header/28003-1710080339.jpg", apps:1077, goals:838, mv:15000000, teams:["Inter Miami","PSG","Barcelona"] },
-    "8198":  { n:"Cristiano Ronaldo", p:"FWD", nat:"Portugal", b:"1985", h:"187", club:"Al-Nassr", img:"https://img.a.transfermarkt.technology/portrait/header/8198-1694609670.jpg", apps:1000, goals:900, mv:15000000, teams:["Al-Nassr","Man Utd","Juventus","Real Madrid"] },
-    "132098":{ n:"Kylian Mbappé", p:"FWD", nat:"France", b:"1998", h:"178", club:"Real Madrid", img:"https://img.a.transfermarkt.technology/portrait/header/342229-1682683695.jpg", apps:450, goals:280, mv:180000000, teams:["Real Madrid","PSG","Monaco"] },
-    "418560":{ n:"Erling Haaland", p:"FWD", nat:"Norway", b:"2000", h:"194", club:"Manchester City", img:"https://img.a.transfermarkt.technology/portrait/header/418560-1695029645.jpg", apps:310, goals:260, mv:200000000, teams:["Man City","Dortmund","RB Salzburg"] },
-    "371998":{ n:"Vinícius Júnior", p:"FWD", nat:"Brazil", b:"2000", h:"176", club:"Real Madrid", img:"https://img.a.transfermarkt.technology/portrait/header/371998-1694609798.jpg", apps:300, goals:100, mv:200000000, teams:["Real Madrid","Flamengo"] },
-    "580195":{ n:"Jude Bellingham", p:"MID", nat:"England", b:"2003", h:"186", club:"Real Madrid", img:"https://img.a.transfermarkt.technology/portrait/header/581678-1694609746.jpg", apps:260, goals:70, mv:150000000, teams:["Real Madrid","Dortmund","Birmingham"] },
-    "357565":{ n:"Pedri", p:"MID", nat:"Spain", b:"2002", h:"174", club:"FC Barcelona", img:"https://img.a.transfermarkt.technology/portrait/header/901307-1694609789.jpg", apps:200, goals:30, mv:100000000, teams:["Barcelona","Las Palmas"] },
-    "401923":{ n:"Lamine Yamal", p:"FWD", nat:"Spain", b:"2007", h:"180", club:"FC Barcelona", img:"https://img.a.transfermarkt.technology/portrait/header/941tried-1694609800.jpg", apps:80, goals:15, mv:150000000, teams:["Barcelona"] },
-    "148455":{ n:"Mohamed Salah", p:"FWD", nat:"Egypt", b:"1992", h:"175", club:"Liverpool FC", img:"https://img.a.transfermarkt.technology/portrait/header/148455-1694609813.jpg", apps:700, goals:340, mv:35000000, teams:["Liverpool","Roma","Chelsea","Fiorentina","Basel"] },
-    "192985":{ n:"Kevin De Bruyne", p:"MID", nat:"Belgium", b:"1991", h:"181", club:"Manchester City", img:"https://img.a.transfermarkt.technology/portrait/header/88755-1694609756.jpg", apps:630, goals:130, mv:30000000, teams:["Man City","Wolfsburg","Chelsea","Genk"] },
-    "177003":{ n:"Luka Modrić", p:"MID", nat:"Croatia", b:"1985", h:"172", club:"Real Madrid", img:"https://img.a.transfermarkt.technology/portrait/header/27706-1694609762.jpg", apps:750, goals:80, mv:3000000, teams:["Real Madrid","Tottenham","Dinamo Zagreb"] },
-    "427850":{ n:"Bukayo Saka", p:"FWD", nat:"England", b:"2001", h:"178", club:"Arsenal FC", img:"https://img.a.transfermarkt.technology/portrait/header/433177-1694609771.jpg", apps:260, goals:70, mv:140000000, teams:["Arsenal"] },
-    "203460":{ n:"Marc-André ter Stegen", p:"GK", nat:"Germany", b:"1992", h:"187", club:"FC Barcelona", img:"https://img.a.transfermarkt.technology/portrait/header/74857-1694609834.jpg", apps:550, goals:0, mv:18000000, teams:["Barcelona","Mönchengladbach"] },
-    "128223":{ n:"Robert Lewandowski", p:"FWD", nat:"Poland", b:"1988", h:"185", club:"FC Barcelona", img:"https://img.a.transfermarkt.technology/portrait/header/38253-1694609815.jpg", apps:900, goals:650, mv:10000000, teams:["Barcelona","Bayern","Dortmund","Lech Poznań"] },
-    "68290":  { n:"Antoine Griezmann", p:"FWD", nat:"France", b:"1991", h:"176", club:"Atlético Madrid", img:"https://img.a.transfermarkt.technology/portrait/header/125037-1694609825.jpg", apps:800, goals:310, mv:12000000, teams:["Atlético","Barcelona","Real Sociedad"] },
-  };
-}
 
 /* ── INICIALIZACIÓN ── */
 async function initGame() {
@@ -481,6 +460,11 @@ function handleChoice(choice) {
 
 /** Transición de cadena: derecho → izquierdo, nuevo → derecho */
 function chainTransition() {
+  // Limpiar el reveal ANTES de animar para que nunca se vea el valor del siguiente
+  DOM.rightReveal.classList.remove('visible');
+  DOM.rightStatValue.textContent = '';
+  DOM.rightStatLabel.textContent = '';
+
   DOM.leftPanel.classList.add('sliding-out');
   DOM.rightPanel.classList.add('sliding-out');
 
