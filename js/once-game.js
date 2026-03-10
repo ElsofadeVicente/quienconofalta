@@ -385,7 +385,7 @@ const POSITION_LAYER = {
     // Defensas
     'CB':  1, 'LB':  1, 'RB':  1, 'LWB': 1, 'RWB': 1, 'SW':  1, 'DF':  1,
     // CDM
-    'CDM': 2, 'DM':  2, 'MCD': 2, 'DCO': 2, 'PIVOT': 2, 'PIVOTE': 2, 'VOL': 2,
+    'CDM': 3, 'DM':  3, 'MCD': 3, 'DCO': 3, 'PIVOT': 3, 'PIVOTE': 3, 'VOL': 3,
     // CM
     'CM':  3, 'MC':  3, 'MF':  3, 'BOX': 3,
     // CAM / mediapunta
