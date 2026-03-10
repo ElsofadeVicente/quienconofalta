@@ -364,49 +364,122 @@ function loadMatch() {
 // RENDER FORMACIÓN
 // =============================================
 
+// Posiciones CDM: se renderizan en línea propia ENTRE defensas y centrocampistas
+const CDM_POSITIONS = new Set(['CDM','DM','MCD','DCO','PIVOT','PIVOTE','MC DEFENSIVO','VOL']);
+// Posiciones CAM: se renderizan en línea propia ENTRE centrocampistas y delanteros
+const CAM_POSITIONS = new Set(['CAM','AM','MCO','TREQUARTISTA','MC OFENSIVO','MEZ','MEDIAPUNTA','SS']);
+// Posiciones que van alineadas con CM aunque sean extremos de mediocampo
+const MID_WIDE_POSITIONS = new Set(['LM','RM','ML','MR','WM']);
+
+function getPositionTier(position) {
+    if (!position) return 'mid';
+    const pos = position.toUpperCase().trim();
+    if (CDM_POSITIONS.has(pos)) return 'cdm';
+    if (CAM_POSITIONS.has(pos)) return 'cam';
+    if (MID_WIDE_POSITIONS.has(pos)) return 'mid'; // LM/RM van con CM
+    return 'mid';
+}
+
+function buildPlayerCard(player, globalIndex) {
+    const isRevealed = revealedPlayers.has(globalIndex);
+
+    const playerCard = document.createElement('div');
+    playerCard.className = 'player-card' + (isRevealed ? ' revealed' : '');
+
+    const jersey = document.createElement('div');
+    jersey.className   = `jersey ${player.position === 'GK' ? 'goalkeeper' : ''}`;
+    jersey.textContent = player.number || '';
+    jersey.onclick     = () => openGuessModal(globalIndex);
+
+    const nameContainer = document.createElement('div');
+    nameContainer.className = 'player-name-container';
+
+    if (isRevealed) {
+        const revealedName = document.createElement('div');
+        revealedName.className   = 'revealed-name' + (failedPlayers.has(globalIndex) ? ' failed-reveal' : '');
+        revealedName.textContent = getKnownName(player.name);
+        nameContainer.appendChild(revealedName);
+    } else {
+        const displayName = getKnownName(player.name);
+        for (const char of displayName) {
+            const slot = document.createElement('div');
+            slot.className = char === ' ' ? 'name-slot space' : 'name-slot';
+            nameContainer.appendChild(slot);
+        }
+    }
+
+    playerCard.appendChild(jersey);
+    playerCard.appendChild(nameContainer);
+    return playerCard;
+}
+
+/**
+ * Expande las líneas del JSON en líneas visuales separadas.
+ * Una línea que mezcle CDM + CM + CAM se convierte en hasta 3 líneas visuales:
+ *   [cdm-row]  →  entre defensas y CMs
+ *   [mid-row]  →  centrocampistas normales + LM/RM
+ *   [cam-row]  →  entre CMs y delanteros
+ *
+ * El contenedor .formation usa flex-direction: column-reverse, así que
+ * añadimos las líneas en orden INVERSO al visual:
+ *   campo de arriba → abajo = delanteros → CAM → MID → CDM → defensas → portero
+ * En el DOM (column-reverse) esto se representa empujando primero los de abajo.
+ *
+ * Devuelve array de { players:[{player,globalIndex}], tier }
+ */
+function expandFormationToVisualLines(formation) {
+    const visualLines = []; // se llenará en orden DOM (portero primero = abajo en campo)
+
+    let globalOffset = 0;
+
+    formation.forEach((line) => {
+        // Asignar índices globales a cada jugador de la línea
+        const indexed = line.map((player, i) => ({
+            player,
+            globalIndex: globalOffset + i,
+            tier: getPositionTier(player.position)
+        }));
+        globalOffset += line.length;
+
+        // Comprobar qué tiers hay en esta línea
+        const tiers = new Set(indexed.map(p => p.tier));
+        const hasCDM = tiers.has('cdm');
+        const hasCAM = tiers.has('cam');
+        const hasMid = tiers.has('mid');
+
+        if (!hasCDM && !hasCAM) {
+            // Línea pura (GK, defensas, delanteros, o solo CM): una sola fila
+            visualLines.push({ players: indexed, tier: indexed[0]?.tier || 'mid' });
+        } else {
+            // Línea mixta: separar en sub-filas por tier
+            // Orden DOM para column-reverse: CDM va antes (más abajo en campo), CAM después (más arriba)
+            if (hasCDM) {
+                visualLines.push({ players: indexed.filter(p => p.tier === 'cdm'), tier: 'cdm' });
+            }
+            if (hasMid) {
+                visualLines.push({ players: indexed.filter(p => p.tier === 'mid'), tier: 'mid' });
+            }
+            if (hasCAM) {
+                visualLines.push({ players: indexed.filter(p => p.tier === 'cam'), tier: 'cam' });
+            }
+        }
+    });
+
+    return visualLines;
+}
+
 function renderFormation() {
     const formationContainer = document.getElementById('formation');
     formationContainer.innerHTML = '';
-    const formation = currentMatch.formation;
 
-    formation.forEach((line, lineIndex) => {
+    const visualLines = expandFormationToVisualLines(currentMatch.formation);
+
+    visualLines.forEach(({ players, tier }) => {
         const lineDiv = document.createElement('div');
-        lineDiv.className = 'line';
-
-        line.forEach((player, playerIndex) => {
-            const globalIndex = formation.slice(0, lineIndex).reduce((s, l) => s + l.length, 0) + playerIndex;
-            const isRevealed  = revealedPlayers.has(globalIndex);
-
-            const playerCard = document.createElement('div');
-            playerCard.className = 'player-card' + (isRevealed ? ' revealed' : '');
-
-            const jersey = document.createElement('div');
-            jersey.className   = `jersey ${player.position === 'GK' ? 'goalkeeper' : ''}`;
-            jersey.textContent = player.number || '';
-            jersey.onclick     = () => openGuessModal(globalIndex);
-
-            const nameContainer = document.createElement('div');
-            nameContainer.className = 'player-name-container';
-
-            if (isRevealed) {
-                const revealedName = document.createElement('div');
-                revealedName.className   = 'revealed-name' + (failedPlayers.has(globalIndex) ? ' failed-reveal' : '');
-                revealedName.textContent = getKnownName(player.name);
-                nameContainer.appendChild(revealedName);
-            } else {
-                const displayName = getKnownName(player.name);
-                for (const char of displayName) {
-                    const slot = document.createElement('div');
-                    slot.className = char === ' ' ? 'name-slot space' : 'name-slot';
-                    nameContainer.appendChild(slot);
-                }
-            }
-
-            playerCard.appendChild(jersey);
-            playerCard.appendChild(nameContainer);
-            lineDiv.appendChild(playerCard);
+        lineDiv.className = `line line--${tier}`;
+        players.forEach(({ player, globalIndex }) => {
+            lineDiv.appendChild(buildPlayerCard(player, globalIndex));
         });
-
         formationContainer.appendChild(lineDiv);
     });
 }

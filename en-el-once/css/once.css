@@ -429,6 +429,18 @@
             flex-wrap: wrap;
         }
 
+        /* Las sub-líneas CDM/CAM/MID se renderizan igual visualmente,
+           el orden en el campo lo controla column-reverse del .formation */
+        .line--cdm,
+        .line--cam,
+        .line--mid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
         .player-card {
             display: flex;
             flex-direction: column;
@@ -1000,7 +1012,10 @@
             }
 
             /* Evitar que los jugadores de una línea se partan en varias filas */
-            .line {
+            .line,
+            .line--cdm,
+            .line--cam,
+            .line--mid {
                 flex-wrap: nowrap;
                 gap: 4px;
                 justify-content: center;
