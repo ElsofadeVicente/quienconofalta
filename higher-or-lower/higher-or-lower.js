@@ -320,8 +320,8 @@ function startNewGame() {
 
   HOL.currentCategory = 'mv';
 
-  HOL.leftPlayer  = pickRandomPlayer();
-  HOL.rightPlayer = pickRandomPlayer();
+  HOL.leftPlayer  = pickRandomPlayer(null);
+  HOL.rightPlayer = pickRandomPlayer(HOL.leftPlayer);
 
   renderLeft();
   renderRight();
@@ -332,23 +332,61 @@ function restartGame() {
   startNewGame();
 }
 
-/** Escoge un jugador aleatorio no usado en esta partida */
-function pickRandomPlayer() {
+/** Escoge un jugador usando probabilidad ponderada para aumentar dificultad.
+ *
+ *  Cuando hay un jugador de referencia (el actual lado izquierdo), el siguiente
+ *  se elige según estas probabilidades:
+ *    15% → candidatos dentro de ±5 M del valor de referencia
+ *    15% → candidatos dentro de ±10 M (incluye los de ±5 M)
+ *    15% → candidatos dentro de ±15 M (incluye los de ±10 M)
+ *    55% → cualquier jugador del pool (completamente random)
+ *
+ *  Si un bucket no tiene candidatos disponibles, cae al siguiente más amplio
+ *  hasta llegar al pool completo.
+ */
+function pickRandomPlayer(referencePlayer) {
+  // Reset de usedIds si el pool está casi agotado
   if (HOL.usedIds.size >= HOL.pool.length - 2) {
     HOL.usedIds.clear();
     if (HOL.leftPlayer)  HOL.usedIds.add(HOL.leftPlayer.id);
     if (HOL.rightPlayer) HOL.usedIds.add(HOL.rightPlayer.id);
   }
 
-  let player;
-  let attempts = 0;
-  do {
-    player = HOL.pool[Math.floor(Math.random() * HOL.pool.length)];
-    attempts++;
-  } while (HOL.usedIds.has(player.id) && attempts < 500);
+  // Candidatos disponibles (no usados)
+  const available = HOL.pool.filter(p => !HOL.usedIds.has(p.id));
+  if (available.length === 0) return HOL.pool[0]; // fallback extremo
 
-  HOL.usedIds.add(player.id);
-  return player;
+  // Sin referencia (primera tirada) → completamente random
+  if (!referencePlayer || referencePlayer.mv == null) {
+    const pick = available[Math.floor(Math.random() * available.length)];
+    HOL.usedIds.add(pick.id);
+    return pick;
+  }
+
+  const refMv = referencePlayer.mv;
+
+  // Construir buckets por cercanía
+  const bucket5  = available.filter(p => p.mv != null && Math.abs(p.mv - refMv) <=  5_000_000);
+  const bucket10 = available.filter(p => p.mv != null && Math.abs(p.mv - refMv) <= 10_000_000);
+  const bucket15 = available.filter(p => p.mv != null && Math.abs(p.mv - refMv) <= 15_000_000);
+
+  // Tirar dado para decidir qué bucket usar
+  const roll = Math.random(); // [0, 1)
+
+  let pool;
+  if (roll < 0.15 && bucket5.length  > 0) {
+    pool = bucket5;                          // 15% → ±5 M
+  } else if (roll < 0.30 && bucket10.length > 0) {
+    pool = bucket10;                         // 15% → ±10 M
+  } else if (roll < 0.45 && bucket15.length > 0) {
+    pool = bucket15;                         // 15% → ±15 M
+  } else {
+    pool = available;                        // 55% → cualquiera
+  }
+
+  const pick = pool[Math.floor(Math.random() * pool.length)];
+  HOL.usedIds.add(pick.id);
+  return pick;
 }
 
 /* ── RENDER ── */
@@ -438,7 +476,7 @@ function chainTransition() {
 
   setTimeout(() => {
     HOL.leftPlayer  = HOL.rightPlayer;
-    HOL.rightPlayer = pickRandomPlayer();
+    HOL.rightPlayer = pickRandomPlayer(HOL.leftPlayer);
 
     renderLeft();
     renderRight();
