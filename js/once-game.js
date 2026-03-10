@@ -365,43 +365,25 @@ function loadMatch() {
 // =============================================
 
 /**
- * Sistema de LAYERS para posicionar jugadores en el campo.
- * Cada posición tiene una capa numérica. El contenedor .formation usa
- * flex-direction: column-reverse, así que insertar en orden ascendente
- * produce visualmente: portero abajo → delanteros arriba.
+ * RENDER FORMACIÓN
  *
- * Layer 0 → GK
- * Layer 1 → Defensas (CB, LB, RB, WB...)
- * Layer 2 → CDM / Pivote
- * Layer 3 → CM / centrocampistas base
- * Layer 4 → CAM / Mediapunta  +  LM/RM si hay CAM en el equipo
- * Layer 5 → Delanteros (ST, CF, LW, RW...)
+ * Regla simple:
+ * - Se respetan las líneas del JSON tal como están.
+ * - Solo se hace UNA separación: si en una línea hay jugadores CAM
+ *   mezclados con no-CAM, los CAM se extraen a su propia línea visual
+ *   encima del resto (más cerca de los delanteros).
+ * - LM/RM van con CAM si hay CAM en esa línea, si no se quedan donde están.
+ * - CDM, CM, RW, LW... todo lo demás se queda en su línea original.
  *
- * LM/RM: van en layer 3 si no hay CAM en la alineación, en layer 4 si hay CAM.
- * LW/RW: siempre layer 5 (extremos delanteros).
+ * El contenedor .formation usa flex-direction: column-reverse, así que
+ * insertar en orden [portero → defensas → medios → delanteros] produce
+ * visualmente el campo correcto (portero abajo, delanteros arriba).
  */
-const POSITION_LAYER = {
-    'GK':  0,
-    // Defensas
-    'CB':  1, 'LB':  1, 'RB':  1, 'LWB': 1, 'RWB': 1, 'SW':  1, 'DF':  1,
-    // CDM
-    'CDM': 3, 'DM':  3, 'MCD': 3, 'DCO': 3, 'PIVOT': 3, 'PIVOTE': 3, 'VOL': 3,
-    // CM
-    'CM':  3, 'MC':  3, 'MF':  3, 'BOX': 3,
-    // CAM / mediapunta
-    'CAM': 4, 'AM':  4, 'MCO': 4, 'TREQUARTISTA': 4, 'MEZ': 4, 'MEDIAPUNTA': 4,
-    // Delanteros
-    'ST':  5, 'CF':  5, 'LW':  5, 'RW':  5, 'FW':  5, 'ATT': 5, 'SS': 5,
-};
 
-// LM/RM: bandas de mediocampo, su layer depende de si hay CAM
-const WIDE_MID = new Set(['LM','RM','ML','MR','WM']);
+const CAM_POS = new Set(['CAM','AM','MCO','TREQUARTISTA','MEZ','MEDIAPUNTA']);
 
-function getPlayerLayer(position, hasCAMInMatch) {
-    if (!position) return 3;
-    const pos = position.toUpperCase().trim();
-    if (WIDE_MID.has(pos)) return hasCAMInMatch ? 4 : 3;
-    return POSITION_LAYER[pos] ?? 3;
+function isCAM(position) {
+    return CAM_POS.has((position || '').toUpperCase().trim());
 }
 
 function buildPlayerCard(player, globalIndex) {
@@ -442,37 +424,44 @@ function renderFormation() {
     formationContainer.innerHTML = '';
     const formation = currentMatch.formation;
 
-    // 1. Aplanar todos los jugadores con índice global
-    const allPlayers = [];
     let globalOffset = 0;
+
     formation.forEach(line => {
-        line.forEach((player, i) => allPlayers.push({ player, globalIndex: globalOffset + i }));
+        // Construir lista con índices globales
+        const indexed = line.map((player, i) => ({
+            player,
+            globalIndex: globalOffset + i
+        }));
         globalOffset += line.length;
-    });
 
-    // 2. ¿Hay algún CAM en la alineación? (determina dónde van LM/RM)
-    const hasCAM = allPlayers.some(({ player }) => {
-        const pos = (player.position || '').toUpperCase().trim();
-        return POSITION_LAYER[pos] === 4;
-    });
+        const camPlayers   = indexed.filter(p => isCAM(p.player.position));
+        const otherPlayers = indexed.filter(p => !isCAM(p.player.position));
 
-    // 3. Agrupar por layer
-    const layerMap = new Map();
-    allPlayers.forEach(({ player, globalIndex }) => {
-        const layer = getPlayerLayer(player.position, hasCAM);
-        if (!layerMap.has(layer)) layerMap.set(layer, []);
-        layerMap.get(layer).push({ player, globalIndex });
-    });
+        if (camPlayers.length === 0 || otherPlayers.length === 0) {
+            // Línea homogénea: renderizar tal cual
+            const lineDiv = document.createElement('div');
+            lineDiv.className = 'line';
+            indexed.forEach(({ player, globalIndex }) => {
+                lineDiv.appendChild(buildPlayerCard(player, globalIndex));
+            });
+            formationContainer.appendChild(lineDiv);
+        } else {
+            // Línea mixta con CAM: primero los no-CAM (más abajo), luego los CAM (más arriba)
+            // column-reverse: insertar no-CAM antes → quedan más abajo en campo
+            const baseDiv = document.createElement('div');
+            baseDiv.className = 'line';
+            otherPlayers.forEach(({ player, globalIndex }) => {
+                baseDiv.appendChild(buildPlayerCard(player, globalIndex));
+            });
+            formationContainer.appendChild(baseDiv);
 
-    // 4. Renderizar en orden ascendente de layer
-    // column-reverse invierte: layer 0 queda abajo (portero), layer 5 arriba (delanteros)
-    [...layerMap.keys()].sort((a, b) => a - b).forEach(layer => {
-        const lineDiv = document.createElement('div');
-        lineDiv.className = 'line';
-        layerMap.get(layer).forEach(({ player, globalIndex }) => {
-            lineDiv.appendChild(buildPlayerCard(player, globalIndex));
-        });
-        formationContainer.appendChild(lineDiv);
+            const camDiv = document.createElement('div');
+            camDiv.className = 'line';
+            camPlayers.forEach(({ player, globalIndex }) => {
+                camDiv.appendChild(buildPlayerCard(player, globalIndex));
+            });
+            formationContainer.appendChild(camDiv);
+        }
     });
 }
 
