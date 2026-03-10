@@ -365,17 +365,27 @@ function pickRandomPlayer(referencePlayer) {
 
   const refMv = referencePlayer.mv;
 
-  // Construir buckets por cercanía
-  const bucket5  = available.filter(p => p.mv != null && Math.abs(p.mv - refMv) <=  5_000_000);
-  const bucket10 = available.filter(p => p.mv != null && Math.abs(p.mv - refMv) <= 10_000_000);
-  const bucket15 = available.filter(p => p.mv != null && Math.abs(p.mv - refMv) <= 15_000_000);
+  // Bucket de igual valor exacto (para forzar respuesta "IGUAL")
+  const bucketEqual = available.filter(p => p.mv != null && p.mv === refMv);
+
+  // Primero: 10% de probabilidad de igual valor (se comprueba antes que el resto)
+  if (bucketEqual.length > 0 && Math.random() < 0.10) {
+    const pick = bucketEqual[Math.floor(Math.random() * bucketEqual.length)];
+    HOL.usedIds.add(pick.id);
+    return pick;
+  }
+
+  // Construir buckets por cercanía (excluyen el valor exacto para no solapar)
+  const bucket5  = available.filter(p => p.mv != null && p.mv !== refMv && Math.abs(p.mv - refMv) <=  5_000_000);
+  const bucket10 = available.filter(p => p.mv != null && p.mv !== refMv && Math.abs(p.mv - refMv) <= 10_000_000);
+  const bucket15 = available.filter(p => p.mv != null && p.mv !== refMv && Math.abs(p.mv - refMv) <= 15_000_000);
 
   // Tirar dado para decidir qué bucket usar
   const roll = Math.random(); // [0, 1)
 
   let pool;
   if (roll < 0.15 && bucket5.length  > 0) {
-    pool = bucket5;                          // 15% → ±5 M
+    pool = bucket5;                          // 15% → ±5 M (sin igual exacto)
   } else if (roll < 0.30 && bucket10.length > 0) {
     pool = bucket10;                         // 15% → ±10 M
   } else if (roll < 0.45 && bucket15.length > 0) {
