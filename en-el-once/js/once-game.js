@@ -84,7 +84,7 @@ async function loadMatchData(mode) {
     try {
         let folders = [];
         switch (mode) {
-            case 'diario':
+            case 'diario':    folders = ['../data/once-diario']; break;
             case 'random':    folders = ['../data/liga', '../data/champions', '../data/historico']; break;
             case 'liga':      folders = ['../data/liga'];      break;
             case 'champions': folders = ['../data/champions']; break;
@@ -92,6 +92,7 @@ async function loadMatchData(mode) {
         }
 
         const knownFiles = {
+            '../data/once-diario': ['once-diario.json'],
             '../data/liga': [
                 'ALAVES.json','ALMERIA.json','ATHLETIC_CLUB.json','ATLETICO_MADRID.json',
                 'BARCELONA.json','CADIZ.json','CELTA_VIGO.json','CORDOBA.json',
@@ -173,14 +174,9 @@ function shuffleArray(array) {
 }
 
 function getDailyMatchForOffset(offset) {
-    const d = new Date();
-    d.setDate(d.getDate() - offset);
-    const seed = d.getFullYear() * 10000 + (d.getMonth() + 1) * 100 + d.getDate();
-    let hash = seed;
-    hash = ((hash >>> 16) ^ hash) * 0x45d9f3b;
-    hash = ((hash >>> 16) ^ hash) * 0x45d9f3b;
-    hash = (hash >>> 16) ^ hash;
-    return dailyPool[Math.abs(hash) % dailyPool.length];
+    const edition = getDailyEditionNumber(offset); // 1, 2, 3...
+    const index = (edition - 1) % dailyPool.length;
+    return dailyPool[index];
 }
 
 function getDailyEditionNumber(offset) {
@@ -368,49 +364,112 @@ function loadMatch() {
 // RENDER FORMACIÓN
 // =============================================
 
+/**
+ * Cada posición tiene un "grupo de fila" (rowGroup).
+ * Todos los jugadores del mismo grupo se muestran en la misma fila visual.
+ * El número determina la altura: mayor número = más arriba en el campo.
+ *
+ * Grupos:
+ *  1 → Portero (GK)
+ *  2 → Defensas (CB, LB, RB, LWB, RWB, SW)
+ *  3 → Centrocampistas: CM, CDM, DM y cualquier posición de mediocampo
+ *  4 → CAM / Mediapunta  (línea propia entre medios y delanteros)
+ *  5 → Delanteros: ST, CF, LW, RW, LM, RM y similares
+ *
+ * LM/RM = extremos/bandas → grupo 5 (delanteros), igual que LW/RW
+ */
+const ROW_GROUP = {
+    'GK':1,
+    'CB':2,'LB':2,'RB':2,'DF':2,'SW':2,'LCB':2,'RCB':2,
+    'CDM':3,'DM':3,'MCD':3,'PIVOT':3,'PIVOTE':3,'VOL':3,
+    'CM':3,'MC':3,'MF':3,'BOX':3,
+    'LWB':3,'RWB':3,
+    'CAM':4,'AM':4,'MCO':4,'TREQUARTISTA':4,'MEZ':4,'MEDIAPUNTA':4,
+    'ST':5,'CF':5,'LW':5,'RW':5,'FW':5,'ATT':5,'SS':5,'DC':5,
+};
+
+// LM/RM: fila 3 si no hay CAM, fila 4 si hay CAM
+const WIDE_MID = new Set(['LM','RM','ML','MR']);
+// LW/RW: normalmente fila 5, pero fila 4 si hay CAM y NO hay ST/CF
+const WIDE_FWD = new Set(['LW','RW']);
+const STRIKER_POS = new Set(['ST','CF','FW','ATT','SS','DC']);
+
+function getRowGroup(position, hasCAM, hasStriker) {
+    if (!position) return 3;
+    const pos = position.toUpperCase().trim();
+    if (WIDE_MID.has(pos)) return hasCAM ? 4 : 3;
+    if (WIDE_FWD.has(pos)) return hasCAM ? 4 : 5;
+    return ROW_GROUP[pos] ?? 3;
+}
+
+function buildPlayerCard(player, globalIndex) {
+    const isRevealed = revealedPlayers.has(globalIndex);
+
+    const playerCard = document.createElement('div');
+    playerCard.className = 'player-card' + (isRevealed ? ' revealed' : '');
+
+    const jersey = document.createElement('div');
+    jersey.className   = `jersey ${player.position === 'GK' ? 'goalkeeper' : ''}`;
+    jersey.textContent = player.number || '';
+    jersey.onclick     = () => openGuessModal(globalIndex);
+
+    const nameContainer = document.createElement('div');
+    nameContainer.className = 'player-name-container';
+
+    if (isRevealed) {
+        const revealedName = document.createElement('div');
+        revealedName.className   = 'revealed-name' + (failedPlayers.has(globalIndex) ? ' failed-reveal' : '');
+        revealedName.textContent = getKnownName(player.name);
+        nameContainer.appendChild(revealedName);
+    } else {
+        const displayName = getKnownName(player.name);
+        for (const char of displayName) {
+            const slot = document.createElement('div');
+            slot.className = char === ' ' ? 'name-slot space' : 'name-slot';
+            nameContainer.appendChild(slot);
+        }
+    }
+
+    playerCard.appendChild(jersey);
+    playerCard.appendChild(nameContainer);
+    return playerCard;
+}
+
 function renderFormation() {
     const formationContainer = document.getElementById('formation');
     formationContainer.innerHTML = '';
     const formation = currentMatch.formation;
 
-    formation.forEach((line, lineIndex) => {
+    // 1. Aplanar todos los jugadores manteniendo su índice global
+    const allPlayers = [];
+    let globalOffset = 0;
+    formation.forEach(line => {
+        line.forEach((player, i) => {
+            allPlayers.push({ player, globalIndex: globalOffset + i });
+        });
+        globalOffset += line.length;
+    });
+
+    // 2. Detectar si hay CAM y si hay delantero centro (ST/CF) en la alineación
+    const hasCAM     = allPlayers.some(({ player }) => ROW_GROUP[(player.position || '').toUpperCase().trim()] === 4);
+    const hasStriker = allPlayers.some(({ player }) => STRIKER_POS.has((player.position || '').toUpperCase().trim()));
+
+    // 3. Agrupar por rowGroup manteniendo el orden original dentro de cada grupo
+    const groups = new Map();
+    allPlayers.forEach(({ player, globalIndex }) => {
+        const group = getRowGroup(player.position, hasCAM, hasStriker);
+        if (!groups.has(group)) groups.set(group, []);
+        groups.get(group).push({ player, globalIndex });
+    });
+
+    // 3. Renderizar en orden ascendente de grupo
+    // column-reverse del contenedor invierte la visual: grupo 1 (GK) queda abajo, grupo 5 (delanteros) arriba
+    [...groups.keys()].sort((a, b) => a - b).forEach(group => {
         const lineDiv = document.createElement('div');
         lineDiv.className = 'line';
-
-        line.forEach((player, playerIndex) => {
-            const globalIndex = formation.slice(0, lineIndex).reduce((s, l) => s + l.length, 0) + playerIndex;
-            const isRevealed  = revealedPlayers.has(globalIndex);
-
-            const playerCard = document.createElement('div');
-            playerCard.className = 'player-card' + (isRevealed ? ' revealed' : '');
-
-            const jersey = document.createElement('div');
-            jersey.className   = `jersey ${player.position === 'GK' ? 'goalkeeper' : ''}`;
-            jersey.textContent = player.number || '';
-            jersey.onclick     = () => openGuessModal(globalIndex);
-
-            const nameContainer = document.createElement('div');
-            nameContainer.className = 'player-name-container';
-
-            if (isRevealed) {
-                const revealedName = document.createElement('div');
-                revealedName.className   = 'revealed-name' + (failedPlayers.has(globalIndex) ? ' failed-reveal' : '');
-                revealedName.textContent = getKnownName(player.name);
-                nameContainer.appendChild(revealedName);
-            } else {
-                const displayName = getKnownName(player.name);
-                for (const char of displayName) {
-                    const slot = document.createElement('div');
-                    slot.className = char === ' ' ? 'name-slot space' : 'name-slot';
-                    nameContainer.appendChild(slot);
-                }
-            }
-
-            playerCard.appendChild(jersey);
-            playerCard.appendChild(nameContainer);
-            lineDiv.appendChild(playerCard);
+        groups.get(group).forEach(({ player, globalIndex }) => {
+            lineDiv.appendChild(buildPlayerCard(player, globalIndex));
         });
-
         formationContainer.appendChild(lineDiv);
     });
 }
@@ -534,19 +593,32 @@ function getKnownName(fullName) {
         'MOI GOMEZ': 'MOI GOMEZ', 'CUCHO HERNANDEZ': 'CUCHO', 'CUCHO HERNÁNDEZ': 'CUCHO',
         'RAFA SILVA': 'RAFA', 'JOAO MARIO': 'JOAO MARIO', 'JOÃO MARIO': 'JOAO MARIO',
         'XAVI HERNANDEZ': 'XAVI', 'XAVI HERNÁNDEZ': 'XAVI',
-        'ERIC MAXIM CHOUPO-MOTING': 'CHOUPO-MOTING', 'CHOUPO-MOTING': 'CHOUPO-MOTING'
+        'ERIC MAXIM CHOUPO-MOTING': 'CHOUPO-MOTING', 'CHOUPO-MOTING': 'CHOUPO-MOTING',
+        'ALISSON BECKER': 'ALISSON',
+        'ADRIAN LOPEZ': 'ADRIAN', 'ADRIÁN LÓPEZ': 'ADRIAN',
+        'JUANFRAN TORRES': 'JUANFRAN', 'JUAN FRANCISCO TORRES': 'JUANFRAN'
     };
     if (exceptions[name]) return exceptions[name];
 
     const words = name.split(' ');
     if (words.length === 1) return words[0];
 
+    const monoNames = [
+        'NEYMAR','RONALDINHO','RONALDO','RIVALDO','CAFU','ROBERTO','CASEMIRO',
+        'FERNANDINHO','WILLIAN','FRED','PAULINHO','HULK','OSCAR','RAMIRES',
+        'LUCAS','RAFAEL','FABINHO','EDERSON','ALISSON','ADRIANO','ROBINHO',
+        'KAKÁ','THIAGO','FIRMINO','RICHARLISON','RAPHINHA','RODRYGO',
+        'VINÍCIUS','MILITÃO','MARQUINHOS','DANILO','FELIPE','RENAN','EMERSON',
+        'ALEX','ANDERSON','PEPE'
+    ];
+    if (monoNames.includes(words[0])) return words[0];
+
     const suffixes = ['JR','JR.','SR','SR.','II','III','IV'];
     let cleanWords = [...words];
     if (suffixes.includes(cleanWords[cleanWords.length - 1])) cleanWords.pop();
     if (cleanWords.length === 1) return cleanWords[0];
 
-    const particles = ['DE','VAN','DER','TER','VON','DA','DI','DEL','LA','LE','LO','VAN DER','VAN DE','DOS','DAS','SAN'];
+    const particles = ['DE','VAN','DER','TER','VON','DA','DI','DEL','LA','LE','VAN DER','VAN DE','DOS','DAS','SAN'];
     if (cleanWords.length === 2 && particles.includes(cleanWords[0])) return cleanWords.join(' ');
 
     if (cleanWords.length >= 3) {
