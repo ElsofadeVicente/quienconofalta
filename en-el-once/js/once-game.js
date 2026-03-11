@@ -380,21 +380,25 @@ function loadMatch() {
  */
 const ROW_GROUP = {
     'GK':1,
-    'CB':2,'LB':2,'RB':2,'DF':2,'SW':2,
+    'CB':2,'LB':2,'RB':2,'DF':2,'SW':2,'LCB':2,'RCB':2,
     'CDM':3,'DM':3,'MCD':3,'PIVOT':3,'PIVOTE':3,'VOL':3,
     'CM':3,'MC':3,'MF':3,'BOX':3,
-    'LWB':3,'RWB':3,                          // carrileros siempre con los CM
+    'LWB':3,'RWB':3,
     'CAM':4,'AM':4,'MCO':4,'TREQUARTISTA':4,'MEZ':4,'MEDIAPUNTA':4,
     'ST':5,'CF':5,'LW':5,'RW':5,'FW':5,'ATT':5,'SS':5,'DC':5,
 };
 
 // LM/RM: fila 3 si no hay CAM, fila 4 si hay CAM
 const WIDE_MID = new Set(['LM','RM','ML','MR']);
+// LW/RW: normalmente fila 5, pero fila 4 si hay CAM y NO hay ST/CF
+const WIDE_FWD = new Set(['LW','RW']);
+const STRIKER_POS = new Set(['ST','CF','FW','ATT','SS','DC']);
 
-function getRowGroup(position, hasCAM) {
+function getRowGroup(position, hasCAM, hasStriker) {
     if (!position) return 3;
     const pos = position.toUpperCase().trim();
     if (WIDE_MID.has(pos)) return hasCAM ? 4 : 3;
+    if (WIDE_FWD.has(pos)) return hasCAM ? 4 : 5;
     return ROW_GROUP[pos] ?? 3;
 }
 
@@ -446,13 +450,14 @@ function renderFormation() {
         globalOffset += line.length;
     });
 
-    // 2. Detectar si hay CAM en la alineación (afecta a LM/RM)
-    const hasCAM = allPlayers.some(({ player }) => ROW_GROUP[(player.position || '').toUpperCase().trim()] === 4);
+    // 2. Detectar si hay CAM y si hay delantero centro (ST/CF) en la alineación
+    const hasCAM     = allPlayers.some(({ player }) => ROW_GROUP[(player.position || '').toUpperCase().trim()] === 4);
+    const hasStriker = allPlayers.some(({ player }) => STRIKER_POS.has((player.position || '').toUpperCase().trim()));
 
     // 3. Agrupar por rowGroup manteniendo el orden original dentro de cada grupo
-    const groups = new Map(); // rowGroup → [{player, globalIndex}]
+    const groups = new Map();
     allPlayers.forEach(({ player, globalIndex }) => {
-        const group = getRowGroup(player.position, hasCAM);
+        const group = getRowGroup(player.position, hasCAM, hasStriker);
         if (!groups.has(group)) groups.set(group, []);
         groups.get(group).push({ player, globalIndex });
     });
