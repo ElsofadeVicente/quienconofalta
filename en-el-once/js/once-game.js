@@ -94,14 +94,8 @@ async function loadMatchData(mode) {
         const knownFiles = {
             '../data/once-diario': ['once-diario.json'],
             '../data/liga': [
-                'ALAVES.json','ALMERIA.json','ATHLETIC_CLUB.json','ATLETICO_MADRID.json',
-                'BARCELONA.json','CADIZ.json','CELTA_VIGO.json','CORDOBA.json',
-                'DEPORTIVO_LA_CORUNA.json','EIBAR.json','ELCHE.json','ESPANYOL.json',
-                'GETAFE.json','GIRONA.json','GRANADA.json','LAS_PALMAS.json',
-                'LEGANES.json','LEVANTE.json','MALAGA.json','MALLORCA.json',
-                'OSASUNA.json','RAYO_VALLECANO.json','REAL_BETIS.json','REAL_MADRID.json',
-                'REAL_SOCIEDAD.json','REAL_VALLADOLID.json','SD_HUESCA.json','SEVILLA.json',
-                'SPORTING_GIJON.json','VALENCIA.json','VILLARREAL.json'
+                '20_21.json','21_22.json','22_23.json',
+                '23_24.json','24_25.json','25_26.json'
             ],
             '../data/champions': ['finales.json','semifinales.json','cuartos.json','remontadas.json','clasicos.json'],
             '../data/historico': ['mundiales.json','eurocopas.json','olimpiadas.json']
@@ -594,7 +588,9 @@ function getKnownName(fullName) {
         'RAFA SILVA': 'RAFA', 'JOAO MARIO': 'JOAO MARIO', 'JOÃO MARIO': 'JOAO MARIO',
         'XAVI HERNANDEZ': 'XAVI', 'XAVI HERNÁNDEZ': 'XAVI',
         'ERIC MAXIM CHOUPO-MOTING': 'CHOUPO-MOTING', 'CHOUPO-MOTING': 'CHOUPO-MOTING',
-        'ALISSON BECKER': 'ALISSON'
+        'ALISSON BECKER': 'ALISSON',
+        'ADRIAN LOPEZ': 'ADRIAN', 'ADRIÁN LÓPEZ': 'ADRIAN',
+        'JUANFRAN TORRES': 'JUANFRAN', 'JUAN FRANCISCO TORRES': 'JUANFRAN'
     };
     if (exceptions[name]) return exceptions[name];
 
