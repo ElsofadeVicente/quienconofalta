@@ -445,11 +445,60 @@
      Ni las categorias ni los futbolistas se guardan: son objetos gordos (con
      fotos, escudos y listas de ids) y ademas se quedarian congelados si algun
      dia cambia el pool. */
+  /* ═══════════════ CARTON DEL DIA (2026-09-06) ═══════════════
+     Bingo no tenia ningun motivo para volver manana: se jugaba, se cerraba y
+     no dejaba nada. Ahora hay una edicion diaria — el MISMO carton para todo
+     el mundo, sacado de la fecha — con su racha en el hub y su marca guardada.
+
+     No hace falta ningun dato nuevo en Supabase: buildGame(seed) ya es
+     determinista, asi que basta con derivar la semilla del dia. */
+  const UMBRAL_RACHA = 12;   // aciertos de 16 que cuentan como dia ganado
+
+  function hoyMadrid() {
+    return new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Madrid' }).format(new Date());
+  }
+  function claveDia(fecha) { return `bingo_day_${fecha || hoyMadrid()}`; }
+
+  /* Semilla estable a partir de la fecha (FNV-1a de 32 bits). No vale
+     Date.parse()/86400000: eso da numeros consecutivos casi iguales y
+     mulberry32 arranca en estados vecinos, con cartones que se parecen entre
+     dias seguidos. */
+  function semillaDelDia(fecha) {
+    let h = 0x811c9dc5;
+    const t = 'bingo:' + (fecha || hoyMadrid());
+    for (let i = 0; i < t.length; i++) { h ^= t.charCodeAt(i); h = Math.imul(h, 0x01000193); }
+    return (h >>> 0) % 2147483647;
+  }
+
+  function leerDia(fecha) {
+    try { return JSON.parse(localStorage.getItem(claveDia(fecha)) || 'null'); }
+    catch { return null; }
+  }
+
+  /* Se guarda tambien el carton (posiciones en la secuencia), no solo el
+     numero de aciertos: al reentrar se rehace la partida y se enseña el
+     resultado con el detalle casilla a casilla, en vez de un numero pelado. */
+  function guardarDia() {
+    if (G.mode !== 'diario' || !G.result) return;
+    try {
+      localStorage.setItem(claveDia(), JSON.stringify({
+        hits: G.result.hits, bingo: G.result.bingo, filled: G.result.filled,
+        completed: true,
+        seed: G.seed, idx: G.idx,
+        board: G.board.map(c => (c && c.seqIdx != null) ? c.seqIdx : null),
+        cats: G.cats.map(catKey),
+        ts: Date.now(),
+      }));
+    } catch { /* incognito: se juega igual, sin historial */ }
+  }
+
   const CLAVE_PARTIDA = 'bingo-partida';
   const CADUCIDAD_PARTIDA_MS = 3 * 60 * 60 * 1000;   // 3 h, como las salas
 
   function guardarPartida(msRestantes) {
     if (G.phase !== 'playing') return;
+    /* El diario tambien se puede dejar a medias y retomar: comparte el
+       mecanismo, con su modo guardado para volver a el como diario. */
     try {
       localStorage.setItem(CLAVE_PARTIDA, JSON.stringify({
         seed: G.seed,
@@ -496,7 +545,7 @@
       if (d.cats.length !== ahora.length || d.cats.some((k, i) => k !== ahora[i])) return false;
     }
 
-    G.mode  = d.mode === 'online' ? 'online' : 'solo';
+    G.mode  = (d.mode === 'online' || d.mode === 'diario') ? d.mode : 'solo';
     G.phase = 'playing';
     G.seed  = d.seed;
     G.cats  = built.cats;
@@ -670,6 +719,7 @@
     revealAnimation(bingo, () => {
       G.phase = 'over';
       saveBest();
+      guardarDia();
       if (G.mode === 'online') Sync.reportResult(G.result);
       showResult();
     });
@@ -1077,6 +1127,51 @@
     startGame(Math.floor(Math.random() * 2147483647), 'solo');
   }
 
+  /* Carton del dia. Si ya se jugo hoy no se puede repetir: se rehace la
+     partida desde la semilla y el carton guardado y se enseña el resultado,
+     que es lo que hacen el resto de diarios de la web. */
+  function startDiario() {
+    const ya = leerDia();
+    if (ya && ya.completed) return mostrarDiaJugado(ya);
+    G.phase = 'idle';
+    if (!startGame(semillaDelDia(), 'diario')) return;
+    $('game-hint').textContent = 'Cartón del día · un intento';
+  }
+
+  function mostrarDiaJugado(d) {
+    const semilla = (typeof d.seed === 'number') ? d.seed : semillaDelDia();
+    const built = buildGame(semilla);
+    if (!built) { showToast('Ya has jugado el cartón de hoy', 'error'); return; }
+    /* Misma huella que reanudarPartida(): si el pool cambio, el carton
+       guardado ya no cuadra con el que sale ahora y es mejor decirlo que
+       enseñar casillas emparejadas con categorias que no son. */
+    if (Array.isArray(d.cats)) {
+      const ahora = built.cats.map(catKey);
+      if (d.cats.length !== ahora.length || d.cats.some((k, i) => k !== ahora[i])) {
+        showToast(`Ya has jugado hoy: ${d.hits}/16`, 'error');
+        return;
+      }
+    }
+    G.mode  = 'diario';
+    G.phase = 'over';
+    G.seed  = semilla;
+    G.cats  = built.cats;
+    G.seq   = built.seq;
+    G.idx   = Math.max(0, Math.min(d.idx | 0, built.seq.length));
+    G.board = (d.board || []).map(si =>
+      (si != null && built.seq[si]) ? { player: built.seq[si], ok: null, seqIdx: si } : null);
+    for (let i = 0; i < CELLS; i++) {
+      const slot = G.board[i];
+      if (slot) slot.ok = FR.validate(slot.player, G.cats[i]);
+    }
+    const hits = G.board.filter(c => c && c.ok).length;
+    G.result = { hits, bingo: hits === CELLS, filled: G.board.filter(Boolean).length, prevBest: readBest() };
+    showScreen('screen-game');
+    renderBoard();
+    for (let i = 0; i < CELLS; i++) if (G.board[i]) paintCell(i);
+    showResult();
+  }
+
   function nameFrom(inputId, panel) {
     const v = ($(inputId)?.value || '').trim();
     if (!v) { showError(panel, 'Escribe tu nombre'); return null; }
@@ -1140,6 +1235,9 @@
   }
 
   function playAgain() {
+    /* El diario es de un intento: repetirlo dejaria la racha sin significar
+       nada. Se ofrece una partida suelta en su lugar. */
+    if (G.mode === 'diario') { G.mode = 'solo'; startSolo(); return; }
     $('ranking').classList.add('hidden');
     if (G.mode === 'online') { Sync.leave(); return; }
     startSolo();
@@ -1300,7 +1398,7 @@
   }
 
   window._AppReal = {
-    init, setTab, startSolo, showRules, closeRules,
+    init, setTab, startSolo, startDiario, showRules, closeRules,
     createRoom, joinRoom, findPublicRoom, leaveRoom, startRoom, copyLink,
     skip, place, playAgain, showMenu, showToast,
   };

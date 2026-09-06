@@ -627,3 +627,22 @@ body.countdown-active .input-section { display:none !important; }
 @media(min-width:768px){
   .results-list{display:grid;grid-template-columns:repeat(2,1fr);align-content:start}
 }
+
+
+/* Aviso de ronda sin puntos por empate total (2026-09-06). Tokenizado, no
+   con colores a fuego: en este proyecto un color literal dentro del CSS de
+   un juego se queda fuera del tema Moderno. */
+.results-empate {
+  margin: 0 0 14px;
+  padding: 10px 14px;
+  text-align: center;
+  font-family: 'DM Mono', ui-monospace, monospace;
+  font-size: .82rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--np-ink);
+  background: var(--np-paper2, transparent);
+  border: 2px solid var(--bd-c, var(--np-ink));
+  border-radius: var(--r-md, 0);
+}
+.results-empate[hidden] { display: none; }

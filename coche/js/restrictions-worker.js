@@ -15,19 +15,24 @@
    código en js/ranked-engine.js — solo puede haber una copia porque ya
    no hay ninguna.
 
-   Recibe: { seed, db, teammates, reverseTeammate, reverseTeammateIds }
+   Recibe: { seed, db, teammates, reverseTeammate, reverseTeammateIds, usadas }
+     `usadas` es la memoria de partida (claves de restricciones ya salidas)
+     serializada como array — un Set no sobrevive al structured clone del
+     postMessage. Llega vacia o ausente en Clasificatoria.
    Emite:  { ok:true, restrictions } | { ok:false, error }
    ═══════════════════════════════════════════════════════════════ */
 
 /* Los Workers no comparten scope con la página: hay que importar los
    mismos archivos compartidos que usa el resto de la web, en orden
    (ranked-engine.js necesita sbStorageUrl, que trae supabase-config.js). */
-importScripts('../../js/supabase-config.js', '../../js/ranked-engine.js?v=20260830a');
+importScripts('../../js/supabase-config.js', '../../js/ranked-engine.js?v=20260906a');
 
 self.onmessage = function ({ data }) {
   RankedEngine.setTeammateData(data.teammates, data.reverseTeammate, data.reverseTeammateIds);
   try {
-    const restrictions = RankedEngine.generate(data.seed, data.db);
+    const usadas = Array.isArray(data.usadas) && data.usadas.length
+      ? new Set(data.usadas) : undefined;
+    const restrictions = RankedEngine.generate(data.seed, data.db, usadas);
     self.postMessage({ ok: true, restrictions });
   } catch (e) {
     self.postMessage({ ok: false, error: e.message });

@@ -9,7 +9,13 @@
 const FB_URL = 'https://futbolhub-9d0a4-default-rtdb.europe-west1.firebasedatabase.app';
 
 /* ── Constantes ── */
-const TOTAL_RONDAS   = 5;
+/* 4 y no 5 (decision del usuario, 2026-09-06): con 693 estadios en el
+   catalogo, repartir de 4 en 4 alarga la baraja de 138 a 173 dias sin
+   repetir ni uno, y acorta la partida a algo que se juega de una sentada.
+   OJO: la RPC liga_enviar_diario valida el numero de pistas en el
+   servidor — hay que aplicar supabase/setup_liga_rondas_variables.sql
+   ANTES de desplegar esto, o la liga rechaza los envios. */
+const TOTAL_RONDAS   = 4;
 const MAX_SCORE      = 5000;
 const DECAY_KM       = 500;   // puntuación cae 63% cada 500 km
 const PERFECT_M      = 100;   // metros para puntuación perfecta
@@ -199,10 +205,14 @@ function loadDaily() {
 /* Un registro es una partida TERMINADA salvo que diga lo contrario: los
    guardados anteriores a que existiera el progreso a medias no llevan
    'completed' y siempre eran finales. */
+/* `>=` y no `===`: al bajar de 5 rondas a 4 (2026-09-06) las partidas ya
+   guardadas tienen 5 puntuaciones. Con `===` dejaban de contar como
+   terminadas, caian en dailyEnCurso() y se volvian a cerrar solas — o sea
+   que se contaban dos veces en las estadisticas y se reenviaban a la liga. */
 function dailyCompleto(d) {
   return !!d && d.completed !== false
-      && Array.isArray(d.scores)  && d.scores.length  === TOTAL_RONDAS
-      && Array.isArray(d.guesses) && d.guesses.length === TOTAL_RONDAS;
+      && Array.isArray(d.scores)  && d.scores.length  >= TOTAL_RONDAS
+      && Array.isArray(d.guesses) && d.guesses.length >= TOTAL_RONDAS;
 }
 
 /* Partida de hoy a medias: rondas ya contestadas sin llegar al final. */
@@ -251,10 +261,33 @@ function saveDailyPlayed(total) {
 /* ══════════════════════════════════════════════
    INICIO DE PARTIDA
    ══════════════════════════════════════════════ */
+/* Epoch de la baraja. No es la fecha del primer dia jugable: es solo el
+   origen desde el que se cuentan los dias para que todo el mundo caiga en
+   la misma posicion de la misma baraja. */
+const ROT_EPOCH   = '2026-01-01';
+const ROT_SEMILLA = 0x45535441;   // "ESTA"(dio): separa esta baraja de la de Superdraft
+
+/* Los estadios se indexan SIEMPRE por id ordenado, no por el orden en que
+   vengan en el JSON: asi reordenar el archivo (o que el generador lo
+   escriba en otro orden) no cambia las rondas ya publicadas. Anadir o
+   quitar un estadio si las cambia — es inevitable sin estado en servidor —
+   y para eso esta el `rondas` guardado en cada partida, que manda sobre
+   este calculo. */
+function rondasDelDia(fecha) {
+  const orden = [...state.estadios].sort((a, b) =>
+    String(a.id).localeCompare(String(b.id)));
+  if (window.FHRotacion) {
+    const dia = FHRotacion.diaDesde(fecha, ROT_EPOCH);
+    return FHRotacion.tanda(orden.length, TOTAL_RONDAS, dia, ROT_SEMILLA)
+                     .map(i => orden[i]);
+  }
+  /* Sin el modulo cargado se vuelve al sorteo de siempre en vez de
+     dejar el juego sin rondas. */
+  return shuffleSeeded(orden, dateToSeed(fecha)).slice(0, TOTAL_RONDAS);
+}
+
 function startGame() {
-  const seed  = dateToSeed(todayStr());
-  const pool  = shuffleSeeded(state.estadios, seed);
-  state.rondas      = pool.slice(0, TOTAL_RONDAS);
+  state.rondas      = rondasDelDia(todayStr());
   state.rondaActual = 0;
   state.scores      = [];
   state.guesses     = [];
@@ -264,8 +297,12 @@ function startGame() {
   // Preferir los estadios realmente jugados (guardados junto al progreso)
   // sobre el pool recién barajado: si el dataset se editó entre medias,
   // recalcular con la semilla de hoy ya no da las mismas rondas.
+  /* `>=` por lo mismo que dailyCompleto(): las partidas guardadas antes de
+     bajar a 4 rondas traen 5 estadios, y con `===` se descartaban — el
+     resultado se habria repintado emparejando puntuaciones con estadios
+     recien sorteados, que no son los que se jugaron. */
   const rondasGuardadas =
-    (guardado && Array.isArray(guardado.rondas) && guardado.rondas.length === TOTAL_RONDAS)
+    (guardado && Array.isArray(guardado.rondas) && guardado.rondas.length >= TOTAL_RONDAS)
       ? guardado.rondas : null;
 
   /* Modo diario: si ya jugaste hoy, restaurar y mostrar el resultado */
@@ -629,7 +666,7 @@ function estadioShare() {
   const squares = state.scores.map(s => (s >= 4000 ? '🟩' : s >= 1500 ? '🟨' : '🟥')).join('');
   const text =
     `El Estadio FutbolHUB · ${todayStr()}\n` +
-    `🏟️ ${total.toLocaleString('es-ES')} / 25.000 puntos\n` +
+    `🏟️ ${total.toLocaleString('es-ES')} / ${(MAX_SCORE * TOTAL_RONDAS).toLocaleString('es-ES')} puntos\n` +
     `${squares}\n` +
     window.location.origin + window.location.pathname;
   estadioDoShare(text, document.getElementById('btn-compartir'));

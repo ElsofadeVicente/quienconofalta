@@ -236,6 +236,25 @@ window._AppReal = (function () {
   }
 
   function renderScore() {
+    /* En el diario el marcador de dos jugadores no significa nada: se
+       reaprovecha para enseñar aciertos e intentos, que es lo que se mira. */
+    if (G && G.mode === 'diario') {
+      const hits = G.board.filter(Boolean).length;
+      $('name-p1').textContent = 'Aciertos';
+      $('name-p2').textContent = 'Intentos';
+      $('num-p1').textContent  = hits;
+      $('num-p2').textContent  = G.intentos || 0;
+      $('score-p1').classList.toggle('active', !G.over);
+      $('score-p2').classList.remove('active');
+      const b = $('turn-badge');
+      b.textContent = G.over ? `${hits} DE 9` : 'REJILLA DEL DÍA';
+      b.style.background = 'var(--np-ink)';
+      const si2 = $('series-info');
+      if (si2) si2.textContent = G.over
+        ? 'Vuelve mañana a por la siguiente'
+        : `Te quedan ${G.intentos} intento${G.intentos === 1 ? '' : 's'}`;
+      return;
+    }
     const series = G.series || [0, 0];
     $('name-p1').textContent = G.players[0].name;
     $('name-p2').textContent = G.players[1].name;
@@ -301,6 +320,120 @@ window._AppReal = (function () {
     showToast(`Ronda ${G.gameNum} · empieza ${G.players[starter].name}`);
   }
 
+  /* ═══════════════ REJILLA DEL DIA (2026-09-06) ═══════════════
+     Tres en Raya era el unico juego del cuarteto de restricciones que no se
+     podia jugar solo: su modo «local» son dos personas en la misma pantalla,
+     y no tiene bot. Ahora hay una rejilla diaria, la misma para todo el mundo,
+     que se juega en solitario con NUEVE intentos — el formato del Immaculate
+     Grid, que es de donde viene la mecanica.
+
+     Reutiliza buildGrid()/renderBoard()/pickCell() tal cual: lo unico propio
+     es la condicion de final (se acaban los intentos o se llenan las nueve) y
+     que no hay turnos que alternar. */
+  const DIARIO_INTENTOS = 9;
+  const DIARIO_RACHA    = 6;   // aciertos que cuentan como dia ganado en el hub
+
+  function hoyMadrid() {
+    return new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Madrid' }).format(new Date());
+  }
+  function claveDia(f) { return `tresenraya_day_${f || hoyMadrid()}`; }
+
+  /* FNV-1a: fechas consecutivas dan semillas MUY separadas. Con un simple
+     numero de dia, mulberry32 arranca en estados vecinos y salen rejillas
+     parecidas dos dias seguidos. */
+  function semillaDelDia(f) {
+    let h = 0x811c9dc5;
+    const t = 'tresenraya:' + (f || hoyMadrid());
+    for (let i = 0; i < t.length; i++) { h ^= t.charCodeAt(i); h = Math.imul(h, 0x01000193); }
+    return (h >>> 0) % 2147483647;
+  }
+
+  function leerDia(f) {
+    try { return JSON.parse(localStorage.getItem(claveDia(f)) || 'null'); } catch { return null; }
+  }
+  function guardarDia() {
+    if (!G || G.mode !== 'diario') return;
+    try {
+      localStorage.setItem(claveDia(), JSON.stringify({
+        hits: G.board.filter(Boolean).length,
+        intentos: DIARIO_INTENTOS - (G.intentos || 0),
+        completed: !!G.over,
+        seed: G.seed, min: G.min,
+        board: G.board.map(c => c ? { id: c.id, name: c.name, img: c.img || null } : null),
+        ts: Date.now(),
+      }));
+    } catch { /* incognito */ }
+  }
+
+  /* La rejilla del dia puede tardar: buildGrid recorre candidatos hasta que
+     las nueve intersecciones tienen solucion. Se prueba con MIN_CELL y, si no
+     sale, se afloja a 1 — igual que generateGrid() para las partidas sueltas. */
+  function rejillaDelDia() {
+    const base = semillaDelDia();
+    for (const min of [MIN_CELL, 1]) {
+      for (let k = 0; k < 40; k++) {
+        const seed = (base + k * 7919) | 0;
+        const grid = buildGrid(seed, min);
+        if (grid) return { grid, seed, min };
+      }
+    }
+    return null;
+  }
+
+  function startDiario() {
+    if (!dataReady) { showToast('Cargando datos…'); return; }
+    const ya = leerDia();
+    if (ya && ya.completed) { mostrarDiaJugado(ya); return; }
+    const res = rejillaDelDia();
+    if (!res) { showToast('No se ha podido montar la rejilla de hoy', 'err'); return; }
+    G = {
+      grid: res.grid, seed: res.seed, min: res.min,
+      board: new Array(9).fill(null),
+      turn: 0, startedBy: 0,
+      players: [{ name: 'Tú' }, { name: '' }],
+      usedIds: new Set(),
+      over: false, matchOver: false, winner: null, roundWinner: null, winLine: null, passes: 0,
+      mode: 'diario',
+      series: [0, 0], targetWins: 1, gameNum: 1,
+      intentos: DIARIO_INTENTOS,
+    };
+    try { window._ttt = G; } catch (e) {}
+    showScreen('screen-game');
+    stopTurnTimer();
+    $('game-hint').textContent = 'Rejilla del día · 9 intentos, uno por casilla. Un fallo también gasta intento.';
+    renderScore(); renderBoard();
+  }
+
+  function mostrarDiaJugado(d) {
+    const grid = (typeof d.seed === 'number') ? buildGrid(d.seed, d.min || MIN_CELL) : null;
+    if (!grid) { showToast(`Ya has jugado hoy: ${d.hits}/9`); return; }
+    G = {
+      grid, seed: d.seed, min: d.min || MIN_CELL,
+      board: (d.board || []).map(c => c ? { owner: 0, id: c.id, name: c.name, img: c.img || null } : null),
+      turn: 0, startedBy: 0,
+      players: [{ name: 'Tú' }, { name: '' }],
+      usedIds: new Set((d.board || []).filter(Boolean).map(c => String(c.id))),
+      over: true, matchOver: true, winner: null, roundWinner: null, winLine: null, passes: 0,
+      mode: 'diario', series: [0, 0], targetWins: 1, gameNum: 1, intentos: 0,
+    };
+    while (G.board.length < 9) G.board.push(null);
+    showScreen('screen-game');
+    stopTurnTimer();
+    $('game-hint').textContent = `Ya has jugado la rejilla de hoy: ${d.hits} de 9. Vuelve mañana.`;
+    renderScore(); renderBoard();
+  }
+
+  function finDiario() {
+    G.over = true; G.matchOver = true;
+    const hits = G.board.filter(Boolean).length;
+    guardarDia();
+    renderScore(); renderBoard();
+    $('game-hint').textContent = hits === 9
+      ? '¡Rejilla perfecta! 9 de 9.'
+      : `Se acabaron los intentos: ${hits} de 9.`;
+    showToast(hits >= DIARIO_RACHA ? `✓ ${hits}/9 — día ganado` : `${hits}/9`, hits >= DIARIO_RACHA ? 'ok' : 'err');
+  }
+
   function startLocalGame() {
     if (!dataReady) { showToast('Cargando datos…'); return; }
     const p1 = ($('input-p1-name').value || '').trim() || 'Jugador 1';
@@ -360,6 +493,11 @@ window._AppReal = (function () {
          no un intento). */
       if (!player) {
         closePick();
+        if (G.mode === 'diario') {
+          showToast('No encuentro ese futbolista — gastas un intento', 'err');
+          gastarIntentoDiario();
+          return;
+        }
         showToast('No encuentro ese futbolista — pierdes el turno', 'err');
         if (G.mode === 'online') { await Sync.wrongAnswer(); return; }
         G.passes = 0; G.turn = 1 - G.turn;
@@ -382,6 +520,21 @@ window._AppReal = (function () {
         return;
       }
 
+      /* Diario: no hay turno que ceder, hay intentos que gastar. Acertar
+         tambien gasta uno — nueve intentos para nueve casillas, asi que un
+         fallo se paga con una casilla que ya no vas a poder rellenar. */
+      if (G.mode === 'diario') {
+        if (ok) {
+          G.board[i] = cellData;
+          G.usedIds.add(String(player.id));
+          showToast(`✓ ${player.name}`, 'ok');
+        } else {
+          showToast(`✗ ${player.name} no cumple`, 'err');
+        }
+        gastarIntentoDiario();
+        return;
+      }
+
       if (ok) {
         G.board[i] = cellData;
         G.usedIds.add(String(player.id));
@@ -401,8 +554,18 @@ window._AppReal = (function () {
     }
   }
 
+  function gastarIntentoDiario() {
+    G.intentos = Math.max(0, (G.intentos || 0) - 1);
+    guardarDia();          // por si se cierra la pestaña a mitad
+    if (G.intentos <= 0 || G.board.every(Boolean)) { finDiario(); return; }
+    renderScore(); renderBoard();
+  }
+
   function skipTurn() {
     if (!G || G.over) return;
+    /* En el diario no hay a quien cederle el turno: saltar es gastar un
+       intento a proposito, que ya se puede hacer fallando. */
+    if (G.mode === 'diario') { closePick(); showToast('En la rejilla del día no se pasa turno'); return; }
     if (G.mode === 'online') {
       if (G.turn !== G.myIdx) { showToast('No es tu turno'); return; }
       closePick(); Sync.skip(); return;
@@ -417,6 +580,7 @@ window._AppReal = (function () {
 
   function proposeDraw() {
     if (!G || G.over) return;
+    if (G.mode === 'diario') { showToast('En la rejilla del día no hay tablas'); return; }
     if (G.mode === 'online') { Sync.offerDraw(); return; }
     /* Local: acuerdo inmediato. Las tablas cierran la RONDA (sin punto para
        nadie) y se pasa a la siguiente, no terminan la partida. */
@@ -1378,7 +1542,7 @@ window._AppReal = (function () {
   }
 
   return {
-    init, setTab, startLocalGame, adjustTarget,
+    init, setTab, startLocalGame, startDiario, adjustTarget,
     createRoom, joinRoom, findPublicRoom, leaveRoom, copyLink,
     pickCell, closePick, submitAnswer, selectAndSubmit,
     skipTurn, proposeDraw, respondDraw, playAgain, showMenu, showToast,

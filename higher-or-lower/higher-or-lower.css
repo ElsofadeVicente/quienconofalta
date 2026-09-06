@@ -353,12 +353,6 @@ a      { text-decoration: none; }
   box-shadow: var(--sh-x,3px) var(--sh-y,3px) var(--sh-b,0) var(--sh-c,var(--np-ink));
 }
 
-.hol-choice-btn--equal {
-  background: var(--np-paper2);
-  color: var(--np-ink);
-  box-shadow: var(--sh-x,3px) var(--sh-y,3px) var(--sh-b,0) var(--sh-c-soft,var(--np-ink-soft));
-}
-
 .hol-choice-btn--lower {
   background: var(--np-red);
   color: var(--np-paper);

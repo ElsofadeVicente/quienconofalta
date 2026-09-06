@@ -1205,6 +1205,23 @@ const App = (() => {
   let _round           = 0;
   let _players         = [];
   let _restrictions    = [];
+  /* MEMORIA DE PARTIDA (2026-09-06). Claves de las restricciones ya salidas
+     en esta partida; el generador las evita al montar la siguiente ronda.
+     Medido sobre 40 partidas de 12 rondas con la base real: las etiquetas
+     repetidas bajan de 16,3 a 0,4 por partida y los clubes repetidos de 4,2
+     a 0.
+
+     Solo la usa el ANFITRION, que es quien genera; los demas leen las
+     restricciones de room.restrictions. Se alimenta en cada ronda desde la
+     sala (no desde lo que se acaba de generar) para que un anfitrion que
+     herede la corona a mitad de partida arranque con lo que ya haya salido,
+     y no desde cero.
+
+     En Clasificatoria NO se pasa: el arbitro (api/ranked.js) regenera cada
+     ronda desde seed_base+ronda para puntuarla y no tiene esta memoria, asi
+     que generar con ella aqui haria que puntuara contra otras restricciones.
+     Ver el comentario de generate() en js/ranked-engine.js. */
+  let _usadasPartida   = new Set();
   let _submitted       = false;
   let _mySubmission    = null;
   let _mySubmissionId  = null;
@@ -1240,13 +1257,28 @@ const App = (() => {
   /* Cache de restricciones pregeneradas para la siguiente ronda */
   let _nextRestrictionsCache = null;
 
+  /* Apunta en la memoria de partida las restricciones de una ronda. Usa la
+     misma clave que el generador (tipo|valor), no el objeto: cada ronda los
+     construye de cero y dos rondas nunca comparten referencia. */
+  function _recordarRestricciones(lista) {
+    if (!Array.isArray(lista)) return;
+    const clave = (typeof RankedEngine !== 'undefined' && RankedEngine.claveRestriccion)
+      ? RankedEngine.claveRestriccion
+      : (r) => (r && r.type || '') + '|' + (r && (Array.isArray(r.value) ? r.value.join(',') : (r.value != null ? r.value : (r.label || ''))));
+    lista.forEach(r => { if (r) _usadasPartida.add(clave(r)); });
+  }
+
   /* ── Genera restricciones en un Web Worker (hilo separado).
      Devuelve una Promise con el array de restricciones.
      Si el navegador no soporta Worker, cae en sincrónico. ── */
-  function _generateAsync(seed, db) {
+  /* `usadas` (opcional) = memoria de partida. En Clasificatoria NO se pasa
+     nunca: el arbitro regenera sin ella. Ver js/ranked-engine.js. */
+  function _generateAsync(seed, db, usadas) {
+    const _mem = (usadas instanceof Set && usadas.size) ? [...usadas] : null;
+    const _sync = () => Restrictions.generate(seed, db, _mem ? new Set(_mem) : undefined);
     return new Promise((resolve, reject) => {
       if (typeof Worker === 'undefined') {
-        try { resolve(Restrictions.generate(seed, db)); } catch(e) { reject(e); }
+        try { resolve(_sync()); } catch(e) { reject(e); }
         return;
       }
       let settled = false;
@@ -1260,7 +1292,7 @@ const App = (() => {
         settled = true;
         try { worker && worker.terminate(); } catch(e) {}
         console.warn('[App] Worker timeout — generando restricciones de forma sincrónica');
-        try { resolve(Restrictions.generate(seed, db)); } catch(err) { reject(err); }
+        try { resolve(_sync()); } catch(err) { reject(err); }
       }, 6000);
       const finish = (fn) => {
         if (settled) return;
@@ -1277,18 +1309,18 @@ const App = (() => {
            por su cuenta, y mientras tanto seguiria siendo el mismo archivo (no
            hay copia que diverja, pero si el motor compartido cambia de version
            conviene forzar la recarga igualmente). */
-        worker = new Worker('js/restrictions-worker.js?v=20260829a');
+        worker = new Worker('js/restrictions-worker.js?v=20260906a');
       } catch(e) {
-        finish(() => { try { resolve(Restrictions.generate(seed, db)); } catch(err){ reject(err); } });
+        finish(() => { try { resolve(_sync()); } catch(err){ reject(err); } });
         return;
       }
       worker.onmessage = ({ data }) => {
         if (data.ok) finish(() => resolve(data.restrictions));
-        else finish(() => { try { resolve(Restrictions.generate(seed, db)); } catch(err){ reject(new Error(data.error||'Worker error')); } });
+        else finish(() => { try { resolve(_sync()); } catch(err){ reject(new Error(data.error||'Worker error')); } });
       };
       worker.onerror = (e) => {
         /* Fallback sincrónico si el worker falla (p.ej. file:// sin CORS) */
-        finish(() => { try { resolve(Restrictions.generate(seed, db)); } catch(err) { reject(err); } });
+        finish(() => { try { resolve(_sync()); } catch(err) { reject(err); } });
       };
       /* Sets no sobreviven structured clone (postMessage) → convertir a arrays */
       const rtSerialized = {};
@@ -1308,6 +1340,8 @@ const App = (() => {
            compañeros_principal.json y el worker la usa tal cual, en vez de
            llevar su propia copia escrita a mano que podria divergir. */
         teammates:          TEAMMATES_LIST,
+        /* Los Set no sobreviven a structured clone: viaja como array. */
+        usadas:             _mem,
       });
     });
   }
@@ -2129,7 +2163,7 @@ const App = (() => {
       await _loadGameData();
       if (stale()) { console.warn('[App] startGame abortado: sesión cambiada (post-loadData)'); restoreBtn(); return; }
       const seed         = Date.now();
-      const restrictions = await _generateAsync(seed, _genPool());
+      const restrictions = await _generateAsync(seed, _genPool(), _usadasPartida);
       if (stale()) { console.warn('[App] startGame abortado: sesión cambiada (post-generate)'); restoreBtn(); return; }
       /* Usar ajustes de _lastRoom (ya sincronizados por el listener) — sin round-trip extra */
       if (_lastRoom?.pointsToWin != null) _onlinePointsToWin = _lastRoom.pointsToWin;
@@ -2187,7 +2221,7 @@ const App = (() => {
        0-indexada). Si esto se queda con Date.now(), la cache pregenerada
        serviría una rejilla que NO coincide con la que espera el arbitro. */
     const seed = _isRanked ? (_rankedSeedBase + _round) : Date.now() + nextRoundNum * 7919;
-    _generateAsync(seed, _genPool())
+    _generateAsync(seed, _genPool(), _isRanked ? undefined : _usadasPartida)
       .then(restrictions => {
         _nextRestrictionsCache = restrictions;
         console.log('[App] Siguiente ronda pregenerada en worker ✓');
@@ -2435,6 +2469,8 @@ const App = (() => {
            la condición room.round !== _round fallaría al empezar nueva partida. */
         _round=0; _submitted=false; _mySubmission=null; _mySubmissionId=null; _revealTriggered=false;
         _isSuddenDeath=false; _suddenDeathPlayers=[];
+        /* Partida nueva: la memoria de restricciones empieza vacia. */
+        _usadasPartida = new Set();
         _nextRestrictionsCache=null;
         _stopTimer();
         if (_finishedDelayTimer) { clearInterval(_finishedDelayTimer); _finishedDelayTimer=null; }
@@ -2458,6 +2494,7 @@ const App = (() => {
           _restrictions = Array.isArray(rawR) ? rawR
             : rawR && typeof rawR === 'object' ? Object.values(rawR)
             : [];
+          _recordarRestricciones(_restrictions);
           _submitted=false; _mySubmission=null; _mySubmissionId=null; _revealTriggered=false;
           /* Leer ajustes de partida desde la sala — SIEMPRE, en cada ronda */
           if (room.pointsToWin != null) _onlinePointsToWin = room.pointsToWin;
@@ -3389,7 +3426,7 @@ const App = (() => {
     _nextRestrictionsCache = null;
     const restrictionsPromise = cached
       ? Promise.resolve(cached)
-      : _generateAsync(seed, _genPool());
+      : _generateAsync(seed, _genPool(), _isRanked ? undefined : _usadasPartida);
 
     restrictionsPromise.then(async restrictions => {
       if (!_live()) return;
@@ -3686,7 +3723,23 @@ const App = (() => {
       results[p.id]={playerName:sub.playerName, valid:true, matchCount,
         matches, footballer:player.name, footballerImg:player.img||null, points:0, isWinner:false};
     }
-    const maxMatches = Math.max(...Object.values(results).map(r=>r.matchCount));
+    const todos = Object.values(results);
+    const maxMatches = Math.max(...todos.map(r=>r.matchCount));
+
+    /* EMPATE TOTAL = no puntua nadie (decision del usuario, 2026-09-06).
+       Si TODO el mundo acierta el mismo numero de restricciones, la ronda no
+       ha decidido nada, asi que no reparte puntos. Antes daba 1 punto a cada
+       uno de los empatados, que en una partida de dos convertia cada ronda
+       igualada en un empate a puntos que solo servia para alargar.
+
+       Un empate PARCIAL sigue puntuando: si dos van a 4 y un tercero a 3, los
+       dos de arriba han ganado la ronda a alguien y se llevan su punto. */
+    const empateTotal = todos.length > 1 && todos.every(r => r.matchCount === maxMatches);
+    if (empateTotal) {
+      for (const r of todos) { r.isWinner = false; r.points = 0; r.pointsToWin = 0; r.empateTotal = true; }
+      return results;
+    }
+
     if (maxMatches>0) {
       /* Calcular diferencia de restricciones respecto al segundo mejor */
       const sortedCounts = Object.values(results)
@@ -3747,7 +3800,28 @@ const App = (() => {
 
   function _renderResultsUI(round, restrictions, results, players) {
     document.getElementById('results-round-num').textContent=round;
+
+    /* Si nadie ha puntuado por empate total hay que DECIRLO: sin esto la
+       ronda se ve igual que una normal pero sin ningun 🏆, y desde fuera
+       parece que la puntuacion se ha roto. */
     const listEl=document.getElementById('results-list');
+    if (listEl) {
+      const hayEmpateTotal = Object.values(results||{}).some(r => r && r.empateTotal);
+      let aviso = document.getElementById('results-empate');
+      if (hayEmpateTotal) {
+        if (!aviso) {
+          aviso = document.createElement('p');
+          aviso.id = 'results-empate';
+          aviso.className = 'results-empate';
+          listEl.parentNode.insertBefore(aviso, listEl);
+        }
+        const n = Object.values(results)[0];
+        aviso.textContent = `Empate a ${n ? n.matchCount : 0}: nadie suma punto esta ronda.`;
+        aviso.hidden = false;
+      } else if (aviso) {
+        aviso.hidden = true;
+      }
+    }
     if (listEl) {
       const sorted=[...players]
         .map(p=>({p,r:results[p.id]||{}}))
@@ -4132,6 +4206,7 @@ const App = (() => {
     _lastRoom=null; _wantReplay=false;
     _isSuddenDeath=false; _suddenDeathPlayers=[];
     _onlinePointsToWin=7; _onlineRoundSecs=60;
+    _usadasPartida = new Set();
     _nextRestrictionsCache=null;
     _stopTimer();
     _acClose();

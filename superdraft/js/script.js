@@ -33,6 +33,24 @@
   /* Dia 1 = fecha de lanzamiento. */
   const EPOCH_UTC = Date.UTC(2026, 7, 4);   // 2026-08-04
 
+  /* ── Rotacion de objetivos (2026-09-06) ──
+     Los 10 objetivos se sorteaban cada dia desde cero, o sea con reemplazo.
+     Medido sobre los ultimos 30 dias antes de este cambio: «EL ONCE MAS
+     BAJO» salio 7 veces, «MAS INTERNACIONALIDADES» y «MAS ALTO» una cada
+     una, y 3 dias repetian el objetivo del anterior. Ahora se reparten como
+     una baraja (js/rotacion.js): los diez, cada diez dias, y nunca dos
+     seguidos iguales.
+
+     ROT_DESDE es el PRIMER dia con rotacion, y tiene que ser un dia que
+     todavia NO se haya jugado cuando esto llegue a produccion. Motivo: la
+     categoria de una edicion pasada no se guarda, se RECALCULA con
+     objectiveOfDay(), asi que cambiar el objetivo de un dia ya jugado
+     reasignaria su marca (superdraft-best-<dia>) a otra categoria en el
+     panel de estadisticas. Si el despliegue se retrasa mas alla de esa
+     fecha, hay que subir la constante antes de subirlo. */
+  const ROT_DESDE_FECHA = '2026-09-15';
+  const ROT_SEMILLA     = 0x53555044;   // "SUPD": separa esta baraja de la de El Estadio
+
   /* Hoy en hora de MADRID, no en la del dispositivo: el resto de diarios
      (La Carrera, En el Top, En el Once, El Estadio, Crucigrama) cambian de
      día a medianoche española, y si Superdraft cambiara a otra hora la
@@ -260,7 +278,7 @@
   function generateDay(day) {
     const seed = ((day * 2654435761) ^ 0x9e3779b9) >>> 0;
     const rng  = FR.rng.mulberry32(seed);
-    const objective = OBJECTIVES[Math.floor(rng() * OBJECTIVES.length)];
+    const objective = elegirObjetivo(day, rng);
     const formation = FORMATIONS[Math.floor(rng() * FORMATIONS.length)];
 
     const reqPos = ['GK',
@@ -907,7 +925,24 @@
   function objectiveOfDay(day) {
     const seed = ((day * 2654435761) ^ 0x9e3779b9) >>> 0;
     const rng  = FR.rng.mulberry32(seed);
-    return OBJECTIVES[Math.floor(rng() * OBJECTIVES.length)];
+    return elegirObjetivo(day, rng);
+  }
+
+  /* La UNICA funcion que decide el objetivo de un dia. La llaman generateDay()
+     (con su rng compartido) y objectiveOfDay() (con uno recien sembrado igual),
+     y las dos tienen que llegar al mismo objetivo o el panel de estadisticas
+     diria una categoria y la partida otra.
+
+     Consume la extraccion del rng SIEMPRE, tambien cuando el objetivo lo
+     decide la rotacion. Es deliberado: en generateDay el objetivo es la
+     primera extraccion y la formacion la segunda, asi que saltarse la tirada
+     correria el flujo y cambiaria la formacion de todos los dias. */
+  function elegirObjetivo(day, rng) {
+    const i = Math.floor(rng() * OBJECTIVES.length);
+    if (day < diaDeFecha(ROT_DESDE_FECHA) || !window.FHRotacion) return OBJECTIVES[i];
+    const k = FHRotacion.tanda(OBJECTIVES.length, 1,
+                               day - diaDeFecha(ROT_DESDE_FECHA), ROT_SEMILLA)[0];
+    return OBJECTIVES[k];
   }
 
   /* Marca guardada de cada edición jugada: Map(nº de día -> puntuación).

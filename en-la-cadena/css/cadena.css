@@ -622,3 +622,19 @@ a      { text-decoration: none; }
    de la sala publica) vive en css/sala.css, una sola vez para los seis
    juegos con sala. */
 
+
+
+/* Cartel del reto al proponente (2026-09-06). Tokenizado para que el tema
+   Moderno lo recoja: un color literal aqui se quedaria fuera. */
+.reto-aviso {
+  margin: 0 0 12px;
+  padding: 10px 14px;
+  text-align: center;
+  font-size: .9rem;
+  line-height: 1.45;
+  color: var(--np-ink, #0f120e);
+  background: var(--np-paper2, transparent);
+  border: 2px solid var(--error, var(--np-red, #b3261e));
+  border-radius: var(--r-md, 0);
+}
+.reto-aviso[hidden] { display: none; }

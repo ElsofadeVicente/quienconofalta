@@ -137,7 +137,6 @@ function cacheDom() {
     rightStatValue: document.getElementById('hol-right-stat-value'),
     rightReveal:    document.getElementById('hol-right-reveal'),
     btnHigher:      document.getElementById('hol-btn-higher'),
-    btnEqual:       document.getElementById('hol-btn-equal'),
     btnLower:       document.getElementById('hol-btn-lower'),
     choices:        document.getElementById('hol-choices'),
     gameoverScreen: document.getElementById('hol-gameover'),
@@ -305,7 +304,6 @@ async function initGame() {
   cacheDom();
 
   DOM.btnHigher.addEventListener('click', () => handleChoice('higher'));
-  DOM.btnEqual.addEventListener('click',  () => handleChoice('equal'));
   DOM.btnLower.addEventListener('click',  () => handleChoice('lower'));
 
   DOM.playAgainBtn.addEventListener('click', restartGame);
@@ -377,13 +375,14 @@ function pickRandomPlayer(referencePlayer) {
   }
 
   const refMv = referencePlayer.mv;
-  const bucketEqual = available.filter(p => p.mv != null && p.mv === refMv);
 
-  if (bucketEqual.length > 0 && Math.random() < 0.10) {
-    const pick = bucketEqual[Math.floor(Math.random() * bucketEqual.length)];
-    HOL.usedIds.add(pick.id);
-    return pick;
-  }
+  /* Aqui habia una rama que FORZABA un empate el 10 % de las rondas. Existia
+     solo para que el boton IGUAL tuviera algo que hacer; sin el boton, lo
+     unico que haria es regalar un punto una de cada diez rondas sin poner a
+     prueba nada. Los empates que salen por su cuenta del sorteo (los tres
+     tramos cercanos excluyen la igualdad, asi que solo pueden venir del 55 %
+     que tira del pool entero) se quedan: son parte del ruido real de los
+     datos y ahora no matan a nadie. */
 
   const bucket5  = available.filter(p => p.mv != null && p.mv !== refMv && Math.abs(p.mv - refMv) <=  5_000_000);
   const bucket10 = available.filter(p => p.mv != null && p.mv !== refMv && Math.abs(p.mv - refMv) <= 10_000_000);
@@ -445,18 +444,40 @@ function handleChoice(choice) {
   const leftVal  = getStatValue(HOL.leftPlayer);
   const rightVal = getStatValue(HOL.rightPlayer);
 
-  let correctChoice;
-  if      (rightVal > leftVal)  correctChoice = 'higher';
-  else if (rightVal === leftVal) correctChoice = 'equal';
-  else                           correctChoice = 'lower';
+  /* EL EMPATE VALE PARA LAS DOS (2026-09-06) — y con el se fue el boton
+     IGUAL, que era lo unico que lo justificaba.
 
-  const isCorrect = (choice === correctChoice);
+     Por que: el valor del jugador de la derecha esta TAPADO, asi que un
+     empate no se puede razonar. Antes te mataba salvo que acertaras a pulsar
+     IGUAL, y eso le ponia al juego un techo que no dependia de saber futbol.
+     Medido sobre los datos reales, con un jugador que NUNCA falla salvo en
+     los empates: racha media 7,6 en modo liga y 6,3 en Top Players, con
+     medianas de 5 y 4. O sea que la partida tipica se acababa en cuatro
+     rondas por una moneda al aire.
+
+     La causa de fondo es que los valores de mercado estan muy cuantizados:
+     73 valores distintos para 2.297 jugadores, y solo 32 para los 732 de Top
+     Players. Con eso, bajar la probabilidad de empate no bastaba — incluso
+     quitando del todo el empate forzado, en Top Players el techo se quedaba
+     en 24. Contandolo como acierto, la racha pasa a medir lo unico que
+     deberia medir: lo que sabes. */
+  const isCorrect = (rightVal === leftVal)
+    || (choice === 'higher' && rightVal > leftVal)
+    || (choice === 'lower'  && rightVal < leftVal);
 
   DOM.rightReveal.classList.add('visible');
 
-  const btnMap = { higher: DOM.btnHigher, equal: DOM.btnEqual, lower: DOM.btnLower };
+  const btnMap = { higher: DOM.btnHigher, lower: DOM.btnLower };
   disableChoices();
-  btnMap[choice].classList.add(isCorrect ? 'correct-pick' : 'wrong-pick');
+  if (rightVal === leftVal) {
+    /* Empate: se encienden los dos botones para que se vea POR QUE ha valido
+       lo que has pulsado. Marcando solo el tuyo parece que has acertado de
+       chiripa y no que valia cualquiera. */
+    DOM.btnHigher.classList.add('correct-pick');
+    DOM.btnLower.classList.add('correct-pick');
+  } else if (btnMap[choice]) {
+    btnMap[choice].classList.add(isCorrect ? 'correct-pick' : 'wrong-pick');
+  }
   DOM.rightPanel.classList.add(isCorrect ? 'flash-correct' : 'flash-wrong');
 
   if (isCorrect) {
@@ -511,14 +532,14 @@ function triggerGameOver() {
 }
 
 function enableChoices() {
-  [DOM.btnHigher, DOM.btnEqual, DOM.btnLower].forEach(btn => {
+  [DOM.btnHigher, DOM.btnLower].forEach(btn => {
     btn.classList.remove('disabled', 'correct-pick', 'wrong-pick');
     btn.disabled = false;
   });
 }
 
 function disableChoices() {
-  [DOM.btnHigher, DOM.btnEqual, DOM.btnLower].forEach(btn => {
+  [DOM.btnHigher, DOM.btnLower].forEach(btn => {
     btn.classList.add('disabled');
     btn.disabled = true;
   });

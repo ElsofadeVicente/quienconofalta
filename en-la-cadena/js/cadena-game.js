@@ -91,6 +91,7 @@ const CadenaGame = (() => {
         turnIndex: 0,
         chain: [],
         chainLength: 0,
+        reto: null,
         createdAt: serverTimestamp()
       };
 
@@ -151,6 +152,9 @@ const CadenaGame = (() => {
       await update(ref(db, this.roomPath(s.roomCode)), {
         turnIndex: s.currentIndex,
         players: playersSerial,
+        /* null y no undefined: RTDB no guarda undefined, asi que un reto
+           resuelto nunca llegaria a borrarse en los demas clientes. */
+        reto: s.reto || null,
         turnStartTime: serverTimestamp(),
         status: s.phase === 'finished' ? 'finished' : 'playing'
       });
@@ -381,6 +385,7 @@ const App = (() => {
       currentIndex: 0,
       chain: [],
       chainLength: 0,
+      reto: null,
       lives,
       turnSecs: turnSecs || 15,
       mode,
@@ -847,11 +852,18 @@ const App = (() => {
   CadenaGame.addToChain = function(entry) {
     const s = CadenaGame._state;
     if (!s) return;
+    /* Con un reto en curso, la respuesta del proponente NO alarga la cadena:
+       solo demuestra que la jugada tenia salida. La cadena se resetea igual,
+       asi que anadirla ademas seria dejarle jugar fuera de turno. */
+    if (s.reto) { clearInterval(window._timerInterval); CadenaGame.resolverReto(true, null); return; }
     clearInterval(window._timerInterval);
 
     const active = s.players.filter(p => !p.eliminated);
     const cp = active[s.currentIndex % active.length];
     entry.submittedBy = cp?.name || '?';
+    /* Y por ID, que es lo que necesita el reto al proponente: dos jugadores
+       pueden llamarse igual y `submittedBy` es solo el nombre. */
+    entry.byId = (cp && cp.id != null) ? cp.id : null;
     // Promover nat y b al nivel raíz para que Firebase los serialice y _renderEntry los lea
     if (entry.type === 'player' && entry.data) {
       if (!entry.nat) entry.nat = entry.data.nat || null;
@@ -869,6 +881,7 @@ const App = (() => {
       const chainSerial = s.chain.map(e => ({
         type: e.type, name: e.name || null, value: e.value || null,
         id: e.id || null, isOneClubMan: e.isOneClubMan || false, submittedBy: e.submittedBy || '',
+        byId: (e.byId != null ? e.byId : null),
         nat: e.nat || e.data?.nat || null,
         b:   e.b   || e.data?.b   || null
       }));
@@ -887,26 +900,104 @@ const App = (() => {
     }
   };
 
-  CadenaGame.penalizeWrongAnswer = function(value, type, validOptions) {
+  /* ═══════════════════════════════════════════════════════════════
+     RETO AL PROPONENTE (2026-09-06)
+
+     Antes, quien no sabia continuar perdia la vida y punto. Eso premiaba
+     poner el club o el jugador mas rebuscado que se te ocurriera SIN saber
+     tu mismo como seguirlo: no arriesgabas nada y el de al lado caia.
+
+     Ahora, cuando alguien falla, el turno pasa a quien propuso el eslabon
+     anterior: tiene que demostrar que habia respuesta. Si la da, la vida se
+     la lleva el que fallo (como siempre). Si tampoco la sabe, la pierde EL,
+     y el que fallo se salva.
+
+     Lo que se ensena importa tanto como la regla: mientras el reto esta en
+     marcha NO se muestran ni el motivo del fallo ni el panel de opciones
+     validas, que es justo la lista de respuestas buenas — si se enseñaran,
+     el proponente solo tendria que leerlas. */
+  function _proponenteDe(s) {
+    if (!s || !s.chain.length) return null;
+    const ultima = s.chain[s.chain.length - 1];
+    if (!ultima || ultima.byId == null) return null;
+    return s.players.find(p => p.id === ultima.byId && !p.eliminated) || null;
+  }
+
+  /* Lo consulta cadena-data.js antes de enseñar el motivo del fallo. */
+  CadenaGame.habraReto = function() {
     const s = CadenaGame._state;
-    if (!s) return;
-    clearInterval(window._timerInterval);
+    if (!s || s.reto) return false;
     const active = s.players.filter(p => !p.eliminated);
     const cp = active[s.currentIndex % active.length];
-    if (!cp) return;
-    cp.lives--;
-    if (cp.lives <= 0) {
-      cp.eliminated = true;
+    const prop = _proponenteDe(s);
+    return !!(cp && prop && prop.id !== cp.id && prop.connected !== false);
+  };
+
+  function _quitarVida(jugador, motivo, validOptions) {
+    const s = CadenaGame._state;
+    if (!s || !jugador) return;
+    jugador.lives--;
+    if (jugador.lives <= 0) {
+      jugador.eliminated = true;
       if (s.mode === 'online') _pushPenaltyToFirebase(s);
-      _showEliminated(cp, '"' + value + '" no es válido', validOptions);
+      _showEliminated(jugador, motivo, validOptions);
     } else {
       s.chain = []; s.chainLength = 0;
       document.getElementById('chain-entries').innerHTML = '';
       _showValidOptionsPanel(validOptions);
-      App.showToast('❤️ Le quedan ' + cp.lives + ' vida' + (cp.lives !== 1 ? 's' : ''), 'error');
+      App.showToast('❤️ A ' + jugador.name + ' le quedan ' + jugador.lives + ' vida' + (jugador.lives !== 1 ? 's' : ''), 'error');
       if (s.mode === 'online') _pushPenaltyToFirebase(s);
       else _nextTurn();
     }
+  }
+
+  CadenaGame.retarProponente = function(fallon, proponente, valor) {
+    const s = CadenaGame._state;
+    if (!s) return;
+    clearInterval(window._timerInterval);
+    s.reto = { byId: proponente.id, contraId: fallon.id, valor: String(valor || '') };
+    App.showToast(`🎯 ${fallon.name} no lo sabe. ${proponente.name}, demuéstralo o pierdes tú.`, 'error');
+    if (s.mode === 'online') CadenaGame.FBSync.pushTurnState();
+    setTimeout(() => CadenaGame.beginTurn(), 600);
+  };
+
+  CadenaGame.resolverReto = function(pruebaOk, validOptions) {
+    const s = CadenaGame._state;
+    if (!s || !s.reto) return;
+    clearInterval(window._timerInterval);
+    const reto = s.reto;
+    s.reto = null;
+    const prov = s.players.find(p => p.id === reto.byId);
+    const acu  = s.players.find(p => p.id === reto.contraId);
+    if (pruebaOk) {
+      App.showToast(`✅ ${prov ? prov.name : '?'} lo ha demostrado`, 'ok');
+      _quitarVida(acu, `"${reto.valor}" no era válido, y ${prov ? prov.name : 'el proponente'} lo demostró`, validOptions);
+    } else {
+      App.showToast(`🙈 ${prov ? prov.name : '?'} tampoco lo sabía`, 'error');
+      _quitarVida(prov, 'Propuso algo que no supo continuar', validOptions);
+    }
+  };
+
+  CadenaGame.penalizeWrongAnswer = function(value, type, validOptions) {
+    const s = CadenaGame._state;
+    if (!s) return;
+    clearInterval(window._timerInterval);
+
+    /* Ya estabamos en un reto: el que acaba de fallar es el proponente. */
+    if (s.reto) { CadenaGame.resolverReto(false, validOptions); return; }
+
+    const active = s.players.filter(p => !p.eliminated);
+    const cp = active[s.currentIndex % active.length];
+    if (!cp) return;
+
+    const prop = _proponenteDe(s);
+    if (prop && prop.id !== cp.id && prop.connected !== false) {
+      CadenaGame.retarProponente(cp, prop, value);
+      return;
+    }
+    /* Sin proponente al que retar (primer eslabon de la cadena, o el que lo
+       puso ya esta eliminado o desconectado): se penaliza como siempre. */
+    _quitarVida(cp, '"' + value + '" no es válido', validOptions);
   };
 
   function _pushPenaltyToFirebase(s) {
@@ -917,7 +1008,7 @@ const App = (() => {
     if (active.length <= 1) {
       update(ref(db, 'rooms/' + s.roomCode), {
         players: s.players.map(p => ({ id: p.id, name: p.name, lives: p.lives, eliminated: p.eliminated })),
-        chain: [], chainLength: 0, status: 'finished'
+        chain: [], chainLength: 0, reto: null, status: 'finished'
       });
       return;
     }
@@ -925,7 +1016,7 @@ const App = (() => {
     s.currentIndex = nextIndex;
     update(ref(db, 'rooms/' + s.roomCode), {
       players: s.players.map(p => ({ id: p.id, name: p.name, lives: p.lives, eliminated: p.eliminated })),
-      chain: [], chainLength: 0, turnIndex: nextIndex,
+      chain: [], chainLength: 0, reto: null, turnIndex: nextIndex,
       turnStartTime: serverTimestamp(), status: 'playing'
     });
   }
@@ -941,12 +1032,18 @@ const App = (() => {
     const active = s.players.filter(p => !p.eliminated);
     if (active.length <= 1) { _endGame(active[0]); return; }
 
-    const cp   = active[s.currentIndex % active.length];
+    /* Con un reto en marcha el que juega NO es active[currentIndex] (ese es
+       quien acaba de fallar) sino el proponente, que sigue en su sitio del
+       turno. currentIndex no se mueve hasta que el reto se resuelve. */
+    const cp   = s.reto
+      ? (s.players.find(p => p.id === s.reto.byId && !p.eliminated) || active[s.currentIndex % active.length])
+      : active[s.currentIndex % active.length];
     const type = CadenaGame.getCurrentTurnType();
 
     // Actualizar UI de vidas y turno
     document.getElementById('turn-name').textContent = cp?.name || '—';
     document.getElementById('answer-type-badge').textContent = type === 'player' ? '⚽ JUGADOR' : '🏟️ EQUIPO';
+    _pintarAvisoReto(s, cp);
     _updateLives();
     _updateLabel();
 
@@ -957,7 +1054,7 @@ const App = (() => {
     const isMyTurn = (s.mode === 'local') || (s.myPlayerId !== null && cp.id === s.myPlayerId);
 
     // Período de gracia al inicio de la partida (cadena vacía, solo una vez)
-    const isFirstTurn = s.chain.length === 0 && !s._graceGiven;
+    const isFirstTurn = s.chain.length === 0 && !s._graceGiven && !s.reto;
     if (isFirstTurn) s._graceGiven = true;
     const graceMs = isFirstTurn ? 10000 : 0;
 
@@ -1003,6 +1100,20 @@ const App = (() => {
       s._lastAppliedTurn = remote.turnIndex;
       s.currentIndex = remote.turnIndex;
       needsBeginTurn = true;
+    }
+
+    /* El reto NO mueve turnIndex —el que fallo sigue siendo el "turno"— asi
+       que abrirlo o cerrarlo no se veria con la guarda de arriba: el
+       proponente no se enteraria de que le toca demostrarlo. Se vigila por
+       separado, con una clave que cambia al abrirse y al cerrarse. */
+    {
+      const rr = remote.reto || null;
+      const clave = rr ? `${rr.byId}>${rr.contraId}` : '';
+      if (clave !== (s._lastAppliedReto || '')) {
+        s._lastAppliedReto = clave;
+        s.reto = rr;
+        needsBeginTurn = true;
+      }
     }
 
     // Actualizar cadena si cambió. OJO: Firebase RTDB no guarda arrays vacíos
@@ -1061,23 +1172,19 @@ const App = (() => {
       if (rem <= 0) {
         clearInterval(window._timerInterval);
         const active2 = s.players.filter(p => !p.eliminated);
-        const cp2 = active2[s.currentIndex % active2.length];
+        /* Durante un reto el reloj corre contra el PROPONENTE, no contra el
+           que fallo: agotarlo es no haber sabido demostrarlo. */
+        const cp2 = s.reto
+          ? (s.players.find(p => p.id === s.reto.byId && !p.eliminated) || active2[s.currentIndex % active2.length])
+          : active2[s.currentIndex % active2.length];
         const isMyTurn = s.mode === 'local' || (s.myPlayerId !== null && cp2?.id === s.myPlayerId);
         if (isMyTurn) {
-          App.showToast('⏰ ¡Tiempo! ' + (cp2?.name || '') + ' pierde una vida', 'error');
-          if (cp2) {
-            cp2.lives--;
-            if (cp2.lives <= 0) {
-              cp2.eliminated = true;
-              if (s.mode === 'online') _pushPenaltyToFirebase(s);
-              _showEliminated(cp2, 'Se quedó sin tiempo', null);
-            } else {
-              s.chain = []; s.chainLength = 0;
-              document.getElementById('chain-entries').innerHTML = '';
-              App.showToast('❤️ Le quedan ' + cp2.lives + ' vida' + (cp2.lives !== 1 ? 's' : ''), 'error');
-              if (s.mode === 'online') _pushPenaltyToFirebase(s);
-              else _nextTurn();
-            }
+          if (s.reto) {
+            App.showToast('⏰ ¡Tiempo! ' + (cp2?.name || '') + ' no lo ha demostrado', 'error');
+            CadenaGame.resolverReto(false, null);
+          } else {
+            App.showToast('⏰ ¡Tiempo! ' + (cp2?.name || '') + ' pierde una vida', 'error');
+            _quitarVida(cp2, 'Se quedó sin tiempo', null);
           }
         }
       }
@@ -1233,6 +1340,25 @@ const App = (() => {
         <span class="plc-hearts">${hearts}</span>
       </div>`;
     }).join('');
+  }
+
+  /* Cartel de reto encima del campo de respuesta. Sin esto, al proponente le
+     salta el turno de la nada y no sabe por que le toca otra vez. */
+  function _pintarAvisoReto(s, cp) {
+    let el = document.getElementById('reto-aviso');
+    const zona = document.getElementById('answer-zone');
+    if (!s.reto) { if (el) el.hidden = true; return; }
+    if (!el && zona && zona.parentNode) {
+      el = document.createElement('p');
+      el.id = 'reto-aviso';
+      el.className = 'reto-aviso';
+      zona.parentNode.insertBefore(el, zona);
+    }
+    if (!el) return;
+    const acu = s.players.find(p => p.id === s.reto.contraId);
+    el.textContent = `🎯 ${acu ? acu.name : 'Alguien'} no ha sabido seguir. `
+      + `${cp ? cp.name : 'Quien lo propuso'} lo propuso: si no lo demuestra, la vida la pierde ${cp ? cp.name : 'quien lo propuso'}.`;
+    el.hidden = false;
   }
 
   function _updateLabel() {

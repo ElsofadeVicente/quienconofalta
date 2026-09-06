@@ -53,6 +53,8 @@
         { prefix: 'estadio_daily_',merge: 'newest', daily: true },
         { prefix: 'superdraft_day_', merge: 'newest', daily: true },
         { prefix: 'wordle_day_',   merge: 'newest', daily: true },
+        { prefix: 'bingo_day_',    merge: 'newest', daily: true },
+        { prefix: 'tresenraya_day_', merge: 'newest', daily: true },
         /* Partida de hoy a medias (para seguirla en otro dispositivo) */
         { exact: 'carrera_today',  merge: 'newest' },
         { exact: 'enteltop_today', merge: 'newest' },
@@ -62,8 +64,16 @@
         { exact: 'estadio-stats',  merge: 'stats' },
         { exact: 'footballStats',  merge: 'stats' },
         { exact: 'wordle-stats',   merge: 'stats' },
+        /* Faltaban las dos (2026-09-06): eran las unicas marcas de juego que
+           no viajaban entre dispositivos. Las estadisticas del Crucigrama son
+           las de un diario como los demas, y el record de Bingo es el unico
+           numero que ese juego acumula. */
+        { exact: 'cruc-stats',     merge: 'stats' },
         /* Récords de Higher or Lower (un número por modo) */
         { prefix: 'hol_record_',   merge: 'max' },
+        /* 'newest' y no 'max': bingo_best es un objeto {hits,bingos}, no un
+           numero, asi que no hay nada que comparar con Math.max. */
+        { exact: 'bingo_best',     merge: 'newest' },
         /* Mejor marca de cada edición de Superdraft (superdraft-best-<nº>).
            'newest' y no 'max': según el objetivo del día se gana subiendo
            (el once más caro) o bajando (el más joven), así que quedarse con

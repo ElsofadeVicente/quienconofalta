@@ -693,9 +693,51 @@
 
   const _ONECLUB_PROB = 0.02;
 
-  function generate(seed, db) {
+  /* Identidad de una restriccion, para la MEMORIA DE PARTIDA. Dos
+     restricciones con la misma clave son la misma etiqueta aunque sean
+     objetos distintos (cada ronda se construyen de cero). */
+  function claveRestriccion(r) {
+    if (!r) return '';
+    const v = Array.isArray(r.value) ? r.value.join(',') : (r.value != null ? r.value : (r.label || ''));
+    return (r.type || '') + '|' + v;
+  }
+
+  /* generate(seed, db, usadas)
+     `usadas` (opcional) es un Set de claves ya salidas EN ESTA PARTIDA. Sin
+     el tercer argumento el resultado es byte a byte el de siempre, que es lo
+     que mantiene intacta la Clasificatoria: api/ranked.js regenera cada ronda
+     desde `seed_base + ronda` para puntuarla, y si el anfitrion generase con
+     memoria y el arbitro sin ella, el arbitro puntuaria contra OTRAS cinco
+     restricciones. Por eso Coche solo pasa memoria en las partidas normales.
+
+     Si algun dia se enciende la Clasificatoria CON memoria, el arbitro tiene
+     que reconstruirla igual, recorriendo la serie de semillas:
+
+         const usadas = new Set();
+         let restr;
+         for (let k = 1; k <= ronda; k++) {
+           restr = RankedEngine.generate(seedBase + k, pool, usadas);
+           restr.forEach(r => usadas.add(RankedEngine.claveRestriccion(r)));
+         }
+
+     Es determinista y da lo mismo en los dos lados, pero cuesta una
+     generacion por ronda jugada: no se ha hecho ahora porque Clasificatoria
+     esta apagada y no merece meter esa latencia en el camino que puntua. */
+  function generate(seed, db, usadas) {
     const rng = _mulberry32(seed);
-    const shuffledClubs = _shuffle(CLUBS_LIST, rng);
+    const _mem = (usadas instanceof Set) ? usadas : null;
+    /* `sinRepetir` NUNCA devuelve una lista vacia: si todo lo que queda ya
+       salio, se prefiere repetir antes que quedarse sin restricciones — una
+       ronda de menos de 5 es peor que una etiqueta repetida (es el mismo
+       criterio que ya arreglo el nuclear fallback de _ensureSolution). */
+    const sinRepetir = (lista, clave) => {
+      if (!_mem || !lista.length) return lista;
+      const libres = lista.filter(x => !_mem.has(clave(x)));
+      return libres.length ? libres : lista;
+    };
+    const shuffledClubs = sinRepetir(
+      _shuffle(CLUBS_LIST, rng),
+      c => 'club|' + c.tmName);
     const MIN_PAIR = Math.min(3, Math.max(2, Math.floor(db.length / 100)));
     const clubRestrictions = [];
 
@@ -783,8 +825,14 @@
       return _matching(r, db) >= 2;
     });
 
+    /* Las tres restricciones que no son de club salen de `playable`; con
+       memoria se descartan primero las etiquetas ya vistas esta partida.
+       Medido antes de esto: 12 rondas repetian 9,4 etiquetas de media y el
+       100 % de las partidas repetian algun club. */
+    const playableMem = sinRepetir(playable, claveRestriccion);
+
     const familyGroups = {};
-    for (const r of playable) {
+    for (const r of playableMem) {
       const fam = r.family || r.type;
       if (!familyGroups[fam]) familyGroups[fam] = [];
       familyGroups[fam].push(r);
@@ -816,7 +864,7 @@
       if (pick) { chosen.push(pick); usedFamilies.add(fam); }
     }
     if (chosen.length < 3) {
-      const remaining = _shuffle(playable.filter(r => !chosen.includes(r)), rng);
+      const remaining = _shuffle(playableMem.filter(r => !chosen.includes(r)), rng);
       for (const r of remaining) {
         if (chosen.length >= 3) break;
         chosen.push(r);
@@ -824,7 +872,13 @@
     }
 
     let result = [...clubRestrictions, ...chosen.slice(0, 3)];
-    const shuffled = _shuffle(playable, rng);
+    /* Tambien aqui la lista filtrada, no la completa: _removeRedundancies y
+       _ensureSolution SUSTITUYEN restricciones, y tirando de `playable` a
+       secas volvian a meter etiquetas ya vistas — medido, dejaban 10,5
+       repeticiones por partida de las 16,3 originales en vez de bajar a ~0.
+       La solvencia no sufre: sinRepetir devuelve la lista entera si el filtro
+       la vaciara, y con ~380 candidatos y 60 usados sigue habiendo de sobra. */
+    const shuffled = _shuffle(playableMem, rng);
     result = _removeRedundancies(result, shuffled, db);
     result = _ensureSolution(result, shuffled, db);
     return result;
@@ -832,6 +886,7 @@
 
   return {
     generate,
+    claveRestriccion,
     validate,
     setTeammateData,
     normalize,

@@ -18,6 +18,8 @@
      En el Once   → oncediario_YYYYMMDD     {matchStats:{guessed}, completed}
      El Estadio   → estadio_daily_YYYY-MM-DD {total}   (racha de días jugados)
      Wordle       → wordle_day_YYYY-MM-DD   {completed, won}
+     Bingo        → bingo_day_YYYY-MM-DD    {hits, bingo, completed}
+     Tres en Raya → tresenraya_day_YYYY-MM-DD {hits, completed}
 
    Fuera del hub no hay tarjetas que pintar, pero el archivo
    se carga igual porque expone window.FHStreaks, que usa el
@@ -151,7 +153,11 @@
         if (!s) return null;
         if (s.completed === false) {
           const n = Array.isArray(s.scores) ? s.scores.length : 0;
-          return `${n} de 5 rondas (en curso)`;
+          /* El total sale del propio guardado, no de un 5 escrito a mano:
+             El Estadio paso de 5 rondas a 4 el 2026-09-06 y las partidas
+             viejas siguen teniendo 5. */
+          const tot = Array.isArray(s.rondas) ? s.rondas.length : 4;
+          return `${n} de ${tot} rondas (en curso)`;
         }
         return typeof s.total === 'number' ? `${s.total.toLocaleString('es-ES')} puntos` : 'Jugado';
       },
@@ -174,6 +180,40 @@
       },
     },
     {
+      /* Bingo: el carton del dia. «Ganar» no es el bingo entero (16/16, que
+         casi no lo hace nadie) sino cerrar UMBRAL de las 16 — el mismo
+         criterio que usa el propio juego. El BINGO sigue siendo el 16/16 y
+         se cuenta aparte, en el record. */
+      href: 'bingo',
+      label: 'Bingo',
+      today: madridToday,
+      stateFor(day) {
+        const s = readJSON(`bingo_day_${day}`);
+        if (!s || typeof s.hits !== 'number') return null;
+        return (s.completed !== false && s.hits >= 12) ? 'win' : 'loss';
+      },
+      detailFor(day) {
+        const s = readJSON(`bingo_day_${day}`);
+        if (!s || typeof s.hits !== 'number') return null;
+        return s.bingo ? '¡BINGO! 16 de 16' : `${s.hits} de 16`;
+      },
+    },
+    {
+      href: 'tres-en-raya',
+      label: 'Tres en Raya',
+      today: madridToday,
+      stateFor(day) {
+        const s = readJSON(`tresenraya_day_${day}`);
+        if (!s || typeof s.hits !== 'number') return null;
+        return (s.completed !== false && s.hits >= 6) ? 'win' : 'loss';
+      },
+      detailFor(day) {
+        const s = readJSON(`tresenraya_day_${day}`);
+        if (!s || typeof s.hits !== 'number') return null;
+        return `${s.hits} de 9`;
+      },
+    },
+    {
       href: 'wordle',
       label: 'Wordle',
       today: madridToday,
@@ -187,8 +227,8 @@
       detailFor(day) {
         const s = readJSON(`wordle_day_${day}`);
         if (!s || !Array.isArray(s.guesses) || !s.guesses.length) return null;
-        if (!s.completed) return `${s.guesses.length}/5 (en curso)`;
-        return s.won ? `Acertado en ${s.guesses.length}/5` : 'Fallado';
+        if (!s.completed) return `${s.guesses.length}/6 (en curso)`;
+        return s.won ? `Acertado en ${s.guesses.length}/6` : 'Fallado';
       },
     },
   ];

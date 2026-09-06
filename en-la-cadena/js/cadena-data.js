@@ -406,6 +406,17 @@ const CadenaData = (() => {
   }
 
   /* ── Submit answer ── */
+  /* Si el fallo va a abrir un reto al proponente, el motivo NO se puede
+     enseñar: los mensajes de validateTeam()/validatePlayer() terminan en
+     «Sus equipos: Barcelona, PSG, Inter Miami…», que en el turno de equipo
+     es LITERALMENTE la lista de respuestas buenas. Enseñarla convertiria el
+     reto en leer en voz alta. El panel de opciones validas ya no se abre en
+     ese caso (lo decide cadena-game.js). */
+  function _motivo(reason) {
+    const habra = window.CadenaGame && CadenaGame.habraReto && CadenaGame.habraReto();
+    return habra ? 'No es válido' : reason;
+  }
+
   async function submitAnswer() {
     const input = document.getElementById('answer-input');
     const value = (input.value || '').trim();
@@ -453,7 +464,7 @@ const CadenaData = (() => {
         const { valid, playerData, reason } = await validatePlayer(playerId, lastTeam);
 
         if (!valid) {
-          App.showToast(reason, 'error');
+          App.showToast(_motivo(reason), 'error');
           CadenaGame.penalizeWrongAnswer(value, 'player', null);
           resetInput(input);
           return;
@@ -501,7 +512,7 @@ const CadenaData = (() => {
         const { valid, reason, isOneClubMan } = validateTeam(teamName, playerData, prevTeam);
 
         if (!valid) {
-          App.showToast(reason, 'error');
+          App.showToast(_motivo(reason), 'error');
           CadenaGame.penalizeWrongAnswer(value, 'team', validTeams);
           resetInput(input);
           return;
